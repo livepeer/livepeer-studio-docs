@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/media-server/introduction",
+  "id": "hodl-guides/media-server/introduction",
+  "title": "Introduction",
+  "description": "Livepeer's media server, MistServer documentation",
+  "source": "@site/docs/hodl-guides/media-server/introduction.mdx",
+  "sourceDirName": "hodl-guides/media-server",
+  "slug": "/hodl-guides/media-server/introduction",
+  "permalink": "/hodl-guides/media-server/introduction",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/media-server/introduction.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction",
+    "description": "Livepeer's media server, MistServer documentation",
+    "metaTitle": "Media Server - Livepeer.com",
+    "metaDescription": "Livepeer's media server, MistServer documentation"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Per stream metrics",
+    "permalink": "/hodl-guides/application-development/per-stream-metrics"
+  },
+  "next": {
+    "title": "Livepeer Features",
+    "permalink": "/hodl-guides/media-server/livepeer-features"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/development/index",
+  "id": "guides/development/index",
+  "title": "Application development",
+  "description": "Using the Livepeer.com API in your app",
+  "source": "@site/docs/guides/development/index.mdx",
+  "sourceDirName": "guides/development",
+  "slug": "/guides/development/",
+  "permalink": "/guides/development/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Application development",
+    "description": "Using the Livepeer.com API in your app",
+    "metaTitle": "Application development - Livepeer.com",
+    "metaDescription": "Using the Livepeer.com API in your app"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "API requests",
+    "permalink": "/guides/api"
+  },
+  "next": {
+    "title": "Clone an example app",
+    "permalink": "/guides/development/example-app"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/development/custom-domain",
+  "id": "guides/development/custom-domain",
+  "title": "Use a custom domain for live streaming",
+  "description": "Use a custom domain for live streaming with Livepeer.com",
+  "source": "@site/docs/guides/development/custom-domain.mdx",
+  "sourceDirName": "guides/development",
+  "slug": "/guides/development/custom-domain",
+  "permalink": "/guides/development/custom-domain",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/custom-domain.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Use a custom domain for live streaming",
+    "description": "Use a custom domain for live streaming with Livepeer.com",
+    "metaTitle": "Use a custom domain for live streaming - Livepeer.com",
+    "metaDescription": "Use a custom domain for live streaming with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Selecting a video player for your app",
+    "permalink": "/guides/development/video-playback-in-your-app"
+  },
+  "next": {
+    "title": "Per stream metrics",
+    "permalink": "/guides/development/per-stream-metrics"
+  }
+}

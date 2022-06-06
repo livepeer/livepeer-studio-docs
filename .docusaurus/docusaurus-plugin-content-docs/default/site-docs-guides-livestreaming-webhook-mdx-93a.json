@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/webhook",
+  "id": "guides/livestreaming/webhook",
+  "title": "Using webhooks",
+  "description": "Use webhooks to listen for video lifecycle events",
+  "source": "@site/docs/guides/livestreaming/webhook.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/webhook",
+  "permalink": "/guides/livestreaming/webhook",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/webhook.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Using webhooks",
+    "description": "Use webhooks to listen for video lifecycle events",
+    "metaTitle": "Using webhooks - Livepeer.com",
+    "metaDescription": "Use webhooks to listen for video lifecycle events"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Stream delivery via CDN",
+    "permalink": "/guides/livestreaming/cdn"
+  },
+  "next": {
+    "title": "Check webhook signatures",
+    "permalink": "/guides/livestreaming/check-webhook-signatures"
+  }
+}

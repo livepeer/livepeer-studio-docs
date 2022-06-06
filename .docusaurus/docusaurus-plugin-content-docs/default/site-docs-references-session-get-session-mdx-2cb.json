@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/session/get-session",
+  "id": "references/session/get-session",
+  "title": "GET retrieve a session",
+  "description": "Livepeer.com API Reference | GET retrieve a session",
+  "source": "@site/docs/references/session/get-session.mdx",
+  "sourceDirName": "references/session",
+  "slug": "/references/session/get-session",
+  "permalink": "/references/session/get-session",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/session/get-session.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "GET retrieve a session",
+    "description": "Livepeer.com API Reference | GET retrieve a session",
+    "metaTitle": "GET retrieve a session - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | GET retrieve a session"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/references/session/overview"
+  },
+  "next": {
+    "title": "GET a list of sessions",
+    "permalink": "/references/session/list-sessions"
+  }
+}

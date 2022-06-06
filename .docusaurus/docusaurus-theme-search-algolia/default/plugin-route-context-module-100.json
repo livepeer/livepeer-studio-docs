@@ -1,0 +1,6 @@
+{
+  "plugin": {
+    "name": "docusaurus-theme-search-algolia",
+    "id": "default"
+  }
+}

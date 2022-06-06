@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/playback",
+  "id": "guides/livestreaming/playback",
+  "title": "Playback a live stream",
+  "description": "Playback a Livepeer.com live stream",
+  "source": "@site/docs/guides/livestreaming/playback.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/playback",
+  "permalink": "/guides/livestreaming/playback",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/playback.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Playback a live stream",
+    "description": "Playback a Livepeer.com live stream",
+    "metaTitle": "Playback a live stream - Livepeer.com",
+    "metaDescription": "Playback a Livepeer.com live stream"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Create a stream",
+    "permalink": "/guides/livestreaming/create-a-stream"
+  },
+  "next": {
+    "title": "Record a live stream session",
+    "permalink": "/guides/livestreaming/record"
+  }
+}

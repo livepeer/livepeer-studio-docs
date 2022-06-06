@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/create-paywall",
+  "id": "guides/livestreaming/create-paywall",
+  "title": "Create paywall",
+  "description": "Suggestions for creating paywall with Livepeer",
+  "source": "@site/docs/guides/livestreaming/create-paywall.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/create-paywall",
+  "permalink": "/guides/livestreaming/create-paywall",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/create-paywall.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Create paywall",
+    "description": "Suggestions for creating paywall with Livepeer",
+    "metaTitle": "Create paywall - Livepeer.com",
+    "metaDescription": "Suggestions for creating paywall with Livepeer"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Debug live stream issues",
+    "permalink": "/guides/livestreaming/debug-live-stream-issues"
+  },
+  "next": {
+    "title": "Supported codecs and workflows",
+    "permalink": "/guides/livestreaming/support-matrix"
+  }
+}

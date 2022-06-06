@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/media-server/downloads",
+  "id": "hodl-guides/media-server/downloads",
+  "title": "Downloads",
+  "description": "Livepeer's media server, MistServer documentation",
+  "source": "@site/docs/hodl-guides/media-server/downloads.mdx",
+  "sourceDirName": "hodl-guides/media-server",
+  "slug": "/hodl-guides/media-server/downloads",
+  "permalink": "/hodl-guides/media-server/downloads",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/media-server/downloads.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Downloads",
+    "description": "Livepeer's media server, MistServer documentation",
+    "metaTitle": "Media Server - Livepeer.com",
+    "metaDescription": "Livepeer's media server, MistServer documentation"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "User Guide",
+    "permalink": "/hodl-guides/media-server/user-guide"
+  },
+  "next": {
+    "title": "Mint a Video NFT",
+    "permalink": "/hodl-guides/video-nft/mint-a-video-nft"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/check-webhook-signatures",
+  "id": "hodl-guides/start-live-streaming/check-webhook-signatures",
+  "title": "Check webhook signatures",
+  "description": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer",
+  "source": "@site/docs/hodl-guides/start-live-streaming/check-webhook-signatures.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/check-webhook-signatures",
+  "permalink": "/hodl-guides/start-live-streaming/check-webhook-signatures",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/check-webhook-signatures.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Check webhook signatures",
+    "description": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer",
+    "metaTitle": "Check webhook signatures - Livepeer.com",
+    "metaDescription": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Using webhooks",
+    "permalink": "/hodl-guides/start-live-streaming/webhook"
+  },
+  "next": {
+    "title": "Multistream",
+    "permalink": "/hodl-guides/start-live-streaming/multistream"
+  }
+}

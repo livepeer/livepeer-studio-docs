@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/multistream",
+  "id": "guides/livestreaming/multistream",
+  "title": "Multistream",
+  "description": "Start multistreaming",
+  "source": "@site/docs/guides/livestreaming/multistream.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/multistream",
+  "permalink": "/guides/livestreaming/multistream",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/multistream.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Multistream",
+    "description": "Start multistreaming",
+    "metaTitle": "Multistream - Livepeer.com",
+    "metaDescription": "Start multistreaming"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Check webhook signatures",
+    "permalink": "/guides/livestreaming/check-webhook-signatures"
+  },
+  "next": {
+    "title": "Redundant back-up transcoding",
+    "permalink": "/guides/livestreaming/back-up-transcoding"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "hodl-guides/media-server/index",
+  "id": "hodl-guides/media-server/index",
+  "title": "Media Server",
+  "description": "Livepeer's media server, MistServer documentation",
+  "source": "@site/docs/hodl-guides/media-server/index.mdx",
+  "sourceDirName": "hodl-guides/media-server",
+  "slug": "/hodl-guides/media-server/",
+  "permalink": "/hodl-guides/media-server/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/media-server/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Media Server",
+    "description": "Livepeer's media server, MistServer documentation",
+    "metaTitle": "Media Server - Livepeer.com",
+    "metaDescription": "Livepeer's media server, MistServer documentation"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/vod/upload",
+  "id": "references/vod/upload",
+  "title": "Upload an Asset",
+  "description": "Livepeer.com API Reference | Upload",
+  "source": "@site/docs/references/vod/upload.mdx",
+  "sourceDirName": "references/vod",
+  "slug": "/references/vod/upload",
+  "permalink": "/references/vod/upload",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/upload.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Upload an Asset",
+    "description": "Livepeer.com API Reference | Upload",
+    "metaTitle": "Upload - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | Upload"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "Import an Asset",
+    "permalink": "/references/vod/import"
+  },
+  "next": {
+    "title": "List Assets",
+    "permalink": "/references/vod/list"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/stream/delete-stream",
+  "id": "references/stream/delete-stream",
+  "title": "DELETE a stream",
+  "description": "Livepeer.com API Reference | DELETE a stream",
+  "source": "@site/docs/references/stream/delete-stream.mdx",
+  "sourceDirName": "references/stream",
+  "slug": "/references/stream/delete-stream",
+  "permalink": "/references/stream/delete-stream",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/delete-stream.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "DELETE a stream",
+    "description": "Livepeer.com API Reference | DELETE a stream",
+    "metaTitle": "DELETE a stream - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | DELETE a stream"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "PATCH update a stream",
+    "permalink": "/references/stream/update-stream"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/references/session/overview"
+  }
+}

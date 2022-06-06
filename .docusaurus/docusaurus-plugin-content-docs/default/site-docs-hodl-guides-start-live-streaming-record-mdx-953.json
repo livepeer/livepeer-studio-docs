@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/record",
+  "id": "hodl-guides/start-live-streaming/record",
+  "title": "Record a live stream session",
+  "description": "Record a Livepeer.com live stream session",
+  "source": "@site/docs/hodl-guides/start-live-streaming/record.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/record",
+  "permalink": "/hodl-guides/start-live-streaming/record",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/record.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Record a live stream session",
+    "description": "Record a Livepeer.com live stream session",
+    "metaTitle": "Record a live stream session - Livepeer.com",
+    "metaDescription": "Record a Livepeer.com live stream session"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Playback a live stream",
+    "permalink": "/hodl-guides/start-live-streaming/playback"
+  },
+  "next": {
+    "title": "Stream delivery via CDN",
+    "permalink": "/hodl-guides/start-live-streaming/cdn"
+  }
+}

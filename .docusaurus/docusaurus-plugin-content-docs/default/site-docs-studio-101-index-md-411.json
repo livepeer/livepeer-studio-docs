@@ -1,0 +1,17 @@
+{
+  "unversionedId": "studio101/index",
+  "id": "studio101/index",
+  "title": "Studio 101",
+  "description": "",
+  "source": "@site/docs/studio101/index.md",
+  "sourceDirName": "studio101",
+  "slug": "/studio101/",
+  "permalink": "/studio101/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/studio101/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Studio 101"
+  },
+  "sidebar": "studio101"
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/multistream-target/list-targets",
+  "id": "references/multistream-target/list-targets",
+  "title": "GET a list of targets",
+  "description": "Livepeer.com API Reference | GET a list of targets",
+  "source": "@site/docs/references/multistream-target/list-targets.mdx",
+  "sourceDirName": "references/multistream-target",
+  "slug": "/references/multistream-target/list-targets",
+  "permalink": "/references/multistream-target/list-targets",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/list-targets.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "GET a list of targets",
+    "description": "Livepeer.com API Reference | GET a list of targets",
+    "metaTitle": "GET a list of targets - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | GET a list of targets"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "GET retrieve a target",
+    "permalink": "/references/multistream-target/get-target"
+  },
+  "next": {
+    "title": "PATCH update a target",
+    "permalink": "/references/multistream-target/update-target"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "references/stream/index",
+  "id": "references/stream/index",
+  "title": "Stream",
+  "description": "API Reference | stream",
+  "source": "@site/docs/references/stream/index.mdx",
+  "sourceDirName": "references/stream",
+  "slug": "/references/stream/",
+  "permalink": "/references/stream/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Stream",
+    "description": "API Reference | stream",
+    "metaTitle": "Stream - Livepeer.com",
+    "metaDescription": "API Reference | stream"
+  }
+}

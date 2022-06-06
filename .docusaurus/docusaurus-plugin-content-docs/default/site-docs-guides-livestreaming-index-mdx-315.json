@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/index",
+  "id": "guides/livestreaming/index",
+  "title": "Start live streaming",
+  "description": "Start live streaming",
+  "source": "@site/docs/guides/livestreaming/index.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/",
+  "permalink": "/guides/livestreaming/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Start live streaming",
+    "description": "Start live streaming",
+    "metaTitle": "Start live streaming - Livepeer.com",
+    "metaDescription": "Start live streaming"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/guides/"
+  },
+  "next": {
+    "title": "Getting started tutorial",
+    "permalink": "/guides/livestreaming/tutorial"
+  }
+}

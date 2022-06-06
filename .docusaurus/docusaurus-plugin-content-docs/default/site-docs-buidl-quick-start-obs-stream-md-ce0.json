@@ -1,0 +1,25 @@
+{
+  "unversionedId": "buidl-quick-start/obs-stream",
+  "id": "buidl-quick-start/obs-stream",
+  "title": "OBS Stream",
+  "description": "",
+  "source": "@site/docs/buidl-quick-start/obs-stream.md",
+  "sourceDirName": "buidl-quick-start",
+  "slug": "/buidl-quick-start/obs-stream",
+  "permalink": "/buidl-quick-start/obs-stream",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/obs-stream.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "OBS Stream"
+  },
+  "sidebar": "buidl",
+  "previous": {
+    "title": "Playback",
+    "permalink": "/buidl-quick-start/playback"
+  },
+  "next": {
+    "title": "Browser Stream",
+    "permalink": "/buidl-quick-start/browser-stream"
+  }
+}

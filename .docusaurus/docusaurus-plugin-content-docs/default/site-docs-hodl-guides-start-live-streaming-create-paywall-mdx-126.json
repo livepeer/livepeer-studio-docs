@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/create-paywall",
+  "id": "hodl-guides/start-live-streaming/create-paywall",
+  "title": "Create paywall",
+  "description": "Suggestions for creating paywall with Livepeer",
+  "source": "@site/docs/hodl-guides/start-live-streaming/create-paywall.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/create-paywall",
+  "permalink": "/hodl-guides/start-live-streaming/create-paywall",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/create-paywall.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Create paywall",
+    "description": "Suggestions for creating paywall with Livepeer",
+    "metaTitle": "Create paywall - Livepeer.com",
+    "metaDescription": "Suggestions for creating paywall with Livepeer"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Debug live stream issues",
+    "permalink": "/hodl-guides/start-live-streaming/debug-live-stream-issues"
+  },
+  "next": {
+    "title": "Supported codecs and workflows",
+    "permalink": "/hodl-guides/start-live-streaming/support-matrix"
+  }
+}

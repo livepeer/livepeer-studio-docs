@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/handling-disconnects",
+  "id": "guides/livestreaming/handling-disconnects",
+  "title": "Handling disconnects",
+  "description": "Handling Livepeer.com disconnects",
+  "source": "@site/docs/guides/livestreaming/handling-disconnects.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/handling-disconnects",
+  "permalink": "/guides/livestreaming/handling-disconnects",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/handling-disconnects.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Handling disconnects",
+    "description": "Handling Livepeer.com disconnects",
+    "metaTitle": "Handling disconnects - Livepeer.com",
+    "metaDescription": "Handling Livepeer.com disconnects"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Tips for reducing latency",
+    "permalink": "/guides/livestreaming/reducing-latency"
+  },
+  "next": {
+    "title": "Debug live stream issues",
+    "permalink": "/guides/livestreaming/debug-live-stream-issues"
+  }
+}

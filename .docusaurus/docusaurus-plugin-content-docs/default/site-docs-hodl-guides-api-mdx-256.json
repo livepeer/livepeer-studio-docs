@@ -1,0 +1,30 @@
+{
+  "unversionedId": "hodl-guides/api",
+  "id": "hodl-guides/api",
+  "title": "API requests",
+  "description": "Livepeer.com API requests documentation",
+  "source": "@site/docs/hodl-guides/api.mdx",
+  "sourceDirName": "hodl-guides",
+  "slug": "/hodl-guides/api",
+  "permalink": "/hodl-guides/api",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/api.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "API requests",
+    "description": "Livepeer.com API requests documentation",
+    "metaTitle": "API requests - Livepeer.com",
+    "metaDescription": "Livepeer.com API requests documentation",
+    "sidebar_position": 3
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "SRT Support",
+    "permalink": "/hodl-guides/livestreaming/srt-support"
+  },
+  "next": {
+    "title": "Clone an example app",
+    "permalink": "/hodl-guides/application-development/example-app"
+  }
+}

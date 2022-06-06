@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/stream/list",
+  "id": "references/stream/list",
+  "title": "GET a list of streams",
+  "description": "Livepeer.com API Reference | GET a list of streams",
+  "source": "@site/docs/references/stream/list.mdx",
+  "sourceDirName": "references/stream",
+  "slug": "/references/stream/list",
+  "permalink": "/references/stream/list",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/list.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "GET a list of streams",
+    "description": "Livepeer.com API Reference | GET a list of streams",
+    "metaTitle": "GET a list of streams - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | GET a list of streams"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "GET retrieve a stream",
+    "permalink": "/references/stream/get-stream"
+  },
+  "next": {
+    "title": "PATCH toggle recording",
+    "permalink": "/references/stream/record-on-off"
+  }
+}

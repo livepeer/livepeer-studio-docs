@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/stream/overview",
+  "id": "references/stream/overview",
+  "title": "Overview",
+  "description": "Livepeer.com API Reference | The stream Object",
+  "source": "@site/docs/references/stream/overview.mdx",
+  "sourceDirName": "references/stream",
+  "slug": "/references/stream/overview",
+  "permalink": "/references/stream/overview",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/overview.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Overview",
+    "description": "Livepeer.com API Reference | The stream Object",
+    "metaTitle": "Overview - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | The stream Object"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/references/"
+  },
+  "next": {
+    "title": "POST create a stream",
+    "permalink": "/references/stream/post-stream"
+  }
+}

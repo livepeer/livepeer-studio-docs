@@ -1,0 +1,25 @@
+{
+  "unversionedId": "buidl-quick-start/first-app",
+  "id": "buidl-quick-start/first-app",
+  "title": "First App",
+  "description": "",
+  "source": "@site/docs/buidl-quick-start/first-app.md",
+  "sourceDirName": "buidl-quick-start",
+  "slug": "/buidl-quick-start/first-app",
+  "permalink": "/buidl-quick-start/first-app",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/first-app.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "First App"
+  },
+  "sidebar": "buidl",
+  "previous": {
+    "title": "First Stream",
+    "permalink": "/buidl-quick-start/first-stream"
+  },
+  "next": {
+    "title": "Playback",
+    "permalink": "/buidl-quick-start/playback"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/srt-support",
+  "id": "hodl-guides/start-live-streaming/srt-support",
+  "title": "SRT Support",
+  "description": "SRT Ingest Supported",
+  "source": "@site/docs/hodl-guides/start-live-streaming/srt-support.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/srt-support",
+  "permalink": "/hodl-guides/start-live-streaming/srt-support",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/srt-support.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "SRT Support",
+    "description": "SRT Ingest Supported",
+    "metaTitle": "SRT Support - Livepeer.com",
+    "metaDescription": "SRT Ingest Supported"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Monitoring stream health",
+    "permalink": "/hodl-guides/start-live-streaming/monitoring-stream-health"
+  },
+  "next": {
+    "title": "API requests",
+    "permalink": "/hodl-guides/api"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/multistream-target/create-target",
+  "id": "references/multistream-target/create-target",
+  "title": "POST create a multistream target",
+  "description": "Livepeer.com API Reference | POST create a target",
+  "source": "@site/docs/references/multistream-target/create-target.mdx",
+  "sourceDirName": "references/multistream-target",
+  "slug": "/references/multistream-target/create-target",
+  "permalink": "/references/multistream-target/create-target",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/create-target.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "POST create a multistream target",
+    "description": "Livepeer.com API Reference | POST create a target",
+    "metaTitle": "POST create a target - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | POST create a target"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/references/multistream-target/overview"
+  },
+  "next": {
+    "title": "GET retrieve a target",
+    "permalink": "/references/multistream-target/get-target"
+  }
+}

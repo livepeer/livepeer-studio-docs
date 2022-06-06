@@ -1,0 +1,902 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "studio101": [
+      {
+        "type": "link",
+        "label": "Studio 101",
+        "href": "/studio101/",
+        "docId": "studio101/index"
+      }
+    ],
+    "buidl": [
+      {
+        "type": "link",
+        "label": "Buidl",
+        "href": "/buidl-quick-start/",
+        "docId": "buidl-quick-start/index"
+      },
+      {
+        "type": "link",
+        "label": "First Stream",
+        "href": "/buidl-quick-start/first-stream",
+        "docId": "buidl-quick-start/first-stream"
+      },
+      {
+        "type": "link",
+        "label": "First App",
+        "href": "/buidl-quick-start/first-app",
+        "docId": "buidl-quick-start/first-app"
+      },
+      {
+        "type": "link",
+        "label": "Playback",
+        "href": "/buidl-quick-start/playback",
+        "docId": "buidl-quick-start/playback"
+      },
+      {
+        "type": "link",
+        "label": "OBS Stream",
+        "href": "/buidl-quick-start/obs-stream",
+        "docId": "buidl-quick-start/obs-stream"
+      },
+      {
+        "type": "link",
+        "label": "Browser Stream",
+        "href": "/buidl-quick-start/browser-stream",
+        "docId": "buidl-quick-start/browser-stream"
+      }
+    ],
+    "guides": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/guides/",
+        "docId": "guides/index"
+      },
+      {
+        "type": "category",
+        "label": "Start live streaming",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting started tutorial",
+            "href": "/guides/livestreaming/tutorial",
+            "docId": "guides/livestreaming/tutorial"
+          },
+          {
+            "type": "link",
+            "label": "Configure broadcast software",
+            "href": "/guides/livestreaming/broadcasting",
+            "docId": "guides/livestreaming/broadcasting"
+          },
+          {
+            "type": "link",
+            "label": "Get an API key",
+            "href": "/guides/livestreaming/api-key",
+            "docId": "guides/livestreaming/api-key"
+          },
+          {
+            "type": "link",
+            "label": "Verify a live stream is active",
+            "href": "/guides/livestreaming/verify",
+            "docId": "guides/livestreaming/verify"
+          },
+          {
+            "type": "link",
+            "label": "Create a stream",
+            "href": "/guides/livestreaming/create-a-stream",
+            "docId": "guides/livestreaming/create-a-stream"
+          },
+          {
+            "type": "link",
+            "label": "Playback a live stream",
+            "href": "/guides/livestreaming/playback",
+            "docId": "guides/livestreaming/playback"
+          },
+          {
+            "type": "link",
+            "label": "Record a live stream session",
+            "href": "/guides/livestreaming/record",
+            "docId": "guides/livestreaming/record"
+          },
+          {
+            "type": "link",
+            "label": "Stream delivery via CDN",
+            "href": "/guides/livestreaming/cdn",
+            "docId": "guides/livestreaming/cdn"
+          },
+          {
+            "type": "link",
+            "label": "Using webhooks",
+            "href": "/guides/livestreaming/webhook",
+            "docId": "guides/livestreaming/webhook"
+          },
+          {
+            "type": "link",
+            "label": "Check webhook signatures",
+            "href": "/guides/livestreaming/check-webhook-signatures",
+            "docId": "guides/livestreaming/check-webhook-signatures"
+          },
+          {
+            "type": "link",
+            "label": "Multistream",
+            "href": "/guides/livestreaming/multistream",
+            "docId": "guides/livestreaming/multistream"
+          },
+          {
+            "type": "link",
+            "label": "Redundant back-up transcoding",
+            "href": "/guides/livestreaming/back-up-transcoding",
+            "docId": "guides/livestreaming/back-up-transcoding"
+          },
+          {
+            "type": "link",
+            "label": "Tips for reducing latency",
+            "href": "/guides/livestreaming/reducing-latency",
+            "docId": "guides/livestreaming/reducing-latency"
+          },
+          {
+            "type": "link",
+            "label": "Handling disconnects",
+            "href": "/guides/livestreaming/handling-disconnects",
+            "docId": "guides/livestreaming/handling-disconnects"
+          },
+          {
+            "type": "link",
+            "label": "Debug live stream issues",
+            "href": "/guides/livestreaming/debug-live-stream-issues",
+            "docId": "guides/livestreaming/debug-live-stream-issues"
+          },
+          {
+            "type": "link",
+            "label": "Create paywall",
+            "href": "/guides/livestreaming/create-paywall",
+            "docId": "guides/livestreaming/create-paywall"
+          },
+          {
+            "type": "link",
+            "label": "Supported codecs and workflows",
+            "href": "/guides/livestreaming/support-matrix",
+            "docId": "guides/livestreaming/support-matrix"
+          },
+          {
+            "type": "link",
+            "label": "Monitoring stream health",
+            "href": "/guides/livestreaming/monitoring-stream-health",
+            "docId": "guides/livestreaming/monitoring-stream-health"
+          },
+          {
+            "type": "link",
+            "label": "SRT Support",
+            "href": "/guides/livestreaming/srt-support",
+            "docId": "guides/livestreaming/srt-support"
+          }
+        ],
+        "href": "/guides/livestreaming/"
+      },
+      {
+        "type": "link",
+        "label": "API requests",
+        "href": "/guides/api",
+        "docId": "guides/api"
+      },
+      {
+        "type": "category",
+        "label": "Application Development",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Clone an example app",
+            "href": "/guides/development/example-app",
+            "docId": "guides/development/example-app"
+          },
+          {
+            "type": "link",
+            "label": "Live streaming from your app",
+            "href": "/guides/development/live-streaming-from-your-app",
+            "docId": "guides/development/live-streaming-from-your-app"
+          },
+          {
+            "type": "link",
+            "label": "Selecting a video player for your app",
+            "href": "/guides/development/video-playback-in-your-app",
+            "docId": "guides/development/video-playback-in-your-app"
+          },
+          {
+            "type": "link",
+            "label": "Use a custom domain for live streaming",
+            "href": "/guides/development/custom-domain",
+            "docId": "guides/development/custom-domain"
+          },
+          {
+            "type": "link",
+            "label": "Per stream metrics",
+            "href": "/guides/development/per-stream-metrics",
+            "docId": "guides/development/per-stream-metrics"
+          }
+        ],
+        "href": "/guides/development/"
+      },
+      {
+        "type": "category",
+        "label": "Video NFT",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Mint a Video NFT",
+            "href": "/guides/nft/mint-a-video-nft",
+            "docId": "guides/nft/mint-a-video-nft"
+          },
+          {
+            "type": "link",
+            "label": "Build a Video NFT app",
+            "href": "/guides/nft/build-a-video-nft-app",
+            "docId": "guides/nft/build-a-video-nft-app"
+          }
+        ],
+        "href": "/guides/nft/"
+      },
+      {
+        "type": "link",
+        "label": "Usage and billing",
+        "href": "/guides/usage-billing",
+        "docId": "guides/usage-billing"
+      },
+      {
+        "type": "link",
+        "label": "Terminology",
+        "href": "/terminology",
+        "docId": "references/terminology"
+      }
+    ],
+    "referencesToc": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/references/",
+        "docId": "references/index"
+      },
+      {
+        "type": "category",
+        "label": "Stream",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/references/stream/overview",
+            "docId": "references/stream/overview"
+          },
+          {
+            "type": "link",
+            "label": "POST create a stream",
+            "href": "/references/stream/post-stream",
+            "docId": "references/stream/post-stream"
+          },
+          {
+            "type": "link",
+            "label": "GET retrieve a stream",
+            "href": "/references/stream/get-stream",
+            "docId": "references/stream/get-stream"
+          },
+          {
+            "type": "link",
+            "label": "GET a list of streams",
+            "href": "/references/stream/list",
+            "docId": "references/stream/list"
+          },
+          {
+            "type": "link",
+            "label": "PATCH toggle recording",
+            "href": "/references/stream/record-on-off",
+            "docId": "references/stream/record-on-off"
+          },
+          {
+            "type": "link",
+            "label": "PATCH update a stream",
+            "href": "/references/stream/update-stream",
+            "docId": "references/stream/update-stream"
+          },
+          {
+            "type": "link",
+            "label": "DELETE a stream",
+            "href": "/references/stream/delete-stream",
+            "docId": "references/stream/delete-stream"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Session",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/references/session/overview",
+            "docId": "references/session/overview"
+          },
+          {
+            "type": "link",
+            "label": "GET retrieve a session",
+            "href": "/references/session/get-session",
+            "docId": "references/session/get-session"
+          },
+          {
+            "type": "link",
+            "label": "GET a list of sessions",
+            "href": "/references/session/list-sessions",
+            "docId": "references/session/list-sessions"
+          },
+          {
+            "type": "link",
+            "label": "GET a list of recorded sessions",
+            "href": "/references/session/list-recorded-sessions",
+            "docId": "references/session/list-recorded-sessions"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Multistream target",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/references/multistream-target/overview",
+            "docId": "references/multistream-target/overview"
+          },
+          {
+            "type": "link",
+            "label": "POST create a multistream target",
+            "href": "/references/multistream-target/create-target",
+            "docId": "references/multistream-target/create-target"
+          },
+          {
+            "type": "link",
+            "label": "GET retrieve a target",
+            "href": "/references/multistream-target/get-target",
+            "docId": "references/multistream-target/get-target"
+          },
+          {
+            "type": "link",
+            "label": "GET a list of targets",
+            "href": "/references/multistream-target/list-targets",
+            "docId": "references/multistream-target/list-targets"
+          },
+          {
+            "type": "link",
+            "label": "PATCH update a target",
+            "href": "/references/multistream-target/update-target",
+            "docId": "references/multistream-target/update-target"
+          },
+          {
+            "type": "link",
+            "label": "DELETE a target",
+            "href": "/references/multistream-target/delete-target",
+            "docId": "references/multistream-target/delete-target"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Video On Demand",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Import an Asset",
+            "href": "/references/vod/import",
+            "docId": "references/vod/import"
+          },
+          {
+            "type": "link",
+            "label": "Upload an Asset",
+            "href": "/references/vod/upload",
+            "docId": "references/vod/upload"
+          },
+          {
+            "type": "link",
+            "label": "List Assets",
+            "href": "/references/vod/list",
+            "docId": "references/vod/list"
+          },
+          {
+            "type": "link",
+            "label": "Export to IPFS",
+            "href": "/references/vod/export",
+            "docId": "references/vod/export"
+          },
+          {
+            "type": "link",
+            "label": "List Tasks",
+            "href": "/references/vod/list-tasks",
+            "docId": "references/vod/list-tasks"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Ingest",
+        "href": "/references/ingest",
+        "docId": "references/ingest"
+      },
+      {
+        "type": "link",
+        "label": "Authentication",
+        "href": "/references/authentication",
+        "docId": "references/authentication"
+      },
+      {
+        "type": "link",
+        "label": "Errors",
+        "href": "/references/errors",
+        "docId": "references/errors"
+      },
+      {
+        "type": "link",
+        "label": "API key",
+        "href": "/references/api-key",
+        "docId": "references/api-key"
+      },
+      {
+        "type": "link",
+        "label": "Terminology",
+        "href": "/terminology",
+        "docId": "references/terminology"
+      }
+    ]
+  },
+  "docs": {
+    "buidl-quick-start/browser-stream": {
+      "id": "buidl-quick-start/browser-stream",
+      "title": "Browser Stream",
+      "description": "",
+      "sidebar": "buidl"
+    },
+    "buidl-quick-start/create-stream": {
+      "id": "buidl-quick-start/create-stream",
+      "title": "Create Stream",
+      "description": ""
+    },
+    "buidl-quick-start/first-app": {
+      "id": "buidl-quick-start/first-app",
+      "title": "First App",
+      "description": "",
+      "sidebar": "buidl"
+    },
+    "buidl-quick-start/first-stream": {
+      "id": "buidl-quick-start/first-stream",
+      "title": "First Stream",
+      "description": "",
+      "sidebar": "buidl"
+    },
+    "buidl-quick-start/index": {
+      "id": "buidl-quick-start/index",
+      "title": "Buidl",
+      "description": "",
+      "sidebar": "buidl"
+    },
+    "buidl-quick-start/obs-stream": {
+      "id": "buidl-quick-start/obs-stream",
+      "title": "OBS Stream",
+      "description": "",
+      "sidebar": "buidl"
+    },
+    "buidl-quick-start/playback": {
+      "id": "buidl-quick-start/playback",
+      "title": "Playback",
+      "description": "",
+      "sidebar": "buidl"
+    },
+    "guides/api": {
+      "id": "guides/api",
+      "title": "API requests",
+      "description": "Livepeer.com API requests documentation",
+      "sidebar": "guides"
+    },
+    "guides/development/custom-domain": {
+      "id": "guides/development/custom-domain",
+      "title": "Use a custom domain for live streaming",
+      "description": "Use a custom domain for live streaming with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/development/example-app": {
+      "id": "guides/development/example-app",
+      "title": "Clone an example app",
+      "description": "Clone a Livepeer.com example app",
+      "sidebar": "guides"
+    },
+    "guides/development/index": {
+      "id": "guides/development/index",
+      "title": "Application development",
+      "description": "Using the Livepeer.com API in your app",
+      "sidebar": "guides"
+    },
+    "guides/development/live-streaming-from-your-app": {
+      "id": "guides/development/live-streaming-from-your-app",
+      "title": "Live streaming from your app",
+      "description": "Live streaming from your app to Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/development/per-stream-metrics": {
+      "id": "guides/development/per-stream-metrics",
+      "title": "Per stream metrics",
+      "description": "Livepeer.com per stream metrics",
+      "sidebar": "guides"
+    },
+    "guides/development/video-playback-in-your-app": {
+      "id": "guides/development/video-playback-in-your-app",
+      "title": "Selecting a video player for your app",
+      "description": "Selecting a video player for your app with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/index": {
+      "id": "guides/index",
+      "title": "Overview",
+      "description": "Livepeer.com Video Guides Overview",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/api-key": {
+      "id": "guides/livestreaming/api-key",
+      "title": "Get an API key",
+      "description": "Get a Livepeer.com API key",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/back-up-transcoding": {
+      "id": "guides/livestreaming/back-up-transcoding",
+      "title": "Redundant back-up transcoding",
+      "description": "Back-up transcoding with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/broadcasting": {
+      "id": "guides/livestreaming/broadcasting",
+      "title": "Configure broadcast software",
+      "description": "Configure broadcast software to stream with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/cdn": {
+      "id": "guides/livestreaming/cdn",
+      "title": "Stream delivery via CDN",
+      "description": "Livepeer.com stream delivery via CDN",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/check-webhook-signatures": {
+      "id": "guides/livestreaming/check-webhook-signatures",
+      "title": "Check webhook signatures",
+      "description": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/create-a-stream": {
+      "id": "guides/livestreaming/create-a-stream",
+      "title": "Create a stream",
+      "description": "Create a Livepeer.com stream",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/create-paywall": {
+      "id": "guides/livestreaming/create-paywall",
+      "title": "Create paywall",
+      "description": "Suggestions for creating paywall with Livepeer",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/debug-live-stream-issues": {
+      "id": "guides/livestreaming/debug-live-stream-issues",
+      "title": "Debug live stream issues",
+      "description": "Debug Livepeer.com live stream issues",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/handling-disconnects": {
+      "id": "guides/livestreaming/handling-disconnects",
+      "title": "Handling disconnects",
+      "description": "Handling Livepeer.com disconnects",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/index": {
+      "id": "guides/livestreaming/index",
+      "title": "Start live streaming",
+      "description": "Start live streaming",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/monitoring-stream-health": {
+      "id": "guides/livestreaming/monitoring-stream-health",
+      "title": "Monitoring stream health",
+      "description": "Understanding stream performance on Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/multistream": {
+      "id": "guides/livestreaming/multistream",
+      "title": "Multistream",
+      "description": "Start multistreaming",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/playback": {
+      "id": "guides/livestreaming/playback",
+      "title": "Playback a live stream",
+      "description": "Playback a Livepeer.com live stream",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/record": {
+      "id": "guides/livestreaming/record",
+      "title": "Record a live stream session",
+      "description": "Record a Livepeer.com live stream session",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/reducing-latency": {
+      "id": "guides/livestreaming/reducing-latency",
+      "title": "Tips for reducing latency",
+      "description": "Tips for reducing latency with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/srt-support": {
+      "id": "guides/livestreaming/srt-support",
+      "title": "SRT Support",
+      "description": "SRT Ingest Supported",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/support-matrix": {
+      "id": "guides/livestreaming/support-matrix",
+      "title": "Supported codecs and workflows",
+      "description": "Codecs and workflows supported by Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/tutorial": {
+      "id": "guides/livestreaming/tutorial",
+      "title": "Getting started tutorial",
+      "description": "Start live streaming with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/verify": {
+      "id": "guides/livestreaming/verify",
+      "title": "Verify a live stream is active",
+      "description": "Verify your Livepeer.com stream is active",
+      "sidebar": "guides"
+    },
+    "guides/livestreaming/webhook": {
+      "id": "guides/livestreaming/webhook",
+      "title": "Using webhooks",
+      "description": "Use webhooks to listen for video lifecycle events",
+      "sidebar": "guides"
+    },
+    "guides/nft/build-a-video-nft-app": {
+      "id": "guides/nft/build-a-video-nft-app",
+      "title": "Build a Video NFT app",
+      "description": "How to build an app that mints Video NFTs with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/nft/index": {
+      "id": "guides/nft/index",
+      "title": "Video NFTs",
+      "description": "Livepeer's Video NFTs documentation",
+      "sidebar": "guides"
+    },
+    "guides/nft/mint-a-video-nft": {
+      "id": "guides/nft/mint-a-video-nft",
+      "title": "Mint a Video NFT",
+      "description": "Learn how to mint a Video NFT with Livepeer.com",
+      "sidebar": "guides"
+    },
+    "guides/usage-billing": {
+      "id": "guides/usage-billing",
+      "title": "Usage and billing",
+      "description": "Livepeer.com usage and billing documentation",
+      "sidebar": "guides"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "Welcome",
+      "description": "There are multiple ways to livestream with livepeer.com. The only prerequisite"
+    },
+    "references/api-key": {
+      "id": "references/api-key",
+      "title": "API key",
+      "description": "Livepeer.com API Reference | API key",
+      "sidebar": "referencesToc"
+    },
+    "references/authentication": {
+      "id": "references/authentication",
+      "title": "Authentication",
+      "description": "Livepeer.com API Reference | Authentication",
+      "sidebar": "referencesToc"
+    },
+    "references/errors": {
+      "id": "references/errors",
+      "title": "Errors",
+      "description": "Livepeer.com API Reference | Errors",
+      "sidebar": "referencesToc"
+    },
+    "references/index": {
+      "id": "references/index",
+      "title": "Overview",
+      "description": "Livepeer.com API reference documentation",
+      "sidebar": "referencesToc"
+    },
+    "references/ingest": {
+      "id": "references/ingest",
+      "title": "Ingest",
+      "description": "Livepeer.com API Reference | Ingest",
+      "sidebar": "referencesToc"
+    },
+    "references/multistream-target/create-target": {
+      "id": "references/multistream-target/create-target",
+      "title": "POST create a multistream target",
+      "description": "Livepeer.com API Reference | POST create a target",
+      "sidebar": "referencesToc"
+    },
+    "references/multistream-target/delete-target": {
+      "id": "references/multistream-target/delete-target",
+      "title": "DELETE a target",
+      "description": "Livepeer.com API Reference | DELETE a target",
+      "sidebar": "referencesToc"
+    },
+    "references/multistream-target/get-target": {
+      "id": "references/multistream-target/get-target",
+      "title": "GET retrieve a target",
+      "description": "Livepeer.com API Reference | GET retrieve a target",
+      "sidebar": "referencesToc"
+    },
+    "references/multistream-target/index": {
+      "id": "references/multistream-target/index",
+      "title": "Multistream target",
+      "description": "API Reference | multistream-target"
+    },
+    "references/multistream-target/list-targets": {
+      "id": "references/multistream-target/list-targets",
+      "title": "GET a list of targets",
+      "description": "Livepeer.com API Reference | GET a list of targets",
+      "sidebar": "referencesToc"
+    },
+    "references/multistream-target/overview": {
+      "id": "references/multistream-target/overview",
+      "title": "Overview",
+      "description": "Livepeer.com API Reference | The multistream target object",
+      "sidebar": "referencesToc"
+    },
+    "references/multistream-target/update-target": {
+      "id": "references/multistream-target/update-target",
+      "title": "PATCH update a target",
+      "description": "Livepeer.com API Reference | PATCH update a target",
+      "sidebar": "referencesToc"
+    },
+    "references/session/get-session": {
+      "id": "references/session/get-session",
+      "title": "GET retrieve a session",
+      "description": "Livepeer.com API Reference | GET retrieve a session",
+      "sidebar": "referencesToc"
+    },
+    "references/session/index": {
+      "id": "references/session/index",
+      "title": "Session",
+      "description": "API Reference | session"
+    },
+    "references/session/list-recorded-sessions": {
+      "id": "references/session/list-recorded-sessions",
+      "title": "GET a list of recorded sessions",
+      "description": "Livepeer.com API Reference | GET a list of recorded sessions",
+      "sidebar": "referencesToc"
+    },
+    "references/session/list-sessions": {
+      "id": "references/session/list-sessions",
+      "title": "GET a list of sessions",
+      "description": "Livepeer.com API Reference | GET a list of sessions",
+      "sidebar": "referencesToc"
+    },
+    "references/session/overview": {
+      "id": "references/session/overview",
+      "title": "Overview",
+      "description": "Livepeer.com API Reference | The session object",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/delete-stream": {
+      "id": "references/stream/delete-stream",
+      "title": "DELETE a stream",
+      "description": "Livepeer.com API Reference | DELETE a stream",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/get-stream": {
+      "id": "references/stream/get-stream",
+      "title": "GET retrieve a stream",
+      "description": "Livepeer.com API Reference | GET retrieve a stream",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/index": {
+      "id": "references/stream/index",
+      "title": "Stream",
+      "description": "API Reference | stream"
+    },
+    "references/stream/list": {
+      "id": "references/stream/list",
+      "title": "GET a list of streams",
+      "description": "Livepeer.com API Reference | GET a list of streams",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/overview": {
+      "id": "references/stream/overview",
+      "title": "Overview",
+      "description": "Livepeer.com API Reference | The stream Object",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/post-stream": {
+      "id": "references/stream/post-stream",
+      "title": "POST create a stream",
+      "description": "Livepeer.com API Reference | POST create a stream",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/record-on-off": {
+      "id": "references/stream/record-on-off",
+      "title": "PATCH toggle recording",
+      "description": "Livepeer.com API Reference | PATCH toggle recording",
+      "sidebar": "referencesToc"
+    },
+    "references/stream/update-stream": {
+      "id": "references/stream/update-stream",
+      "title": "PATCH update a stream",
+      "description": "Livepeer.com API Reference | PATCH update a stream",
+      "sidebar": "referencesToc"
+    },
+    "references/terminology": {
+      "id": "references/terminology",
+      "title": "Terminology",
+      "description": "",
+      "sidebar": "referencesToc"
+    },
+    "references/vod/export": {
+      "id": "references/vod/export",
+      "title": "Export to IPFS",
+      "description": "Livepeer.com API Reference | Export",
+      "sidebar": "referencesToc"
+    },
+    "references/vod/import": {
+      "id": "references/vod/import",
+      "title": "Import an Asset",
+      "description": "Livepeer.com API Reference | Import",
+      "sidebar": "referencesToc"
+    },
+    "references/vod/index": {
+      "id": "references/vod/index",
+      "title": "Video On Demand",
+      "description": "Livepeer.com API Reference | VOD"
+    },
+    "references/vod/list": {
+      "id": "references/vod/list",
+      "title": "List Assets",
+      "description": "Livepeer.com API Reference | List Assets",
+      "sidebar": "referencesToc"
+    },
+    "references/vod/list-tasks": {
+      "id": "references/vod/list-tasks",
+      "title": "List Tasks",
+      "description": "Livepeer.com API Reference | List Tasks",
+      "sidebar": "referencesToc"
+    },
+    "references/vod/upload": {
+      "id": "references/vod/upload",
+      "title": "Upload an Asset",
+      "description": "Livepeer.com API Reference | Upload",
+      "sidebar": "referencesToc"
+    },
+    "studio101/index": {
+      "id": "studio101/index",
+      "title": "Studio 101",
+      "description": "",
+      "sidebar": "studio101"
+    }
+  }
+}

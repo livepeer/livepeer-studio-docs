@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/livestreaming/api-key",
+  "id": "hodl-guides/livestreaming/api-key",
+  "title": "Get an API key",
+  "description": "Get a Livepeer.com API key",
+  "source": "@site/docs/hodl-guides/livestreaming/api-key.mdx",
+  "sourceDirName": "hodl-guides/livestreaming",
+  "slug": "/hodl-guides/livestreaming/api-key",
+  "permalink": "/hodl-guides/livestreaming/api-key",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/livestreaming/api-key.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Get an API key",
+    "description": "Get a Livepeer.com API key",
+    "metaTitle": "Get an API key - Livepeer.com",
+    "metaDescription": "Get a Livepeer.com API key"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Configure broadcast software",
+    "permalink": "/hodl-guides/livestreaming/broadcasting"
+  },
+  "next": {
+    "title": "Verify a live stream is active",
+    "permalink": "/hodl-guides/livestreaming/verify"
+  }
+}

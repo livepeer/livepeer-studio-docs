@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/livestreaming/tutorial",
+  "id": "hodl-guides/livestreaming/tutorial",
+  "title": "Getting started tutorial",
+  "description": "Start live streaming with Livepeer.com",
+  "source": "@site/docs/hodl-guides/livestreaming/tutorial.mdx",
+  "sourceDirName": "hodl-guides/livestreaming",
+  "slug": "/hodl-guides/livestreaming/tutorial",
+  "permalink": "/hodl-guides/livestreaming/tutorial",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/livestreaming/tutorial.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Getting started tutorial",
+    "description": "Start live streaming with Livepeer.com",
+    "metaTitle": "Getting started tutorial - Livepeer.com",
+    "metaDescription": "Start live streaming with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Start live streaming",
+    "permalink": "/hodl-guides/livestreaming/"
+  },
+  "next": {
+    "title": "Configure broadcast software",
+    "permalink": "/hodl-guides/livestreaming/broadcasting"
+  }
+}

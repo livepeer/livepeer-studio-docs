@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/livestreaming/create-a-stream",
+  "id": "hodl-guides/livestreaming/create-a-stream",
+  "title": "Create a stream",
+  "description": "Create a Livepeer.com stream",
+  "source": "@site/docs/hodl-guides/livestreaming/create-a-stream.mdx",
+  "sourceDirName": "hodl-guides/livestreaming",
+  "slug": "/hodl-guides/livestreaming/create-a-stream",
+  "permalink": "/hodl-guides/livestreaming/create-a-stream",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/livestreaming/create-a-stream.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Create a stream",
+    "description": "Create a Livepeer.com stream",
+    "metaTitle": "Create a stream - Livepeer.com",
+    "metaDescription": "Create a stream"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Verify a live stream is active",
+    "permalink": "/hodl-guides/livestreaming/verify"
+  },
+  "next": {
+    "title": "Playback a live stream",
+    "permalink": "/hodl-guides/livestreaming/playback"
+  }
+}

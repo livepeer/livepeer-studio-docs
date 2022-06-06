@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/media-server/user-guide",
+  "id": "hodl-guides/media-server/user-guide",
+  "title": "User Guide",
+  "description": "Livepeer's media server, MistServer documentation",
+  "source": "@site/docs/hodl-guides/media-server/user-guide.mdx",
+  "sourceDirName": "hodl-guides/media-server",
+  "slug": "/hodl-guides/media-server/user-guide",
+  "permalink": "/hodl-guides/media-server/user-guide",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/media-server/user-guide.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "User Guide",
+    "description": "Livepeer's media server, MistServer documentation",
+    "metaTitle": "Media Server - Livepeer.com",
+    "metaDescription": "Livepeer's media server, MistServer documentation"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "MistServer features",
+    "permalink": "/hodl-guides/media-server/mistserver-features"
+  },
+  "next": {
+    "title": "Downloads",
+    "permalink": "/hodl-guides/media-server/downloads"
+  }
+}

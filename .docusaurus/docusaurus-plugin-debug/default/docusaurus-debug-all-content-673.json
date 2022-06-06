@@ -1,0 +1,2335 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/",
+          "tagsPath": "/tags",
+          "versionEditUrl": "https://github.com/livepeer/docs/blob/main/docs",
+          "versionEditUrlLocalized": "https://github.com/livepeer/docs/blob/main/i18n/en/docusaurus-plugin-content-docs/current",
+          "versionBanner": null,
+          "versionBadge": false,
+          "versionClassName": "docs-version-current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/drewhoang/Desktop/livepeer-studio-docs/sidebars.js",
+          "contentPath": "/Users/drewhoang/Desktop/livepeer-studio-docs/docs",
+          "contentPathLocalized": "/Users/drewhoang/Desktop/livepeer-studio-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "buidl-quick-start/browser-stream",
+              "id": "buidl-quick-start/browser-stream",
+              "title": "Browser Stream",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/browser-stream.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/browser-stream",
+              "permalink": "/buidl-quick-start/browser-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/browser-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Browser Stream"
+              },
+              "sidebar": "buidl",
+              "previous": {
+                "title": "OBS Stream",
+                "permalink": "/buidl-quick-start/obs-stream"
+              }
+            },
+            {
+              "unversionedId": "buidl-quick-start/create-stream",
+              "id": "buidl-quick-start/create-stream",
+              "title": "Create Stream",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/create-stream.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/create-stream",
+              "permalink": "/buidl-quick-start/create-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/create-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Create Stream"
+              }
+            },
+            {
+              "unversionedId": "buidl-quick-start/first-app",
+              "id": "buidl-quick-start/first-app",
+              "title": "First App",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/first-app.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/first-app",
+              "permalink": "/buidl-quick-start/first-app",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/first-app.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "First App"
+              },
+              "sidebar": "buidl",
+              "previous": {
+                "title": "First Stream",
+                "permalink": "/buidl-quick-start/first-stream"
+              },
+              "next": {
+                "title": "Playback",
+                "permalink": "/buidl-quick-start/playback"
+              }
+            },
+            {
+              "unversionedId": "buidl-quick-start/first-stream",
+              "id": "buidl-quick-start/first-stream",
+              "title": "First Stream",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/first-stream.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/first-stream",
+              "permalink": "/buidl-quick-start/first-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/first-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "First Stream"
+              },
+              "sidebar": "buidl",
+              "previous": {
+                "title": "Buidl",
+                "permalink": "/buidl-quick-start/"
+              },
+              "next": {
+                "title": "First App",
+                "permalink": "/buidl-quick-start/first-app"
+              }
+            },
+            {
+              "unversionedId": "buidl-quick-start/index",
+              "id": "buidl-quick-start/index",
+              "title": "Buidl",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/index.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/",
+              "permalink": "/buidl-quick-start/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Buidl"
+              },
+              "sidebar": "buidl",
+              "next": {
+                "title": "First Stream",
+                "permalink": "/buidl-quick-start/first-stream"
+              }
+            },
+            {
+              "unversionedId": "buidl-quick-start/obs-stream",
+              "id": "buidl-quick-start/obs-stream",
+              "title": "OBS Stream",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/obs-stream.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/obs-stream",
+              "permalink": "/buidl-quick-start/obs-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/obs-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "OBS Stream"
+              },
+              "sidebar": "buidl",
+              "previous": {
+                "title": "Playback",
+                "permalink": "/buidl-quick-start/playback"
+              },
+              "next": {
+                "title": "Browser Stream",
+                "permalink": "/buidl-quick-start/browser-stream"
+              }
+            },
+            {
+              "unversionedId": "buidl-quick-start/playback",
+              "id": "buidl-quick-start/playback",
+              "title": "Playback",
+              "description": "",
+              "source": "@site/docs/buidl-quick-start/playback.md",
+              "sourceDirName": "buidl-quick-start",
+              "slug": "/buidl-quick-start/playback",
+              "permalink": "/buidl-quick-start/playback",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/playback.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Playback"
+              },
+              "sidebar": "buidl",
+              "previous": {
+                "title": "First App",
+                "permalink": "/buidl-quick-start/first-app"
+              },
+              "next": {
+                "title": "OBS Stream",
+                "permalink": "/buidl-quick-start/obs-stream"
+              }
+            },
+            {
+              "unversionedId": "guides/api",
+              "id": "guides/api",
+              "title": "API requests",
+              "description": "Livepeer.com API requests documentation",
+              "source": "@site/docs/guides/api.mdx",
+              "sourceDirName": "guides",
+              "slug": "/guides/api",
+              "permalink": "/guides/api",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/api.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "API requests",
+                "description": "Livepeer.com API requests documentation",
+                "metaTitle": "API requests - Livepeer.com",
+                "metaDescription": "Livepeer.com API requests documentation",
+                "sidebar_position": 3
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "SRT Support",
+                "permalink": "/guides/livestreaming/srt-support"
+              },
+              "next": {
+                "title": "Application development",
+                "permalink": "/guides/development/"
+              }
+            },
+            {
+              "unversionedId": "guides/development/custom-domain",
+              "id": "guides/development/custom-domain",
+              "title": "Use a custom domain for live streaming",
+              "description": "Use a custom domain for live streaming with Livepeer.com",
+              "source": "@site/docs/guides/development/custom-domain.mdx",
+              "sourceDirName": "guides/development",
+              "slug": "/guides/development/custom-domain",
+              "permalink": "/guides/development/custom-domain",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/custom-domain.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Use a custom domain for live streaming",
+                "description": "Use a custom domain for live streaming with Livepeer.com",
+                "metaTitle": "Use a custom domain for live streaming - Livepeer.com",
+                "metaDescription": "Use a custom domain for live streaming with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Selecting a video player for your app",
+                "permalink": "/guides/development/video-playback-in-your-app"
+              },
+              "next": {
+                "title": "Per stream metrics",
+                "permalink": "/guides/development/per-stream-metrics"
+              }
+            },
+            {
+              "unversionedId": "guides/development/example-app",
+              "id": "guides/development/example-app",
+              "title": "Clone an example app",
+              "description": "Clone a Livepeer.com example app",
+              "source": "@site/docs/guides/development/example-app.mdx",
+              "sourceDirName": "guides/development",
+              "slug": "/guides/development/example-app",
+              "permalink": "/guides/development/example-app",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/example-app.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Clone an example app",
+                "description": "Clone a Livepeer.com example app",
+                "metaTitle": "Clone an example app - Livepeer.com",
+                "metaDescription": "Clone a Livepeer.com example app"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Application development",
+                "permalink": "/guides/development/"
+              },
+              "next": {
+                "title": "Live streaming from your app",
+                "permalink": "/guides/development/live-streaming-from-your-app"
+              }
+            },
+            {
+              "unversionedId": "guides/development/index",
+              "id": "guides/development/index",
+              "title": "Application development",
+              "description": "Using the Livepeer.com API in your app",
+              "source": "@site/docs/guides/development/index.mdx",
+              "sourceDirName": "guides/development",
+              "slug": "/guides/development/",
+              "permalink": "/guides/development/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Application development",
+                "description": "Using the Livepeer.com API in your app",
+                "metaTitle": "Application development - Livepeer.com",
+                "metaDescription": "Using the Livepeer.com API in your app"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "API requests",
+                "permalink": "/guides/api"
+              },
+              "next": {
+                "title": "Clone an example app",
+                "permalink": "/guides/development/example-app"
+              }
+            },
+            {
+              "unversionedId": "guides/development/live-streaming-from-your-app",
+              "id": "guides/development/live-streaming-from-your-app",
+              "title": "Live streaming from your app",
+              "description": "Live streaming from your app to Livepeer.com",
+              "source": "@site/docs/guides/development/live-streaming-from-your-app.mdx",
+              "sourceDirName": "guides/development",
+              "slug": "/guides/development/live-streaming-from-your-app",
+              "permalink": "/guides/development/live-streaming-from-your-app",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/live-streaming-from-your-app.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Live streaming from your app",
+                "description": "Live streaming from your app to Livepeer.com",
+                "metaTitle": "Live streaming from your app - Livepeer.com",
+                "metaDescription": "Live streaming from your app to Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Clone an example app",
+                "permalink": "/guides/development/example-app"
+              },
+              "next": {
+                "title": "Selecting a video player for your app",
+                "permalink": "/guides/development/video-playback-in-your-app"
+              }
+            },
+            {
+              "unversionedId": "guides/development/per-stream-metrics",
+              "id": "guides/development/per-stream-metrics",
+              "title": "Per stream metrics",
+              "description": "Livepeer.com per stream metrics",
+              "source": "@site/docs/guides/development/per-stream-metrics.mdx",
+              "sourceDirName": "guides/development",
+              "slug": "/guides/development/per-stream-metrics",
+              "permalink": "/guides/development/per-stream-metrics",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/per-stream-metrics.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Per stream metrics",
+                "description": "Livepeer.com per stream metrics",
+                "metaTitle": "Per stream metrics - Livepeer.com",
+                "metaDescription": "Livepeer.com per stream metrics"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Use a custom domain for live streaming",
+                "permalink": "/guides/development/custom-domain"
+              },
+              "next": {
+                "title": "Video NFTs",
+                "permalink": "/guides/nft/"
+              }
+            },
+            {
+              "unversionedId": "guides/development/video-playback-in-your-app",
+              "id": "guides/development/video-playback-in-your-app",
+              "title": "Selecting a video player for your app",
+              "description": "Selecting a video player for your app with Livepeer.com",
+              "source": "@site/docs/guides/development/video-playback-in-your-app.mdx",
+              "sourceDirName": "guides/development",
+              "slug": "/guides/development/video-playback-in-your-app",
+              "permalink": "/guides/development/video-playback-in-your-app",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/video-playback-in-your-app.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Selecting a video player for your app",
+                "description": "Selecting a video player for your app with Livepeer.com",
+                "metaTitle": "Selecting a video player for your app - Livepeer.com",
+                "metaDescription": "Selecting a video player for your app with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Live streaming from your app",
+                "permalink": "/guides/development/live-streaming-from-your-app"
+              },
+              "next": {
+                "title": "Use a custom domain for live streaming",
+                "permalink": "/guides/development/custom-domain"
+              }
+            },
+            {
+              "unversionedId": "guides/index",
+              "id": "guides/index",
+              "title": "Overview",
+              "description": "Livepeer.com Video Guides Overview",
+              "source": "@site/docs/guides/index.mdx",
+              "sourceDirName": "guides",
+              "slug": "/guides/",
+              "permalink": "/guides/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/index.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Livepeer.com Video Guides Overview",
+                "metaTitle": "Overview - Livepeer.com",
+                "metaDescription": "Livepeer.com Video Guides Overview",
+                "sidebar_position": 1
+              },
+              "sidebar": "guides",
+              "next": {
+                "title": "Start live streaming",
+                "permalink": "/guides/livestreaming/"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/api-key",
+              "id": "guides/livestreaming/api-key",
+              "title": "Get an API key",
+              "description": "Get a Livepeer.com API key",
+              "source": "@site/docs/guides/livestreaming/api-key.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/api-key",
+              "permalink": "/guides/livestreaming/api-key",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/api-key.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Get an API key",
+                "description": "Get a Livepeer.com API key",
+                "metaTitle": "Get an API key - Livepeer.com",
+                "metaDescription": "Get a Livepeer.com API key"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Configure broadcast software",
+                "permalink": "/guides/livestreaming/broadcasting"
+              },
+              "next": {
+                "title": "Verify a live stream is active",
+                "permalink": "/guides/livestreaming/verify"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/back-up-transcoding",
+              "id": "guides/livestreaming/back-up-transcoding",
+              "title": "Redundant back-up transcoding",
+              "description": "Back-up transcoding with Livepeer.com",
+              "source": "@site/docs/guides/livestreaming/back-up-transcoding.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/back-up-transcoding",
+              "permalink": "/guides/livestreaming/back-up-transcoding",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/back-up-transcoding.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Redundant back-up transcoding",
+                "description": "Back-up transcoding with Livepeer.com",
+                "metaTitle": "Redundant back-up transcoding - Livepeer.com",
+                "metaDescription": "Back-up transcoding with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Multistream",
+                "permalink": "/guides/livestreaming/multistream"
+              },
+              "next": {
+                "title": "Tips for reducing latency",
+                "permalink": "/guides/livestreaming/reducing-latency"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/broadcasting",
+              "id": "guides/livestreaming/broadcasting",
+              "title": "Configure broadcast software",
+              "description": "Configure broadcast software to stream with Livepeer.com",
+              "source": "@site/docs/guides/livestreaming/broadcasting.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/broadcasting",
+              "permalink": "/guides/livestreaming/broadcasting",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/broadcasting.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Configure broadcast software",
+                "description": "Configure broadcast software to stream with Livepeer.com",
+                "metaTitle": "Configure broadcast software - Livepeer.com",
+                "metaDescription": "Configure broadcast software to stream with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Getting started tutorial",
+                "permalink": "/guides/livestreaming/tutorial"
+              },
+              "next": {
+                "title": "Get an API key",
+                "permalink": "/guides/livestreaming/api-key"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/cdn",
+              "id": "guides/livestreaming/cdn",
+              "title": "Stream delivery via CDN",
+              "description": "Livepeer.com stream delivery via CDN",
+              "source": "@site/docs/guides/livestreaming/cdn.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/cdn",
+              "permalink": "/guides/livestreaming/cdn",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/cdn.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Stream delivery via CDN",
+                "description": "Livepeer.com stream delivery via CDN",
+                "metaTitle": "Stream delivery via CDN - Livepeer.com",
+                "metaDescription": "Livepeer.com stream delivery via CDN"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Record a live stream session",
+                "permalink": "/guides/livestreaming/record"
+              },
+              "next": {
+                "title": "Using webhooks",
+                "permalink": "/guides/livestreaming/webhook"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/check-webhook-signatures",
+              "id": "guides/livestreaming/check-webhook-signatures",
+              "title": "Check webhook signatures",
+              "description": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer",
+              "source": "@site/docs/guides/livestreaming/check-webhook-signatures.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/check-webhook-signatures",
+              "permalink": "/guides/livestreaming/check-webhook-signatures",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/check-webhook-signatures.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Check webhook signatures",
+                "description": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer",
+                "metaTitle": "Check webhook signatures - Livepeer.com",
+                "metaDescription": "Use webhook signatures to ensure incoming webhook requests are coming from Livepeer"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Using webhooks",
+                "permalink": "/guides/livestreaming/webhook"
+              },
+              "next": {
+                "title": "Multistream",
+                "permalink": "/guides/livestreaming/multistream"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/create-a-stream",
+              "id": "guides/livestreaming/create-a-stream",
+              "title": "Create a stream",
+              "description": "Create a Livepeer.com stream",
+              "source": "@site/docs/guides/livestreaming/create-a-stream.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/create-a-stream",
+              "permalink": "/guides/livestreaming/create-a-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/create-a-stream.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Create a stream",
+                "description": "Create a Livepeer.com stream",
+                "metaTitle": "Create a stream - Livepeer.com",
+                "metaDescription": "Create a stream"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Verify a live stream is active",
+                "permalink": "/guides/livestreaming/verify"
+              },
+              "next": {
+                "title": "Playback a live stream",
+                "permalink": "/guides/livestreaming/playback"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/create-paywall",
+              "id": "guides/livestreaming/create-paywall",
+              "title": "Create paywall",
+              "description": "Suggestions for creating paywall with Livepeer",
+              "source": "@site/docs/guides/livestreaming/create-paywall.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/create-paywall",
+              "permalink": "/guides/livestreaming/create-paywall",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/create-paywall.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Create paywall",
+                "description": "Suggestions for creating paywall with Livepeer",
+                "metaTitle": "Create paywall - Livepeer.com",
+                "metaDescription": "Suggestions for creating paywall with Livepeer"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Debug live stream issues",
+                "permalink": "/guides/livestreaming/debug-live-stream-issues"
+              },
+              "next": {
+                "title": "Supported codecs and workflows",
+                "permalink": "/guides/livestreaming/support-matrix"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/debug-live-stream-issues",
+              "id": "guides/livestreaming/debug-live-stream-issues",
+              "title": "Debug live stream issues",
+              "description": "Debug Livepeer.com live stream issues",
+              "source": "@site/docs/guides/livestreaming/debug-live-stream-issues.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/debug-live-stream-issues",
+              "permalink": "/guides/livestreaming/debug-live-stream-issues",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/debug-live-stream-issues.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Debug live stream issues",
+                "description": "Debug Livepeer.com live stream issues",
+                "metaTitle": "Debug live stream issues - Livepeer.com",
+                "metaDescription": "Debug Livepeer.com live stream issues"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Handling disconnects",
+                "permalink": "/guides/livestreaming/handling-disconnects"
+              },
+              "next": {
+                "title": "Create paywall",
+                "permalink": "/guides/livestreaming/create-paywall"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/handling-disconnects",
+              "id": "guides/livestreaming/handling-disconnects",
+              "title": "Handling disconnects",
+              "description": "Handling Livepeer.com disconnects",
+              "source": "@site/docs/guides/livestreaming/handling-disconnects.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/handling-disconnects",
+              "permalink": "/guides/livestreaming/handling-disconnects",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/handling-disconnects.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Handling disconnects",
+                "description": "Handling Livepeer.com disconnects",
+                "metaTitle": "Handling disconnects - Livepeer.com",
+                "metaDescription": "Handling Livepeer.com disconnects"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Tips for reducing latency",
+                "permalink": "/guides/livestreaming/reducing-latency"
+              },
+              "next": {
+                "title": "Debug live stream issues",
+                "permalink": "/guides/livestreaming/debug-live-stream-issues"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/index",
+              "id": "guides/livestreaming/index",
+              "title": "Start live streaming",
+              "description": "Start live streaming",
+              "source": "@site/docs/guides/livestreaming/index.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/",
+              "permalink": "/guides/livestreaming/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Start live streaming",
+                "description": "Start live streaming",
+                "metaTitle": "Start live streaming - Livepeer.com",
+                "metaDescription": "Start live streaming"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/guides/"
+              },
+              "next": {
+                "title": "Getting started tutorial",
+                "permalink": "/guides/livestreaming/tutorial"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/monitoring-stream-health",
+              "id": "guides/livestreaming/monitoring-stream-health",
+              "title": "Monitoring stream health",
+              "description": "Understanding stream performance on Livepeer.com",
+              "source": "@site/docs/guides/livestreaming/monitoring-stream-health.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/monitoring-stream-health",
+              "permalink": "/guides/livestreaming/monitoring-stream-health",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/monitoring-stream-health.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Monitoring stream health",
+                "description": "Understanding stream performance on Livepeer.com",
+                "metaTitle": "Monitoring stream health - Livepeer.com",
+                "metaDescription": "Understanding stream performance on Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Supported codecs and workflows",
+                "permalink": "/guides/livestreaming/support-matrix"
+              },
+              "next": {
+                "title": "SRT Support",
+                "permalink": "/guides/livestreaming/srt-support"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/multistream",
+              "id": "guides/livestreaming/multistream",
+              "title": "Multistream",
+              "description": "Start multistreaming",
+              "source": "@site/docs/guides/livestreaming/multistream.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/multistream",
+              "permalink": "/guides/livestreaming/multistream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/multistream.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Multistream",
+                "description": "Start multistreaming",
+                "metaTitle": "Multistream - Livepeer.com",
+                "metaDescription": "Start multistreaming"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Check webhook signatures",
+                "permalink": "/guides/livestreaming/check-webhook-signatures"
+              },
+              "next": {
+                "title": "Redundant back-up transcoding",
+                "permalink": "/guides/livestreaming/back-up-transcoding"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/playback",
+              "id": "guides/livestreaming/playback",
+              "title": "Playback a live stream",
+              "description": "Playback a Livepeer.com live stream",
+              "source": "@site/docs/guides/livestreaming/playback.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/playback",
+              "permalink": "/guides/livestreaming/playback",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/playback.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Playback a live stream",
+                "description": "Playback a Livepeer.com live stream",
+                "metaTitle": "Playback a live stream - Livepeer.com",
+                "metaDescription": "Playback a Livepeer.com live stream"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Create a stream",
+                "permalink": "/guides/livestreaming/create-a-stream"
+              },
+              "next": {
+                "title": "Record a live stream session",
+                "permalink": "/guides/livestreaming/record"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/record",
+              "id": "guides/livestreaming/record",
+              "title": "Record a live stream session",
+              "description": "Record a Livepeer.com live stream session",
+              "source": "@site/docs/guides/livestreaming/record.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/record",
+              "permalink": "/guides/livestreaming/record",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/record.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Record a live stream session",
+                "description": "Record a Livepeer.com live stream session",
+                "metaTitle": "Record a live stream session - Livepeer.com",
+                "metaDescription": "Record a Livepeer.com live stream session"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Playback a live stream",
+                "permalink": "/guides/livestreaming/playback"
+              },
+              "next": {
+                "title": "Stream delivery via CDN",
+                "permalink": "/guides/livestreaming/cdn"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/reducing-latency",
+              "id": "guides/livestreaming/reducing-latency",
+              "title": "Tips for reducing latency",
+              "description": "Tips for reducing latency with Livepeer.com",
+              "source": "@site/docs/guides/livestreaming/reducing-latency.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/reducing-latency",
+              "permalink": "/guides/livestreaming/reducing-latency",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/reducing-latency.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Tips for reducing latency",
+                "description": "Tips for reducing latency with Livepeer.com",
+                "metaTitle": "Tips for reducing latency - Livepeer.com",
+                "metaDescription": "Tips for reducing latency with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Redundant back-up transcoding",
+                "permalink": "/guides/livestreaming/back-up-transcoding"
+              },
+              "next": {
+                "title": "Handling disconnects",
+                "permalink": "/guides/livestreaming/handling-disconnects"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/srt-support",
+              "id": "guides/livestreaming/srt-support",
+              "title": "SRT Support",
+              "description": "SRT Ingest Supported",
+              "source": "@site/docs/guides/livestreaming/srt-support.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/srt-support",
+              "permalink": "/guides/livestreaming/srt-support",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/srt-support.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "SRT Support",
+                "description": "SRT Ingest Supported",
+                "metaTitle": "SRT Support - Livepeer.com",
+                "metaDescription": "SRT Ingest Supported"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Monitoring stream health",
+                "permalink": "/guides/livestreaming/monitoring-stream-health"
+              },
+              "next": {
+                "title": "API requests",
+                "permalink": "/guides/api"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/support-matrix",
+              "id": "guides/livestreaming/support-matrix",
+              "title": "Supported codecs and workflows",
+              "description": "Codecs and workflows supported by Livepeer.com",
+              "source": "@site/docs/guides/livestreaming/support-matrix.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/support-matrix",
+              "permalink": "/guides/livestreaming/support-matrix",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/support-matrix.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Supported codecs and workflows",
+                "description": "Codecs and workflows supported by Livepeer.com",
+                "metaTitle": "Supported codecs and workflows - Livepeer.com",
+                "metaDescription": "Codecs and workflows supported by Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Create paywall",
+                "permalink": "/guides/livestreaming/create-paywall"
+              },
+              "next": {
+                "title": "Monitoring stream health",
+                "permalink": "/guides/livestreaming/monitoring-stream-health"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/tutorial",
+              "id": "guides/livestreaming/tutorial",
+              "title": "Getting started tutorial",
+              "description": "Start live streaming with Livepeer.com",
+              "source": "@site/docs/guides/livestreaming/tutorial.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/tutorial",
+              "permalink": "/guides/livestreaming/tutorial",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/tutorial.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Getting started tutorial",
+                "description": "Start live streaming with Livepeer.com",
+                "metaTitle": "Getting started tutorial - Livepeer.com",
+                "metaDescription": "Start live streaming with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Start live streaming",
+                "permalink": "/guides/livestreaming/"
+              },
+              "next": {
+                "title": "Configure broadcast software",
+                "permalink": "/guides/livestreaming/broadcasting"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/verify",
+              "id": "guides/livestreaming/verify",
+              "title": "Verify a live stream is active",
+              "description": "Verify your Livepeer.com stream is active",
+              "source": "@site/docs/guides/livestreaming/verify.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/verify",
+              "permalink": "/guides/livestreaming/verify",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/verify.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Verify a live stream is active",
+                "description": "Verify your Livepeer.com stream is active",
+                "metaTitle": "Verify a live stream is active - Livepeer.com",
+                "metaDescription": "Verify your Livepeer.com stream is active"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Get an API key",
+                "permalink": "/guides/livestreaming/api-key"
+              },
+              "next": {
+                "title": "Create a stream",
+                "permalink": "/guides/livestreaming/create-a-stream"
+              }
+            },
+            {
+              "unversionedId": "guides/livestreaming/webhook",
+              "id": "guides/livestreaming/webhook",
+              "title": "Using webhooks",
+              "description": "Use webhooks to listen for video lifecycle events",
+              "source": "@site/docs/guides/livestreaming/webhook.mdx",
+              "sourceDirName": "guides/livestreaming",
+              "slug": "/guides/livestreaming/webhook",
+              "permalink": "/guides/livestreaming/webhook",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/webhook.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Using webhooks",
+                "description": "Use webhooks to listen for video lifecycle events",
+                "metaTitle": "Using webhooks - Livepeer.com",
+                "metaDescription": "Use webhooks to listen for video lifecycle events"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Stream delivery via CDN",
+                "permalink": "/guides/livestreaming/cdn"
+              },
+              "next": {
+                "title": "Check webhook signatures",
+                "permalink": "/guides/livestreaming/check-webhook-signatures"
+              }
+            },
+            {
+              "unversionedId": "guides/nft/build-a-video-nft-app",
+              "id": "guides/nft/build-a-video-nft-app",
+              "title": "Build a Video NFT app",
+              "description": "How to build an app that mints Video NFTs with Livepeer.com",
+              "source": "@site/docs/guides/nft/build-a-video-nft-app.mdx",
+              "sourceDirName": "guides/nft",
+              "slug": "/guides/nft/build-a-video-nft-app",
+              "permalink": "/guides/nft/build-a-video-nft-app",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/nft/build-a-video-nft-app.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Build a Video NFT app",
+                "description": "How to build an app that mints Video NFTs with Livepeer.com",
+                "metaTitle": "Build a Video NFT app - Livepeer.com",
+                "metaDescription": "How to build an app that mints Video NFTs with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Mint a Video NFT",
+                "permalink": "/guides/nft/mint-a-video-nft"
+              },
+              "next": {
+                "title": "Usage and billing",
+                "permalink": "/guides/usage-billing"
+              }
+            },
+            {
+              "unversionedId": "guides/nft/index",
+              "id": "guides/nft/index",
+              "title": "Video NFTs",
+              "description": "Livepeer's Video NFTs documentation",
+              "source": "@site/docs/guides/nft/index.mdx",
+              "sourceDirName": "guides/nft",
+              "slug": "/guides/nft/",
+              "permalink": "/guides/nft/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/nft/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Video NFTs",
+                "description": "Livepeer's Video NFTs documentation",
+                "metaTitle": "Video NFTs - Livepeer.com",
+                "metaDescription": "Livepeer's Video NFTs documentation"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Per stream metrics",
+                "permalink": "/guides/development/per-stream-metrics"
+              },
+              "next": {
+                "title": "Mint a Video NFT",
+                "permalink": "/guides/nft/mint-a-video-nft"
+              }
+            },
+            {
+              "unversionedId": "guides/nft/mint-a-video-nft",
+              "id": "guides/nft/mint-a-video-nft",
+              "title": "Mint a Video NFT",
+              "description": "Learn how to mint a Video NFT with Livepeer.com",
+              "source": "@site/docs/guides/nft/mint-a-video-nft.mdx",
+              "sourceDirName": "guides/nft",
+              "slug": "/guides/nft/mint-a-video-nft",
+              "permalink": "/guides/nft/mint-a-video-nft",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/nft/mint-a-video-nft.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Mint a Video NFT",
+                "description": "Learn how to mint a Video NFT with Livepeer.com",
+                "metaTitle": "Mint a Video NFT - Livepeer.com",
+                "metaDescription": "Learn how to mint a Video NFT with Livepeer.com"
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Video NFTs",
+                "permalink": "/guides/nft/"
+              },
+              "next": {
+                "title": "Build a Video NFT app",
+                "permalink": "/guides/nft/build-a-video-nft-app"
+              }
+            },
+            {
+              "unversionedId": "guides/usage-billing",
+              "id": "guides/usage-billing",
+              "title": "Usage and billing",
+              "description": "Livepeer.com usage and billing documentation",
+              "source": "@site/docs/guides/usage-billing.mdx",
+              "sourceDirName": "guides",
+              "slug": "/guides/usage-billing",
+              "permalink": "/guides/usage-billing",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/usage-billing.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "title": "Usage and billing",
+                "description": "Livepeer.com usage and billing documentation",
+                "metaTitle": "Usage and billing - Livepeer.com",
+                "metaDescription": "Livepeer.com usage and billing documentation",
+                "sidebar_position": 6
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Build a Video NFT app",
+                "permalink": "/guides/nft/build-a-video-nft-app"
+              },
+              "next": {
+                "title": "Terminology",
+                "permalink": "/terminology"
+              }
+            },
+            {
+              "unversionedId": "intro",
+              "id": "intro",
+              "title": "Welcome",
+              "description": "There are multiple ways to livestream with livepeer.com. The only prerequisite",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/intro.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "slug": "/",
+                "title": "Welcome",
+                "sidebar_position": 1
+              }
+            },
+            {
+              "unversionedId": "references/api-key",
+              "id": "references/api-key",
+              "title": "API key",
+              "description": "Livepeer.com API Reference | API key",
+              "source": "@site/docs/references/api-key.mdx",
+              "sourceDirName": "references",
+              "slug": "/references/api-key",
+              "permalink": "/references/api-key",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/api-key.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API key",
+                "description": "Livepeer.com API Reference | API key",
+                "metaTitle": "API key - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | API key"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Errors",
+                "permalink": "/references/errors"
+              },
+              "next": {
+                "title": "Terminology",
+                "permalink": "/terminology"
+              }
+            },
+            {
+              "unversionedId": "references/authentication",
+              "id": "references/authentication",
+              "title": "Authentication",
+              "description": "Livepeer.com API Reference | Authentication",
+              "source": "@site/docs/references/authentication.mdx",
+              "sourceDirName": "references",
+              "slug": "/references/authentication",
+              "permalink": "/references/authentication",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/authentication.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Authentication",
+                "description": "Livepeer.com API Reference | Authentication",
+                "metaTitle": "Authentication - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | Authentication"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Ingest",
+                "permalink": "/references/ingest"
+              },
+              "next": {
+                "title": "Errors",
+                "permalink": "/references/errors"
+              }
+            },
+            {
+              "unversionedId": "references/errors",
+              "id": "references/errors",
+              "title": "Errors",
+              "description": "Livepeer.com API Reference | Errors",
+              "source": "@site/docs/references/errors.mdx",
+              "sourceDirName": "references",
+              "slug": "/references/errors",
+              "permalink": "/references/errors",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/errors.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Errors",
+                "description": "Livepeer.com API Reference | Errors",
+                "metaTitle": "Errors - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | Errors"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Authentication",
+                "permalink": "/references/authentication"
+              },
+              "next": {
+                "title": "API key",
+                "permalink": "/references/api-key"
+              }
+            },
+            {
+              "unversionedId": "references/index",
+              "id": "references/index",
+              "title": "Overview",
+              "description": "Livepeer.com API reference documentation",
+              "source": "@site/docs/references/index.mdx",
+              "sourceDirName": "references",
+              "slug": "/references/",
+              "permalink": "/references/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/index.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Livepeer.com API reference documentation",
+                "metaTitle": "API reference - Livepeer.com",
+                "metaDescription": "Livepeer.com API reference documentation",
+                "sidebar_position": 1
+              },
+              "sidebar": "referencesToc",
+              "next": {
+                "title": "Overview",
+                "permalink": "/references/stream/overview"
+              }
+            },
+            {
+              "unversionedId": "references/ingest",
+              "id": "references/ingest",
+              "title": "Ingest",
+              "description": "Livepeer.com API Reference | Ingest",
+              "source": "@site/docs/references/ingest.mdx",
+              "sourceDirName": "references",
+              "slug": "/references/ingest",
+              "permalink": "/references/ingest",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/ingest.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Ingest",
+                "description": "Livepeer.com API Reference | Ingest",
+                "metaTitle": "Ingest - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | Ingest"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "List Tasks",
+                "permalink": "/references/vod/list-tasks"
+              },
+              "next": {
+                "title": "Authentication",
+                "permalink": "/references/authentication"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/create-target",
+              "id": "references/multistream-target/create-target",
+              "title": "POST create a multistream target",
+              "description": "Livepeer.com API Reference | POST create a target",
+              "source": "@site/docs/references/multistream-target/create-target.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/create-target",
+              "permalink": "/references/multistream-target/create-target",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/create-target.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "POST create a multistream target",
+                "description": "Livepeer.com API Reference | POST create a target",
+                "metaTitle": "POST create a target - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | POST create a target"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/references/multistream-target/overview"
+              },
+              "next": {
+                "title": "GET retrieve a target",
+                "permalink": "/references/multistream-target/get-target"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/delete-target",
+              "id": "references/multistream-target/delete-target",
+              "title": "DELETE a target",
+              "description": "Livepeer.com API Reference | DELETE a target",
+              "source": "@site/docs/references/multistream-target/delete-target.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/delete-target",
+              "permalink": "/references/multistream-target/delete-target",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/delete-target.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "DELETE a target",
+                "description": "Livepeer.com API Reference | DELETE a target",
+                "metaTitle": "DELETE a target - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | DELETE a target"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "PATCH update a target",
+                "permalink": "/references/multistream-target/update-target"
+              },
+              "next": {
+                "title": "Import an Asset",
+                "permalink": "/references/vod/import"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/get-target",
+              "id": "references/multistream-target/get-target",
+              "title": "GET retrieve a target",
+              "description": "Livepeer.com API Reference | GET retrieve a target",
+              "source": "@site/docs/references/multistream-target/get-target.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/get-target",
+              "permalink": "/references/multistream-target/get-target",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/get-target.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET retrieve a target",
+                "description": "Livepeer.com API Reference | GET retrieve a target",
+                "metaTitle": "GET retrieve a target - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET retrieve a target"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "POST create a multistream target",
+                "permalink": "/references/multistream-target/create-target"
+              },
+              "next": {
+                "title": "GET a list of targets",
+                "permalink": "/references/multistream-target/list-targets"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/index",
+              "id": "references/multistream-target/index",
+              "title": "Multistream target",
+              "description": "API Reference | multistream-target",
+              "source": "@site/docs/references/multistream-target/index.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/",
+              "permalink": "/references/multistream-target/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Multistream target",
+                "description": "API Reference | multistream-target",
+                "metaTitle": "Multistream target - Livepeer.com",
+                "metaDescription": "API Reference | multistream-target"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/list-targets",
+              "id": "references/multistream-target/list-targets",
+              "title": "GET a list of targets",
+              "description": "Livepeer.com API Reference | GET a list of targets",
+              "source": "@site/docs/references/multistream-target/list-targets.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/list-targets",
+              "permalink": "/references/multistream-target/list-targets",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/list-targets.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET a list of targets",
+                "description": "Livepeer.com API Reference | GET a list of targets",
+                "metaTitle": "GET a list of targets - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET a list of targets"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET retrieve a target",
+                "permalink": "/references/multistream-target/get-target"
+              },
+              "next": {
+                "title": "PATCH update a target",
+                "permalink": "/references/multistream-target/update-target"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/overview",
+              "id": "references/multistream-target/overview",
+              "title": "Overview",
+              "description": "Livepeer.com API Reference | The multistream target object",
+              "source": "@site/docs/references/multistream-target/overview.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/overview",
+              "permalink": "/references/multistream-target/overview",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/overview.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Livepeer.com API Reference | The multistream target object",
+                "metaTitle": "Overview - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | The multistream target object"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET a list of recorded sessions",
+                "permalink": "/references/session/list-recorded-sessions"
+              },
+              "next": {
+                "title": "POST create a multistream target",
+                "permalink": "/references/multistream-target/create-target"
+              }
+            },
+            {
+              "unversionedId": "references/multistream-target/update-target",
+              "id": "references/multistream-target/update-target",
+              "title": "PATCH update a target",
+              "description": "Livepeer.com API Reference | PATCH update a target",
+              "source": "@site/docs/references/multistream-target/update-target.mdx",
+              "sourceDirName": "references/multistream-target",
+              "slug": "/references/multistream-target/update-target",
+              "permalink": "/references/multistream-target/update-target",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/update-target.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "PATCH update a target",
+                "description": "Livepeer.com API Reference | PATCH update a target",
+                "metaTitle": "PATCH update a target - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | PATCH update a target"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET a list of targets",
+                "permalink": "/references/multistream-target/list-targets"
+              },
+              "next": {
+                "title": "DELETE a target",
+                "permalink": "/references/multistream-target/delete-target"
+              }
+            },
+            {
+              "unversionedId": "references/session/get-session",
+              "id": "references/session/get-session",
+              "title": "GET retrieve a session",
+              "description": "Livepeer.com API Reference | GET retrieve a session",
+              "source": "@site/docs/references/session/get-session.mdx",
+              "sourceDirName": "references/session",
+              "slug": "/references/session/get-session",
+              "permalink": "/references/session/get-session",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/session/get-session.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET retrieve a session",
+                "description": "Livepeer.com API Reference | GET retrieve a session",
+                "metaTitle": "GET retrieve a session - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET retrieve a session"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/references/session/overview"
+              },
+              "next": {
+                "title": "GET a list of sessions",
+                "permalink": "/references/session/list-sessions"
+              }
+            },
+            {
+              "unversionedId": "references/session/index",
+              "id": "references/session/index",
+              "title": "Session",
+              "description": "API Reference | session",
+              "source": "@site/docs/references/session/index.mdx",
+              "sourceDirName": "references/session",
+              "slug": "/references/session/",
+              "permalink": "/references/session/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/session/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Session",
+                "description": "API Reference | session",
+                "metaTitle": "API reference - Livepeer.com",
+                "metaDescription": "Livepeer.com API reference documentation"
+              }
+            },
+            {
+              "unversionedId": "references/session/list-recorded-sessions",
+              "id": "references/session/list-recorded-sessions",
+              "title": "GET a list of recorded sessions",
+              "description": "Livepeer.com API Reference | GET a list of recorded sessions",
+              "source": "@site/docs/references/session/list-recorded-sessions.mdx",
+              "sourceDirName": "references/session",
+              "slug": "/references/session/list-recorded-sessions",
+              "permalink": "/references/session/list-recorded-sessions",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/session/list-recorded-sessions.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET a list of recorded sessions",
+                "description": "Livepeer.com API Reference | GET a list of recorded sessions",
+                "metaTitle": "GET a list of recorded sessions - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET a list of recorded sessions"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET a list of sessions",
+                "permalink": "/references/session/list-sessions"
+              },
+              "next": {
+                "title": "Overview",
+                "permalink": "/references/multistream-target/overview"
+              }
+            },
+            {
+              "unversionedId": "references/session/list-sessions",
+              "id": "references/session/list-sessions",
+              "title": "GET a list of sessions",
+              "description": "Livepeer.com API Reference | GET a list of sessions",
+              "source": "@site/docs/references/session/list-sessions.mdx",
+              "sourceDirName": "references/session",
+              "slug": "/references/session/list-sessions",
+              "permalink": "/references/session/list-sessions",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/session/list-sessions.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET a list of sessions",
+                "description": "Livepeer.com API Reference | GET a list of sessions",
+                "metaTitle": "GET a list of sessions - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET a list of sessions"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET retrieve a session",
+                "permalink": "/references/session/get-session"
+              },
+              "next": {
+                "title": "GET a list of recorded sessions",
+                "permalink": "/references/session/list-recorded-sessions"
+              }
+            },
+            {
+              "unversionedId": "references/session/overview",
+              "id": "references/session/overview",
+              "title": "Overview",
+              "description": "Livepeer.com API Reference | The session object",
+              "source": "@site/docs/references/session/overview.mdx",
+              "sourceDirName": "references/session",
+              "slug": "/references/session/overview",
+              "permalink": "/references/session/overview",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/session/overview.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Livepeer.com API Reference | The session object",
+                "metaTitle": "Overview - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | The session object"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "DELETE a stream",
+                "permalink": "/references/stream/delete-stream"
+              },
+              "next": {
+                "title": "GET retrieve a session",
+                "permalink": "/references/session/get-session"
+              }
+            },
+            {
+              "unversionedId": "references/stream/delete-stream",
+              "id": "references/stream/delete-stream",
+              "title": "DELETE a stream",
+              "description": "Livepeer.com API Reference | DELETE a stream",
+              "source": "@site/docs/references/stream/delete-stream.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/delete-stream",
+              "permalink": "/references/stream/delete-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/delete-stream.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "DELETE a stream",
+                "description": "Livepeer.com API Reference | DELETE a stream",
+                "metaTitle": "DELETE a stream - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | DELETE a stream"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "PATCH update a stream",
+                "permalink": "/references/stream/update-stream"
+              },
+              "next": {
+                "title": "Overview",
+                "permalink": "/references/session/overview"
+              }
+            },
+            {
+              "unversionedId": "references/stream/get-stream",
+              "id": "references/stream/get-stream",
+              "title": "GET retrieve a stream",
+              "description": "Livepeer.com API Reference | GET retrieve a stream",
+              "source": "@site/docs/references/stream/get-stream.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/get-stream",
+              "permalink": "/references/stream/get-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/get-stream.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET retrieve a stream",
+                "description": "Livepeer.com API Reference | GET retrieve a stream",
+                "metaTitle": "GET retrieve a stream - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET retrieve a stream"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "POST create a stream",
+                "permalink": "/references/stream/post-stream"
+              },
+              "next": {
+                "title": "GET a list of streams",
+                "permalink": "/references/stream/list"
+              }
+            },
+            {
+              "unversionedId": "references/stream/index",
+              "id": "references/stream/index",
+              "title": "Stream",
+              "description": "API Reference | stream",
+              "source": "@site/docs/references/stream/index.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/",
+              "permalink": "/references/stream/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Stream",
+                "description": "API Reference | stream",
+                "metaTitle": "Stream - Livepeer.com",
+                "metaDescription": "API Reference | stream"
+              }
+            },
+            {
+              "unversionedId": "references/stream/list",
+              "id": "references/stream/list",
+              "title": "GET a list of streams",
+              "description": "Livepeer.com API Reference | GET a list of streams",
+              "source": "@site/docs/references/stream/list.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/list",
+              "permalink": "/references/stream/list",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/list.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "GET a list of streams",
+                "description": "Livepeer.com API Reference | GET a list of streams",
+                "metaTitle": "GET a list of streams - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | GET a list of streams"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET retrieve a stream",
+                "permalink": "/references/stream/get-stream"
+              },
+              "next": {
+                "title": "PATCH toggle recording",
+                "permalink": "/references/stream/record-on-off"
+              }
+            },
+            {
+              "unversionedId": "references/stream/overview",
+              "id": "references/stream/overview",
+              "title": "Overview",
+              "description": "Livepeer.com API Reference | The stream Object",
+              "source": "@site/docs/references/stream/overview.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/overview",
+              "permalink": "/references/stream/overview",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/overview.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Livepeer.com API Reference | The stream Object",
+                "metaTitle": "Overview - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | The stream Object"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/references/"
+              },
+              "next": {
+                "title": "POST create a stream",
+                "permalink": "/references/stream/post-stream"
+              }
+            },
+            {
+              "unversionedId": "references/stream/post-stream",
+              "id": "references/stream/post-stream",
+              "title": "POST create a stream",
+              "description": "Livepeer.com API Reference | POST create a stream",
+              "source": "@site/docs/references/stream/post-stream.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/post-stream",
+              "permalink": "/references/stream/post-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/post-stream.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "POST create a stream",
+                "description": "Livepeer.com API Reference | POST create a stream",
+                "metaTitle": "POST create a stream",
+                "metaDescription": "Livepeer.com API Reference | POST create a stream"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/references/stream/overview"
+              },
+              "next": {
+                "title": "GET retrieve a stream",
+                "permalink": "/references/stream/get-stream"
+              }
+            },
+            {
+              "unversionedId": "references/stream/record-on-off",
+              "id": "references/stream/record-on-off",
+              "title": "PATCH toggle recording",
+              "description": "Livepeer.com API Reference | PATCH toggle recording",
+              "source": "@site/docs/references/stream/record-on-off.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/record-on-off",
+              "permalink": "/references/stream/record-on-off",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/record-on-off.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "PATCH toggle recording",
+                "description": "Livepeer.com API Reference | PATCH toggle recording",
+                "metaTitle": "PATCH toggle recording - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | PATCH toggle recording"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "GET a list of streams",
+                "permalink": "/references/stream/list"
+              },
+              "next": {
+                "title": "PATCH update a stream",
+                "permalink": "/references/stream/update-stream"
+              }
+            },
+            {
+              "unversionedId": "references/stream/update-stream",
+              "id": "references/stream/update-stream",
+              "title": "PATCH update a stream",
+              "description": "Livepeer.com API Reference | PATCH update a stream",
+              "source": "@site/docs/references/stream/update-stream.mdx",
+              "sourceDirName": "references/stream",
+              "slug": "/references/stream/update-stream",
+              "permalink": "/references/stream/update-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/update-stream.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "PATCH update a stream",
+                "description": "Livepeer.com API Reference | PATCH update a stream",
+                "metaTitle": "PATCH update a stream - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | PATCH update a stream"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "PATCH toggle recording",
+                "permalink": "/references/stream/record-on-off"
+              },
+              "next": {
+                "title": "DELETE a stream",
+                "permalink": "/references/stream/delete-stream"
+              }
+            },
+            {
+              "unversionedId": "references/terminology",
+              "id": "references/terminology",
+              "title": "Terminology",
+              "description": "",
+              "source": "@site/docs/references/terminology.md",
+              "sourceDirName": "references",
+              "slug": "/terminology",
+              "permalink": "/terminology",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/terminology.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "slug": "/terminology",
+                "title": "Terminology",
+                "sidebar_position": 6
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "API key",
+                "permalink": "/references/api-key"
+              }
+            },
+            {
+              "unversionedId": "references/vod/export",
+              "id": "references/vod/export",
+              "title": "Export to IPFS",
+              "description": "Livepeer.com API Reference | Export",
+              "source": "@site/docs/references/vod/export.mdx",
+              "sourceDirName": "references/vod",
+              "slug": "/references/vod/export",
+              "permalink": "/references/vod/export",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/export.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Export to IPFS",
+                "description": "Livepeer.com API Reference | Export",
+                "metaTitle": "Export - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | Export"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "List Assets",
+                "permalink": "/references/vod/list"
+              },
+              "next": {
+                "title": "List Tasks",
+                "permalink": "/references/vod/list-tasks"
+              }
+            },
+            {
+              "unversionedId": "references/vod/import",
+              "id": "references/vod/import",
+              "title": "Import an Asset",
+              "description": "Livepeer.com API Reference | Import",
+              "source": "@site/docs/references/vod/import.mdx",
+              "sourceDirName": "references/vod",
+              "slug": "/references/vod/import",
+              "permalink": "/references/vod/import",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/import.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Import an Asset",
+                "description": "Livepeer.com API Reference | Import",
+                "metaTitle": "Import - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | Import"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "DELETE a target",
+                "permalink": "/references/multistream-target/delete-target"
+              },
+              "next": {
+                "title": "Upload an Asset",
+                "permalink": "/references/vod/upload"
+              }
+            },
+            {
+              "unversionedId": "references/vod/index",
+              "id": "references/vod/index",
+              "title": "Video On Demand",
+              "description": "Livepeer.com API Reference | VOD",
+              "source": "@site/docs/references/vod/index.mdx",
+              "sourceDirName": "references/vod",
+              "slug": "/references/vod/",
+              "permalink": "/references/vod/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/index.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Video On Demand",
+                "description": "Livepeer.com API Reference | VOD",
+                "metaTitle": "VOD - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | VOD"
+              }
+            },
+            {
+              "unversionedId": "references/vod/list",
+              "id": "references/vod/list",
+              "title": "List Assets",
+              "description": "Livepeer.com API Reference | List Assets",
+              "source": "@site/docs/references/vod/list.mdx",
+              "sourceDirName": "references/vod",
+              "slug": "/references/vod/list",
+              "permalink": "/references/vod/list",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/list.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "List Assets",
+                "description": "Livepeer.com API Reference | List Assets",
+                "metaTitle": "List Assets - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | List Assets"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Upload an Asset",
+                "permalink": "/references/vod/upload"
+              },
+              "next": {
+                "title": "Export to IPFS",
+                "permalink": "/references/vod/export"
+              }
+            },
+            {
+              "unversionedId": "references/vod/list-tasks",
+              "id": "references/vod/list-tasks",
+              "title": "List Tasks",
+              "description": "Livepeer.com API Reference | List Tasks",
+              "source": "@site/docs/references/vod/list-tasks.mdx",
+              "sourceDirName": "references/vod",
+              "slug": "/references/vod/list-tasks",
+              "permalink": "/references/vod/list-tasks",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/list-tasks.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "List Tasks",
+                "description": "Livepeer.com API Reference | List Tasks",
+                "metaTitle": "List Tasks - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | List Tasks"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Export to IPFS",
+                "permalink": "/references/vod/export"
+              },
+              "next": {
+                "title": "Ingest",
+                "permalink": "/references/ingest"
+              }
+            },
+            {
+              "unversionedId": "references/vod/upload",
+              "id": "references/vod/upload",
+              "title": "Upload an Asset",
+              "description": "Livepeer.com API Reference | Upload",
+              "source": "@site/docs/references/vod/upload.mdx",
+              "sourceDirName": "references/vod",
+              "slug": "/references/vod/upload",
+              "permalink": "/references/vod/upload",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/upload.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Upload an Asset",
+                "description": "Livepeer.com API Reference | Upload",
+                "metaTitle": "Upload - Livepeer.com",
+                "metaDescription": "Livepeer.com API Reference | Upload"
+              },
+              "sidebar": "referencesToc",
+              "previous": {
+                "title": "Import an Asset",
+                "permalink": "/references/vod/import"
+              },
+              "next": {
+                "title": "List Assets",
+                "permalink": "/references/vod/list"
+              }
+            },
+            {
+              "unversionedId": "studio101/index",
+              "id": "studio101/index",
+              "title": "Studio 101",
+              "description": "",
+              "source": "@site/docs/studio101/index.md",
+              "sourceDirName": "studio101",
+              "slug": "/studio101/",
+              "permalink": "/studio101/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/studio101/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Studio 101"
+              },
+              "sidebar": "studio101"
+            }
+          ],
+          "sidebars": {
+            "studio101": [
+              {
+                "type": "doc",
+                "id": "studio101/index"
+              }
+            ],
+            "buidl": [
+              {
+                "type": "doc",
+                "id": "buidl-quick-start/index"
+              },
+              {
+                "type": "doc",
+                "id": "buidl-quick-start/first-stream"
+              },
+              {
+                "type": "doc",
+                "id": "buidl-quick-start/first-app"
+              },
+              {
+                "type": "doc",
+                "id": "buidl-quick-start/playback"
+              },
+              {
+                "type": "doc",
+                "id": "buidl-quick-start/obs-stream"
+              },
+              {
+                "type": "doc",
+                "id": "buidl-quick-start/browser-stream"
+              }
+            ],
+            "guides": [
+              {
+                "type": "doc",
+                "id": "guides/index"
+              },
+              {
+                "type": "category",
+                "label": "Start live streaming",
+                "link": {
+                  "type": "doc",
+                  "id": "guides/livestreaming/index"
+                },
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/broadcasting"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/api-key"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/verify"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/create-a-stream"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/playback"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/record"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/cdn"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/webhook"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/check-webhook-signatures"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/multistream"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/back-up-transcoding"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/reducing-latency"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/handling-disconnects"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/debug-live-stream-issues"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/create-paywall"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/support-matrix"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/monitoring-stream-health"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/livestreaming/srt-support"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "guides/api"
+              },
+              {
+                "type": "category",
+                "label": "Application Development",
+                "link": {
+                  "type": "doc",
+                  "id": "guides/development/index"
+                },
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "guides/development/example-app"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/development/live-streaming-from-your-app"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/development/video-playback-in-your-app"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/development/custom-domain"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/development/per-stream-metrics"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Video NFT",
+                "link": {
+                  "type": "doc",
+                  "id": "guides/nft/index"
+                },
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "guides/nft/mint-a-video-nft"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "guides/nft/build-a-video-nft-app"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "guides/usage-billing"
+              },
+              {
+                "type": "doc",
+                "id": "references/terminology"
+              }
+            ],
+            "referencesToc": [
+              {
+                "type": "doc",
+                "id": "references/index"
+              },
+              {
+                "type": "category",
+                "label": "Stream",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "references/stream/overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/stream/post-stream"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/stream/get-stream"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/stream/list"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/stream/record-on-off"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/stream/update-stream"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/stream/delete-stream"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Session",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "references/session/overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/session/get-session"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/session/list-sessions"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/session/list-recorded-sessions"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Multistream target",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "references/multistream-target/overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/multistream-target/create-target"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/multistream-target/get-target"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/multistream-target/list-targets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/multistream-target/update-target"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/multistream-target/delete-target"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Video On Demand",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "references/vod/import"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/vod/upload"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/vod/list"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/vod/export"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "references/vod/list-tasks"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "references/ingest"
+              },
+              {
+                "type": "doc",
+                "id": "references/authentication"
+              },
+              {
+                "type": "doc",
+                "id": "references/errors"
+              },
+              {
+                "type": "doc",
+                "id": "references/api-key"
+              },
+              {
+                "type": "doc",
+                "id": "references/terminology"
+              }
+            ]
+          },
+          "mainDocId": "intro",
+          "categoryGeneratedIndices": []
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/landing-page",
+        "source": "@site/src/pages/landing-page.js"
+      },
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        }
+      }
+    ]
+  },
+  "docusaurus-plugin-google-analytics": {},
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-theme-search-algolia": {}
+}

@@ -1,0 +1,404 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "buidl-quick-start/browser-stream",
+              "path": "/buidl-quick-start/browser-stream",
+              "sidebar": "buidl"
+            },
+            {
+              "id": "buidl-quick-start/create-stream",
+              "path": "/buidl-quick-start/create-stream"
+            },
+            {
+              "id": "buidl-quick-start/first-app",
+              "path": "/buidl-quick-start/first-app",
+              "sidebar": "buidl"
+            },
+            {
+              "id": "buidl-quick-start/first-stream",
+              "path": "/buidl-quick-start/first-stream",
+              "sidebar": "buidl"
+            },
+            {
+              "id": "buidl-quick-start/index",
+              "path": "/buidl-quick-start/",
+              "sidebar": "buidl"
+            },
+            {
+              "id": "buidl-quick-start/obs-stream",
+              "path": "/buidl-quick-start/obs-stream",
+              "sidebar": "buidl"
+            },
+            {
+              "id": "buidl-quick-start/playback",
+              "path": "/buidl-quick-start/playback",
+              "sidebar": "buidl"
+            },
+            {
+              "id": "guides/api",
+              "path": "/guides/api",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/development/custom-domain",
+              "path": "/guides/development/custom-domain",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/development/example-app",
+              "path": "/guides/development/example-app",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/development/index",
+              "path": "/guides/development/",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/development/live-streaming-from-your-app",
+              "path": "/guides/development/live-streaming-from-your-app",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/development/per-stream-metrics",
+              "path": "/guides/development/per-stream-metrics",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/development/video-playback-in-your-app",
+              "path": "/guides/development/video-playback-in-your-app",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/index",
+              "path": "/guides/",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/api-key",
+              "path": "/guides/livestreaming/api-key",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/back-up-transcoding",
+              "path": "/guides/livestreaming/back-up-transcoding",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/broadcasting",
+              "path": "/guides/livestreaming/broadcasting",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/cdn",
+              "path": "/guides/livestreaming/cdn",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/check-webhook-signatures",
+              "path": "/guides/livestreaming/check-webhook-signatures",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/create-a-stream",
+              "path": "/guides/livestreaming/create-a-stream",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/create-paywall",
+              "path": "/guides/livestreaming/create-paywall",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/debug-live-stream-issues",
+              "path": "/guides/livestreaming/debug-live-stream-issues",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/handling-disconnects",
+              "path": "/guides/livestreaming/handling-disconnects",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/index",
+              "path": "/guides/livestreaming/",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/monitoring-stream-health",
+              "path": "/guides/livestreaming/monitoring-stream-health",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/multistream",
+              "path": "/guides/livestreaming/multistream",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/playback",
+              "path": "/guides/livestreaming/playback",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/record",
+              "path": "/guides/livestreaming/record",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/reducing-latency",
+              "path": "/guides/livestreaming/reducing-latency",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/srt-support",
+              "path": "/guides/livestreaming/srt-support",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/support-matrix",
+              "path": "/guides/livestreaming/support-matrix",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/tutorial",
+              "path": "/guides/livestreaming/tutorial",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/verify",
+              "path": "/guides/livestreaming/verify",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/livestreaming/webhook",
+              "path": "/guides/livestreaming/webhook",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/nft/build-a-video-nft-app",
+              "path": "/guides/nft/build-a-video-nft-app",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/nft/index",
+              "path": "/guides/nft/",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/nft/mint-a-video-nft",
+              "path": "/guides/nft/mint-a-video-nft",
+              "sidebar": "guides"
+            },
+            {
+              "id": "guides/usage-billing",
+              "path": "/guides/usage-billing",
+              "sidebar": "guides"
+            },
+            {
+              "id": "intro",
+              "path": "/"
+            },
+            {
+              "id": "references/api-key",
+              "path": "/references/api-key",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/authentication",
+              "path": "/references/authentication",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/errors",
+              "path": "/references/errors",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/index",
+              "path": "/references/",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/ingest",
+              "path": "/references/ingest",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/multistream-target/create-target",
+              "path": "/references/multistream-target/create-target",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/multistream-target/delete-target",
+              "path": "/references/multistream-target/delete-target",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/multistream-target/get-target",
+              "path": "/references/multistream-target/get-target",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/multistream-target/index",
+              "path": "/references/multistream-target/"
+            },
+            {
+              "id": "references/multistream-target/list-targets",
+              "path": "/references/multistream-target/list-targets",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/multistream-target/overview",
+              "path": "/references/multistream-target/overview",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/multistream-target/update-target",
+              "path": "/references/multistream-target/update-target",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/session/get-session",
+              "path": "/references/session/get-session",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/session/index",
+              "path": "/references/session/"
+            },
+            {
+              "id": "references/session/list-recorded-sessions",
+              "path": "/references/session/list-recorded-sessions",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/session/list-sessions",
+              "path": "/references/session/list-sessions",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/session/overview",
+              "path": "/references/session/overview",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/delete-stream",
+              "path": "/references/stream/delete-stream",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/get-stream",
+              "path": "/references/stream/get-stream",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/index",
+              "path": "/references/stream/"
+            },
+            {
+              "id": "references/stream/list",
+              "path": "/references/stream/list",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/overview",
+              "path": "/references/stream/overview",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/post-stream",
+              "path": "/references/stream/post-stream",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/record-on-off",
+              "path": "/references/stream/record-on-off",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/stream/update-stream",
+              "path": "/references/stream/update-stream",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/terminology",
+              "path": "/terminology",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/vod/export",
+              "path": "/references/vod/export",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/vod/import",
+              "path": "/references/vod/import",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/vod/index",
+              "path": "/references/vod/"
+            },
+            {
+              "id": "references/vod/list",
+              "path": "/references/vod/list",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/vod/list-tasks",
+              "path": "/references/vod/list-tasks",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "references/vod/upload",
+              "path": "/references/vod/upload",
+              "sidebar": "referencesToc"
+            },
+            {
+              "id": "studio101/index",
+              "path": "/studio101/",
+              "sidebar": "studio101"
+            }
+          ],
+          "sidebars": {
+            "studio101": {
+              "link": {
+                "path": "/studio101/",
+                "label": "studio101/index"
+              }
+            },
+            "buidl": {
+              "link": {
+                "path": "/buidl-quick-start/",
+                "label": "buidl-quick-start/index"
+              }
+            },
+            "guides": {
+              "link": {
+                "path": "/guides/",
+                "label": "guides/index"
+              }
+            },
+            "referencesToc": {
+              "link": {
+                "path": "/references/",
+                "label": "references/index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

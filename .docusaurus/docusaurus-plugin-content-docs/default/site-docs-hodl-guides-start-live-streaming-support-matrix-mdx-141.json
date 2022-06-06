@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/support-matrix",
+  "id": "hodl-guides/start-live-streaming/support-matrix",
+  "title": "Supported codecs and workflows",
+  "description": "Codecs and workflows supported by Livepeer.com",
+  "source": "@site/docs/hodl-guides/start-live-streaming/support-matrix.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/support-matrix",
+  "permalink": "/hodl-guides/start-live-streaming/support-matrix",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/support-matrix.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Supported codecs and workflows",
+    "description": "Codecs and workflows supported by Livepeer.com",
+    "metaTitle": "Supported codecs and workflows - Livepeer.com",
+    "metaDescription": "Codecs and workflows supported by Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Create paywall",
+    "permalink": "/hodl-guides/start-live-streaming/create-paywall"
+  },
+  "next": {
+    "title": "Monitoring stream health",
+    "permalink": "/hodl-guides/start-live-streaming/monitoring-stream-health"
+  }
+}

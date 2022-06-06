@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/livestreaming/reducing-latency",
+  "id": "hodl-guides/livestreaming/reducing-latency",
+  "title": "Tips for reducing latency",
+  "description": "Tips for reducing latency with Livepeer.com",
+  "source": "@site/docs/hodl-guides/livestreaming/reducing-latency.mdx",
+  "sourceDirName": "hodl-guides/livestreaming",
+  "slug": "/hodl-guides/livestreaming/reducing-latency",
+  "permalink": "/hodl-guides/livestreaming/reducing-latency",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/livestreaming/reducing-latency.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tips for reducing latency",
+    "description": "Tips for reducing latency with Livepeer.com",
+    "metaTitle": "Tips for reducing latency - Livepeer.com",
+    "metaDescription": "Tips for reducing latency with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Redundant back-up transcoding",
+    "permalink": "/hodl-guides/livestreaming/back-up-transcoding"
+  },
+  "next": {
+    "title": "Handling disconnects",
+    "permalink": "/hodl-guides/livestreaming/handling-disconnects"
+  }
+}

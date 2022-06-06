@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/verify",
+  "id": "guides/livestreaming/verify",
+  "title": "Verify a live stream is active",
+  "description": "Verify your Livepeer.com stream is active",
+  "source": "@site/docs/guides/livestreaming/verify.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/verify",
+  "permalink": "/guides/livestreaming/verify",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/verify.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Verify a live stream is active",
+    "description": "Verify your Livepeer.com stream is active",
+    "metaTitle": "Verify a live stream is active - Livepeer.com",
+    "metaDescription": "Verify your Livepeer.com stream is active"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Get an API key",
+    "permalink": "/guides/livestreaming/api-key"
+  },
+  "next": {
+    "title": "Create a stream",
+    "permalink": "/guides/livestreaming/create-a-stream"
+  }
+}

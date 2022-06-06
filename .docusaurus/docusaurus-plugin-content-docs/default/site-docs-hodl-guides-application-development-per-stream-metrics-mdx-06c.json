@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/application-development/per-stream-metrics",
+  "id": "hodl-guides/application-development/per-stream-metrics",
+  "title": "Per stream metrics",
+  "description": "Livepeer.com per stream metrics",
+  "source": "@site/docs/hodl-guides/application-development/per-stream-metrics.mdx",
+  "sourceDirName": "hodl-guides/application-development",
+  "slug": "/hodl-guides/application-development/per-stream-metrics",
+  "permalink": "/hodl-guides/application-development/per-stream-metrics",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/application-development/per-stream-metrics.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Per stream metrics",
+    "description": "Livepeer.com per stream metrics",
+    "metaTitle": "Per stream metrics - Livepeer.com",
+    "metaDescription": "Livepeer.com per stream metrics"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Use a custom domain for live streaming",
+    "permalink": "/hodl-guides/application-development/custom-domain"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/hodl-guides/media-server/introduction"
+  }
+}

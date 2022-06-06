@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/handling-disconnects",
+  "id": "hodl-guides/start-live-streaming/handling-disconnects",
+  "title": "Handling disconnects",
+  "description": "Handling Livepeer.com disconnects",
+  "source": "@site/docs/hodl-guides/start-live-streaming/handling-disconnects.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/handling-disconnects",
+  "permalink": "/hodl-guides/start-live-streaming/handling-disconnects",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/handling-disconnects.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Handling disconnects",
+    "description": "Handling Livepeer.com disconnects",
+    "metaTitle": "Handling disconnects - Livepeer.com",
+    "metaDescription": "Handling Livepeer.com disconnects"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Tips for reducing latency",
+    "permalink": "/hodl-guides/start-live-streaming/reducing-latency"
+  },
+  "next": {
+    "title": "Debug live stream issues",
+    "permalink": "/hodl-guides/start-live-streaming/debug-live-stream-issues"
+  }
+}

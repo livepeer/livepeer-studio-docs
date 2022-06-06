@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/debug-live-stream-issues",
+  "id": "hodl-guides/start-live-streaming/debug-live-stream-issues",
+  "title": "Debug live stream issues",
+  "description": "Debug Livepeer.com live stream issues",
+  "source": "@site/docs/hodl-guides/start-live-streaming/debug-live-stream-issues.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/debug-live-stream-issues",
+  "permalink": "/hodl-guides/start-live-streaming/debug-live-stream-issues",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/debug-live-stream-issues.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Debug live stream issues",
+    "description": "Debug Livepeer.com live stream issues",
+    "metaTitle": "Debug live stream issues - Livepeer.com",
+    "metaDescription": "Debug Livepeer.com live stream issues"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Handling disconnects",
+    "permalink": "/hodl-guides/start-live-streaming/handling-disconnects"
+  },
+  "next": {
+    "title": "Create paywall",
+    "permalink": "/hodl-guides/start-live-streaming/create-paywall"
+  }
+}

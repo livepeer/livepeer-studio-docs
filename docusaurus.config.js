@@ -54,24 +54,29 @@ const config = {
         },
         items: [
           {
-            href: "/buidl-quick-start",
-            label: "Buidl",
+            href: "/studio101",
+            label: "Studio 101",
             position: "left"
           },
           {
-            href: "/hodl-guides",
-            label: "Guides",
+            href: "/buidl-quick-start",
+            label: "Buidl Quick Start",
+            position: "left"
+          },
+          {
+            href: "/guides",
+            label: "HODL Guides",
             position: "left",
           },
           {
             href: "/references",
             label: "API",
-            position:"left"
+            position:"right"
           },
           {
             href: "https://forum.livepeer.com/",
             label: "Forum",
-            position: "left"
+            position: "right"
           },
           {
             href: "https://livepeer.com",

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/video-nft/mint-a-video-nft",
+  "id": "guides/video-nft/mint-a-video-nft",
+  "title": "Mint a Video NFT",
+  "description": "Learn how to mint a Video NFT with Livepeer.com",
+  "source": "@site/docs/guides/video-nft/mint-a-video-nft.mdx",
+  "sourceDirName": "guides/video-nft",
+  "slug": "/guides/video-nft/mint-a-video-nft",
+  "permalink": "/guides/video-nft/mint-a-video-nft",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/video-nft/mint-a-video-nft.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Mint a Video NFT",
+    "description": "Learn how to mint a Video NFT with Livepeer.com",
+    "metaTitle": "Mint a Video NFT - Livepeer.com",
+    "metaDescription": "Learn how to mint a Video NFT with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Per stream metrics",
+    "permalink": "/guides/development/per-stream-metrics"
+  },
+  "next": {
+    "title": "Build a Video NFT app",
+    "permalink": "/guides/video-nft/build-a-video-nft-app"
+  }
+}

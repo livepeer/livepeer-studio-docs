@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/multistream",
+  "id": "hodl-guides/start-live-streaming/multistream",
+  "title": "Multistream",
+  "description": "Start multistreaming",
+  "source": "@site/docs/hodl-guides/start-live-streaming/multistream.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/multistream",
+  "permalink": "/hodl-guides/start-live-streaming/multistream",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/multistream.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Multistream",
+    "description": "Start multistreaming",
+    "metaTitle": "Multistream - Livepeer.com",
+    "metaDescription": "Start multistreaming"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Check webhook signatures",
+    "permalink": "/hodl-guides/start-live-streaming/check-webhook-signatures"
+  },
+  "next": {
+    "title": "Redundant back-up transcoding",
+    "permalink": "/hodl-guides/start-live-streaming/back-up-transcoding"
+  }
+}

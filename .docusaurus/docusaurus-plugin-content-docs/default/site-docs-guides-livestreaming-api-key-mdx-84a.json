@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/api-key",
+  "id": "guides/livestreaming/api-key",
+  "title": "Get an API key",
+  "description": "Get a Livepeer.com API key",
+  "source": "@site/docs/guides/livestreaming/api-key.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/api-key",
+  "permalink": "/guides/livestreaming/api-key",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/api-key.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Get an API key",
+    "description": "Get a Livepeer.com API key",
+    "metaTitle": "Get an API key - Livepeer.com",
+    "metaDescription": "Get a Livepeer.com API key"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Configure broadcast software",
+    "permalink": "/guides/livestreaming/broadcasting"
+  },
+  "next": {
+    "title": "Verify a live stream is active",
+    "permalink": "/guides/livestreaming/verify"
+  }
+}

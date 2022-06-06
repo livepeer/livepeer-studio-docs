@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/application-development/custom-domain",
+  "id": "hodl-guides/application-development/custom-domain",
+  "title": "Use a custom domain for live streaming",
+  "description": "Use a custom domain for live streaming with Livepeer.com",
+  "source": "@site/docs/hodl-guides/application-development/custom-domain.mdx",
+  "sourceDirName": "hodl-guides/application-development",
+  "slug": "/hodl-guides/application-development/custom-domain",
+  "permalink": "/hodl-guides/application-development/custom-domain",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/application-development/custom-domain.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Use a custom domain for live streaming",
+    "description": "Use a custom domain for live streaming with Livepeer.com",
+    "metaTitle": "Use a custom domain for live streaming - Livepeer.com",
+    "metaDescription": "Use a custom domain for live streaming with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Selecting a video player for your app",
+    "permalink": "/hodl-guides/application-development/video-playback-in-your-app"
+  },
+  "next": {
+    "title": "Per stream metrics",
+    "permalink": "/hodl-guides/application-development/per-stream-metrics"
+  }
+}

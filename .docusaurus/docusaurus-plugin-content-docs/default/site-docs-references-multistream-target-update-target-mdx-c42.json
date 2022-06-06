@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/multistream-target/update-target",
+  "id": "references/multistream-target/update-target",
+  "title": "PATCH update a target",
+  "description": "Livepeer.com API Reference | PATCH update a target",
+  "source": "@site/docs/references/multistream-target/update-target.mdx",
+  "sourceDirName": "references/multistream-target",
+  "slug": "/references/multistream-target/update-target",
+  "permalink": "/references/multistream-target/update-target",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/multistream-target/update-target.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "PATCH update a target",
+    "description": "Livepeer.com API Reference | PATCH update a target",
+    "metaTitle": "PATCH update a target - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | PATCH update a target"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "GET a list of targets",
+    "permalink": "/references/multistream-target/list-targets"
+  },
+  "next": {
+    "title": "DELETE a target",
+    "permalink": "/references/multistream-target/delete-target"
+  }
+}

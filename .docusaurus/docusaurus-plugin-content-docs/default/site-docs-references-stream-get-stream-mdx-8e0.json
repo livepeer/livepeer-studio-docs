@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/stream/get-stream",
+  "id": "references/stream/get-stream",
+  "title": "GET retrieve a stream",
+  "description": "Livepeer.com API Reference | GET retrieve a stream",
+  "source": "@site/docs/references/stream/get-stream.mdx",
+  "sourceDirName": "references/stream",
+  "slug": "/references/stream/get-stream",
+  "permalink": "/references/stream/get-stream",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/stream/get-stream.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "GET retrieve a stream",
+    "description": "Livepeer.com API Reference | GET retrieve a stream",
+    "metaTitle": "GET retrieve a stream - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | GET retrieve a stream"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "POST create a stream",
+    "permalink": "/references/stream/post-stream"
+  },
+  "next": {
+    "title": "GET a list of streams",
+    "permalink": "/references/stream/list"
+  }
+}

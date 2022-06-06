@@ -1,0 +1,19 @@
+{
+  "unversionedId": "hodl-guides/start-live-streaming/index",
+  "id": "hodl-guides/start-live-streaming/index",
+  "title": "Start live streaming",
+  "description": "Start live streaming",
+  "source": "@site/docs/hodl-guides/start-live-streaming/index.mdx",
+  "sourceDirName": "hodl-guides/start-live-streaming",
+  "slug": "/hodl-guides/start-live-streaming/",
+  "permalink": "/hodl-guides/start-live-streaming/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/start-live-streaming/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Start live streaming",
+    "description": "Start live streaming",
+    "metaTitle": "Start live streaming - Livepeer.com",
+    "metaDescription": "Start live streaming"
+  }
+}

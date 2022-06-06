@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/livestreaming/debug-live-stream-issues",
+  "id": "guides/livestreaming/debug-live-stream-issues",
+  "title": "Debug live stream issues",
+  "description": "Debug Livepeer.com live stream issues",
+  "source": "@site/docs/guides/livestreaming/debug-live-stream-issues.mdx",
+  "sourceDirName": "guides/livestreaming",
+  "slug": "/guides/livestreaming/debug-live-stream-issues",
+  "permalink": "/guides/livestreaming/debug-live-stream-issues",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/livestreaming/debug-live-stream-issues.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Debug live stream issues",
+    "description": "Debug Livepeer.com live stream issues",
+    "metaTitle": "Debug live stream issues - Livepeer.com",
+    "metaDescription": "Debug Livepeer.com live stream issues"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Handling disconnects",
+    "permalink": "/guides/livestreaming/handling-disconnects"
+  },
+  "next": {
+    "title": "Create paywall",
+    "permalink": "/guides/livestreaming/create-paywall"
+  }
+}

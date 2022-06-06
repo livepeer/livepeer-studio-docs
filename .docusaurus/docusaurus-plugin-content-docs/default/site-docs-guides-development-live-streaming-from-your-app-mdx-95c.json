@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/development/live-streaming-from-your-app",
+  "id": "guides/development/live-streaming-from-your-app",
+  "title": "Live streaming from your app",
+  "description": "Live streaming from your app to Livepeer.com",
+  "source": "@site/docs/guides/development/live-streaming-from-your-app.mdx",
+  "sourceDirName": "guides/development",
+  "slug": "/guides/development/live-streaming-from-your-app",
+  "permalink": "/guides/development/live-streaming-from-your-app",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/development/live-streaming-from-your-app.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Live streaming from your app",
+    "description": "Live streaming from your app to Livepeer.com",
+    "metaTitle": "Live streaming from your app - Livepeer.com",
+    "metaDescription": "Live streaming from your app to Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Clone an example app",
+    "permalink": "/guides/development/example-app"
+  },
+  "next": {
+    "title": "Selecting a video player for your app",
+    "permalink": "/guides/development/video-playback-in-your-app"
+  }
+}

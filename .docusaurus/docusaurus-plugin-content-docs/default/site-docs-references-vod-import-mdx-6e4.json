@@ -1,0 +1,28 @@
+{
+  "unversionedId": "references/vod/import",
+  "id": "references/vod/import",
+  "title": "Import an Asset",
+  "description": "Livepeer.com API Reference | Import",
+  "source": "@site/docs/references/vod/import.mdx",
+  "sourceDirName": "references/vod",
+  "slug": "/references/vod/import",
+  "permalink": "/references/vod/import",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/references/vod/import.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Import an Asset",
+    "description": "Livepeer.com API Reference | Import",
+    "metaTitle": "Import - Livepeer.com",
+    "metaDescription": "Livepeer.com API Reference | Import"
+  },
+  "sidebar": "referencesToc",
+  "previous": {
+    "title": "DELETE a target",
+    "permalink": "/references/multistream-target/delete-target"
+  },
+  "next": {
+    "title": "Upload an Asset",
+    "permalink": "/references/vod/upload"
+  }
+}

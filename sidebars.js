@@ -1,5 +1,6 @@
-const guidesToc = require("./docs/hodl-guides/toc")
+const guidesToc = require("./docs/guides/toc")
 const referencesToc = require("./docs/references/toc")
+const studioToc = require("./docs/studio101/toc");
 const buidlToc = require("./docs/buidl-quick-start/toc");
 
 
@@ -7,6 +8,7 @@ const buidlToc = require("./docs/buidl-quick-start/toc");
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+ studio101: studioToc,
  buidl: buidlToc,
  guides: guidesToc,
  referencesToc:  referencesToc

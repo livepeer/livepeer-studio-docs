@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/nft/index",
+  "id": "guides/nft/index",
+  "title": "Video NFTs",
+  "description": "Livepeer's Video NFTs documentation",
+  "source": "@site/docs/guides/nft/index.mdx",
+  "sourceDirName": "guides/nft",
+  "slug": "/guides/nft/",
+  "permalink": "/guides/nft/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/nft/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Video NFTs",
+    "description": "Livepeer's Video NFTs documentation",
+    "metaTitle": "Video NFTs - Livepeer.com",
+    "metaDescription": "Livepeer's Video NFTs documentation"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Per stream metrics",
+    "permalink": "/guides/development/per-stream-metrics"
+  },
+  "next": {
+    "title": "Mint a Video NFT",
+    "permalink": "/guides/nft/mint-a-video-nft"
+  }
+}

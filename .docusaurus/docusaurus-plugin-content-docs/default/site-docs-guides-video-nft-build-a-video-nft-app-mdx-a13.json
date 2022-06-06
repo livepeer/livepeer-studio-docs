@@ -1,0 +1,28 @@
+{
+  "unversionedId": "guides/video-nft/build-a-video-nft-app",
+  "id": "guides/video-nft/build-a-video-nft-app",
+  "title": "Build a Video NFT app",
+  "description": "How to build an app that mints Video NFTs with Livepeer.com",
+  "source": "@site/docs/guides/video-nft/build-a-video-nft-app.mdx",
+  "sourceDirName": "guides/video-nft",
+  "slug": "/guides/video-nft/build-a-video-nft-app",
+  "permalink": "/guides/video-nft/build-a-video-nft-app",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/guides/video-nft/build-a-video-nft-app.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Build a Video NFT app",
+    "description": "How to build an app that mints Video NFTs with Livepeer.com",
+    "metaTitle": "Build a Video NFT app - Livepeer.com",
+    "metaDescription": "How to build an app that mints Video NFTs with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Mint a Video NFT",
+    "permalink": "/guides/video-nft/mint-a-video-nft"
+  },
+  "next": {
+    "title": "Usage and billing",
+    "permalink": "/guides/usage-billing"
+  }
+}

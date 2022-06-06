@@ -1,0 +1,25 @@
+{
+  "unversionedId": "buidl-quick-start/playback",
+  "id": "buidl-quick-start/playback",
+  "title": "Playback",
+  "description": "",
+  "source": "@site/docs/buidl-quick-start/playback.md",
+  "sourceDirName": "buidl-quick-start",
+  "slug": "/buidl-quick-start/playback",
+  "permalink": "/buidl-quick-start/playback",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/playback.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Playback"
+  },
+  "sidebar": "buidl",
+  "previous": {
+    "title": "First App",
+    "permalink": "/buidl-quick-start/first-app"
+  },
+  "next": {
+    "title": "OBS Stream",
+    "permalink": "/buidl-quick-start/obs-stream"
+  }
+}

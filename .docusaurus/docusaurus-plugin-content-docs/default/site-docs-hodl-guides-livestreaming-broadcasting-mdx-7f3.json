@@ -1,0 +1,28 @@
+{
+  "unversionedId": "hodl-guides/livestreaming/broadcasting",
+  "id": "hodl-guides/livestreaming/broadcasting",
+  "title": "Configure broadcast software",
+  "description": "Configure broadcast software to stream with Livepeer.com",
+  "source": "@site/docs/hodl-guides/livestreaming/broadcasting.mdx",
+  "sourceDirName": "hodl-guides/livestreaming",
+  "slug": "/hodl-guides/livestreaming/broadcasting",
+  "permalink": "/hodl-guides/livestreaming/broadcasting",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/livestreaming/broadcasting.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Configure broadcast software",
+    "description": "Configure broadcast software to stream with Livepeer.com",
+    "metaTitle": "Configure broadcast software - Livepeer.com",
+    "metaDescription": "Configure broadcast software to stream with Livepeer.com"
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Getting started tutorial",
+    "permalink": "/hodl-guides/livestreaming/tutorial"
+  },
+  "next": {
+    "title": "Get an API key",
+    "permalink": "/hodl-guides/livestreaming/api-key"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "hodl-guides/application-development/index",
+  "id": "hodl-guides/application-development/index",
+  "title": "Application development",
+  "description": "Using the Livepeer.com API in your app",
+  "source": "@site/docs/hodl-guides/application-development/index.mdx",
+  "sourceDirName": "hodl-guides/application-development",
+  "slug": "/hodl-guides/application-development/",
+  "permalink": "/hodl-guides/application-development/",
+  "editUrl": "https://github.com/livepeer/docs/blob/main/docs/hodl-guides/application-development/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Application development",
+    "description": "Using the Livepeer.com API in your app",
+    "metaTitle": "Application development - Livepeer.com",
+    "metaDescription": "Using the Livepeer.com API in your app"
+  }
+}
