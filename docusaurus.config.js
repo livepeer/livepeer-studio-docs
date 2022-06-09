@@ -56,43 +56,43 @@ const config = {
           {
             href: "/studio101",
             label: "Studio 101",
-            position: "left"
+            position: "left",
           },
           {
-            href: "/buidl-quick-start",
-            label: "Buidl Quick Start",
-            position: "left"
+            href: "/quick-start",
+            label: "Quick Start",
+            position: "left",
           },
           {
             href: "/guides",
-            label: "HODL Guides",
+            label: "Guides",
             position: "left",
           },
           {
             href: "/references",
             label: "API",
-            position:"right"
+            position: "right",
           },
           {
             href: "https://forum.livepeer.com/",
             label: "Forum",
-            position: "right"
+            position: "right",
           },
           {
             href: "https://livepeer.com",
             label: "Follow us",
-            position: "right"
+            position: "right",
           },
           {
             href: "https://livepeer.com",
             label: "Support",
-            position: "right"
+            position: "right",
           },
           {
             href: "https://livepeer.com/dashboard",
             label: "Dashboard",
-            position: "right"
-          }
+            position: "right",
+          },
         ],
       },
       colorMode: {

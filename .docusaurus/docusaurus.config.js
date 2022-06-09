@@ -56,13 +56,13 @@ export default {
           "position": "left"
         },
         {
-          "href": "/buidl-quick-start",
-          "label": "Buidl Quick Start",
+          "href": "/quick-start",
+          "label": "Quick Start",
           "position": "left"
         },
         {
           "href": "/guides",
-          "label": "HODL Guides",
+          "label": "Guides",
           "position": "left"
         },
         {

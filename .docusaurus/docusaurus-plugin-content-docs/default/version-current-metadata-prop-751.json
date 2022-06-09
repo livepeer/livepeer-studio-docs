@@ -15,42 +15,42 @@
         "docId": "studio101/index"
       }
     ],
-    "buidl": [
+    "quickstart": [
       {
         "type": "link",
         "label": "Buidl",
-        "href": "/buidl-quick-start/",
-        "docId": "buidl-quick-start/index"
+        "href": "/quick-start/",
+        "docId": "quick-start/index"
       },
       {
         "type": "link",
         "label": "First Stream",
-        "href": "/buidl-quick-start/first-stream",
-        "docId": "buidl-quick-start/first-stream"
+        "href": "/quick-start/first-stream",
+        "docId": "quick-start/first-stream"
       },
       {
         "type": "link",
         "label": "First App",
-        "href": "/buidl-quick-start/first-app",
-        "docId": "buidl-quick-start/first-app"
+        "href": "/quick-start/first-app",
+        "docId": "quick-start/first-app"
       },
       {
         "type": "link",
         "label": "Playback",
-        "href": "/buidl-quick-start/playback",
-        "docId": "buidl-quick-start/playback"
+        "href": "/quick-start/playback",
+        "docId": "quick-start/playback"
       },
       {
         "type": "link",
         "label": "OBS Stream",
-        "href": "/buidl-quick-start/obs-stream",
-        "docId": "buidl-quick-start/obs-stream"
+        "href": "/quick-start/obs-stream",
+        "docId": "quick-start/obs-stream"
       },
       {
         "type": "link",
         "label": "Browser Stream",
-        "href": "/buidl-quick-start/browser-stream",
-        "docId": "buidl-quick-start/browser-stream"
+        "href": "/quick-start/browser-stream",
+        "docId": "quick-start/browser-stream"
       }
     ],
     "guides": [
@@ -466,47 +466,6 @@
     ]
   },
   "docs": {
-    "buidl-quick-start/browser-stream": {
-      "id": "buidl-quick-start/browser-stream",
-      "title": "Browser Stream",
-      "description": "",
-      "sidebar": "buidl"
-    },
-    "buidl-quick-start/create-stream": {
-      "id": "buidl-quick-start/create-stream",
-      "title": "Create Stream",
-      "description": ""
-    },
-    "buidl-quick-start/first-app": {
-      "id": "buidl-quick-start/first-app",
-      "title": "First App",
-      "description": "",
-      "sidebar": "buidl"
-    },
-    "buidl-quick-start/first-stream": {
-      "id": "buidl-quick-start/first-stream",
-      "title": "First Stream",
-      "description": "",
-      "sidebar": "buidl"
-    },
-    "buidl-quick-start/index": {
-      "id": "buidl-quick-start/index",
-      "title": "Buidl",
-      "description": "",
-      "sidebar": "buidl"
-    },
-    "buidl-quick-start/obs-stream": {
-      "id": "buidl-quick-start/obs-stream",
-      "title": "OBS Stream",
-      "description": "",
-      "sidebar": "buidl"
-    },
-    "buidl-quick-start/playback": {
-      "id": "buidl-quick-start/playback",
-      "title": "Playback",
-      "description": "",
-      "sidebar": "buidl"
-    },
     "guides/api": {
       "id": "guides/api",
       "title": "API requests",
@@ -703,6 +662,47 @@
       "id": "intro",
       "title": "Welcome",
       "description": "There are multiple ways to livestream with livepeer.com. The only prerequisite"
+    },
+    "quick-start/browser-stream": {
+      "id": "quick-start/browser-stream",
+      "title": "Browser Stream",
+      "description": "",
+      "sidebar": "quickstart"
+    },
+    "quick-start/create-stream": {
+      "id": "quick-start/create-stream",
+      "title": "Create Stream",
+      "description": ""
+    },
+    "quick-start/first-app": {
+      "id": "quick-start/first-app",
+      "title": "First App",
+      "description": "",
+      "sidebar": "quickstart"
+    },
+    "quick-start/first-stream": {
+      "id": "quick-start/first-stream",
+      "title": "First Stream",
+      "description": "",
+      "sidebar": "quickstart"
+    },
+    "quick-start/index": {
+      "id": "quick-start/index",
+      "title": "Buidl",
+      "description": "",
+      "sidebar": "quickstart"
+    },
+    "quick-start/obs-stream": {
+      "id": "quick-start/obs-stream",
+      "title": "OBS Stream",
+      "description": "",
+      "sidebar": "quickstart"
+    },
+    "quick-start/playback": {
+      "id": "quick-start/playback",
+      "title": "Playback",
+      "description": "",
+      "sidebar": "quickstart"
     },
     "references/api-key": {
       "id": "references/api-key",

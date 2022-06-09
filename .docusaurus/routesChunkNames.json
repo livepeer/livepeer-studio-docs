@@ -42,7 +42,7 @@
     "component": "component---theme-search-page-1-a-4-d6f",
     "__routeContextModule": "__routeContextModule---searchc-39-e64"
   },
-  "/-c25": {
+  "/-f72": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---935-fcf",
     "__routeContextModule": "__routeContextModule---362-0ea"
@@ -50,34 +50,6 @@
   "/-546": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---0-e-3-279"
-  },
-  "/buidl-quick-start/-daa": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-a-0-d-735"
-  },
-  "/buidl-quick-start/browser-stream-7a0": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-browser-streamcfa-e2a"
-  },
-  "/buidl-quick-start/create-stream-d11": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-create-stream-199-2f9"
-  },
-  "/buidl-quick-start/first-app-72e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-first-appe-88-079"
-  },
-  "/buidl-quick-start/first-stream-aba": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-first-streamcb-6-896"
-  },
-  "/buidl-quick-start/obs-stream-25f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-obs-streamce-0-88f"
-  },
-  "/buidl-quick-start/playback-d32": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---buidl-quick-start-playback-09-c-9ed"
   },
   "/guides/-8e7": {
     "component": "component---theme-doc-item-178-a40",
@@ -206,6 +178,34 @@
   "/guides/usage-billing-8de": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---guides-usage-billingafc-50b"
+  },
+  "/quick-start/-3b1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-11-d-1a2"
+  },
+  "/quick-start/browser-stream-dd2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-browser-stream-3-b-9-d6e"
+  },
+  "/quick-start/create-stream-1fe": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-create-stream-59-b-1e7"
+  },
+  "/quick-start/first-app-9b7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-first-app-81-c-01b"
+  },
+  "/quick-start/first-stream-24d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-first-stream-1-e-9-7e7"
+  },
+  "/quick-start/obs-stream-40f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-obs-streameb-7-8b5"
+  },
+  "/quick-start/playback-129": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---quick-start-playback-322-e2c"
   },
   "/references/-9f0": {
     "component": "component---theme-doc-item-178-a40",

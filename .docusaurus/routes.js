@@ -55,53 +55,12 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/','c25'),
+    component: ComponentCreator('/','f72'),
     routes: [
       {
         path: '/',
         component: ComponentCreator('/','546'),
         exact: true
-      },
-      {
-        path: '/buidl-quick-start/',
-        component: ComponentCreator('/buidl-quick-start/','daa'),
-        exact: true,
-        sidebar: "buidl"
-      },
-      {
-        path: '/buidl-quick-start/browser-stream',
-        component: ComponentCreator('/buidl-quick-start/browser-stream','7a0'),
-        exact: true,
-        sidebar: "buidl"
-      },
-      {
-        path: '/buidl-quick-start/create-stream',
-        component: ComponentCreator('/buidl-quick-start/create-stream','d11'),
-        exact: true
-      },
-      {
-        path: '/buidl-quick-start/first-app',
-        component: ComponentCreator('/buidl-quick-start/first-app','72e'),
-        exact: true,
-        sidebar: "buidl"
-      },
-      {
-        path: '/buidl-quick-start/first-stream',
-        component: ComponentCreator('/buidl-quick-start/first-stream','aba'),
-        exact: true,
-        sidebar: "buidl"
-      },
-      {
-        path: '/buidl-quick-start/obs-stream',
-        component: ComponentCreator('/buidl-quick-start/obs-stream','25f'),
-        exact: true,
-        sidebar: "buidl"
-      },
-      {
-        path: '/buidl-quick-start/playback',
-        component: ComponentCreator('/buidl-quick-start/playback','d32'),
-        exact: true,
-        sidebar: "buidl"
       },
       {
         path: '/guides/',
@@ -294,6 +253,47 @@ export default [
         component: ComponentCreator('/guides/usage-billing','8de'),
         exact: true,
         sidebar: "guides"
+      },
+      {
+        path: '/quick-start/',
+        component: ComponentCreator('/quick-start/','3b1'),
+        exact: true,
+        sidebar: "quickstart"
+      },
+      {
+        path: '/quick-start/browser-stream',
+        component: ComponentCreator('/quick-start/browser-stream','dd2'),
+        exact: true,
+        sidebar: "quickstart"
+      },
+      {
+        path: '/quick-start/create-stream',
+        component: ComponentCreator('/quick-start/create-stream','1fe'),
+        exact: true
+      },
+      {
+        path: '/quick-start/first-app',
+        component: ComponentCreator('/quick-start/first-app','9b7'),
+        exact: true,
+        sidebar: "quickstart"
+      },
+      {
+        path: '/quick-start/first-stream',
+        component: ComponentCreator('/quick-start/first-stream','24d'),
+        exact: true,
+        sidebar: "quickstart"
+      },
+      {
+        path: '/quick-start/obs-stream',
+        component: ComponentCreator('/quick-start/obs-stream','40f'),
+        exact: true,
+        sidebar: "quickstart"
+      },
+      {
+        path: '/quick-start/playback',
+        component: ComponentCreator('/quick-start/playback','129'),
+        exact: true,
+        sidebar: "quickstart"
       },
       {
         path: '/references/',

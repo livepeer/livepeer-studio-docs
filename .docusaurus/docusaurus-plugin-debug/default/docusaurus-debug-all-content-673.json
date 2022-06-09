@@ -19,164 +19,6 @@
           "contentPathLocalized": "/Users/shih-yuhwang/Desktop/livepeer-studio-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "buidl-quick-start/browser-stream",
-              "id": "buidl-quick-start/browser-stream",
-              "title": "Browser Stream",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/browser-stream.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/browser-stream",
-              "permalink": "/buidl-quick-start/browser-stream",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/browser-stream.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Browser Stream"
-              },
-              "sidebar": "buidl",
-              "previous": {
-                "title": "OBS Stream",
-                "permalink": "/buidl-quick-start/obs-stream"
-              }
-            },
-            {
-              "unversionedId": "buidl-quick-start/create-stream",
-              "id": "buidl-quick-start/create-stream",
-              "title": "Create Stream",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/create-stream.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/create-stream",
-              "permalink": "/buidl-quick-start/create-stream",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/create-stream.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Create Stream"
-              }
-            },
-            {
-              "unversionedId": "buidl-quick-start/first-app",
-              "id": "buidl-quick-start/first-app",
-              "title": "First App",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/first-app.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/first-app",
-              "permalink": "/buidl-quick-start/first-app",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/first-app.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "First App"
-              },
-              "sidebar": "buidl",
-              "previous": {
-                "title": "First Stream",
-                "permalink": "/buidl-quick-start/first-stream"
-              },
-              "next": {
-                "title": "Playback",
-                "permalink": "/buidl-quick-start/playback"
-              }
-            },
-            {
-              "unversionedId": "buidl-quick-start/first-stream",
-              "id": "buidl-quick-start/first-stream",
-              "title": "First Stream",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/first-stream.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/first-stream",
-              "permalink": "/buidl-quick-start/first-stream",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/first-stream.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "First Stream"
-              },
-              "sidebar": "buidl",
-              "previous": {
-                "title": "Buidl",
-                "permalink": "/buidl-quick-start/"
-              },
-              "next": {
-                "title": "First App",
-                "permalink": "/buidl-quick-start/first-app"
-              }
-            },
-            {
-              "unversionedId": "buidl-quick-start/index",
-              "id": "buidl-quick-start/index",
-              "title": "Buidl",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/index.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/",
-              "permalink": "/buidl-quick-start/",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/index.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Buidl"
-              },
-              "sidebar": "buidl",
-              "next": {
-                "title": "First Stream",
-                "permalink": "/buidl-quick-start/first-stream"
-              }
-            },
-            {
-              "unversionedId": "buidl-quick-start/obs-stream",
-              "id": "buidl-quick-start/obs-stream",
-              "title": "OBS Stream",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/obs-stream.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/obs-stream",
-              "permalink": "/buidl-quick-start/obs-stream",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/obs-stream.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "OBS Stream"
-              },
-              "sidebar": "buidl",
-              "previous": {
-                "title": "Playback",
-                "permalink": "/buidl-quick-start/playback"
-              },
-              "next": {
-                "title": "Browser Stream",
-                "permalink": "/buidl-quick-start/browser-stream"
-              }
-            },
-            {
-              "unversionedId": "buidl-quick-start/playback",
-              "id": "buidl-quick-start/playback",
-              "title": "Playback",
-              "description": "",
-              "source": "@site/docs/buidl-quick-start/playback.md",
-              "sourceDirName": "buidl-quick-start",
-              "slug": "/buidl-quick-start/playback",
-              "permalink": "/buidl-quick-start/playback",
-              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/buidl-quick-start/playback.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Playback"
-              },
-              "sidebar": "buidl",
-              "previous": {
-                "title": "First App",
-                "permalink": "/buidl-quick-start/first-app"
-              },
-              "next": {
-                "title": "OBS Stream",
-                "permalink": "/buidl-quick-start/obs-stream"
-              }
-            },
-            {
               "unversionedId": "guides/api",
               "id": "guides/api",
               "title": "API requests",
@@ -1094,6 +936,164 @@
               }
             },
             {
+              "unversionedId": "quick-start/browser-stream",
+              "id": "quick-start/browser-stream",
+              "title": "Browser Stream",
+              "description": "",
+              "source": "@site/docs/quick-start/browser-stream.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/browser-stream",
+              "permalink": "/quick-start/browser-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/browser-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Browser Stream"
+              },
+              "sidebar": "quickstart",
+              "previous": {
+                "title": "OBS Stream",
+                "permalink": "/quick-start/obs-stream"
+              }
+            },
+            {
+              "unversionedId": "quick-start/create-stream",
+              "id": "quick-start/create-stream",
+              "title": "Create Stream",
+              "description": "",
+              "source": "@site/docs/quick-start/create-stream.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/create-stream",
+              "permalink": "/quick-start/create-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/create-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Create Stream"
+              }
+            },
+            {
+              "unversionedId": "quick-start/first-app",
+              "id": "quick-start/first-app",
+              "title": "First App",
+              "description": "",
+              "source": "@site/docs/quick-start/first-app.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/first-app",
+              "permalink": "/quick-start/first-app",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/first-app.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "First App"
+              },
+              "sidebar": "quickstart",
+              "previous": {
+                "title": "First Stream",
+                "permalink": "/quick-start/first-stream"
+              },
+              "next": {
+                "title": "Playback",
+                "permalink": "/quick-start/playback"
+              }
+            },
+            {
+              "unversionedId": "quick-start/first-stream",
+              "id": "quick-start/first-stream",
+              "title": "First Stream",
+              "description": "",
+              "source": "@site/docs/quick-start/first-stream.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/first-stream",
+              "permalink": "/quick-start/first-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/first-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "First Stream"
+              },
+              "sidebar": "quickstart",
+              "previous": {
+                "title": "Buidl",
+                "permalink": "/quick-start/"
+              },
+              "next": {
+                "title": "First App",
+                "permalink": "/quick-start/first-app"
+              }
+            },
+            {
+              "unversionedId": "quick-start/index",
+              "id": "quick-start/index",
+              "title": "Buidl",
+              "description": "",
+              "source": "@site/docs/quick-start/index.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/",
+              "permalink": "/quick-start/",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Buidl"
+              },
+              "sidebar": "quickstart",
+              "next": {
+                "title": "First Stream",
+                "permalink": "/quick-start/first-stream"
+              }
+            },
+            {
+              "unversionedId": "quick-start/obs-stream",
+              "id": "quick-start/obs-stream",
+              "title": "OBS Stream",
+              "description": "",
+              "source": "@site/docs/quick-start/obs-stream.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/obs-stream",
+              "permalink": "/quick-start/obs-stream",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/obs-stream.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "OBS Stream"
+              },
+              "sidebar": "quickstart",
+              "previous": {
+                "title": "Playback",
+                "permalink": "/quick-start/playback"
+              },
+              "next": {
+                "title": "Browser Stream",
+                "permalink": "/quick-start/browser-stream"
+              }
+            },
+            {
+              "unversionedId": "quick-start/playback",
+              "id": "quick-start/playback",
+              "title": "Playback",
+              "description": "",
+              "source": "@site/docs/quick-start/playback.md",
+              "sourceDirName": "quick-start",
+              "slug": "/quick-start/playback",
+              "permalink": "/quick-start/playback",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/quick-start/playback.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Playback"
+              },
+              "sidebar": "quickstart",
+              "previous": {
+                "title": "First App",
+                "permalink": "/quick-start/first-app"
+              },
+              "next": {
+                "title": "OBS Stream",
+                "permalink": "/quick-start/obs-stream"
+              }
+            },
+            {
               "unversionedId": "references/api-key",
               "id": "references/api-key",
               "title": "API key",
@@ -1972,30 +1972,30 @@
                 "id": "studio101/index"
               }
             ],
-            "buidl": [
+            "quickstart": [
               {
                 "type": "doc",
-                "id": "buidl-quick-start/index"
+                "id": "quick-start/index"
               },
               {
                 "type": "doc",
-                "id": "buidl-quick-start/first-stream"
+                "id": "quick-start/first-stream"
               },
               {
                 "type": "doc",
-                "id": "buidl-quick-start/first-app"
+                "id": "quick-start/first-app"
               },
               {
                 "type": "doc",
-                "id": "buidl-quick-start/playback"
+                "id": "quick-start/playback"
               },
               {
                 "type": "doc",
-                "id": "buidl-quick-start/obs-stream"
+                "id": "quick-start/obs-stream"
               },
               {
                 "type": "doc",
-                "id": "buidl-quick-start/browser-stream"
+                "id": "quick-start/browser-stream"
               }
             ],
             "guides": [

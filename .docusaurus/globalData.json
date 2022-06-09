@@ -11,40 +11,6 @@
           "mainDocId": "intro",
           "docs": [
             {
-              "id": "buidl-quick-start/browser-stream",
-              "path": "/buidl-quick-start/browser-stream",
-              "sidebar": "buidl"
-            },
-            {
-              "id": "buidl-quick-start/create-stream",
-              "path": "/buidl-quick-start/create-stream"
-            },
-            {
-              "id": "buidl-quick-start/first-app",
-              "path": "/buidl-quick-start/first-app",
-              "sidebar": "buidl"
-            },
-            {
-              "id": "buidl-quick-start/first-stream",
-              "path": "/buidl-quick-start/first-stream",
-              "sidebar": "buidl"
-            },
-            {
-              "id": "buidl-quick-start/index",
-              "path": "/buidl-quick-start/",
-              "sidebar": "buidl"
-            },
-            {
-              "id": "buidl-quick-start/obs-stream",
-              "path": "/buidl-quick-start/obs-stream",
-              "sidebar": "buidl"
-            },
-            {
-              "id": "buidl-quick-start/playback",
-              "path": "/buidl-quick-start/playback",
-              "sidebar": "buidl"
-            },
-            {
               "id": "guides/api",
               "path": "/guides/api",
               "sidebar": "guides"
@@ -207,6 +173,40 @@
             {
               "id": "intro",
               "path": "/"
+            },
+            {
+              "id": "quick-start/browser-stream",
+              "path": "/quick-start/browser-stream",
+              "sidebar": "quickstart"
+            },
+            {
+              "id": "quick-start/create-stream",
+              "path": "/quick-start/create-stream"
+            },
+            {
+              "id": "quick-start/first-app",
+              "path": "/quick-start/first-app",
+              "sidebar": "quickstart"
+            },
+            {
+              "id": "quick-start/first-stream",
+              "path": "/quick-start/first-stream",
+              "sidebar": "quickstart"
+            },
+            {
+              "id": "quick-start/index",
+              "path": "/quick-start/",
+              "sidebar": "quickstart"
+            },
+            {
+              "id": "quick-start/obs-stream",
+              "path": "/quick-start/obs-stream",
+              "sidebar": "quickstart"
+            },
+            {
+              "id": "quick-start/playback",
+              "path": "/quick-start/playback",
+              "sidebar": "quickstart"
             },
             {
               "id": "references/api-key",
@@ -377,10 +377,10 @@
                 "label": "studio101/index"
               }
             },
-            "buidl": {
+            "quickstart": {
               "link": {
-                "path": "/buidl-quick-start/",
-                "label": "buidl-quick-start/index"
+                "path": "/quick-start/",
+                "label": "quick-start/index"
               }
             },
             "guides": {
