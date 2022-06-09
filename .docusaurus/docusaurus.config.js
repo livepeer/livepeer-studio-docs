@@ -20,12 +20,12 @@ export default {
         "docs": {
           "routeBasePath": "/",
           "breadcrumbs": true,
-          "sidebarPath": "/Users/drewhoang/Desktop/livepeer-studio-docs/sidebars.js",
+          "sidebarPath": "/Users/shih-yuhwang/Desktop/livepeer-studio-docs/sidebars.js",
           "editUrl": "https://github.com/livepeer/docs/blob/main"
         },
         "blog": false,
         "theme": {
-          "customCss": "/Users/drewhoang/Desktop/livepeer-studio-docs/src/css/custom.css"
+          "customCss": "/Users/shih-yuhwang/Desktop/livepeer-studio-docs/src/css/custom.css"
         },
         "googleAnalytics": {
           "trackingID": "UA-111259858-1",

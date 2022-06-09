@@ -14,9 +14,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/drewhoang/Desktop/livepeer-studio-docs/sidebars.js",
-          "contentPath": "/Users/drewhoang/Desktop/livepeer-studio-docs/docs",
-          "contentPathLocalized": "/Users/drewhoang/Desktop/livepeer-studio-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/shih-yuhwang/Desktop/livepeer-studio-docs/sidebars.js",
+          "contentPath": "/Users/shih-yuhwang/Desktop/livepeer-studio-docs/docs",
+          "contentPathLocalized": "/Users/shih-yuhwang/Desktop/livepeer-studio-docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "buidl-quick-start/browser-stream",

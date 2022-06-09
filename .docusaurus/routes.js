@@ -5,57 +5,57 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug','cb2'),
+    component: ComponentCreator('/__docusaurus/debug','68b'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config','3c7'),
+    component: ComponentCreator('/__docusaurus/debug/config','e0e'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content','8bf'),
+    component: ComponentCreator('/__docusaurus/debug/content','651'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData','f4e'),
+    component: ComponentCreator('/__docusaurus/debug/globalData','4cc'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata','9b5'),
+    component: ComponentCreator('/__docusaurus/debug/metadata','633'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry','6f5'),
+    component: ComponentCreator('/__docusaurus/debug/registry','019'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes','8f7'),
+    component: ComponentCreator('/__docusaurus/debug/routes','58a'),
     exact: true
   },
   {
     path: '/landing-page',
-    component: ComponentCreator('/landing-page','2b9'),
+    component: ComponentCreator('/landing-page','805'),
     exact: true
   },
   {
     path: '/markdown-page',
-    component: ComponentCreator('/markdown-page','ccb'),
+    component: ComponentCreator('/markdown-page','473'),
     exact: true
   },
   {
     path: '/search',
-    component: ComponentCreator('/search','fcf'),
+    component: ComponentCreator('/search','b02'),
     exact: true
   },
   {
     path: '/',
-    component: ComponentCreator('/','ddc'),
+    component: ComponentCreator('/','c25'),
     routes: [
       {
         path: '/',
