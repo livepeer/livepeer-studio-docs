@@ -1,51 +1,51 @@
 {
-  "/__docusaurus/debug-cb2": {
+  "/__docusaurus/debug-c67": {
     "component": "component---theme-debug-config-23-a-2ff",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/__docusaurus/debug/config-3c7": {
+  "/__docusaurus/debug/config-8d9": {
     "component": "component---theme-debug-config-23-a-2ff",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/__docusaurus/debug/content-8bf": {
+  "/__docusaurus/debug/content-73a": {
     "component": "component---theme-debug-contentba-8-ce7",
     "allContent": "allContent---docusaurus-debug-content-246-9aa",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/__docusaurus/debug/globalData-f4e": {
+  "/__docusaurus/debug/globalData-97b": {
     "component": "component---theme-debug-global-dataede-0fa",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/__docusaurus/debug/metadata-9b5": {
+  "/__docusaurus/debug/metadata-3c3": {
     "component": "component---theme-debug-site-metadata-68-e-3d4",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/__docusaurus/debug/registry-6f5": {
+  "/__docusaurus/debug/registry-0f9": {
     "component": "component---theme-debug-registry-679-501",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/__docusaurus/debug/routes-8f7": {
+  "/__docusaurus/debug/routes-989": {
     "component": "component---theme-debug-routes-946-699",
-    "__routeContextModule": "__routeContextModule---docusaurus-debug-28-f-29c"
+    "__routeContextModule": "__routeContextModule---docusaurus-debug-9-e-8-755"
   },
-  "/landing-page-2b9": {
+  "/landing-page-668": {
     "component": "component---site-src-pages-landing-page-jsc-82-d6c",
     "config": "config---landing-page-5-e-9-22e",
-    "__routeContextModule": "__routeContextModule---landing-page-7-b-0-00f"
+    "__routeContextModule": "__routeContextModule---landing-page-234-752"
   },
-  "/markdown-page-ccb": {
+  "/markdown-page-ef6": {
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028",
-    "__routeContextModule": "__routeContextModule---landing-page-7-b-0-00f"
+    "__routeContextModule": "__routeContextModule---landing-page-234-752"
   },
-  "/search-fcf": {
+  "/search-d14": {
     "component": "component---theme-search-page-1-a-4-d6f",
-    "__routeContextModule": "__routeContextModule---search-0-f-7-865"
+    "__routeContextModule": "__routeContextModule---search-0-d-9-931"
   },
-  "/-ddc": {
+  "/-fb6": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---935-fcf",
-    "__routeContextModule": "__routeContextModule---e-87-48d"
+    "__routeContextModule": "__routeContextModule---051-cad"
   },
   "/-546": {
     "component": "component---theme-doc-item-178-a40",
@@ -334,6 +334,18 @@
   "/studio101/-e9d": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---studio-101-411-f45"
+  },
+  "/studio101/architecture101-2e1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---studio-101-architecture-101-ad-8-ea6"
+  },
+  "/studio101/features-5ff": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---studio-101-features-88-b-243"
+  },
+  "/studio101/tech-overview-ff6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---studio-101-tech-overview-7-e-4-c5e"
   },
   "/terminology-6b7": {
     "component": "component---theme-doc-item-178-a40",

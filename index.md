@@ -21,7 +21,7 @@ You can apply this quick start to:
 - Livepeer Studio In-browser Application
 - Livestreaming encoder with more latency
 - Inbrowser platforms (Restream/Streamyard)
-- https://www.notion.so/livepeer/Blog-Post-Tutorial-on-choosing-a-streaming-method-3471461c0054460abcafc2df584aeb06
+- [Choosing a Stream Method](https://www.notion.so/livepeer/Blog-Post-Tutorial-on-choosing-a-streaming-method-3471461c0054460abcafc2df584aeb06)
 
 ### Methods
 

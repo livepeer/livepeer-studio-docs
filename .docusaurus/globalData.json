@@ -365,9 +365,21 @@
               "sidebar": "referencesToc"
             },
             {
+              "id": "studio101/architecture101",
+              "path": "/studio101/architecture101"
+            },
+            {
+              "id": "studio101/features",
+              "path": "/studio101/features"
+            },
+            {
               "id": "studio101/index",
               "path": "/studio101/",
               "sidebar": "studio101"
+            },
+            {
+              "id": "studio101/tech-overview",
+              "path": "/studio101/tech-overview"
             }
           ],
           "sidebars": {

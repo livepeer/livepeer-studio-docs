@@ -892,11 +892,26 @@
       "description": "Livepeer.com API Reference | Upload",
       "sidebar": "referencesToc"
     },
+    "studio101/architecture101": {
+      "id": "studio101/architecture101",
+      "title": "Livepeer Studio Architecture",
+      "description": "This document covers the architecture and component descriptions in Livepeer."
+    },
+    "studio101/features": {
+      "id": "studio101/features",
+      "title": "Livepeer Studio Features and Capabilities",
+      "description": "The following provides a high-level overview of the Use Cases and Methods you can implement to build your livestreaming application with Livepeer Studio"
+    },
     "studio101/index": {
       "id": "studio101/index",
       "title": "Studio 101",
       "description": "",
       "sidebar": "studio101"
+    },
+    "studio101/tech-overview": {
+      "id": "studio101/tech-overview",
+      "title": "tech-overview",
+      "description": "How Does Livepeer studio work?"
     }
   }
 }

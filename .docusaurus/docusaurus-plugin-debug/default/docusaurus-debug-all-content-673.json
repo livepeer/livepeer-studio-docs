@@ -14,9 +14,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/drewhoang/Desktop/livepeer-studio-docs/sidebars.js",
-          "contentPath": "/Users/drewhoang/Desktop/livepeer-studio-docs/docs",
-          "contentPathLocalized": "/Users/drewhoang/Desktop/livepeer-studio-docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "C:\\users\\hjoll\\documents\\livepeer-studio-docs\\sidebars.js",
+          "contentPath": "C:\\users\\hjoll\\documents\\livepeer-studio-docs\\docs",
+          "contentPathLocalized": "C:\\users\\hjoll\\documents\\livepeer-studio-docs\\i18n\\en\\docusaurus-plugin-content-docs\\current",
           "docs": [
             {
               "unversionedId": "buidl-quick-start/browser-stream",
@@ -1948,6 +1948,38 @@
               }
             },
             {
+              "unversionedId": "studio101/architecture101",
+              "id": "studio101/architecture101",
+              "title": "Livepeer Studio Architecture",
+              "description": "This document covers the architecture and component descriptions in Livepeer.",
+              "source": "@site/docs/studio101/architecture101.md",
+              "sourceDirName": "studio101",
+              "slug": "/studio101/architecture101",
+              "permalink": "/studio101/architecture101",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/studio101/architecture101.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Livepeer Studio Architecture"
+              }
+            },
+            {
+              "unversionedId": "studio101/features",
+              "id": "studio101/features",
+              "title": "Livepeer Studio Features and Capabilities",
+              "description": "The following provides a high-level overview of the Use Cases and Methods you can implement to build your livestreaming application with Livepeer Studio",
+              "source": "@site/docs/studio101/features.md",
+              "sourceDirName": "studio101",
+              "slug": "/studio101/features",
+              "permalink": "/studio101/features",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/studio101/features.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Livepeer Studio Features and Capabilities"
+              }
+            },
+            {
               "unversionedId": "studio101/index",
               "id": "studio101/index",
               "title": "Studio 101",
@@ -1963,6 +1995,22 @@
                 "title": "Studio 101"
               },
               "sidebar": "studio101"
+            },
+            {
+              "unversionedId": "studio101/tech-overview",
+              "id": "studio101/tech-overview",
+              "title": "tech-overview",
+              "description": "How Does Livepeer studio work?",
+              "source": "@site/docs/studio101/tech-overview.md",
+              "sourceDirName": "studio101",
+              "slug": "/studio101/tech-overview",
+              "permalink": "/studio101/tech-overview",
+              "editUrl": "https://github.com/livepeer/docs/blob/main/docs/studio101/tech-overview.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "Title": "Technical Overview"
+              }
             }
           ],
           "sidebars": {

@@ -5,57 +5,57 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug','cb2'),
+    component: ComponentCreator('/__docusaurus/debug','c67'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config','3c7'),
+    component: ComponentCreator('/__docusaurus/debug/config','8d9'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content','8bf'),
+    component: ComponentCreator('/__docusaurus/debug/content','73a'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData','f4e'),
+    component: ComponentCreator('/__docusaurus/debug/globalData','97b'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata','9b5'),
+    component: ComponentCreator('/__docusaurus/debug/metadata','3c3'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry','6f5'),
+    component: ComponentCreator('/__docusaurus/debug/registry','0f9'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes','8f7'),
+    component: ComponentCreator('/__docusaurus/debug/routes','989'),
     exact: true
   },
   {
     path: '/landing-page',
-    component: ComponentCreator('/landing-page','2b9'),
+    component: ComponentCreator('/landing-page','668'),
     exact: true
   },
   {
     path: '/markdown-page',
-    component: ComponentCreator('/markdown-page','ccb'),
+    component: ComponentCreator('/markdown-page','ef6'),
     exact: true
   },
   {
     path: '/search',
-    component: ComponentCreator('/search','fcf'),
+    component: ComponentCreator('/search','d14'),
     exact: true
   },
   {
     path: '/',
-    component: ComponentCreator('/','ddc'),
+    component: ComponentCreator('/','fb6'),
     routes: [
       {
         path: '/',
@@ -482,6 +482,21 @@ export default [
         component: ComponentCreator('/studio101/','e9d'),
         exact: true,
         sidebar: "studio101"
+      },
+      {
+        path: '/studio101/architecture101',
+        component: ComponentCreator('/studio101/architecture101','2e1'),
+        exact: true
+      },
+      {
+        path: '/studio101/features',
+        component: ComponentCreator('/studio101/features','5ff'),
+        exact: true
+      },
+      {
+        path: '/studio101/tech-overview',
+        component: ComponentCreator('/studio101/tech-overview','ff6'),
+        exact: true
       },
       {
         path: '/terminology',
