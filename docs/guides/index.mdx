@@ -1,75 +1,348 @@
 ---
-title: Overview
-description: Livepeer.com Video Guides Overview
-metaTitle: Overview - Livepeer.com
-metaDescription: Livepeer.com Video Guides Overview
-sidebar_position: 1
+title: QuickStart
 ---
 
-# Livepeer.com documentation
 
-<Text size="5" variant="gray" css={{ mt: "-$5", mb: "$7" }}>
-  Explore guides, tutorials and sample code.
-</Text>
+The following includes a step-by-step process to follow to get started with the Livepeer Studio API with Node.js and Axios so that you can go through the cycle of Livestreaming following our recommended best practices:
 
-<!-- {/* <Grid
-  gap={6}
-  css={{
-    mb: "$9",
-    gridTemplateColumns: "repeat(1, 1fr)",
-    "@bp1": {
-      gridTemplateColumns: "repeat(2, 1fr)",
-    },
-  }}>
-  <Post
-    title="Start Live Streaming"
-    description="Quickly get started with Livepeer.com"
-    href="/docs/guides/start-live-streaming/tutorial"
-    image="/img/docs/thumbnail.jpg"
-  />
-  <Post
-    title="Supported Codecs and Workflows"
-    description="Review the workflows Livepeer.com supports"
-    href="/docs/guides/start-live-streaming/support-matrix"
-    image="/img/docs/thumbnail2.jpg"
-  />
-</Grid> */} -->
+- [Create a livestream](/guides#create-a-livestream) 
+- [Record the livestream](/guides#toggle-the-recording) 
+- [Play back the livestream](/guides#get-a-list-of-recorded-sessions) using the [Livepeer Studio API](/references) with Node.js and Axios
 
-## Popular guides
-<!-- 
-<Grid
-  gap={3}
-  css={{
-    gridTemplateColumns: "repeat(1, 1fr)",
-    "@bp1": {
-      gridTemplateColumns: "repeat(2, 1fr)",
-    },
-    "@bp2": {
-      gridTemplateColumns: "repeat(3, 1fr)",
-    },
-  }}>
-  <Card
-    href="/docs/guides/start-live-streaming/tutorial"
-    title="Start live streaming with Livepeer.com"
-  />
-  <Card
-    href="/docs/guides/application-development/example-app"
-    title="Clone an example application"
-  />
-  <Card
-    href="/docs/guides/start-live-streaming/playback"
-    title="Playback a live stream"
-  />
-  <Card
-    href="/docs/guides/start-live-streaming/broadcasting"
-    title="Configure broadcast software"
-  />
-  <Card
-    href="/docs/guides/start-live-streaming/record"
-    title="Record a live stream session"
-  />
-  <Card
-    href="/docs/guides/start-live-streaming/debug-live-stream-issues"
-    title="Debug live stream issues"
-  />
-</Grid> -->
+> **Note:** Athough the above is not restricted to Node.js and Axios -- Livepeer Studio currently supports Node.js and Axios. In the future will open to other programming languages. 
+
+## What you need to know
+
+- Familiarity with the [Livepeer Studio protocol](/studio101)
+- Experience working with Node.js
+- Experience working with Axios
+
+## What You Can Build Here
+
+The following is an annotated list of applications you can build following this tutorial. It includes brief descriptions of use cases with advantages and challenges of each implementation including but not limited to:
+
+| Implementation |Advantages  |Challenges   |
+| ------------ | ------------ | ------------ |
+| Pass in the Livepeer Studio address to YouTube, Twitch, |   |   |
+|  Multi-streaming |   |   |
+|  OBS Professional Broadcasting (e.g. Livestreaming changing camera angles, or multiple "views" within a screen) |   |   |
+|  Livepeer Studio In-browser Application |   |   |
+|  Livestreaming encoder with more latency |   |   |
+|  Inbrowser platforms (Restream/Streamyard) |   |   |
+|  [Choosing a Streaming-Method](https://www.notion.so/livepeer/) |   |   |
+
+
+## Livestreaming Methods
+
+- Livepeer Stream to Zoom using the transcoding network
+- [Inbrowser platforms](https://docs.google.com/document/d/1tl_CsOmZT1_ExxVu6IdcoPOTJwcxQA015scsfULyKgk/edit#heading=h.daphfpfvg4hn) (Streamyard, Restream, Agora (with their own transcoding -- sending signal to Livepeer))
+- Mobile livestreaming, Larix application --, transcoding on our network, placing a video player and streaming there
+
+## Preparing the Environment
+
+- **Operating System:** Livepeer Studio services can be run on any operating system 
+- **IDE:** You can use any development environment that supports your library (VS Code, Sublime, etc.)
+1. **[Sign up for a free Livepeer account](https://livepeer.com/blog/stream-into-livepeer-video-services-first-time)**
+1. [Get an API key](https://livepeer.com/docs/guides/start-live-streaming/api-key)
+1. Download and install [OBS](https://obsproject.com/)
+1. Install [Node.js](https://nodejs.org/en/)
+1. Install [Axios](https://axios-http.com/)
+1. [Livepeer API Reference](https://livepeer.com/docs/api-reference)
+
+## Create a Livestream
+
+1.  To create a stream you will need to get:
+
+- A `Stream key`, 
+- An `RTMP ingest URL`
+- A `playbackURL` 
+
+<!-- link the above to existing documentation-->
+
+> **Note:** Be sure to store these so that you will have access to them for future steps. 
+
+The following request will return:
+
+- `playbackId`, 
+- `id` of the stream, 
+- `streamKey` available.
+
+They will be used in [OBS](https://obsproject.com/), with the `id`  to enable recording for the stream.
+
+<!-- link the above to existing documentation-->
+
+### Request
+
+```js
+const axios = require('axios');
+const rtmpURL = "https://livepeer.com/api";
+const playbackURL = "https://livepeercdn.com/hls/{playbackId}/index.m3u8";
+ 
+const createStream = async () => {
+ const response = await axios.post("https://livepeer.com/api/stream", {
+   headers: {
+     'Authorization': `Bearer ${process.env.LV_API_KEY}`,
+     'Content-Type': 'application/json'
+   },
+   data: JSON.stringify({
+     "name": "test_stream",
+     "profiles": [
+       {
+         "name": "720p",
+         "bitrate": 2000000,
+         "fps": 30,
+         "width": 1280,
+         "height": 720
+       },
+       {
+         "name": "480p",
+         "bitrate": 1000000,
+         "fps": 30,
+         "width": 854,
+         "height": 480
+       },
+       {
+         "name": "360p",
+         "bitrate": 500000,
+         "fps": 30,
+         "width": 640,
+         "height": 360
+       }
+     ]
+   })
+ });
+ console.log(JSON.stringify(response.data));
+}
+```
+
+### Response
+```JSON
+{
+   "lastSeen": 0,
+   "isActive": false,
+   "record": false,
+   "suspended": false,
+   "sourceSegments": 0,
+   "transcodedSegments": 0,
+   "sourceSegmentsDuration": 0,
+   "transcodedSegmentsDuration": 0,
+   "sourceBytes": 0,
+   "transcodedBytes": 0,
+   "profiles": [
+       {
+           "name": "720p",
+           "bitrate": 2000000,
+           "fps": 30,
+           "width": 1280,
+           "height": 720
+       },
+       {
+           "name": "480p",
+           "bitrate": 1000000,
+           "fps": 30,
+           "width": 854,
+           "height": 480
+       },
+       {
+           "name": "360p",
+           "bitrate": 500000,
+           "fps": 30,
+           "width": 640,
+           "height": 360
+       }
+   ],
+   "name": "test_stream",
+   "kind": "stream",
+   "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+   "renditions": {},
+   "id": "05b0b7b7-c6aa-45b8-a947-6c11997a3efd",
+   "createdAt": 1654273038907,
+   "streamKey": "05b0-nyoa-jf0p-s2x8",
+   "playbackId": "05b0572n8voz1t4w",
+   "createdByTokenName": "Test",
+   "multistream": {
+       "targets": []
+   }
+}
+```
+
+From the API response, we now have our `playbackId`, `id` of the stream, and the `streamKey` available.
+
+ We will need the:
+ - `playbackId` for our `playbackURl`  
+ - the `id` of the stream to enable the recording for the stream
+ - `streamKey` to use in OBS
+
+2. Place the following in variables for later use:
+
+```js
+let playBackId = "05b0572n8voz1t4w";
+let id = "05b0b7b7-c6aa-45b8-a947-6c11997a3efd";
+let streamKey = "05b0-nyoa-jf0p-s2x8";
+```
+
+The flag for  `"record": false` should appear in the API response, indicating the ability to record and save the live stream for later views.
+
+
+### Toggle the recording 
+
+2. Since the default of the record is off for a newly created stream, we will turn it on to record our stream.
+
+```js
+const recordOn = async () => {
+ const response = await axios.patch("https://livepeer.com/api/stream/{id}/record", {
+   headers: {
+     'Authorization': `Bearer ${process.env.LV_API_KEY}`,
+     'Content-Type': 'application/json'
+   },
+   data: JSON.stringify({
+     "record": true
+ })
+ });
+  console.log(JSON.stringify(response.data));
+}
+```
+
+The response should be a `204`
+
+Now that we created a new stream and turned on the recording, let's start streaming in OBS.
+
+### Start Streaming with OBS
+
+To start streaming, follow the [OBS tutorial](https://livepeer.com/blog/stream-into-livepeer-video-services-first-time)
+
+To make sure that the stream is on, we can use `/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": true}` to verify that is streaming.
+
+```js
+const streamOn = async () => {
+ const response = await axios.get("https://livepeer.com/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": true}", {
+   headers: {
+     'Authorization': `Bearer ${process.env.LV_API_KEY}`,
+     'Content-Type': 'application/json'
+   },
+   data: JSON.stringify({
+     "record": true
+ })
+ });
+  console.log(JSON.stringify(response.data));
+}
+```
+Response
+```json
+"isActive": true
+```
+
+Once the live stream is complete, stop the stream and after 6 minutes from the end of the streaming session.
+
+
+## Get a list of recorded sessions
+
+We can confirm that the session is has been recorded by
+ 
+```js
+const getRecording = async () => {
+ const response = await axios.get("https://livepeer.com/api/stream/{id}/sessions?record=1", {
+   headers: {
+     'Authorization': `Bearer ${process.env.LV_API_KEY}`,
+     'Content-Type': 'application/json'
+   }
+ });
+  console.log(JSON.stringify(response.data));
+}
+```
+ 
+Response
+ 
+```json
+"createdAt": 1654285544854,
+       "ingestRate": 0,
+       "renditions": {},
+       "outgoingRate": 0,
+       "recordingStatus": "ready",
+       "recordingUrl": "https://livepeercdn.com/recordings/05b0b7b7-c6aa-45b8-a947-6c11997a3efd/index.m3u8",
+       "mp4Url": "https://livepeercdn.com/recordings/05b0b7b7-c6aa-45b8-a947-6c11997a3efd/source.mp4"
+```
+
+### Import an asset
+
+Since recording from Livepeer automatically imports it, there is no need to import it.
+
+### List asset
+
+Now that our recorded live stream is stored, let's retrieve the `playbackURL` so that we can play it
+
+To get the `playbackURL`, we will use `/api/asset`
+
+```js
+const getPlaybackURL = async () => {
+ const response = await axios.get("https://livepeer.com/api/asset", {
+   headers: {
+     'Authorization': `Bearer ${process.env.LV_API_KEY}`,
+     'Content-Type': 'application/json'
+   }
+ });
+  console.log(JSON.stringify(response.data));
+}
+```
+Response
+```json
+{
+       "id": "2a36cec4-40e1-4ece-9a21-f24b632901c1",
+       "hash": [
+           {
+               "hash": "9c0871abb5a23757b681485a3eb1fe66",
+               "algorithm": "md5"
+           },
+           {
+               "hash": "4c316d62cc8084ee02ead7862a7ec814433cb18c0a025952d5461d9fc99b8b46",
+               "algorithm": "sha256"
+           }
+       ],
+       "name": "live-to-vod-05b07f11-4900-453a-af05-03376bba4514",
+       "size": 23952463,
+       "status": {
+           "phase": "ready",
+           "updatedAt": 1654357897107
+       },
+       "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+       "createdAt": 1654357880804,
+       "videoSpec": {
+           "format": "mp4",
+           "tracks": [
+               {
+                   "type": "audio",
+                   "codec": "aac",
+                   "bitrate": 159859,
+                   "channels": 2,
+                   "duration": 2.005313,
+                   "sampleRate": 48000
+               },
+               {
+                   "fps": 30,
+                   "type": "video",
+                   "codec": "h264",
+                   "width": 1280,
+                   "height": 720,
+                   "bitrate": 2863648,
+                   "duration": 2,
+                   "pixelFormat": "yuv420p"
+               }
+           ],
+           "duration": 2.005313
+       },
+       "playbackId": "05b0k8kughw7o6ml",
+       "downloadUrl": "https://livepeercdn.com/asset/05b0k8kughw7o6ml/video"
+   }
+```
+
+At the bottom of the response, there is the `playbackURL`, which we will use to view it.
+
+There are different options to check the recorded video, in this tutorial we will use the [Bitmovin test player](https://bitmovin.com/demos/stream-test?format=dash&manifest=https%3A%2F%2Fbitmovin-a.akamaihd.net%2Fcontent%2FMI201109210084_1%2Fmpds%2Ff08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd)
+
+Copy and paste the `playbackURL` in the Stream box and select the HLS option.
+
+Click the blue button `Load Settings` when you press play, and you should see the recorded live stream.
+
+* For other options of playback, you can directly paste the `playbackURL` in the address bar if using the Safari web browser only, otherwise, you can build your own video player.
+See our tutorial [How to implement a player in the front end](https://github.com/codentell/livepeer-player-tutorial)
+
