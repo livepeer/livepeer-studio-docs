@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Livepeer Docs",
+  title: "Livepeer Studio",
   tagline: "The world's open video infrastructure",
   url: "https://livepeer.org",
   baseUrl: "/",
@@ -47,7 +47,7 @@ const config = {
         contextualSearch: true,
       },
       navbar: {
-        title: "Livepeer Docs",
+        title: "Livepeer Studio",
         logo: {
           alt: "Livepeer Logo",
           src: "img/logo.svg",
@@ -59,7 +59,7 @@ const config = {
             position: "left",
           },
           {
-            href: "/quick-start",
+            href: "/guides",
             label: "Quick Start",
             position: "left",
           },
@@ -71,7 +71,7 @@ const config = {
           {
             href: "/references",
             label: "API",
-            position: "right",
+            position: "left",
           },
           {
             href: "https://forum.livepeer.com/",
