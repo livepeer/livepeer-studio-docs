@@ -1,8 +1,8 @@
 ---
 title: List Tasks
-description: Livepeer.com API Reference | List Tasks
-metaTitle: List Tasks - Livepeer.com
-metaDescription: Livepeer.com API Reference | List Tasks
+description: Livepeer Studio API Reference | List Tasks
+metaTitle: List Tasks - Livepeer Studio
+metaDescription: Livepeer Studio API Reference | List Tasks
 ---
 
 # Tasks
@@ -15,12 +15,13 @@ API.
 List all tasks in the account, most recent first.
 
 ```jsx
-curl --location --request GET 'https://livepeer.com/api/task' \
+curl --location --request GET 'https://livepeer.studio/api/task' \
 --header 'Authorization: Bearer $API_TOKEN'
 ```
 
 ### **Request path & query params**
-<!-- 
+
+<!--
 <Table
   data={[
     {
@@ -43,14 +44,14 @@ the unique `Task` ID that was returned from your previous request or from an
 `Asset` import or export.
 
 ```jsx
-curl --location --request GET 'https://livepeer.com/api/task/$TASK_ID' \
+curl --location --request GET 'https://livepeer.studio/api/task/$TASK_ID' \
 --header 'Authorization: Bearer $API_TOKEN'
 ```
 
 ### Response example
 
 ```jsx
-curl --location --request GET 'https://livepeer.com/api/asset' \
+curl --location --request GET 'https://livepeer.studio/api/asset' \
 --header 'Authorization: Bearer $API_TOKEN'{
         "id": "$TASK_ID",
         "type": "import",

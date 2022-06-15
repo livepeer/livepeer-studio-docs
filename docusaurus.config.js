@@ -47,9 +47,8 @@ const config = {
         contextualSearch: true,
       },
       navbar: {
-        title: "Livepeer Studio",
         logo: {
-          alt: "Livepeer Logo",
+          alt: "Livepeer Studio Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -74,22 +73,7 @@ const config = {
             position: "left",
           },
           {
-            href: "https://forum.livepeer.com/",
-            label: "Forum",
-            position: "right",
-          },
-          {
-            href: "https://livepeer.com",
-            label: "Follow us",
-            position: "right",
-          },
-          {
-            href: "https://livepeer.com",
-            label: "Support",
-            position: "right",
-          },
-          {
-            href: "https://livepeer.com/dashboard",
+            href: "https://livepeer.studio/dashboard",
             label: "Dashboard",
             position: "right",
           },
@@ -97,37 +81,6 @@ const config = {
       },
       colorMode: {
         defaultMode: "dark",
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Discord",
-                href: "https://discord.gg/uaPhtyrWsF",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/LivepeerOrg",
-              },
-              {
-                label: "Blog",
-                href: "https://medium.com/livepeer-blog",
-              },
-              {
-                label: "Forum",
-                href: "https://forum.livepeer.org/",
-              },
-              {
-                label: "Reddit",
-                href: "https://www.reddit.com/r/livepeer/",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Livepeer, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
