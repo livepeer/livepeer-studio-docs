@@ -68,7 +68,7 @@ const config = {
             position: "left",
           },
           {
-            href: "/references",
+            href: "/api",
             label: "API",
             position: "left",
           },

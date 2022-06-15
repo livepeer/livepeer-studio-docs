@@ -12,7 +12,7 @@ metaDescription: Livepeer Studio API Reference | DELETE a stream
 This will also suspend any active stream sessions, so make sure to wait until
 the stream has finished. To explicitly interrupt an active session, consider
 instead updating the `suspended` field in the `stream` using the
-[`PATCH stream` API](/references/stream/update-stream).
+[`PATCH stream` API](/api/stream/update-stream).
 
 ```bash
 curl -X DELETE 'https://livepeer.studio/api/stream/{id}' \
