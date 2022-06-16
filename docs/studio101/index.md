@@ -2,22 +2,28 @@
 title: Studio 101
 ---
 
-The following provides a high level technical overview of what you will discover with using Livepeer Studio.
+The following provides a high level technical overview of what you will discover with using Livepeer Studio. Developers interested in working with livestreaming applications in Web3 technology will be able to:
 
-- New Developers
-- Web2 to Web 3 Developers
-- Experienced Developers
+## About Studio 101
+ 
+- **APIs:** build applications that interface with Livepeer Studio's API
+- **Dashboard:** test applications with the Livepeer Studio dashboard to monitor stream health
+
+## What you can build
+
+- Livestreaming creator applications
+- Event plaforms
+- Content creator experiences
+- Event streaming
+- On-Demand experience
 
 ## What you need to know
 
-- New to developing Livestream applications
-	- Livepeer Primer
-	- Livestreaming Terminology
-	- Livestreaming Concepts
-	- Working with APIs for developing Livestreaming applications
-	- Web 3 concepts
-- Experience with developing livestreaming applications
-	- What distinguishes Livepeer Studio
+- Familiarity with building applications and interfacing with APIs (Server/Client side)
+- If you are **New** to developing video applications, you can check out:
+	- [Livepeer Primer](https://livepeer.org/primer)
+	- [Studio 101](/studio)
+	- [Livestreaming Terminology](/terminology)
 
 ## Livepeer Studio Architecture
 
@@ -32,7 +38,7 @@ What are the components:
 - Livestream
 - Upload
 - Mint
-- API
+
 
 ## Livepeer Studio Capabilities
 

@@ -19,3 +19,11 @@ pass it in the `cursor` query-string in the request.
 | Item 2 | Description 2 | Notes 2   |
 | Item 3 | Description 3 | Notes 3   |
 | Item 4 | Description 4 | Notes 4   |
+
+
+## Page/Sidebar Titles
+ Titles should always be in the doc heading and formated this way:
+
+---
+title: Example
+---
