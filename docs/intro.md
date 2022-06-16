@@ -6,22 +6,21 @@ sidebar_position: 1
 
 # Welcome to Livepeer Studio!
 
-The Livepeer delivers a live video streaming network protocol that is fully decentralized, highly scalable, crypto token incentivized, and results in a solution which is cheaper to an app developer than using traditional centralized live video solutions.
+This site is organized by topics including concepts, tasks, and reference information designed for:
 
-Livepeer Studio provides developers the ability to add all the compute capabilities of our offering: 
+- Application developers new to Livestreaming
+- Application developers interested in building video applications for Web 3 technologies
+- Application developers interested in livestreaming on the Livepeer network
 
-**Livepeer Streaming Service** - Open infrastructure network best possible toolkit/toolbox to scale it.
+## About Livepeer Studio
 
-**Video API** tailored to address the requirements of today's creator platforms for operating on Web3
+The Livepeer Studio delivers a live video streaming network protocol that is fully decentralized, highly scalable, crypto token incentivized, and results in a solution which is cheaper to an app developer than using traditional centralized live video solutions.
 
+- Developers will have the ability to add all the compute capabilities of our offering: 
 
-## New to Livepeer Studio?
+	- **Livepeer Streaming Service** - Open infrastructure network best possible toolkit/toolbox to scale it.
 
-**Check out** the [Livepeer Primer](https://livepeer.org/primer). Once you go through the Primer, you will be able decide how you want to participate in the Livepeer community.
-
-**Learn more about how Livepeer works**, check out [Core-Concepts](/protocol/core-concepts/) including relevant detailed high-level topics to familiarize yourself more in-depth with  Livepeer Studio  capabilities.
-
-<!---[Protocol Overview](/protocol/core-concepts/).--->
+	- **Video API** tailored to address the requirements of today's creator platforms for operating on Web3
 
 ## **Features** ...
 
@@ -32,17 +31,48 @@ Livepeer Studio provides developers the ability to add all the compute capabilit
 |  Mint | Minting mp4 video as an NFT   |  Mint mp4 video files, add your smart contract to mint video nft  |
 
 
+## New to Livepeer Studio?
 
+- **Check out** the [Livepeer Primer](https://livepeer.org/primer). Once you go through the Primer, you will be able decide how you want to participate in the Livepeer community.
 
+### Livepeer Studio 101
 
-This site is organized by topics including concepts, tasks, and reference information designed for:
+- **Learn more about how Livepeer works**, check out [Livepeer Studio 101](/studio101) including relevant detailed high-level topics to familiarize yourself more in-depth about  Livepeer Studio:
+	- Architecture
+	- Features and Capabilities
+	- Use Cases and Methods
+	- Livepeer Studio API
+	- Livestream
+	- Upload
+	- Mint
 
+**New Developers** can access resources of **What You Need to Know** -- a knowledge base to prepare yourself to write the first mini-apps on our test eco-system: 
 
+- Technical Overview of Livepeer offering
+	- Features and Capabilities
+	- Use Cases and Methods
+- [Architecture](Livepeer: Video, NFTs, and Web3)
+	- Livepeer Studio API
+	- Livestream
+	- Upload
+	- Mint
+- Protocol
+- Smart Contracts
+- Tool kit: Built in features so you don't need to code as much -- provided in multiple languages:
+	- Code Samples -- in multiple languages 
+	- API
+	- Test Frameworks
+
+## Livepeer Studio Quickstart
+
+Get up and running with the Livepeer Studio [Quickstart](/guides), a guide for Application Developers to become familiarized with Livepeer Studio in three easy steps.
+- 
 
 
 ## What's New
 
-**[Livepeer Network Upgrade](https://medium.com/livepeer-blog/the-confluence-upgrade-is-live-3b6b342ea71e)** - Livepeer now offers faster transactions and lower costs for broadcasters, orchestrators, and delegators.
+**[Livepeer Network Upgrade](https://medium.com/livepeer-blog/the-confluence-upgrade-is-live-3b6b342ea71e)** 
+- Livepeer now offers faster transactions and lower costs for broadcasters, orchestrators, and delegators.
 
 **[How to Migrate to Arbitrum](/video-miners/guides/l2-migration)** - Instructions for One-time Migration to Arbitrum (L2)
 
@@ -55,24 +85,6 @@ This site is organized by topics including concepts, tasks, and reference inform
 - [@LivepeerOrg](https://twitter.com/LivepeerOrg?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) on twitter
 - Join our [community chat](https://discord.gg/RR4kFAh) on Discord.
 
-## Livepeer Studio 101
-
-**New Developers** can access resources of **What You Need to Know** -- a knowledge base to prepare yourself to write the first mini-apps on our test eco-system: 
-
-- Overview of Livepeer offering
-- [Architecture](Livepeer: Video, NFTs, and Web3)
-- Technical Overview
-- Protocol
-- Smart Contracts
-- Tool kit: Built in features so you don't need to code as much -- provided in multiple languages:
-	- Code Samples -- in multiple languages 
-	- API
-	- Test Frameworks
-
-## Livepeer Studio Quickstart
-
-and Get up and running with the Livepeer Studio Quickstart
-guide for Application Developers.
 
 
 

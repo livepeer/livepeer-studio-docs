@@ -1,13 +1,21 @@
 
+## Technical terminology formatting
+
+`term`
 
 
+## Sample Note
 
-| Implementation |Advantages  |Challenges   |
+> **Note:** Pagination should be done using the cursor in the `Link` response header. You
+can either use the raw link included in the header or extract the `cursor` and
+pass it in the `cursor` query-string in the request.
+
+
+## Sample 3 Column Table
+
+| Item         |Description   |Notes         |
 | ------------ | ------------ | ------------ |
-| Pass in the Livepeer Studio address to YouTube, Twitch, |   |   |
-|  Multi-streaming |   |   |
-|  OBS Professional Broadcasting (e.g. Livestreaming changing camera angles, or multiple "views" within a screen) |   |   |
-|  Livepeer Studio In-browser Application |   |   |
-|  Livestreaming encoder with more latency |   |   |
-|  Inbrowser platforms (Restream/Streamyard) |   |   |
-|  [Choosing a Streaming-Method](https://www.notion.so/livepeer/) |   |   |
+| Item 1|  Description 1 | Notes 1   |
+| Item 2 | Description 2 | Notes 2   |
+| Item 3 | Description 3 | Notes 3   |
+| Item 4 | Description 4 | Notes 4   |
