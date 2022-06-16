@@ -1,7 +1,7 @@
 ---
 title: Multistream
 description: Start multistreaming
-metaTitle: Multistream - Livepeer.com
+metaTitle: Multistream - Livepeer Studio
 metaDescription: Start multistreaming
 ---
 
@@ -11,10 +11,10 @@ The Multistream API allows a source stream and transcoded renditions to be
 pushed to multiple RTMP(S) or SRT targets, such as Facebook Live, Twitch, and
 Youtube Live.
 
-## Managing Multistream targets in the Livepeer.com Dashboard
+## Managing Multistream targets in the Livepeer Studio Dashboard
 
 To add, manage, and delete `Multistream Targets`, navigate to the Streams page
-([livepeer.com/dashboard/streams](https://livepeer.com/dashboard/streams)) and
+([livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams)) and
 click on a stream name. On the stream detail page, on the `Overview` tab, you
 can view all configured targets. You must configure new `Multistream Targets`
 for each stream. This will apply the multistream configuration to that stream.
@@ -44,13 +44,13 @@ target name and then on `Delete`.
   </Text>
 </Alert>
 
-## Managing Multistream targets with the Livepeer.com API
+## Managing Multistream targets with the Livepeer Studio API
 
 ### Multistream Target Object `/multistream/target`
 
 You can also manage `Multistream Target` objects from the API. Each target
 represents a specific endpoint where a stream could be multistreamed to. More
-details in the [API reference](/references/multistream-target/overview).
+details in the [API reference](/api/multistream-target/overview).
 
 <!-- Add notice about how other platforms call this? Re-stream, simulcast, etc -->
 
@@ -63,10 +63,10 @@ for the multistream to happen. You also need to reference the target from the
 
 #### Create
 
-##### Request: [`POST /api/multistream/target`](/references/multistream-target/create-target)
+##### Request: [`POST /api/multistream/target`](/api/multistream-target/create-target)
 
 ```bash
-curl -X POST 'https://livepeer.com/api/multistream/target' \
+curl -X POST 'https://livepeer.studio/api/multistream/target' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -95,10 +95,10 @@ creation request. The destination url will not be returned since it contains
 sensitive user data. This way the application developer doesn't have to worry
 about storing and securing their users' stream keys.
 
-##### Request: [`GET /api/multistream/target/{id}`](/references/multistream-target/get-target)
+##### Request: [`GET /api/multistream/target/{id}`](/api/multistream-target/get-target)
 
 ```bash
-curl 'https://livepeer.com/api/multistream/target/{id}' \
+curl 'https://livepeer.studio/api/multistream/target/{id}' \
 -H 'authorization: Bearer {api-key}'
 ```
 
@@ -115,16 +115,16 @@ curl 'https://livepeer.com/api/multistream/target/{id}' \
 You can also list all existing `Multistream Targets` in the account by omitting
 the `{id}` segment in the above request.
 
-##### List Request: [`GET /api/multistream/target`](/references/multistream-target/list-targets)
+##### List Request: [`GET /api/multistream/target`](/api/multistream-target/list-targets)
 
 ```bash
-curl 'https://livepeer.com/api/multistream/target' \
+curl 'https://livepeer.studio/api/multistream/target' \
 -H 'authorization: Bearer {api-key}'
 ```
 
 The response is an array of `Multistream Target` objects, as returned from the
 read API above. The pagination should be done exactly the same as the other
-Livepeer.com list APIs.
+Livepeer Studio list APIs.
 
 #### Update
 
@@ -136,10 +136,10 @@ One of the updateable properties is the `disabled` field. It can be used to
 disable multistreaming to a specific target without the need of removing them
 from streams nor deleting the target completely.
 
-##### Request: [`PATCH /api/multistream/target/{id}`](/references/multistream-target/update-target)
+##### Request: [`PATCH /api/multistream/target/{id}`](/api/multistream-target/update-target)
 
 ```bash
-curl -X PATCH 'https://livepeer.com/api/multistream/target/{id}' \
+curl -X PATCH 'https://livepeer.studio/api/multistream/target/{id}' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -160,10 +160,10 @@ that target or a broken reference will be left. So first update (`PATCH`) any
 `Stream` removing the reference to the `Multistream Target` and only then
 actually delete it.
 
-##### Request: [`DELETE /api/multistream/target/{id}`](/references/multistream-target/delete-target)
+##### Request: [`DELETE /api/multistream/target/{id}`](/api/multistream-target/delete-target)
 
 ```bash
-curl -X DELETE 'https://livepeer.com/api/multistream/target/{id}' \
+curl -X DELETE 'https://livepeer.studio/api/multistream/target/{id}' \
 -H 'authorization: Bearer {api-key}'
 ```
 
@@ -207,7 +207,7 @@ separate entries in the `multistream.targets` array.
 ##### By Reference
 
 ```bash
-curl -X POST 'https://livepeer.com/api/stream' \
+curl -X POST 'https://livepeer.studio/api/stream' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -229,7 +229,7 @@ curl -X POST 'https://livepeer.com/api/stream' \
 ##### Inline
 
 ```bash
-curl -X POST 'https://livepeer.com/api/stream' \
+curl -X POST 'https://livepeer.studio/api/stream' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -276,7 +276,7 @@ request, it's really easy to add a target by URL to an existing stream:
 ##### 1. `GET` the current state of the Stream
 
 ```bash
-curl 'https://livepeer.com/api/stream/{id}' \
+curl 'https://livepeer.studio/api/stream/{id}' \
 -H 'authorization: Bearer {api-key}'
 ```
 
@@ -300,7 +300,7 @@ curl 'https://livepeer.com/api/stream/{id}' \
 ##### 2. `PATCH` the Stream with the new target
 
 ```bash
-curl -X PATCH 'https://livepeer.com/api/stream/{id}' \
+curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -325,7 +325,7 @@ array.
 
 After removing the reference from the `Stream`, you can also delete the
 `Multistream Target` object completetly by calling the separate
-[Delete `Multistream Target` API](/references/multistream-target/delete-target).
+[Delete `Multistream Target` API](/api/multistream-target/delete-target).
 Make sure that no other `Stream` has a reference to that `Multistream Target`
 before doing so.
 
@@ -337,7 +337,7 @@ the targets that we want to keep in the stream, after removing the desired one.
 e.g.: Removing only the first target from the example above:
 
 ```bash
-curl -X PATCH 'https://livepeer.com/api/stream/{id}' \
+curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -358,7 +358,7 @@ for the given target when building the `PATCH` request payload.
 ##### Removing all Multistream Targets
 
 ```bash
-curl -X PATCH 'https://livepeer.com/api/stream/{id}' \
+curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d '{
@@ -396,4 +396,4 @@ We have 3 webhooks to help you monitor the state of your `Multistream Targets`::
   Multistream has also ended for the respective target.
 
 For more information on how to use webhooks, please consult our
-[Webhooks Documentation](https://livepeer.com/docs/guides/start-live-streaming/webhook).
+[Webhooks Documentation](https://livepeer.studio/docs/guides/start-live-streaming/webhook).

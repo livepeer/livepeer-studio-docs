@@ -1,8 +1,8 @@
 ---
 title: Export to IPFS
-description: Livepeer.com API Reference | Export
-metaTitle: Export - Livepeer.com
-metaDescription: Livepeer.com API Reference | Export
+description: Livepeer Studio API Reference | Export
+metaTitle: Export - Livepeer Studio
+metaDescription: Livepeer Studio API Reference | Export
 ---
 
 # Export an Asset to IPFS
@@ -12,14 +12,15 @@ Export a video `Asset` from Livepeer to IPFS on the
 task.
 
 ```jsx
-curl --location --request POST 'https://livepeer.com/api/asset/$ASSET_ID/export' \
+curl --location --request POST 'https://livepeer.studio/api/asset/$ASSET_ID/export' \
 --header 'Authorization: Bearer $API_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "ipfs": {}
 }'
 ```
-<!-- 
+
+<!--
 <Table
   data={[
     {

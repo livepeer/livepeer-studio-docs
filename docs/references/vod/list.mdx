@@ -1,8 +1,8 @@
 ---
 title: List Assets
-description: Livepeer.com API Reference | List Assets
-metaTitle: List Assets - Livepeer.com
-metaDescription: Livepeer.com API Reference | List Assets
+description: Livepeer Studio API Reference | List Assets
+metaTitle: List Assets - Livepeer Studio
+metaDescription: Livepeer Studio API Reference | List Assets
 ---
 
 # List Assets
@@ -10,26 +10,26 @@ metaDescription: Livepeer.com API Reference | List Assets
 To list all assets in your account call `GET /api/asset`:
 
 ```jsx
-curl --location --request GET 'https://livepeer.com/api/asset' \
+curl --location --request GET 'https://livepeer.studio/api/asset' \
 --header 'Authorization: Bearer $API_TOKEN'
 ```
 
 ### **Request path & query params**
 
-{/* <Table
-  data={[
-    {
-      parameter: <code>limit</code>,
-      type: <code>number</code>,
-      description: "Number of items to include in the response",
-    },
-    {
-      parameter: <code>name</code>,
-      type: <code>string</code>,
-      description: "For custom sorting of the objects in the response list.",
-    },
-  ]}
-/> */}
+{/_ <Table
+data={[
+{
+parameter: <code>limit</code>,
+type: <code>number</code>,
+description: "Number of items to include in the response",
+},
+{
+parameter: <code>name</code>,
+type: <code>string</code>,
+description: "For custom sorting of the objects in the response list.",
+},
+]}
+/> _/}
 
 # Retrieve an Asset
 
@@ -38,7 +38,7 @@ uploaded. Supply the unique `Asset` ID that was returned from your previous
 request, and Livepeer will return the corresponding `Asset` information.
 
 ```jsx
-curl --location --request GET 'https://livepeer.com/api/asset/$ASSET_ID' \
+curl --location --request GET 'https://livepeer.studio/api/asset/$ASSET_ID' \
 --header 'Authorization: Bearer $API_TOKEN'
 ```
 
