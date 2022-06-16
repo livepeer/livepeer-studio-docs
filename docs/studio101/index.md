@@ -4,20 +4,20 @@ title: Studio 101
 
 The following provides a high level technical overview of what you will discover with using Livepeer Studio.
 
-- New Developers
-- Web2 to Web 3 Developers
-- Experienced Developers
+Developers interested in working with Livestreaming applications on Web3 technology:
+
+- Building livestreaming creator applications
+- Event platforms
+- Creator experiences
+- Event streaming
 
 ## What you need to know
 
-- New to developing Livestream applications
+- **New** to developing Livestream Studio applications
 	- Livepeer Primer
 	- Livestreaming Terminology
 	- Livestreaming Concepts
-	- Working with APIs for developing Livestreaming applications
-	- Web 3 concepts
-- Experience with developing livestreaming applications
-	- What distinguishes Livepeer Studio
+	- Familiarity with building and interfacing with APIs
 
 ## Livepeer Studio Architecture
 
@@ -26,17 +26,25 @@ Image of the architecture and flow
 List and description of components and flow
 
 
-## Livepeer Studio Features
+## Livepeer Studio Features, Capabilities, Components
 
 What are the components:
 - Livestream
 - Upload
 - Mint
-- API
 
-## Livepeer Studio Capabilities
+- Recording
+- Multistreaming
+- Tokengating
+- Upload types: via url, via file
+- Decentralized storage
 
-List of all the things you can do with the Livepeer Studio.
+
+> **Notes:** We are currently not providing:
+- Realtime Video Use Cases
+- Realtime Communication Latency
+
+
 
 ## Livepeer Studio Use Cases and Methods
 
