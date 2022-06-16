@@ -27,10 +27,9 @@ The following provides a high level technical overview of what you will discover
 
 ## Livepeer Studio Architecture
 
-Description of architecture and flow
-Image of the architecture and flow
-List and description of components and flow
+From streaming to delivery, Livepeer Studio provides processes from streaming to uploading from beginning with the device of your choice (cameras/mobile apps/stored video files) utilizing the Livepeer Studio APIs and leveraging the Livepeer transcoding network to bringing the highest quality video for your viewing.
 
+For more details on our architechture ***See*** [Studio 101 Architechture](/architecture.md)
 
 ## Livepeer Studio Features
 

@@ -27,3 +27,6 @@ pass it in the `cursor` query-string in the request.
 ---
 title: Example
 ---
+
+## Embed an image
+<!-- ![Video miner architectures](/docs-assets/architecture.png) -->
