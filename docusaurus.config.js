@@ -73,6 +73,21 @@ const config = {
             position: "left",
           },
           {
+            href: "https://forum.livepeer.com/",
+            label: "Forum",
+            position: "right",
+          },
+          {
+            href: "https://livepeer.studio",
+            label: "Follow us",
+            position: "right",
+          },
+          {
+            href: "https://livepeer.studio",
+            label: "Support",
+            position: "right",
+          },
+          {
             href: "https://livepeer.studio/dashboard",
             label: "Dashboard",
             position: "right",

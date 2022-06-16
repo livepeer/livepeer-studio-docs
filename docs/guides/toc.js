@@ -52,7 +52,7 @@ const toc = [
     items: ["guides/nft/mint-a-video-nft", "guides/nft/build-a-video-nft-app"],
   },
   "guides/usage-billing",
-  "api/terminology",
+  "references/terminology",
 ];
 
 module.exports = toc;

@@ -5,15 +5,20 @@ metaTitle: GET a list of targets - Livepeer Studio
 metaDescription: Livepeer Studio API Reference | GET a list of targets
 ---
 
-# `GET` a list of multistream targets
+## `GET` a list of multistream targets
 
 Use `/multistream/target` to a return a list of your existing multistream
 targets.
+
+### Request
 
 ```bash
 curl 'https://livepeer.studio/api/multistream/target' \
 -H 'authorization: Bearer {api-key}'
 ```
+
+
+### Respons
 
 200 OK
 
@@ -32,6 +37,6 @@ curl 'https://livepeer.studio/api/multistream/target' \
 ]
 ```
 
-Pagination should be done using the cursor in the `Link` response header. You
+> **Note:** Pagination should be done using the cursor in the `Link` response header. You
 can either use the raw link included in the header or extract the `cursor` and
 pass it in the `cursor` query-string in the request.

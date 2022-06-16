@@ -3,19 +3,29 @@ title: API requests
 description: Livepeer Studio API requests documentation
 metaTitle: API requests - Livepeer Studio
 metaDescription: Livepeer Studio API requests documentation
-sidebar_position: 3
 ---
 
-# API requests
+The [Livepeer.studio API](http://localhost:3000/references) is a live video streaming API.
+You or the client can configure details for 
 
-The Livepeer Studio API is a live video streaming API. With the Livepeer Studio API,
-you or the client can configure details for live broadcasting software, generate
-a playback URL for stream viewers, get usage data about your stream sessions and
-more. Explore the [Livepeer Studio API reference](/api) for more
-information.
+- live broadcasting software, 
+- generate a playback URL for stream viewers, 
+- get usage data about your stream sessions, 
 
-The Livepeer Studio API base url is `https://livepeer.studio/api/`. As you make
-requests, the Livepeer Studio API returns JSON responses.
+## Access the Livepeer Studio API
+
+Explore the [Livepeer.studio API reference](/references). 
+
+
+## API Requests
+
+All API requests must be made over HTTPS. API requests without proper
+authentication will fail.
+
+- The Livepeer.studio API base url is `https://livepeer.studio/api/`. 
+
+- As you make requests, the Livepeer Studio API returns JSON responses.
+
 
 ## Authentication
 
@@ -29,9 +39,6 @@ information:
 ```bash
 Authorization: Bearer <api-key>
 ```
-
-All API requests must be made over HTTPS. API requests without proper
-authentication will fail.
 
 ## Errors
 

@@ -1,5 +1,5 @@
 const guidesToc = require("./docs/guides/toc");
-const apiToc = require("./docs/api/toc");
+const referencesToc = require("./docs/references/toc");
 const studioToc = require("./docs/studio101/toc");
 const quickstartToc = require("./docs/guides/toc");
 
@@ -10,7 +10,7 @@ const sidebars = {
   studio101: studioToc,
   quickstart: guidesToc,
   guides: guidesToc,
-  apiToc: apiToc,
+  referencesToc: referencesToc,
 };
 
 module.exports = sidebars;
