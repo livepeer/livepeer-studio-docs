@@ -4,6 +4,7 @@ const toc = [
   "studio101/features",
   "studio101/architecture",
   "studio101/usecases-methods",
+  "studio101/sampleapps101",
   {
     type: "category",
     label: "Livestream",

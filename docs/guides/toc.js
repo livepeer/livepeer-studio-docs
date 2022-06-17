@@ -49,6 +49,17 @@ const toc = [
     collapsed: true,
     items: ["guides/nft/mint-a-video-nft", "guides/nft/build-a-video-nft-app"],
   },
+  {
+    type: "category",
+    label: "Sample Apps Library",
+    link: { type: "doc", id: "guides/sampleslib/index" },
+    collapsible: true,
+    collapsed: true,
+    items: [
+      "guides/sampleslib/index",
+      
+    ],
+  },
   "guides/api-key",
   "guides/usage-billing",
   "references/terminology",
