@@ -1,23 +1,22 @@
 ---
-title: API key
-description: Livepeer Studio API Reference | API key
-metaTitle: API key - Livepeer Studio
-metaDescription: Livepeer Studio API Reference | API key
+title: API Keys
 ---
 
-# API key
+## Making requests on the API
 
-You need an API key to make requests of the Livepeer Studio API. You do not need to
-create an API key if you are creating and configuring live streams using only
-the Livepeer Studio Dashboard.
+You need an API key to make requests of the Livepeer Studio API. 
 
-For information on how to get an API key visit the
-[`Get an API key`](/guides/livestreaming/api-key) guide.
+## Using the Dashboard
+
+You do not need to create an API key if you are creating and configuring livestreams using only the Livepeer Studio Dashboard.
+
+> **Note:** Livestream Studio Dashboard is intended for viewing and testing work done with the API. 
+
+For information on how to get an API key visit the [`Get an API key`](/guides/livestreaming/api-key) guide.
 
 ## Usage
 
-To use an API key, simply add an `Authorization` header to your request with the
-`Bearer` scheme and the API key as the value. Example:
+To use an API key, simply add an `Authorization` header to your request with the `Bearer` scheme and the API key as the value. Example:
 
 ```bash
 curl -X GET \

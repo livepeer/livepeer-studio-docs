@@ -28,7 +28,6 @@ const toc = [
       "guides/livestreaming/srt-support",
     ],
   },
-  "guides/api",
   {
     type: "category",
     label: "Application Development",
