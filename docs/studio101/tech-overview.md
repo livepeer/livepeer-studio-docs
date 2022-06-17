@@ -2,7 +2,6 @@
 title: Technical Overview 
 ---
 
-# Technical Overview
 
 ## How Does Livepeer studio work?
 
