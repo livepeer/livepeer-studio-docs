@@ -1,7 +1,7 @@
 const guidesToc = require("./docs/guides/toc");
 const referencesToc = require("./docs/references/toc");
 const studioToc = require("./docs/studio101/toc");
-const quickstartToc = require("./docs/guides/toc");
+// const quickstartToc = require("./docs/guides/toc");
 
 // @ts-check
 

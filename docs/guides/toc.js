@@ -9,7 +9,6 @@ const toc = [
     items: [
       "guides/livestreaming/tutorial",
       "guides/livestreaming/broadcasting",
-      "guides/livestreaming/api-key",
       "guides/livestreaming/verify",
       "guides/livestreaming/create-a-stream",
       "guides/livestreaming/playback",
@@ -50,6 +49,7 @@ const toc = [
     collapsed: true,
     items: ["guides/nft/mint-a-video-nft", "guides/nft/build-a-video-nft-app"],
   },
+  "guides/api-key",
   "guides/usage-billing",
   "references/terminology",
 ];

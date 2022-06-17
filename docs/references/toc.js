@@ -6,6 +6,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
+      "references/stream/index",
       "references/stream/overview",
       "references/stream/post-stream",
       "references/stream/get-stream",
@@ -21,7 +22,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-      "references/session/overview",
+      "references/session/index",
       "references/session/get-session",
       "references/session/list-sessions",
       "references/session/list-recorded-sessions",
