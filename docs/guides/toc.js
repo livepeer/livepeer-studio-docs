@@ -8,6 +8,7 @@ const toc = [
     collapsed: true,
     items: [
       "guides/livestreaming/tutorial",
+      "guides/livestreaming/webrtmp",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/verify",
       "guides/livestreaming/create-a-stream",
