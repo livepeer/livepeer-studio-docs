@@ -8,6 +8,7 @@ const toc = [
     collapsed: true,
     items: [
       "guides/livestreaming/tutorial",
+      "guides/livestreaming/obs",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/verify",
       "guides/livestreaming/create-a-stream",
@@ -55,10 +56,7 @@ const toc = [
     link: { type: "doc", id: "guides/sampleslib/index" },
     collapsible: true,
     collapsed: true,
-    items: [
-      "guides/sampleslib/index",
-      
-    ],
+    items: ["guides/sampleslib/index"],
   },
   "guides/api-key",
   "guides/usage-billing",
