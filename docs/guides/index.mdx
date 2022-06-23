@@ -1,20 +1,20 @@
 ---
-title: QuickStart
+title: Quick Start
 ---
 
-The following includes a step-by-step process to follow to get started with the Livepeer Studio API with Node.js and Axios so that you can go through the cycle of Livestreaming following our recommended best practices:
+This Quick Start guide includes a step-by-step process to get you started developing an application with the Livepeer Studio API (for `Node.js` and `Axios` apps). With the tools we provice, you will be able to develop an application following a complete Livestreaming cycle and best practice guidelines:
 
 - [Create a livestream](/guides#create-a-livestream)
 - [Record the livestream](/guides#toggle-the-recording)
-- [Play back the livestream](/guides#get-a-list-of-recorded-sessions) using the [Livepeer Studio API](/references) with Node.js and Axios
+- [Play back the livestream](/guides#get-a-list-of-recorded-sessions) using the [Livepeer Studio API](/references) with `Node.js` and `Axios`
 
-> **Note:** Athough the above is not restricted to Node.js and Axios -- Livepeer Studio currently supports Node.js and Axios. In the future will open to other programming languages.
+> **Note:** Athough the above is not restricted to `Node.js` and `Axios` -- Livepeer Studio currently only supports `Node.js` and `Axios`. In the future we will support other programming languages as well.
 
 ## What you need to know
 
-- Familiarity with the [Livepeer protocol](/studio101)
-- Experience working with Node.js
-- Experience working with Axios
+- Familiarity with [Livepeer Studio core concepts](/aboutstudio)
+- Experience working with `Node.js`
+- Experience working with `Axios`
 
 ## What You Can Build Here
 
@@ -32,11 +32,15 @@ The following is an annotated list of applications you can build following this 
 
 ## Livestreaming Methods
 
-- Livepeer Stream to Zoom using the transcoding network
-- [Inbrowser platforms](https://docs.google.com/document/d/1tl_CsOmZT1_ExxVu6IdcoPOTJwcxQA015scsfULyKgk/edit#heading=h.daphfpfvg4hn) (Streamyard, Restream, Agora (with their own transcoding -- sending signal to Livepeer))
-- Mobile livestreaming, Larix application --, transcoding on our network, placing a video player and streaming there
+You can choose which method to use to stream for your implementation, e.g.:
 
-## Prepare the Environment
+- Livepeer Stream to Zoom using the transcoding network
+- [Inbrowser platforms](https://docs.google.com/document/d/1tl_CsOmZT1_ExxVu6IdcoPOTJwcxQA015scsfULyKgk/edit#heading=h.daphfpfvg4hn) (e.g., Streamyard, Restream, Agora (with their own transcoding while sending the signal to Livepeer))
+- Mobile livestreaming, e.g. Larix applications, while transcoding on our network, placing a video player for streaming
+
+## Technical Preparation
+
+Before getting started, you can set up your environment to prepare for developing your application:
 
 - **Operating System:** Livepeer Studio services can be run on any operating system
 - **IDE:** You can use any development environment that supports your library (VS Code, Sublime, etc.)
@@ -48,7 +52,8 @@ The following is an annotated list of applications you can build following this 
 1. Install [Axios](https://axios-http.com/)
 1. [Livepeer API Reference](https://livepeer.studio/docs/api-reference)
 
-## Create a Livestream
+
+## Creating a Livestream
 
 1.  To create a stream you will need to get:
 
@@ -208,13 +213,18 @@ const recordOn = async () => {
 
 The response should be a `204`
 
-Now that we created a new stream and turned on the recording, let's start streaming in OBS.
 
 ### Start Streaming with OBS
 
-To start streaming, follow the [OBS tutorial](https://livepeer.studio/blog/stream-into-livepeer-video-services-first-time)
+Now that you have created a new stream and turned on the recording, you can start streaming in OBS.
 
-To make sure that the stream is on, we can use `/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": true}` to verify that is streaming.
+
+1. To start streaming, follow the [OBS tutorial](https://livepeer.studio/blog/stream-into-livepeer-video-services-first-time)
+
+To verify that the stream is on, use:
+
+ `/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": true}` 
+
 
 ```js
 const streamOn = async () => {
@@ -231,17 +241,25 @@ const streamOn = async () => {
 }
 ```
 
-Response
+
+### Response
+
 
 ```json
+
 "isActive": true
+
 ```
 
-Once the live stream is complete, stop the stream and after 6 minutes from the end of the streaming session.
+Once the live stream is complete, you can stop the stream after 6 minutes from the end of the streaming session.
+
+
 
 ## Get a list of recorded sessions
 
-We can confirm that the session is has been recorded by
+1. You can confirm that the session is has been recorded:
+
+#### Request
 
 ```js
 const getRecording = async () => {
@@ -258,7 +276,7 @@ const getRecording = async () => {
 };
 ```
 
-Response
+#### Response
 
 ```json
 "createdAt": 1654285544854,
@@ -272,7 +290,7 @@ Response
 
 ### Import an asset
 
-Since recording from Livepeer automatically imports it, there is no need to import it.
+Livepeer automatically imports a recording. However, there is an [Import API for Video On Demand (VOD)](/references/vod/import) implementations.
 
 ### List asset
 
