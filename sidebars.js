@@ -1,13 +1,13 @@
 const guidesToc = require("./docs/guides/toc");
 const referencesToc = require("./docs/references/toc");
-const studioToc = require("./docs/studio101/toc");
+const aboutstudioToc = require("./docs/aboutstudio/toc");
 // const quickstartToc = require("./docs/guides/toc");
 
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  studio101: studioToc,
+  aboutstudio: aboutstudioToc,
   quickstart: guidesToc,
   guides: guidesToc,
   referencesToc: referencesToc,

@@ -1,17 +1,17 @@
 const toc = [
-  "studio101/index",
-  "studio101/tech-overview",
-  "studio101/features",
-  "studio101/architecture",
-  "studio101/usecases-methods",
-  "studio101/sampleapps101",
+  "aboutstudio/index",
+  "aboutstudio/tech-overview",
+  "aboutstudio/features",
+  "aboutstudio/architecture",
+  "aboutstudio/usecases-methods",
+  "aboutstudio/sampleapps",
   {
     type: "category",
     label: "Livestream",
     collapsible: true,
     collapsed: true,
     items: [
-     "studio101/livestream/livestream101"
+     "aboutstudio/livestream/livestream"
 
     ],
   },
@@ -21,7 +21,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-    "studio101/upload/upload101"
+    "aboutstudio/upload/upload"
    ],
  },
  {
@@ -30,7 +30,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-      "studio101/mint/mint101"
+      "aboutstudio/mint/mint"
     ],
   },
 ];
