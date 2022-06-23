@@ -3,8 +3,48 @@ title: Technical Overview
 ---
 
 
-## How Does Livepeer studio work?
+## How Does Livepeer Studio work?
+
+Livepeer Studio provides video infrastructure tools needed for video development. The fundamental principle for video development is that the original video (live or recorded) is compressed utilizing an encoder to reduce the file size for transferring and alteration (if needed). The encoded video now has to get transcoded so that different renditions of it are made. These renditions are necessary so that when accessed on any device regardless of its bandwidth, they are the most optimized quality for viewing.
+
+Traditionally, transcoding is done in on a centralized server, but Livepeer Studio does this by taking livestreams or video assets provided and sends them to be transcoded using the [Livepeer Decentralized Newtwork](https://livepeer.org). For a more in-depth understanding of the workflow for each feature offered, visit the [Architecture](./architecture) page.
 
 ## Using Livepeer Studio
 
+The features that Livepeer Studio provide allows developers to build versatile apps/Dapps depending on what their needs are. Projects that focus on creator content applications can utilize the [Livestreaming](./livestream) feature or the [On Demand](./upload) to provide previously recorded videos. Using the [Mint](./mint) feature allows for creation of video NFTs to be sold or utilized for token gating.
+
+The following are lists of use cases and methods implemented with Livepeer Studio features and capabilities including but not limited to the provided examples.
+
+### Use cases
+
+| Implementation                                                                                                 | Advantages | Challenges |
+| -------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
+| Multistream recordings to other video platforms (YouTube, Twitch)                                                        |    Stream can reach wider audience        |    Dependent on if application supports use of custom RTMP URL         |
+| Live multistream to other video platforms (YouTube, Twitch)                                                                                              |     Stream can reach wider audience      |    Dependent on if application supports use of custom RTMP URL        |
+| Stream with broadcasting software (OBS) |     More professional looking streams (can switch between different camera views)       |      Understand of using the software      |
+| Livestream with mobile applications                                                                        |            Stream anywhere with an internet connection|      Not as stable as using ethernet connection      |
+| Inbrowser streaming                                                                      |            Lower latency|       Not as feature rich as using a broadcasting software like OBS     |
+
+
+### Methods
+
+Here are some examples of methods that can be used with features offered by Livepeer Studio:
+
+- Livestreaming using DJI Action2 camera and DJI Mimo app -> stream to transcode on the Livepeer network and viewed on a video player
+- Inbrowser streaming using Agora ->  stream to transcode on the Livepeer network and viewed on a video player
+- Mobile livestreaming using Larix app -> stream to transcode on the Livepeer network and viewed 
+on a video player
+- Upload video to Livepeer Studio from custom build app -> stored video gets transcoded by Livepeer network and viewed on a video player
+
+
 ## Best Practices and Recommendations
+
+When using Livepeer Studio for development, details related to video have to be taken into consideration such as:
+
+- Proper formats of video files
+- Reliable internet connection 
+- Proper video setting in broadcasting software for streaming
+- File sizes
+- Video players
+
+From more information on setting and configurations visit the [Features and Capabilities](./features) page.
