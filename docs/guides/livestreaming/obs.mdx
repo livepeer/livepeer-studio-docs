@@ -1,0 +1,70 @@
+---
+title: Streaming with OBS
+---
+
+OBS is the way that most users stream into Livepeer because it is easy to use and offers a high degree of customization. The purpose of this guide is to allow you to get a more in-dept look at setting up a livestream using Livepeer Studio with OBS.
+
+## What you need to know
+
+- Familiarity with using OBS
+
+## What you are going to build
+
+In this quick tutorial, you will learn how to pass in a live stream using OBS with a provided RTMP URL from Livepeer Studio.
+
+## What the methods are
+
+- Live streaming with a broadcasting software
+
+## Prepare the environment
+
+- Download [OBS](https://obsproject.com/)
+- Login or Sign up for a [Livpeer Studio](https://livepeer.studio) account
+- [Create a stream](https://livepeer.studio/preview/blog/stream-into-livepeer-studio-first-time)
+
+## Step 1: Open OBS and create a source
+
+- Click the **+ icon** under sources and select **Video Capture Device** if you’d like to stream using a camera or webcam. If you’d like to stream a browser window, select **Window Capture**.
+- Give the device a name
+
+![OBS1](../../../static/docs-assets/obs/OBS1.png) 
+![OBS2](../../../static/docs-assets/obs/OBS2.png)
+![OBS3](../../../static/docs-assets/obs/OBS3.png)
+
+## Step 2: Go to the settings
+
+- Select **Stream** settings
+- Select **custom** for services
+- Copy and paste the **RTMP ingest URL** and **Stream Key** and paste it into
+  the **“Server”** and **“Stream Key”** fields.
+
+  - RTMP ingest URL and Stream Key can be found on the dashboard on the Stream
+    Detail page after creating a stream or in the API.
+
+  ![OBS4](../../../static/docs-assets/obs/OBS4.png)
+
+## Step 3: Select the Output settings and the Streaming tab
+
+- In the Output Mode select Advance
+- Set the keyframe interval to 2 seconds
+- Save your settings
+
+![OBS5](../../../static/docs-assets/obs/OBS5.png)
+
+## Step 4: Stream and check output
+
+After saving your settings, OBS will return to the stream console. Press start
+streaming from the output you selected in Step 2.
+
+![LVS4](../../../static/docs-assets/obs/LVS4.png)
+
+Navigate to the Livepeer Dashboard, login, and select the stream name that
+you’re currently using, which should now be marked as “Active.” Under the Health
+tab, the video you’re streaming in through OBS should be visible.
+
+![LVS5](../../../static/docs-assets/obs/LVS5.png)
+
+To preview the stream in the browser, a video player is required. There are
+several options to display the live stream in the browser.
+[Visit our tutorial on Video playback in your app](https://livepeer.com/docs/guides/application-development/video-playback-in-your-app)
+to learn more.
