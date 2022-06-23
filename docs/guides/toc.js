@@ -7,7 +7,6 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-      "guides/livestreaming/tutorial",
       "guides/livestreaming/webrtmp",
       "guides/livestreaming/livestream-api",
       "guides/livestreaming/api-key",
