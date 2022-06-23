@@ -2,12 +2,13 @@ const toc = [
   "guides/index",
   {
     type: "category",
-    label: "Start live streaming",
+    label: "Livestreaming",
     link: { type: "doc", id: "guides/livestreaming/index" },
     collapsible: true,
     collapsed: true,
     items: [
-      "guides/livestreaming/tutorial",
+      "guides/livestreaming/livestream-api",
+      "guides/livestreaming/api-key",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/verify",
       "guides/livestreaming/create-a-stream",
@@ -43,11 +44,22 @@ const toc = [
   },
   {
     type: "category",
-    label: "Video NFT",
-    link: { type: "doc", id: "guides/nft/index" },
+    label: "Mint",
+    link: { type: "doc", id: "guides/mint-guides/index" },
     collapsible: true,
     collapsed: true,
-    items: ["guides/nft/mint-a-video-nft", "guides/nft/build-a-video-nft-app"],
+    items: ["guides/mint-guides/mint-a-video-nft", "guides/nft/build-a-video-nft-app"],
+  },
+  {
+    type: "category",
+    label: "Upload",
+    link: { type: "doc", id: "guides/upload-guides/index" },
+    collapsible: true,
+    collapsed: true,
+    items: [
+      "guides/upload-guides/upload-guides",
+
+    ],
   },
   {
     type: "category",
