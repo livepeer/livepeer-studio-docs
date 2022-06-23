@@ -53,7 +53,7 @@ const config = {
         },
         items: [
           {
-            href: "/aboutstudio,
+            href: "/aboutstudio",
             label: "About Studio",
             position: "left",
           },
