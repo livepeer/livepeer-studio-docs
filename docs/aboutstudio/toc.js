@@ -4,7 +4,7 @@ const toc = [
   "aboutstudio/features",
   "aboutstudio/architecture",
   "aboutstudio/usecases-methods",
-  "aboustudio/sampleapps",
+  "aboutstudio/sampleapps",
   {
     type: "category",
     label: "Livestream",

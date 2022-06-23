@@ -48,12 +48,12 @@ const toc = [
     link: { type: "doc", id: "guides/mint-guides/index" },
     collapsible: true,
     collapsed: true,
-    items: ["guides/mint-guides/mint-a-video-nft", "guides/nft/build-a-video-nft-app"],
+    items: ["guides/mint-guides/mint-a-video-nft", "guides/mint-guides/build-a-video-nft-app"],
   },
   {
     type: "category",
     label: "Upload",
-    link: { type: "doc", id: "guides/upload-guides/index" },
+    link: { type: "doc", id: "guides/upload-guides/upload-guides" },
     collapsible: true,
     collapsed: true,
     items: [
