@@ -40,12 +40,11 @@ feed gets transcoded to multiple renditions and sent to the CDN
 
 - An asset can be provided by **either** a downloadable URL link **or** by uploading a `.mp4` file
   - Importing a URL
-    - Asset in downloadable link is saved in storage
+    - Asset in downloadable link is transcoded in the Livepeer Network, gets passed back to Livepeer Studio and saved in storage
   - Uploading a file  
     - Generates a URL for storage if `Upload` option is used
-    - File provided is uploaded to storage
-  - Stored assets gets passed into Livepeer's decentralized transcoding network for transcoding
-  - Transcoded assets gets sent to CDN for delivery
+    - File provided itranscoded in the Livepeer Network, gets passed back to Livepeer Studio and saved in storage
+  - Stored assest now contains the `playbackUrl` used for viewing
   - The CDN sends specific rendition of the asset based on the viewers device and network capabilities when a request is made
 
 ![On Deamn Workflow](../../static/docs-assets/architechture/ondemandworkflow.png)
