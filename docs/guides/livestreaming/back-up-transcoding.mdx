@@ -1,11 +1,6 @@
 ---
-title: Redundant back-up transcoding
-description: Back-up transcoding with Livepeer Studio
-metaTitle: Redundant back-up transcoding - Livepeer Studio
-metaDescription: Back-up transcoding with Livepeer Studio
+title: Back-up transcoding
 ---
-
-# Redundant back-up transcoding
 
 Livepeer Studio routes your live streams to the nearest available datacenter to
 ensure your streamers and live stream viewers have a consistent, high quality
@@ -59,16 +54,19 @@ location. Use the ingest and playback URL pair in the region closest to your
 broadcaster. For any stream session, you must **use the RTMP ingest URL and
 playback URL pair from the same region.**
 
-### Find the closest ingest data center
 
-You can get the base URL pair for the regional ingest point nearest to you by
-calling `https://livepeer.studio/api/ingest`. For example:
+
+#### Request
+Find the closest ingest data center
 
 ```bash
 curl "https://livepeer.studio/api/ingest"
 ```
 
-And you should get results like this:
+#### Response 
+Returns the ingest data center region 
+   - 200 OK
+   -  `Content-Type: application/json`
 
 ```bash
 [
@@ -79,17 +77,19 @@ And you should get results like this:
 ];
 ```
 
-### Return a list of all regional base URL pairs
-
+#### Request
 At times, you will want to use a base URL pair of a region different from the
 one closest to you. You can get a list of all base URL pairs by calling
-`https://livepeer.studio/api/ingest?first=false`. For example:
+`https://livepeer.studio/api/ingest?first=false`.
 
 ```bash
 curl "https://livepeer.studio/api/ingest?first=false"
 ```
 
-And you should get a result similar to this:
+#### Response 
+Return a list of all regional base URL pairs
+   - 200 OK
+    -  `Content-Type: application/json`
 
 ```bash
 [
