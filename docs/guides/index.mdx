@@ -182,9 +182,7 @@ From the API response, we now have:
 
 2. Include these variables for later use:
 
-**For example:**
-
-### Request
+**Stored Variables**
 
 ```js
 let playBackId = "05b0572n8voz1t4w";
@@ -192,51 +190,14 @@ let id = "05b0b7b7-c6aa-45b8-a947-6c11997a3efd";
 let streamKey = "05b0-nyoa-jf0p-s2x8";
 ```
 
-### Response
 
-The flag for `"record": false` should appear in the API response. 
+### Start streaming with OBS
 
-> **Note:** This is the default setting, and indicates the ability to record and save the live stream for later views is not yet active. You will be able to change this in the following steps.
-
-## Record a Livestream
-
-The default of `record` is set to `off` for a newly created stream.The following settings are required to set up your recording.
-
-## Enable Recording
-
-1. You will make the request to turn the recording setting `on` and record your stream:
-
-### Request
-
-```js
-const recordOn = async () => {
-  const response = await axios.patch(
-    "https://livepeer.studio/api/stream/{id}/record",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LV_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      data: JSON.stringify({
-        record: true,
-      }),
-    }
-  );
-  console.log(JSON.stringify(response.data));
-};
-```
-
-### Response 
-
-The response should return a `204` message.
-
-## Start Streaming With OBS
-
-Now that you have created a new stream and turned on the recording, you can start streaming in OBS.
+Now that you have created a new stream, you can start streaming in OBS.
 
 1. First, follow the [OBS tutorial](/guides/livestreaming/obs). 
 
-## Verify the stream is running
+### Verify the stream is running
 
 2. Once you complete the OBS Tutorial, you can verify that the stream is running by setting the following value:
 
@@ -270,9 +231,43 @@ const streamOn = async () => {
 
 ```
 
+## Recording a Livestream
+
+This is the default setting, and indicates the ability to record and save the live stream for later views is not yet active `"record": false`. You will be able to change this in the following steps.
+
+> **Note:** Recording a livestream is not a development requirement for the livestreaming process. However, most streamers prefer to have a recording of their streams to show later, e.g. broadcasting/streaming/content creating
+
+ ### To enable a recording
+
+1. You will make the request to turn the recording setting `on` and record your stream:
+
+### Request
+
+```js
+const recordOn = async () => {
+  const response = await axios.patch(
+    "https://livepeer.studio/api/stream/{id}/record",
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.LV_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify({
+        record: true,
+      }),
+    }
+  );
+  console.log(JSON.stringify(response.data));
+};
+```
+
+### Response 
+
+The response should return a `204` message and `"record": true` in the livestream object .
+
 Once the live stream is complete, you can stop the stream after 6 minutes from the end of the streaming session.
 
-## List Recorded Sessions
+### List recorded sessions
 
 1. Confirm that the session has been recorded:
 
@@ -306,13 +301,10 @@ const getRecording = async () => {
 ```
 
 
-## Import an Asset
 
-Livepeer automatically imports a recording. However, there is an [Import API for Video On Demand (VOD)](/references/vod/import) implementations.
+### List assets
 
-## List Assets
-
-Retrieve the `playbackURL` to play the recording"
+Retrieve the `playbackURL` to play the recording
 
 2. Get the `playbackURL`:
 
@@ -386,10 +378,13 @@ This returns the `playbackURL` at the bottom of the response which we will use t
 }
 ```
 
+##  Playback a Livestream
 
-## Check a Recorded Video
+The response from requesting an asset in the API will return the `playbackId` which is used for the `playbackUrl`. https://livepeercdn.com/hls/{playbackId}/index.m3u8
+> **Note:** You can also get the `playbackUrl` by from the dashboard of the stream.
 
-There are different options to check the recorded video.
+
+There are different options to view a livestream.
 
 **For example:**
 
@@ -406,3 +401,7 @@ You can check a recorded video via [Bitmovin test player](https://bitmovin.com/d
 - ***For Safari web browser only***,  you can directly paste the `playbackURL` in the address bar.
 
 - ***Alternatively**, you can build your own video player: ***See*** [How to implement a player in the front end](https://github.com/codentell/livepeer-player-tutorial)
+
+> **Note:** The process of playing back a recorded video is the same as above.
+
+> **Note:** There are two ways to playback a recorded stream, via the API by getting the asset and the response returns a `playbackUrl` or download it via the `downloadUrl` link.(ALternatively you can get the download link from the dashboard)
