@@ -1,11 +1,6 @@
 ---
 title: Monitoring stream health
-description: Understanding stream performance on Livepeer Studio
-metaTitle: Monitoring stream health - Livepeer Studio
-metaDescription: Understanding stream performance on Livepeer Studio
 ---
-
-# Monitoring Stream Health
 
 To monitor any active stream for issues that may impact the quality of your
 stream, navigate to the Stream Health tab on the stream detail page.
@@ -87,17 +82,12 @@ your viewers.
 
 ## Stream Health API
 
-<Alert css={{ mt: "$5", mb: "$5" }} variant="loContrast">
-  <Text size="3" variant="gray">
-    Note: The Stream Health API is currently in <code>beta</code> and some
+
+**Note:** The Stream Health API is currently in `beta` and some
     elements may change as we mature the product. Before you start building with
-    it, let us know at{" "}
-    <a href="mailto:hello@livepeer.studio?subject=New%20Stream%20Health%20API%20user&body=Please%20include%20details%20about%20your%20app.">
-      <code>help@livepeer.studio</code>
-    </a>
+    it, let us know at [help@livepeer.studio](mailto:hello@livepeer.studio?subject=New%20Stream%20Health%20API%20user&body=Please%20include%20details%20about%20your%20app)
     so we can give you a heads up before any breaking changes.
-  </Text>
-</Alert>
+
 
 The health information about a stream can also be queried using a separate
 Stream Health API, which resides on a different root path `/data`. To use it,
@@ -117,18 +107,20 @@ Now let's go into more detail about each of the mentioned API endpoints.
 
 ### Health Status
 
-##### Request: `GET livepeer.studio/data/stream/{id}/health`
+#### Request: 
+
+`GET livepeer.studio/data/stream/{id}/health`
+  - id the stream ID is the same one as used in the regular API.
 
 ```bash
 curl 'https://livepeer.studio/data/stream/{id}/health' \
 -H 'authorization: Bearer {api-key}'
 ```
 
-The stream ID is the same one as used in the regular API.
 
-##### Response
-
-`Content-Type: application/json`
+#### Response
+- 200 OK
+- `Content-Type: application/json`
 
 ```json
 {
@@ -227,16 +219,20 @@ In the above response payload:
 
 ### Events
 
-##### Request: `GET livepeer.studio/data/stream/{id}/events`
+#### Request 
+
+`GET livepeer.studio/data/stream/{id}/events`
+- id the stream ID is the same one as used in the regular API.
 
 ```bash
 curl 'https://livepeer.studio/data/stream/{id}/events' \
 -H 'authorization: Bearer {api-key}'
 ```
 
-##### Response
+#### Response
 
-`Content-Type: text/event-stream`
+- 200 Ok
+- `Content-Type: text/event-stream`
 
 ```json
 retry: 10000
@@ -253,7 +249,6 @@ id: fd782a49-4986-4b3c-b3b4-9088ae76c152
 event: lp_event
 data:
 {"type":"media_server_metrics","id":"fd782a49-4986-4b3c-b3b4-9088ae76c152","timestamp":1635994881604,"streamId":"{id}","nodeId":"prod-mist-blue-server-1","region":"lon","stats":{"mediaTimeMs":1142550},"multistream":[]}
-
 ...
 ```
 
