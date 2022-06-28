@@ -1,7 +1,26 @@
 ---
-title: Upload 101
+title: Upload
 ---
 
 
 
-## About Upload with Livepeer Studio
+## About Uploading with Livepeer Studio
+
+Uploading is simple with Livepeer Studio. After getting your [API Key](../../guides/livestreaming/api-key), you can upload assets and get additional information on them.
+
+When an asset is uploaded, it gets transcoded in the Livepeer Network, which will generate information for playing the video along with Livepeer Studio storing them for you. Afterward, you can retrieve information on the asset such as the `playbackUrl` to view by using a video player or download it with the provided `downloadUrl`.
+
+
+
+Below is more information on the capabilities of uploading with  Livepeer Studio has to offer.
+
+## Livestreaming Capabilities
+
+| Capabilities | Description  |
+| ------------ | ------------ |
+|  Import assets  | Asset provided in a downloadable link is sent to the Livepeer Network for transcoding and saved in storage. | 
+|  Upload assets  | A direct upload URL is generated and then the asset provided in the `.mp4` file format is sent to the Livepeer Network for transcoding and saved in storage.  | 
+|  Get assets | Retreives a specific or list of assets with provided information such as `playbackUrl`, `playbackId`, and `downloadUrl` | 
+|  Get tasks | Retreives a specific or list of tasks associated with an asset and provides information such as `type`, `status`, and `params` | 
+
+To learn more on using the Livestream feature, visit the [Uploading guide](../../guides/upload-guides) or the [Upload API Reference](../../references/vod) for more detailed instructions.
