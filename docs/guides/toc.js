@@ -38,7 +38,6 @@ const toc = [
     items: [
       "guides/development/live-streaming-from-your-app",
       "guides/development/video-playback-in-your-app",
-      "guides/development/custom-domain",
       "guides/development/metrics"
     ],
   },
