@@ -10,7 +10,6 @@ const toc = [
       "guides/livestreaming/tutorial",
       "guides/livestreaming/obs",
       "guides/livestreaming/webrtmp",
-      "guides/livestreaming/livestream-api",
       "guides/livestreaming/api-key",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/verify",
