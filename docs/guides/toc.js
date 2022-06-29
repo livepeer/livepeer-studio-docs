@@ -24,8 +24,6 @@ const toc = [
       "guides/livestreaming/back-up-transcoding",
       "guides/livestreaming/reducing-latency",
       "guides/livestreaming/handling-disconnects",
-      "guides/livestreaming/debug-live-stream-issues",
-      "guides/livestreaming/create-paywall",
       "guides/livestreaming/support-matrix",
       "guides/livestreaming/monitoring-stream-health",
       "guides/livestreaming/srt-support",
@@ -38,11 +36,10 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-      "guides/development/example-app",
       "guides/development/live-streaming-from-your-app",
       "guides/development/video-playback-in-your-app",
       "guides/development/custom-domain",
-      "guides/development/metrics",
+      "guides/development/metrics"
     ],
   },
   {
@@ -72,7 +69,6 @@ const toc = [
     collapsed: true,
     items: ["guides/sampleslib/index"],
   },
-  "guides/api-key",
   "guides/usage-billing",
   "references/terminology",
 ];
