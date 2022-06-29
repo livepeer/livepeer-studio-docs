@@ -2,16 +2,13 @@
 title: Quick Start
 ---
 
-This Quick Start guide includes a step-by-step process to get you started developing an application with the Livepeer Studio API (for `Node.js` and `Axios` apps). With the Livepeer Studio toolkit, you will be able to develop an application that follows our complete livestreaming cycle and best practice guidelines:
+This Quick Start guide includes a step-by-step process to get you started developing an application with the Livepeer Studio API (for `Node.js` and `Axios` apps). With the Livepeer Studio toolkit, you will be able to develop an application that follows our complete livestreaming cycle and best practice guidelines to:
 
 - [Create a livestream](/guides#create-a-livestream)
 - [Record a  livestream](/guides#record-a-livestream)
-- [Play back the livestream](/guides/#list-recorded-sessions) using the [Livepeer Studio API](/references) with `Node.js` and `Axios`
+- [Playback a livestream](/guides/#list-recorded-sessions) using the [Livepeer Studio API](/references) with `Node.js` and `Axios`
 
-**Optional**
-- [Check a recorded video](/guides#check-a-recorded-video)
-
-> **Note:** Athough the above is not restricted to `Node.js` and `Axios` -- Livepeer Studio currently only supports `Node.js` and `Axios`. In the future we will support other programming languages as well.
+> **Note:** Although the above is not restricted to `Node.js` and `Axios`, Livepeer Studio currently only supports `Node.js` and `Axios`. **In the future we will support other programming languages as well**.
 
 ## What You Need to Know
 
@@ -21,46 +18,44 @@ This Quick Start guide includes a step-by-step process to get you started develo
 
 ## What You Can Build Here
 
-The following is an annotated list of applications you can build following this tutorial. It includes brief descriptions of use cases with advantages and challenges of each implementation including but not limited to:
+This guide follows an implementation for building a livestream application with **OBS Professional Broadcasting** as included in the annotated list of applications you can build from this guide:
 
 | Implementation                                                                                                 | Advantages | Challenges |
 | -------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
-| Pass in the Livepeer Studio address to YouTube, Twitch,                                                        |            |            |
+| * **OBS Professional Broadcasting (e.g. Livestreaming changing camera angles, or multiple "views" within a screen)** |            |            |
+| Livepeer Studio In-browser Applications                                                                          |            |            |
+| *> **Note:** Capabilities are available for implementations of InBrowser platforms (Restream/Streamyard).*                                                                     |            |            |
+| Pass in the Livepeer Studio address to YouTube, Twitch, etc.                                                        |            |            |
 | Multi-streaming                                                                                                |            |            |
-| OBS Professional Broadcasting (e.g. Livestreaming changing camera angles, or multiple "views" within a screen) |            |            |
-| Livepeer Studio In-browser Application                                                                         |            |            |
-| Livestreaming encoder with more latency                                                                        |            |            |
-| Inbrowser platforms (Restream/Streamyard)                                                                      |            |            |
-| [Choosing a Streaming-Method](/aboutstudio/usecases-methods)                                                 |            |            |
+
 
 ## Livestreaming Methods
 
-You can choose which method to use to stream for your implementation, e.g.:
+You can choose which [method](http://localhost:3000/aboutstudio/usecases-methods#methods) to use to stream for your implementation (e.g., Inbrowser, Mobile, Zoom, ...)
 
-- Livepeer Stream to Zoom using the transcoding network
-- [Inbrowser platforms](https://docs.google.com/document/d/1tl_CsOmZT1_ExxVu6IdcoPOTJwcxQA015scsfULyKgk/edit#heading=h.daphfpfvg4hn) (e.g., Streamyard, Restream, Agora (with their own transcoding while sending the signal to Livepeer))
-- Mobile livestreaming, e.g. Larix applications, while transcoding on our network, placing a video player for streaming
 
 ## Technical Preparation
 
-Before getting started, you can set up your environment to prepare for developing your application:
+Before getting started, you can set up your environment for developing your application:
 
-- **Operating System:** Livepeer Studio services can be run on any operating system
-- **IDE:** You can use any development environment that supports your library (VS Code, Sublime, etc.)
+- **Operating System:** Livepeer Studio services can be run on any operating system.
 
-1. **[Sign up for a free Livepeer account](https://livepeer.studio/login)**
+- **IDE:** You can use any development environment that supports your library (VS Code, Sublime, etc.).
+
+- **Complete these steps** to finalize your setup:
+1. **[Sign up for a Free Livepeer Account](https://livepeer.studio/login)**
 1. [Get an API key](https://livepeer.studio/docs/guides/start-live-streaming/api-key)
 1. Download and install [OBS](https://obsproject.com/)
 1. Install [Node.js](https://nodejs.org/en/)
 1. Install [Axios](https://axios-http.com/)
-1. Access the [Livepeer API Reference](https://livepeer.studio/docs/api-reference)
+1. Access the [Livepeer Studio API Reference](/references)
 
 
 ## Create a Livestream
 
 1.  To create a stream you will need to get the following parameters:
 
-- A `Stream key`,
+- A `Stream key`
 - An `RTMP ingest URL`
 - A `playbackURL`
 
@@ -231,13 +226,18 @@ const streamOn = async () => {
 
 ```
 
-## Recording a Livestream
+## Record a Livestream
 
-This is the default setting, and indicates the ability to record and save the live stream for later views is not yet active `"record": false`. You will be able to change this in the following steps.
+The setting for recording a livestream indicates:
+
+- the ability to record a livestream, and
+- save the livestream for later views  
+
+**By default**, this setting is set to `"record": false`. You will be able to change this in the following steps:
 
 > **Note:** Recording a livestream is not a development requirement for the livestreaming process. However, most streamers prefer to have a recording of their streams to show later, e.g. broadcasting/streaming/content creating
 
- ### To enable a recording
+ ### Enable recording
 
 1. You will make the request to turn the recording setting `on` and record your stream:
 
@@ -263,7 +263,7 @@ const recordOn = async () => {
 
 ### Response 
 
-The response should return a `204` message and `"record": true` in the livestream object .
+The response should return a `204` message and `"record": true` in the livestream object.
 
 Once the live stream is complete, you can stop the stream after 6 minutes from the end of the streaming session.
 
@@ -381,7 +381,7 @@ This returns the `playbackURL` at the bottom of the response which we will use t
 ##  Playback a Livestream
 
 The response from requesting an asset in the API will return the `playbackId` which is used for the `playbackUrl`. https://livepeercdn.com/hls/{playbackId}/index.m3u8
-> **Note:** You can also get the `playbackUrl` by from the dashboard of the stream.
+> **Note:** You can also get the `playbackUrl` from the dashboard of the stream.
 
 
 There are different options to view a livestream.
@@ -404,4 +404,4 @@ You can check a recorded video via [Bitmovin test player](https://bitmovin.com/d
 
 > **Note:** The process of playing back a recorded video is the same as above.
 
-> **Note:** There are two ways to playback a recorded stream, via the API by getting the asset and the response returns a `playbackUrl` or download it via the `downloadUrl` link.(ALternatively you can get the download link from the dashboard)
+> **Note:** There are two ways to playback a recorded stream, via the API by getting the asset and the response returns a `playbackUrl` or download it via the `downloadUrl` link. (ALternatively you can get the download link from the dashboard)
