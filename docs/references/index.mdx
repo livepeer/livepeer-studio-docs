@@ -3,6 +3,7 @@ title: About Livepeer Studio API
 ---
 
 
+
 The Livepeer Studio API is a livestreaming video API whereby you or the client can: 
 
 - Configure details for live broadcasting software, 
@@ -73,3 +74,32 @@ The Livepeer Studio API uses conventional HTTP status codes.
 `4XX` = client error, problem with information provided
 
 `5XX` = internal server error, problem with Livepeer Studio servers
+
+
+Hope do something with this
+
+---
+title: API Keys
+---
+
+## Making requests on the API
+
+You need an API key to make requests of the Livepeer Studio API. 
+
+## Using the Dashboard
+
+You do not need to create an API key if you are creating and configuring livestreams using only the Livepeer Studio Dashboard.
+
+> **Note:** Livestream Studio Dashboard is intended for viewing and testing work done with the API. 
+
+For information on how to get an API key visit the [`Get an API key`](/guides/livestreaming/api-key) guide.
+
+## Usage
+
+To use an API key, simply add an `Authorization` header to your request with the `Bearer` scheme and the API key as the value. Example:
+
+```bash
+curl -X GET \
+  -H 'Authorization: Bearer {api_key}'
+  https://livepeer.studio/api/user/me
+```

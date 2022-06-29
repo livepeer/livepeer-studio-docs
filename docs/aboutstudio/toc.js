@@ -3,7 +3,6 @@ const toc = [
   "aboutstudio/tech-overview",
   "aboutstudio/features",
   "aboutstudio/architecture",
-  "aboutstudio/usecases-methods",
   "aboutstudio/sampleapps",
   {
     type: "category",

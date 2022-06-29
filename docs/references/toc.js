@@ -59,6 +59,7 @@ const toc = [
   "references/authentication",
   "references/errors",
   "references/terminology",
+  "references/support-references",
 ];
 
 module.exports = toc;
