@@ -10,7 +10,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-     "aboutstudio/livestream/livestream"
+     "aboutstudio/livestream/index"
 
     ],
   },
@@ -20,7 +20,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-    "aboutstudio/upload/upload"
+    "aboutstudio/upload/index"
    ],
  },
  {
@@ -29,7 +29,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-      "aboutstudio/mint/mint"
+      "aboutstudio/mint/index"
     ],
   },
 ];
