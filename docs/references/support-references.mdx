@@ -24,3 +24,26 @@ brand, e.g. `rtmp.companyname.io`.
 
 - You can configure this with your DNS
 provider.
+
+
+## Stream delivery via CDN
+
+Playback for all Pro plan streams is delivered via a content delivery network
+(CDN). The transcoded video stream automatically switches between the transcoded
+renditions based on the viewers’ available bandwidth, device performance, and
+network conditions.
+
+Non-CDN delivery for free tier users is limited to 10 viewers per account.
+
+## What if playback isn’t working?
+
+Look at the `lastSeen` and `isActive` (Status row on the Livepeer Studio Dashboard)
+values. If ingest was properly configured for playback, `lastSeen` will show the
+current date and time and `isActive` will be `true` (Status row on the
+Livepeer Studio Dashboard will be Active).
+
+If this isn't the case, confirm the `streamKey` and RTMP ingest URL,
+`rtmp://rtmp.livepeer.studio/live`, are configured correctly in your broadcast
+software.
+
+Lastly, check that your playback URL is correct.

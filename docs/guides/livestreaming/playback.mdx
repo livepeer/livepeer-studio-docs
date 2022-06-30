@@ -1,36 +1,128 @@
 ---
-title: Playback a live stream
-description: Playback a Livepeer Studio live stream
-metaTitle: Playback a live stream - Livepeer Studio
-metaDescription: Playback a Livepeer Studio live stream
+title: Playback a Livestream
 ---
 
-# Playback a live stream
+This guide provides steps and information about livestream playbacks:
 
-This is how a Livepeer Studio playback URL is formatted:
+- Understanding the `playbackUrl`
+- Ways to get the playback URL
+- Working with the example API requests
+  - cURL Method
+  - JavaScript Method
+- Get the playback URL through the dashboard
+- Build video players to view playback URL
+
+## About the `playbackUrl`
+
+Livepeer Studio playback URL is formatted:
 `https://livepeercdn.com/hls/{playbackId}/index.m3u8`.
 
-All sessions for a stream have the same playback URL.
+> **Note:** All sessions for a stream have the same playback URL.
 
-The easiest way to the stream playback URL is to login to the Livepeer Studio
-Dashboard, navigate to the Streams page,
-[livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams), and
-click on a stream name. The playback URL is listed on the page.
+## What You Need to Know
+
+- Familiarity with [Livepeer Studio core concepts](/aboutstudio)
+- Experience working with APIs
+
+## What You Can Build Here
+
+| Implementation      | Description                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| Get a playback URL  | Using the `playbackUrl` to view the livestream                         |
+| Embed video player  | HLS supported video player is required for viewing livestreams with the playback URL |
+| Build a  video player  | HLS supported video player is required for viewing livestreams with the playback URL |
+| Get audio of stream | Provide only the audio of a stream                                     |
+
+## Technical Preparation
+
+1. **[Sign up for a free Livepeer account](https://livepeer.studio/login)**
+1. [Get an API key](https://livepeer.studio/docs/guides/start-live-streaming/api-key)
+1. Access the [API Reference](https://livepeer.studio/docs/api-reference)
+
+## Ways to Get the Playback URL
+
+- Via the API
+- Via the dashboard
+
+## Get Playback URL with the GET request to the API
 
 You can also make a `GET` request to `https://livepeer.studio/api/stream/{id}`, and
 note the value of `playbackId` in the response. The playback URL is
 `https://livepeercdn.com/hls/{playbackId}/index.m3u8`.
 
-### Example code
+## cURL Method
 
-#### cURL Method
+### Request
 
 ```bash
 curl --location --request GET 'https://livepeer.studio/api/stream/{id}' \
 --header 'Authorization: Bearer {api_key}'
 ```
 
-#### Node.js with Axios Method
+### Response
+
+```json
+{
+  "lastSeen": 1654285662946,
+  "isActive": false,
+  "record": true,
+  "suspended": false,
+  "sourceSegments": 2041,
+  "transcodedSegments": 8168,
+  "sourceSegmentsDuration": 4074.216000000001,
+  "transcodedSegmentsDuration": 16304.863999999987,
+  "sourceBytes": 1886568720,
+  "transcodedBytes": 1175130472,
+  "id": "405a4ab4-9c5f-48a0-859a-4bb6445994a7",
+  "kind": "stream",
+  "name": "Test Stream",
+  "region": "mdw",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "profiles": [
+    {
+      "fps": 0,
+      "name": "240p0",
+      "width": 426,
+      "height": 240,
+      "bitrate": 250000
+    },
+    {
+      "fps": 0,
+      "name": "360p0",
+      "width": 640,
+      "height": 360,
+      "bitrate": 800000
+    },
+    {
+      "fps": 0,
+      "name": "480p0",
+      "width": 854,
+      "height": 480,
+      "bitrate": 1600000
+    },
+    {
+      "fps": 0,
+      "name": "720p0",
+      "width": 1280,
+      "height": 720,
+      "bitrate": 3000000
+    }
+  ],
+  "createdAt": 1651776454667,
+  "streamKey": "405a-lacy-ynpa-dnq2",
+  "ingestRate": 0,
+  "playbackId": "405ag6i16yojk2un",
+  "renditions": {},
+  "multistream": {
+    "targets": []
+  },
+  "outgoingRate": 0
+}
+```
+
+## JavaScript Method
+
+### Request
 
 ```javascript
 const axios = require("axios");
@@ -49,35 +141,59 @@ axios
   });
 ```
 
+### Response
+
+Same as the cURL's method
+
+## Get the Playback URL Through the Dashboard
+
+1. Log in to Livepeer Studio Dashboard
+1. Navigate to the [Streams page](https://livepeer.studio/dashboard/streams)
+1. Click on a stream name
+1. The playback URL is listed in the details section of the page.
+
 ## Video player
 
-Users can view the live stream with any HLS video player (for example
-[video.js](https://videojs.com/) or [JW Player](https://www.jwplayer.com/)).
+To build an application that plays your livestream or On Demand assets, you need to use some sort of video player compatible with the HLS protocol. There are many HLS video players out there, for example [video.js](https://videojs.com/) or [JW Player](https://www.jwplayer.com/) which either have built-in support or have plugins to support HLS.
 
-## Stream delivery via CDN
+### Embed a video player
 
-Playback for all Pro plan streams is delivered via a content delivery network
-(CDN). The transcoded video stream automatically switches between the transcoded
-renditions based on the viewers’ available bandwidth, device performance, and
-network conditions.
+You can build an embeddable player:
+> **Note:** The embeddable player is currently in `beta` and some elements may change as we mature the product. For a production-grade application consider using your own player, like the ones suggested above. You can also check or copy the [Livepeer Player source code](https://github.com/livepeer/player) to get started quickly.
 
-Non-CDN delivery for free tier users is limited to 10 viewers per account.
+To make getting started easier, you can also use the Livepeer Studio embeddable player on your page. To use it, you just need to create an `<iframe>` element in your application with the URL pointing to the hosted player.
 
-## What if playback isn’t working?
+You only need to send it some information about what content it is supposed to play, which is made via the `?v` query-string parameter, which should be set to the `playbackId`. Notice that this playback ID can be either a livestream or an On Demand asset and the player will figure out where to find the content to play.
 
-Look at the `lastSeen` and `isActive` (Status row on the Livepeer Studio Dashboard)
-values. If ingest was properly configured for playback, `lastSeen` will show the
-current date and time and `isActive` will be `true` (Status row on the
-Livepeer Studio Dashboard will be Active).
+#### Example Code
 
-If this isn't the case, confirm the `streamKey` and RTMP ingest URL,
-`rtmp://rtmp.livepeer.studio/live`, are configured correctly in your broadcast
-software.
+```html
+<iframe
+  src="https://lvpr.tv?v={playbackId}"
+  frameborder="0"
+  allowfullscreen
+  allow="autoplay; encrypted-media; picture-in-picture"
+  sandbox="allow-scripts">
+</iframe>
+```
 
-Lastly, check that your playback URL is correct.
+#### Customization
+
+Some options can be changed in the player for better integration with your application. Those are also configured through the query-string. Some examples are:
+
+- `autoplay:` By default, the player starts playing the video automatically. This also means that the video has to start muted due to browser restrictions. To disable that use the `?autoplay=0` option. To still start the video muted, you can include `&muted=1` as well.
+
+- `loop:` To repeatedly play the video in a loop, use `?loop=1`. This is useful for short videos to create a continuous experience for the user.
+
+- `theme` (experimental): Use this to change the theme of the player. We currently provide the default video.js themes as options (city, fantasy, forest, and sea) e.g. `?theme=sea`. By default, no theme is applied.
+
+> **Warning ⚠️** The theme option is the most subject to stop working in the future as we change the underlying technology used in the player. Consider setting up your own player if you need to customize that on a production app.
+
+### Build a video player
+You can also learn how to build your own [video player](../development/video-playback-in-your-app).
 
 ## Audio-only streams
 
-You can use `?video=false` at the end of an `.m3u8` URL to get an audio-only
+If you want to provide only the audio of the stream, you can use `?video=false` at the end of an `.m3u8` URL to get an audio-only
 stream. For example,
 `https://livepeercdn.com/hls/{playbackId}/index.m3u8?video=false`.
