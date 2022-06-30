@@ -25,7 +25,6 @@ const toc = [
       "guides/livestreaming/reducing-latency",
       "guides/livestreaming/handling-disconnects",
       "guides/livestreaming/support-matrix",
-      "guides/livestreaming/monitoring-stream-health",
       "guides/livestreaming/srt-support",
     ],
   },
