@@ -1,61 +1,51 @@
 ---
-title: Create a stream
+title: Creating a Stream
 ---
 
+This guide provides steps and information about creating a livestream:
 
+- Understanding the `stream` object
+- Ways to create a stream object
+- Working with example API requests
+- No-code stream creation (optional)
 
-## The `stream` object
+## About the `stream` Object
 
-Live streaming with Livepeer Studio is easy. The first step is understanding the
-`stream` object. It is the core building block of the Livepeer Studio platform.
+**It is important to note,** that the`stream` object is the core building block of the Livepeer Studio platform.
 
-A Livepeer Studio `stream` is a unique object with configuration data and metadata
-about all live stream sessions associated with it.
+In Livepeer Studio, the`stream` object has unique configuration data and metadata
+about all [livestream sessions](/terminology) that are associated with the stream.
 
-<Alert css={{ mt: "$5", mb: "$6" }} variant="loContrast">
-  <Text size="3" variant="gray">
-    Note: historically, a <code>stream</code> object with a{" "}
-    <code>parentId</code> represented a single live stream session. This type of
-    "child-session" stream object will be deprecated in an upcoming version of
-    the API in favor of the <code>session</code> object.
-  </Text>
-</Alert>
+> **Note:** historically, a `stream` object with a `parentId`represented a single livestream session. This type of "child-session" stream object will be deprecated in an upcoming version of the API in favor of the `session` object.
+
+## What You Need To Know
+
+- Familiarity with Livepeer Studio core concepts
+- Experience working with APIs
+
+## What You Can Build Here
+
+| Implementation                          | Description                             |
+| --------------------------------------- | --------------------------------------- |
+| Create a stream for livestreaming       | Broadcast livestreams of any duration   |
+| Create a stream to broadcast recordings | Broadcast 24/7 livestream of recordings |
+
+## Technical Preparation
+
+Before getting started, you can set up your environment to prepare for developing your application:
+
+- Sign up for a free Livepeer account
+- Get an API key
+- Access the [API Reference](/references/stream/)
+
+## Ways to Create a Stream Object
 
 There are two ways to create a stream object:
 
-<Grid
-  gap={3}
-  css={{
-    gridTemplateColumns: "repeat(1, 1fr)",
-    "@bp1": {
-      gridTemplateColumns: "repeat(2, 1fr)",
-    },
-  }}
->
-  <Card
-    href="/docs/guides/start-live-streaming/create-a-stream#no-code-stream-creation-with-the-livepeercom-dashboard"
-    title="No code stream creation in the Livepeer Studio Dashboard"
-    label="Jump to section"
-  />
-  <Card
-    href="/docs/guides/start-live-streaming/create-a-stream#create-a-stream-object-with-a-post-request-to-the-api"
-    title="Create a stream object with a POST request to the API"
-    label="Jump to section"
-  />
-</Grid>
+- Via the API
+- Via the dashboard (no code)
 
-### No code stream creation with the Livepeer Studio Dashboard
-
-Login to the Livepeer Studio Dashboard, and navigate to the Streams page,
-[livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams). On
-this page you can create a new stream and delete streams. When you name your
-stream, pick a unique name and include URL compatible characters only.
-
-On the Stream page
-([livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams)), you
-can also click on a stream to find out configuration and usage information.
-
-### Create a stream object with a POST request to the API
+## Create a stream object with a POST request to the API
 
 Send a `POST` request to `https://livepeer.studio/api/stream`. This creates a new
 Livepeer Studio `stream` object.
@@ -68,9 +58,9 @@ you define the `profiles` parameter with 720p, 480p and 360p renditions.
 If you do not define transcoding rendition `profiles` when creating the
 `stream`, no transcoding will happen. Your playback video will have the
 attributes of the source stream only, will not take advantage of adaptive
-bitrate streaming and will likely buffer.
+bitrate streaming, and will likely buffer.
 
-Here is an example request:
+### Request
 
 ```bash
 curl -X POST \
@@ -105,6 +95,8 @@ curl -X POST \
 https://livepeer.studio/api/stream
 ```
 
+### Response
+
 This is an example response to the request above. `streamKey`, `playbackId`, and
 `id` are unique to the `stream` object. You will need the `streamKey` to
 broadcast live video and the `playbackId` to configure the playback URL to watch
@@ -125,3 +117,14 @@ the live stream.
     {other asset object keys}
 }
 ```
+
+## No-code stream creation with the Livepeer Studio Dashboard
+
+1. Log in to the Livepeer Studio Dashboard
+1. Navigate to the Streams page,
+   [livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams). On
+   this page, you can create a new stream and delete streams. When you name your
+   stream, pick a unique name and include URL-compatible characters only.
+1. On the Stream page
+   ([livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams)), you
+   can also click on a stream to find out configuration and usage information.
