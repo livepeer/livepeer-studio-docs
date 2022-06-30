@@ -1,6 +1,7 @@
 const toc = [
   "aboutstudio/index",
   "aboutstudio/tech-overview",
+  "aboutstudio/cdn",
   "aboutstudio/features",
   "aboutstudio/architecture",
   "aboutstudio/sampleapps",
@@ -16,11 +17,11 @@ const toc = [
   },
   {
     type: "category",
-    label: "Upload",
+    label: "On Demand ",
     collapsible: true,
     collapsed: true,
     items: [
-    "aboutstudio/upload/index"
+    "aboutstudio/on-demand/index"
    ],
  },
  {
