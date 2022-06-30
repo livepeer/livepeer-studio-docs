@@ -3,32 +3,60 @@ title: About Livepeer Studio API
 ---
 
 
-The Livepeer Studio API is a livestreaming video API whereby you or the client can: 
-
-- Configure details for live broadcasting software, 
-- Generate a playback URL for stream viewers 
-- Get usage data about your stream sessions and
-more..
-
 The [Livepeer.studio API](/references) is a video livestreaming API whereby you or the client can configure details for: 
 
-- Live broadcasting software, 
-- Generating a playback URL for stream viewers, 
-- Getting usage data about your stream sessions, 
+- Live broadcasting software
+- Generating a playback URL for stream viewers
+- Getting usage data about your stream sessions
 
-## Base url
+## Making requests on the API
 
-The Livepeer Studio API base url is `https://livepeer.studio/api/`
+You need an API key to make requests of the API.
+
+> **Note:**
+Livestream Studio Dashboard is intended for viewing and testing work done with the API. 
+You do not need to create an API key if you are creating and configuring livestreams using only the Livepeer Studio Dashboard.
+
+## Getting an API Key
+
+For information on how to get an API key visit the [`Get an API key`](/guides/livestreaming/api-key) guide.
+
+## Base URL
+
+The API base url is `https://livepeer.studio/api/`
+
+## Authentication
+
+The API uses API keys to authenticate most requests, including all requests associated with creating and retrieving a stream or session object.
+
+The API uses Bearer authentication. You or the client must send an API key in the Authorization header when making requests to protected information:
+
+```bash
+Authorization: Bearer <api-key>
+```
+
+> **Note:** All API requests must be made over HTTPS. API requests without proper authentication will fail.
+
+## Usage
+
+To use an API key, simply add an `Authorization` header to your request with the `Bearer` scheme and the API key as the value. Example:
+
+```bash
+curl -X GET \
+  -H 'Authorization: Bearer {api_key}'
+  https://livepeer.studio/api/user/me
+```
+
 
 ## Request and Response Formats
 
-As you make requests, the Livepeer.com API returns JSON responses.
+As you make requests, the API returns JSON responses.
 
 
 
-## Access the Livepeer Studio API
+## Access the API
 
-Explore the [Livepeer.studio API reference](/references). 
+Explore the [API reference](/references). 
 
 
 ## API Requests
@@ -41,35 +69,97 @@ All API requests must be made over HTTPS. API requests without proper authentica
 
 **For example:**
 
+`Get` a livestream by using the stream `id`
+
 ### Request
 
-```
+```bash
+curl -H 'authorization: Bearer {api-key}' \
+"https://livepeer.studio/api/stream/{id}"
 
 ```
 
 ### Response
 
-```
+Returns in JSON format information related to the asset
 
-```
-
-
-## Authentication
-
-The Livepeer Studio API uses API keys to authenticate most requests, including all requests associated with creating and retrieving a stream or session object.
-
-The Livepeer Studio API uses Bearer authentication. You or the client must send an API key in the Authorization header when making requests to protected information:
-
-```bash
-Authorization: Bearer <api-key>
+```json
+{
+    "id": "c4eb76a8-55ef-4d9e-a43d-76fc5ef5b675",
+    "hash": [
+        {
+            "hash": "70a7dfe283f8b5e12f37d16e167e9888",
+            "algorithm": "md5"
+        },
+        {
+            "hash": "0fc9afd9382ebda9a8a8b19dba6c25b7737ac63bc835b1e448753c6110468d5f",
+            "algorithm": "sha256"
+        }
+    ],
+    "name": "Test",
+    "size": 65830529,
+    "status": {
+        "phase": "ready",
+        "storage": {
+            "ipfs": {
+                "data": {
+                    "videoFileCid": "bafybeic472o54gavum3wvnlec5nd2eo2izadoiupjutk3nlotkref4wvte",
+                    "nftMetadataCid": "bafkreidw3n2jr3yiscvnb6wgycvjnjqmnz5jvqjy6nspmzztoiuuhav2xm"
+                },
+                "taskIds": {
+                    "last": "15b039b1-bb18-4560-bc99-008622c216c6"
+                }
+            }
+        },
+        "updatedAt": 1655912767100
+    },
+    "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+    "storage": {
+        "ipfs": {}
+    },
+    "createdAt": 1655908245685,
+    "videoSpec": {
+        "format": "mp4",
+        "tracks": [
+            {
+                "fps": 60,
+                "type": "video",
+                "codec": "h264",
+                "width": 560,
+                "height": 318,
+                "bitrate": 777938,
+                "duration": 634.566667,
+                "pixelFormat": "yuv420p"
+            },
+            {
+                "type": "audio",
+                "codec": "aac",
+                "bitrate": 48085,
+                "channels": 1,
+                "duration": 634.144,
+                "sampleRate": 16000
+            }
+        ],
+        "duration": 634.567
+    },
+    "playbackId": "q4eb1vvprpm8avp7",
+    "playbackUrl": "https://livepeercdn.com/recordings/d34e3146-5715-44f8-90c5-cc1109a51583/index.m3u8",
+    "downloadUrl": "https://livepeercdn.com/asset/{playbackId}/video"
+}
 ```
 
 ## Errors
 
-The Livepeer Studio API uses conventional HTTP status codes.
+The API uses conventional HTTP status codes.
 
 `2XX` = success
 
 `4XX` = client error, problem with information provided
 
 `5XX` = internal server error, problem with Livepeer Studio servers
+
+
+ 
+
+
+
