@@ -1,20 +1,42 @@
 ---
-title: Verify a live stream is active
-description: Verify your Livepeer Studio stream is active
-metaTitle: Verify a live stream is active - Livepeer Studio
-metaDescription: Verify your Livepeer Studio stream is active
+title: Verify Active Livestream
 ---
 
-# Verify a live stream is active
+This guide provides steps and information about verifying streams:
 
-The easiest way to confirm a live stream is active is to login to the
-Livepeer Studio Dashboard, navigate to the Streams page,
-[livepeer.studio/dashboard/streams](https://livepeer.studio/dashboard/streams), and
-click on a stream name. Look at the Status row to see if the stream is Active or
-Idle. If the status Idle, that means that Livepeer Studio is not ingesting any
-video with that stream’s `streamKey`.
+- Ways to verify if the stream `isActive`
 
-## Verify stream status with the Livepeer Studio API
+## What You Need To Know
+
+- Familiarity with Livepeer Studio core concepts
+- Experience working with APIs
+
+## What You Can Build Here
+
+| Implementation                           | Description                                             |
+| ---------------------------------------- | ------------------------------------------------------- |
+| Verify a stream  |Getting the status of a stream on whether live or idle |
+
+
+
+## Technical Preparation
+
+Before getting started, you can set up your environment to prepare for developing your application:
+
+- Sign up for a free Livepeer account
+- Get an API key
+- Access the [API Reference](/../references/stream)
+
+## Ways to Verify Livestream
+
+There are two ways to verify a livestream:
+
+- Via the API
+- Via the dashboard(no code)
+
+
+
+## Verify stream status with the API
 
 Make a `GET` request to `https://livepeer.studio/api/stream/{id}`, and note the
 value of `isActive` in the response. `true` means the `stream` is active, and
@@ -25,6 +47,8 @@ that Livepeer Studio is not ingesting any video with that `streamKey`.
 system. The time is reported in Unix epoch time. If the stream is running, the
 epoch will be close to the current time.
 
+### Request
+
 Here is an example request:
 
 ```bash
@@ -32,9 +56,11 @@ curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/stream/{id}"
 ```
 
+### Response
+
 This is an example response:
 
-```bash
+```json
 {
     "name":"test_stream",
     "profiles":[
@@ -51,22 +77,44 @@ This is an example response:
 }
 ```
 
-## Return all active live streams
+## Return All Active Livestreams
 
-This example shows a decoded JSON object. But, remember that anything passed as
+This example shows a decoded JSON object.
+ > **NOTE:** Anything passed as
 a parameter in a `GET` request URL must be URL encoded.
+
+### Request
 
 ```bash
 curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": true}]"
 ```
 
-## Return all idle live streams
+### Response 
+
+If there are active streams, `isActive: true` will be listed in the response along with a list of the streams. If no active streams are present, the response returns an empty array `[]`.
+
+## Return All Idle Livestreams
 
 This example shows a decoded JSON object. Remember that anything passed as a
 parameter in a `GET` request URL must be URL encoded.
+
+### Request
 
 ```bash
 curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": false}]"
 ```
+
+### Response 
+
+If there are idle streams, `isActive: false` will be listed in the response along with a list of only idle streams.
+
+## Verify stream status with the Dashboard
+
+The easiest way to confirm a live stream is active is to login to the
+Livepeer Studio Dashboard, navigate to the
+[Streams page](https://livepeer.studio/dashboard/streams), and
+click on a stream name. Look at the Status row to see if the stream is Active or
+Idle. If the status Idle, that means that Livepeer Studio is not ingesting any
+video with that stream’s `streamKey`.
