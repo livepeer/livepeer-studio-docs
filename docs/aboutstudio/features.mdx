@@ -1,12 +1,10 @@
 ---
-title: Features and Capabilities
+title: Component Features and Capabilities
 ---
 
-The following provides a high-level overview of the Use Cases and Methods you can implement to build your livestreaming application with Livepeer Studio
+The following provides descriptions of components and capabilities you can implement to build your livestreaming application with Livepeer Studio Features:
 
-
-## Features and Capabilities
-
+## Livepeer Studio Features
 
 | Feature | Description  | Capabilities   |
 | ------------ | ------------ | ------------ |
@@ -14,7 +12,9 @@ The following provides a high-level overview of the Use Cases and Methods you ca
 |  On Demand  | **Upload** and **store videos** for on demand access | <li>Export to IPFS or other services</li> <li>Upload video to Livepeer Studio (API or Dashboard)</li> <li>Store assets on decentralized storage</li>  |
 |  Mint | Minting `.mp4` video as an NFT   |  <li>Mint `.mp4` video files</li> <li>Use to create custom ERC-721 smart contracts</li> <li>Deploy to mainnet, testnet or layer 2 solutions like  Polygon in you custom smart contract</li> |
 
-## Ingest Support
+## Livepeer Studio Components
+
+### Ingest Support
 
 | attribute                    | notes                                                                                                                                                                                      |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,7 +26,7 @@ The following provides a high-level overview of the Use Cases and Methods you ca
 | Framerate                    | Between 5fps and 60fps, passthrough or custom                                                                                                                                              |
 | GOP Size (Keyframe Interval) | Supported tested: Constant GOP, Variable GOP of 0.5s to 8sSupported untested: Xsplit, Other versions of OBS and ffmpeg, other RTMP encodersUnsupported: Variable GOP not within 0.5s to 8s |
 
-## Transcoding Support
+### Transcoding Support
 | attribute                 | notes                                                                                                                            |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Location                  | EU, US                                                                                                                           |
@@ -36,7 +36,7 @@ The following provides a high-level overview of the Use Cases and Methods you ca
 | Resolution                | Supported tested: Custom resolution up to 1080pSupported untested: Custom resolution up to 4k                                    |
 | Pixel format              | YUV4:2:0                                                                                                                         |
 
-## Video Workflow Support
+### Video Workflow Support
 | attribute                 | notes                                                                                                                                                                                              |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Latency                   | 10-18 seconds with good RTMP ingest health, 2s segment size, and standard 3 seg buffering in player                                                                                                |

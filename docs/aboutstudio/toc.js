@@ -32,6 +32,7 @@ const toc = [
       "aboutstudio/mint/index"
     ],
   },
+  "references/terminology",
 ];
 
 module.exports = toc;
