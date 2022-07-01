@@ -1,6 +1,7 @@
 const toc = [
   "aboutstudio/index",
   "aboutstudio/tech-overview",
+  "aboutstudio/cdn",
   "aboutstudio/features",
   "aboutstudio/architecture",
   "aboutstudio/sampleapps",
@@ -10,17 +11,17 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-     "aboutstudio/livestream/livestream"
+     "aboutstudio/livestream/index"
 
     ],
   },
   {
     type: "category",
-    label: "Upload",
+    label: "On Demand ",
     collapsible: true,
     collapsed: true,
     items: [
-    "aboutstudio/upload/upload"
+    "aboutstudio/on-demand/index"
    ],
  },
  {
@@ -29,7 +30,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-      "aboutstudio/mint/mint"
+      "aboutstudio/mint/index"
     ],
   },
 ];
