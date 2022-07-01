@@ -1,25 +1,21 @@
 ---
-title: Create a stream
+title: Creating a Stream
 ---
+ 
+
+## What you need to know
 
 
+### The `stream` object
 
-## The `stream` object
+The first step is understanding the `stream` object. It is the core building block of the Livepeer Studio platform.
 
-Live streaming with Livepeer Studio is easy. The first step is understanding the
-`stream` object. It is the core building block of the Livepeer Studio platform.
+A Livepeer Studio `stream` is a unique object with configuration data and metadata about all live stream sessions associated with it.
 
-A Livepeer Studio `stream` is a unique object with configuration data and metadata
-about all live stream sessions associated with it.
-
-<Alert css={{ mt: "$5", mb: "$6" }} variant="loContrast">
-  <Text size="3" variant="gray">
-    Note: historically, a <code>stream</code> object with a{" "}
+> **Note:** historically, a <code>stream</code> object with a{" "}
     <code>parentId</code> represented a single live stream session. This type of
     "child-session" stream object will be deprecated in an upcoming version of
     the API in favor of the <code>session</code> object.
-  </Text>
-</Alert>
 
 There are two ways to create a stream object:
 
