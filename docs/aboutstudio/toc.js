@@ -1,7 +1,6 @@
 const toc = [
   "aboutstudio/index",
   "aboutstudio/tech-overview",
-  "aboutstudio/cdn",
   "aboutstudio/features",
   "aboutstudio/architecture",
   "aboutstudio/sampleapps",
