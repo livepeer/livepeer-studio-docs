@@ -11,15 +11,14 @@ const toc = [
       "guides/livestreaming/tutorial",
       "guides/livestreaming/obs",
       "guides/livestreaming/webrtmp",
-      "guides/livestreaming/broadcasting",
-      "guides/livestreaming/verify",
       "guides/livestreaming/create-a-stream",
       "guides/livestreaming/playback",
       "guides/livestreaming/record",
+      "guides/livestreaming/multistream",
+      "guides/livestreaming/verify",
+      "guides/livestreaming/broadcasting",
       "guides/livestreaming/webhook",
       "guides/livestreaming/check-webhook-signatures",
-      "guides/livestreaming/multistream",
-      "guides/livestreaming/back-up-transcoding"
     ],
   },
   {
@@ -40,16 +39,18 @@ const toc = [
     link: { type: "doc", id: "guides/mint-guides/index" },
     collapsible: true,
     collapsed: true,
-    items: ["guides/mint-guides/mint-a-video-nft", "guides/mint-guides/build-a-video-nft-app"],
+    items: [
+            "guides/mint-guides/mint-a-video-nft", 
+            "guides/mint-guides/build-a-video-nft-app"],
   },
   {
     type: "category",
     label: "On Demand",
-    link: { type: "doc", id: "guides/upload-guides/upload-guides" },
+    link: { type: "doc", id: "guides/on-demand-guides/index" },
     collapsible: true,
     collapsed: true,
     items: [
-      "guides/upload-guides/upload-guides",
+      "guides/on-demand-guides/on-demand",
 
     ],
   },
