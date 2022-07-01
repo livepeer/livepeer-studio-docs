@@ -19,8 +19,7 @@ const toc = [
       "guides/livestreaming/webhook",
       "guides/livestreaming/check-webhook-signatures",
       "guides/livestreaming/multistream",
-      "guides/livestreaming/back-up-transcoding",
-      "guides/livestreaming/monitoring-stream-health",
+      "guides/livestreaming/back-up-transcoding"
     ],
   },
   {
@@ -32,7 +31,7 @@ const toc = [
     items: [
       "guides/development/live-streaming-from-your-app",
       "guides/development/video-playback-in-your-app",
-      "guides/development/per-stream-metrics",
+      "guides/development/metrics"
     ],
   },
   {
