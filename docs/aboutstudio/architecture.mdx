@@ -2,11 +2,11 @@
 title: Architecture
 ---
 
-Architecture and workflows of the Livepeer Studio features are presented with the Livepeer decentralized transcoding network:
+Architecture and workflows of the Livepeer Studio features are presented here with the Livepeer decentralized transcoding network.
 
 ## Options for Streaming
 
-According to devices being used, there are multiple options for streaming workflow, including but not limited to these common methods:
+According to the devices being used, there are multiple options for streaming workflow, including but not limited to these commonly used methods:
 
 - Via a streaming software
 - In-Browser streaming
@@ -19,7 +19,7 @@ The following are the architecture and workflows of the different features avail
 
 - Livestreaming
 - Multistreaming
-- On Demand
+- On-Demand
 - Mint
 
 
@@ -28,38 +28,36 @@ The following are the architecture and workflows of the different features avail
 - An incoming audio/video feed from a device passes through a streaming software like OBS or a web browser via WebRTC
 - Livepeer Studio sends the feed to the Livepeer network for transcoding
 - The feed gets transcoded to multiple renditions and sent to the CDN
-- The CDN sends specific rendition of the feed based on the viewers device and network capabilities when a request is made
+- The CDN sends a specific rendition of the feed based on the viewers' device and network capabilities when a request is made:
 
 ![Livestream Workflow](../../static/docs-assets/architechture/livestreamworkflow.png)
 
 ### Multistream Workflow
 
 - An incoming audio/video feed from a device passes through a streaming software like OBS or a web browser via WebRTC at the same time, Livepeer Studio will redirect this feed into other streaming platforms
-- Livepeer Studio sends the original feed to the Livepeer network for transcoding
-feed gets transcoded to multiple renditions and sent to the CDN
-- The CDN sends specific rendition of the feed based on the viewers device and network capabilities when a request is made
+- Livepeer Studio sends the original feed to the Livepeer network whereby the transcoding feed gets transcoded to multiple renditions and sent to the CDN
+- The CDN sends a specific rendition of the feed based on the viewer's device, and network capabilities when a request is made
 
 ![Multistream Workflow](../../static/docs-assets/architechture/multistreamworkflow.png)
 
-### On Demand Workflow
-
+### On-Demand Workflow
 - An asset can be provided by **either** a downloadable URL link **or** by uploading a `.mp4` file
   - Importing a URL
-    - Asset in downloadable link is transcoded in the Livepeer Network, gets passed back to Livepeer Studio and saved in storage
+    - Asset in a downloadable link is transcoded in the Livepeer Network, gets passed back to Livepeer Studio, and saved in storage
   - Uploading a file  
-    - Generates a URL for storage if `Upload` option is used
-    - File provided itranscoded in the Livepeer Network, gets passed back to Livepeer Studio and saved in storage
-  - Stored assest now contains the `playbackUrl` used for viewing
-  - The CDN sends specific rendition of the asset based on the viewers device and network capabilities when a request is made
+    - Generates a URL for storage if the `Upload` option is used
+    - The File is provided if it is transcoded in the Livepeer Network, gets passed back to Livepeer Studio, and is saved in storage
+  - The Stored asset now contains the `playbackUrl` used for viewing
+  - The CDN sends a specific rendition of the asset based on the viewer's device and network capabilities when a request is made
 
 ![On Deamn Workflow](../../static/docs-assets/architechture/ondemandworkflow.png)
 
 ### Mint Workflow
 
-- Livepeer Studio takes provided `.mp4` asset and metadata provided by the user
-- Write and deploy the smart contract
-- Pass in the metadata from uploaded asset
-- Sends asset to Livepeer's decentralized transcoding network for transcoding
-- Mint the video NFT by calling the Ethereum blockchain (Polygon layer 2 solution is used for mosre cost effective gas fees)
+- Livepeer Studio takes the `.mp4` asset and metadata provided by the user
+- Writes and deploys the `smart contract`
+- Passes in the metadata from the uploaded asset
+- Sends the asset to Livepeer's decentralized transcoding network for transcoding
+- Mints the video NFT by calling the Ethereum blockchain (Polygon layer 2 solution is used for more cost-effective gas fees)
 
 ![Mint Workflow](../../static/docs-assets/architechture/mintworkflow.png)

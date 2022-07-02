@@ -5,17 +5,25 @@ title: Technical Overview
 
 ## How Does Livepeer Studio work?
 
-Livepeer Studio provides video infrastructure tools needed for video development. The fundamental principle for video development is that the original video (live or recorded) is compressed utilizing an encoder to reduce the file size for transferring and alteration (if needed). The encoded video now has to get transcoded so that different renditions of it are made. These renditions are necessary so that when accessed on any device regardless of its bandwidth, they are the most optimized quality for viewing.
+Livepeer Studio provides video infrastructure tools needed for video development. The fundamental principle for video development is that the original video (live or recorded) is compressed utilizing an encoder to reduce the file size for transferring and alteration (if needed). The encoded video now has to get transcoded so that different renditions of it are made. These renditions are necessary so that when accessed on any device, they are the most optimized quality for viewing regardless of its bandwidth.
 
-Traditionally, transcoding is done in on a centralized server, but Livepeer Studio does this by taking livestreams or video assets provided and sends them to be transcoded using the [Livepeer Decentralized Newtwork](https://livepeer.org). For a more in-depth understanding of the workflow for each feature offered, visit the [Architecture](./architecture) page.
+Traditionally, transcoding is done on a centralized server, but Livepeer Studio does this by taking livestreams or video assets provided and sends them to be transcoded using the [Livepeer Decentralized Newtwork](https://livepeer.org). 
+
+> **Note:** For a more in-depth understanding of the workflow for each feature offered, visit our [Architecture](./architecture) page.
 
 ## Using Livepeer Studio
 
-The features that Livepeer Studio provide allows developers to build versatile apps/Dapps depending on what their needs are. Projects that focus on creator content applications can utilize the [Livestreaming](./livestream) feature or the [On Demand](./upload) to provide previously recorded videos. Using the [Mint](./mint) feature allows for creation of video NFTs to be sold or utilized for token gating.
+Livepeer Studio features include capabilities for you to build versatile apps/Dapps depending on your specific needs and requirements. 
 
-The following are lists of use cases and methods implemented with Livepeer Studio features and capabilities including but not limited to the provided examples.
+**For example:** 
+
+- Projects that focus on creator content applications can utilize the [Livestreaming](./livestream) feature or the [On Demand](./upload) to provide previously recorded videos. 
+
+- Using the [Mint](./mint) feature allows for creation of video NFTs to be sold or utilized for token gating.
 
 ### Use cases
+
+This table includes but is not limited to the commom use cases followed by the methods implemented with Livepeer Studio features and capabilities:
 
 | Implementation                                                                                                 | Advantages | Challenges |
 | -------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
@@ -30,21 +38,15 @@ The following are lists of use cases and methods implemented with Livepeer Studi
 
 Here are some examples of methods that can be used with features offered by Livepeer Studio:
 
-**Desktop software**
-- Livestreaming using OBS broadcasting software -> stream to transcode on the Livepeer network and viewed on a video player
 
-**Mobile**
-- Livestreaming using DJI Action2 camera and DJI Mimo app -> stream to transcode on the Livepeer network and viewed on a video player
-- Mobile livestreaming using Larix app -> stream to transcode on the Livepeer network and viewed 
-on a video player
-- Mobile livestreaming using DroidCam app -> stream from mobile phone to OBS, then transcoded on the Livepeer network and viewed on a video player
+| Method               | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| **Desktop Software** | - Livestreaming using OBS broadcasting software -> stream to transcode on the Livepeer network and viewed on a video player |
+| **Mobile**           | -  Livestreaming using DJI Action2 camera and DJI Mimo app -> stream to transcode on the Livepeer network and viewed on a video player <br /><br />- Mobile livestreaming using Larix app -> stream to transcode on the Livepeer network and viewed  on a video player <br /><br />- Mobile livestreaming using DroidCam app -> stream from mobile phone to OBS, then transcoded on the Livepeer network and viewed on a video player |
+| **Inbrowser**        | - Inbrowser streaming using Agora ->  stream to transcode on the Livepeer network and viewed on a video player Inbrowser streaming using 3rd party platforms such as ReStream or StreamYard <br /><br />- create custom RTMP in platform, stream to transcode on the Livepeer network and viewed on platform's inbrowser dashboard |
+| **On Demand**        | - Upload video to Livepeer Studio from custom built app -> stored video gets transcoded by Livepeer network and viewed on a video player |
 
-**Inbrowser**
-- Inbrowser streaming using Agora ->  stream to transcode on the Livepeer network and viewed on a video player
-- Inbrowser streaming using 3rd party platforms such as ReStream or StreamYard -> create custom RTMP in platform, stream to transcode on the Livepeer network and viewed on platform's inbrowser dashboard
 
-**On Demand**
-- Upload video to Livepeer Studio from custom built app -> stored video gets transcoded by Livepeer network and viewed on a video player
 
 
 ## Best Practices and Recommendations
@@ -57,4 +59,4 @@ When using Livepeer Studio for development, details related to video have to be 
 - File sizes
 - Video players
 
-From more information on setting and configurations visit the [Features and Capabilities](./features) page.
+> **Note:** From more information on setting and configurations ***See*** our [Support Matrix](./features).
