@@ -7,30 +7,26 @@ const toc = [
   {
     type: "category",
     label: "Livestream",
+    link: { type: "doc", id: "aboutstudio/livestream/index" },
     collapsible: true,
     collapsed: true,
-    items: [
-     "aboutstudio/livestream/index"
-
-    ],
+    items: ["aboutstudio/livestream/index"],
   },
   {
     type: "category",
     label: "On Demand ",
+    link: { type: "doc", id: "aboutstudio/on-demand/index" },
     collapsible: true,
     collapsed: true,
-    items: [
-     "aboutstudio/on-demand/index"
-   ],
+    items: ["aboutstudio/on-demand/index"],
  },
  {
     type: "category",
     label: "Mint",
+    link: { type: "doc", id: "aboutstudio/mint/index" },
     collapsible: true,
     collapsed: true,
-    items: [
-      "aboutstudio/mint/index"
-    ],
+    items: ["aboutstudio/mint/index"],
   },
   "references/terminology",
 ];
