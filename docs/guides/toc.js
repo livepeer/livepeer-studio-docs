@@ -11,12 +11,9 @@ const toc = [
       "guides/livestreaming/tutorial",
       "guides/livestreaming/obs",
       "guides/livestreaming/webrtmp",
-<<<<<<< Updated upstream
       "guides/livestreaming/create-a-stream",
-=======
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/verify",
->>>>>>> Stashed changes
       "guides/livestreaming/playback",
       "guides/livestreaming/create-a-stream",
       "guides/livestreaming/record",
