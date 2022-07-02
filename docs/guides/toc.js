@@ -52,10 +52,7 @@ const toc = [
     link: { type: "doc", id: "guides/on-demand-guides/index" },
     collapsible: true,
     collapsed: true,
-    items: [
-      "guides/on-demand-guides/on-demand",
-
-    ],
+    items: ["guides/on-demand-guides/index"],
   },
   {
     type: "category",
