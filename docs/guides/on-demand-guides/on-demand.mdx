@@ -3,6 +3,11 @@ title: On Demand (Upload)
 ---
 
 
+This guide walks you through the process of working with the On Demand feature:
+
+
+## About the On Demand API
+
 The Video-on-Demand (VOD) API allows you to send video files to Livepeer and get them ready for optimized playback. This tutorial covers how to use it to upload videos and play them back in your application.
 
 Those videos can be provided either by you (static content) or your users, given your application offers an interface for them to do so.
@@ -15,36 +20,91 @@ Only MP4 files encoded with H.264 and AAC are supported
 
 ## Dependencies
 
-In this tutorial, we will be using Node.js and Axios so make sure to set that up in your project. You will also need to Get an API key to call the VOD API. If you're planning on calling the API from the frontend, create an API key with CORS access allowed.
+- Node.js and Axios 
+- An API key to call the VOD API. 
 
-Asset Resources
+> **Note:** Calling the API from the frontend requires an [API key with CORS access allowed](/guides/livestreaming/api-key).
+
+##Asset Resources
+
 When adding a video file, this is an asynchronous process that requires processing the file. Here are resources for this process:
 
-Listing the assets
-Once an asset is uploaded /request-upload, the response will return the id of that asset. Use GET /api/asset/$ASSET_ID to retrieve the status of that asset. The response will indicate the status of the uploaded assets as status: "waiting" or status: "ready". If status: "waiting" is returned in the response, the asset is not available, make the API call again until status: "ready". Once the status indicates that it is ready, it is now available.
+### Listing the assets
 
-Listing the tasks
-To check the status on an asset imported /import to Livepeer or exported /export to IPFS, get the task.id from the response of the uploaded asset. Use the GET /api/task/$TASK_ID to retrieve the status.
+Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset. 
 
-Monitoring progress of the task
-If the asset is available, then the response will return status.phase.complete, otherwise the value will be status.phase.pending and the API call will need to be made again until it is complete. Depending on whether the asset is imported or exported using the GET /api/task/$TASK_ID provides information different information. For imported assets, information on video specs such as codec and formats are present. If the assest is exported to IPFS, then the response will provide information such as the metadat and CID.
+### Retrieve the status of that asset
+
+### Request
+
+Use `GET /api/asset/$ASSET_ID` 
+
+
+### Response
+
+The response will indicate the status of the uploaded assets as status: 
+
+- `waiting` or `status`: "ready". 
+
+If status: "waiting" is returned in the response, the asset is not available: 
+
+- make the API call again until status: "ready". 
+
+Once the status indicates that it is ready, it is now available.
+
+
+### Listing the tasks
+
+To check the status on an asset imported /import to Livepeer or exported /export to IPFS, get the `task.id` from the response of the uploaded asset. 
+
+### Request
+
+To retrieve the status
+
+```GET /api/task/$TASK_ID`` 
+
+### Monitoring progress of the task
+
+If the asset is available, 
+- the response will return `status.phase.complete`, 
+
+otherwise 
+
+- the value will be `status.phase.pending`. 
+
+- The API call will need to be made again until it is complete. 
+
+
+Depending on whether the asset is imported or exported using the GET /api/task/$TASK_ID provides information different information. 
+
+
+### For imported assets
+
+- Information on video specs such as codec and formats are present. 
+
+### For assets exported to IPFS
+
+- The response will provide information such as the metadat and CID.
 
 ## Uploading
 
 There are two methods to upload a video to Livepeer:
 Upload via URL, with an .mp4 file format
 
-Upload locally
+### Upload locally
 
 
-Upload via URL
+### Upload via URL
 When using the upload via URL method:
 
 Provide the name of the asset
 
 Provide the URL of the asset that should be imported
 
-JavaScript
+### Request
+
+
+```JavaScript
 
 const axios = require('axios');
 const fs = require('fs');
@@ -66,8 +126,13 @@ const response = await axios.post("https://livepeer.studio/api/asset/import", {
   });
    console.log(JSON.stringify(response.data))
 };
-Response
+```
 
+
+### Response
+
+
+```JSON
 {
   "asset": {
     "id": "87289307-b60f-432b-984a-8ede174fa152",
@@ -94,10 +159,13 @@ Response
     }
   }
 }
-Note that the status is pending, it might take a few minutes for it to be imported. To verify that the status is ready, use https://livepeer.studio/api/asset/$ASSET_ID/ with the provided asset.id in the response above.
+```
 
-Response
+> **Note:** that the status is pending, it might take a few minutes for it to be imported. To verify that the status is ready, use https://livepeer.studio/api/asset/$ASSET_ID/ with the provided asset.id in the response above.
 
+### Response
+
+```JavaScript
 {
   "id": "87289307-b60f-432b-984a-8ede174fa152",
   "hash": [
@@ -144,16 +212,25 @@ Response
   "playbackUrl": "https://livepeercdn.com/recordings/e605988e-e8d3-4e14-b5b0-10b01ff94a8b/index.m3u8",
   "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
 }
-Upload Locally
+```
+
+
+
+### Upload Locally
+
 When using the upload locally method, this is a two-step process:
 
-Only MP4 files encoded with H.264 and AAC are supported
+- Only MP4 files encoded with H.264 and AAC are supported
 
-Files are currently limited to 1GB in size. Any files greater than that will likely error out during the upload or processing steps
+- Files are currently limited to 1GB in size. Any files greater than that will likely error out during the upload or processing steps
 
-Step 1
+1. Step 1
+
 Generate the URL to upload assets
-JavaScript
+
+### Request
+
+```JavaScript
 
 const uploadAsset = async () => {
   const response = await axios.post(
@@ -170,8 +247,11 @@ const uploadAsset = async () => {
   );
   console.log(JSON.stringify(response.data));
 };
-Response
+```
 
+### Response
+
+```JSON
 {
   "url": "https://origin.livepeer.studio/api/asset/upload/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcmVzaWduZWRVcmwiOiJodHRwczovL3N0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vbHAtdXMtdm9kLWNvbS9kaXJlY3RVcGxvYWQvNGMyMWs3ejJ0amNkZzh3dC9zb3VyY2U_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUdPT0cxRVlVTldOVjZSWUlLNTQySFdBM1JMN1JCN0pVT0VRM1lMMjNRWUI2Q0hQRzVITzJRQzMzTUpWVVklMkYyMDIyMDUxOCUyRnVzJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIyMDUxOFQxOTIyMDVaJlgtQW16LUV4cGlyZXM9OTAwJlgtQW16LVNpZ25hdHVyZT0wZWJmNmMwNWFlZTA2ZGVhOGZmM2U1MzNmNjMxZjk1ZTY3M2I4ZWRiOTI3MWJlOWQzYjdhZWQ4YjI1YTUzZTM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ4LWlkPVB1dE9iamVjdCIsImF1ZCI6Imh0dHBzOi8vbGl2ZXBlZXIuY29tIiwiaWF0IjoxNjUyOTAxNzI1fQ.2wSQMC3s6QFFkmyhQZuecbQF2R8E_j3VGTg9tblc0Dc",
   "asset": {
@@ -199,16 +279,22 @@ Response
     }
   }
 }
-Step 2
+```
+
+2. Step 2
+
 Upload the asset to the generated URL
 
 Get the “url”: “https://origin.livepeer.studio/api/assets/…“ from the response.
-
 
 Check the status of the generated url.
 
 https://livepeer.studio/api/asset/$ASSET_ID/ with provided asset.id
 
+### Request
+
+
+```JavaScript
 {
   "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
   "name": "Waterfall",
@@ -217,11 +303,13 @@ https://livepeer.studio/api/asset/$ASSET_ID/ with provided asset.id
   "createdAt": 1652895834393,
   "playbackId": "4c21k7z2tjcdg8wt"
 }
+```
 
-Upload the video
+### Upload the video
 
+### Request
 
-JavaScript
+```JavaScript
 
 const uploadAsset = async () => {
 
@@ -235,10 +323,13 @@ const response = await axios
   });
     console.log(JSON.stringify(response.data));
   };
-Response
+```
+
+### Response
 
 When the video is uploaded, the result should return a 200 response
 
+```JSON
 {
   "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
   "hash": [
@@ -285,12 +376,16 @@ When the video is uploaded, the result should return a 200 response
   "playbackUrl": "https://livepeercdn.com/recordings/54aeff83-404c-490a-9afa-99296a932401/index.m3u8",
   "downloadUrl": "https://livepeercdn.com/asset/4c21k7z2tjcdg8wt/video"
 }
-List Assets
+```
+
+
+### List Assets
+
 When listing assets, look for the status in the response body, it should return status:“ready”. If the response returns status:“waiting”, then wait a little longer and repeat this step until the status is ready before moving to the exporting step.
 
-The response will return information on the uploaded asset including the video spec, the playbackUrl for the uploaded asset as well as the playbackId.
+### Request
 
-JavaScript
+```JavaScript
 
 const listAsset = async () => {
   const response = await axios.get("https://livepeer.studio/api/asset", {
@@ -300,8 +395,13 @@ const listAsset = async () => {
   });
   console.log(JSON.stringify(response.data));
 };
-Response
+```
 
+### Response
+
+The response will return information on the uploaded asset including the video spec, the playbackUrl for the uploaded asset as well as the playbackId.
+
+```JSON
 [
   {
     // Uploaded asset locally
@@ -398,10 +498,15 @@ Response
     "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
   }
 ]
-Update an asset
+```
+
+### Update an asset
+
 When updating an asset, make sure to have the asset.id available. The asset ID is provided in the response when an asset is uploaded.
 
-JavaScript
+### Request
+
+```JavaScript
 
 const updateAsset = async () => {
   const response = await axios.patch(
@@ -418,8 +523,12 @@ const updateAsset = async () => {
   );
   console.log(JSON.stringify(response.data));
 };
-Response
 
+```
+
+### Response
+
+```
 {
   "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
   "hash": [
@@ -469,8 +578,13 @@ Response
   "playbackUrl": "https://livepeercdn.com/recordings/54aeff83-404c-490a-9afa-99296a932401/index.m3u8",
   "downloadUrl": "https://livepeercdn.com/asset/4c21k7z2tjcdg8wt/video"
 }
-Delete an asset
-JavaScript
+```
+
+### Delete an asset
+
+
+
+```JavaScript
 
 const deleteAsset = async () => {
   const response = await axios.delete(
@@ -483,6 +597,10 @@ const deleteAsset = async () => {
   );
   JSON.stringify(response.data);
 };
+```
+
+### Response
+
 When the asset has been successfully deleted, the response should return a 204
 
 Export an asset to IPFS
@@ -490,7 +608,7 @@ This method allows for exporting an asset imported or uploaded from Livepeer to 
 
 Provide the $ASSET_ID of the asset, this can be found using the List Asset method.
 
-JavaScript
+```JavaScript
 
 const exportAsset = async () => {
   const response = await axios.post(
@@ -507,10 +625,13 @@ const exportAsset = async () => {
   );
   console.log(JSON.stringify(res.data));
 };
+```
+
 Response
 
 The this example has the response show that the status is pending.
 
+```JSON
 {
   "task": {
     "id": "8b0cd796-8be1-412b-b1dc-8251a35ad2e7",
@@ -559,14 +680,19 @@ Check back with https://livepeer.studio/api/task/$TASK_ID to get the status upda
   "createdAt": 1652903903963,
   "inputAssetId": "87289307-b60f-432b-984a-8ede174fa152"
 }
-List Tasks
+```
+
+### List Tasks
+
 When listing tasks, the response will provide information on imported or exported information on the asset.
+
+### Request
 
 Use the list tasks method to get CID and metadata.
 
-To get the CID and metadata URL for the created asset, retrieve the task until it is completed. To do this, check the status field in the response. This finished task will have an output with all the information about that asst, and the CID information is located under the output.export.ipfs path.
+To get the CID and metadata URL for the created asset, retrieve the task until it is completed. To do this, check the status field in the response. 
 
-JavaScript
+```JavaScript
 
 
 const list Task = async () => {
@@ -579,4 +705,10 @@ const response = await axios
   })
     console.log(JSON.stringify(response.data));
 };
-Overview - Livepeer Studio
+```
+
+### Response
+
+This finished task will have an output with all the information about that asset.
+
+- The `CID` information is located under the `output.export.ipfs` path.
