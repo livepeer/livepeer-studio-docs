@@ -1,4 +1,7 @@
-# Terminology
+---
+title: Terminology
+---
+
 
 A list of terms to assist developers navigate in the video tech world
 

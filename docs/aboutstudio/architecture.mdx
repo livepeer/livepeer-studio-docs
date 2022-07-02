@@ -2,13 +2,18 @@
 title: Architecture
 ---
 
-There are different options for streaming owrkflow depending on devices used.
-Here are streaming workflows for two commonly used methods:
+Architecture and workflows of the Livepeer Studio features are presented with the Livepeer decentralized transcoding network:
 
-- Using a streaming software
-- Using In-Browser 
+## Options for Streaming
 
-To learn more about these methods, visit the tutorial [How to Stream with Livepeer Studio](pending)
+According to devices being used, there are multiple options for streaming workflow, including but not limited to these common methods:
+
+- Via a streaming software
+- In-Browser streaming
+
+> **Note** To learn more about how to work with these methods, ***See*** Our [Start Livestreaming](/guides/livestreaming/tutorial) guide.
+
+## Architecture Workflows 
 
 The following are the architecture and workflows of the different features available in Livepeer Studio utilizing the decentralized transcoding of the Livepeer network:
 
@@ -18,7 +23,7 @@ The following are the architecture and workflows of the different features avail
 - Mint
 
 
-## Livestream Workflow
+### Livestream Workflow
 
 - An incoming audio/video feed from a device passes through a streaming software like OBS or a web browser via WebRTC
 - Livepeer Studio sends the feed to the Livepeer network for transcoding
@@ -27,7 +32,7 @@ The following are the architecture and workflows of the different features avail
 
 ![Livestream Workflow](../../static/docs-assets/architechture/livestreamworkflow.png)
 
-## Multistream Workflow
+### Multistream Workflow
 
 - An incoming audio/video feed from a device passes through a streaming software like OBS or a web browser via WebRTC at the same time, Livepeer Studio will redirect this feed into other streaming platforms
 - Livepeer Studio sends the original feed to the Livepeer network for transcoding
@@ -36,7 +41,7 @@ feed gets transcoded to multiple renditions and sent to the CDN
 
 ![Multistream Workflow](../../static/docs-assets/architechture/multistreamworkflow.png)
 
-## On Demand Workflow
+### On Demand Workflow
 
 - An asset can be provided by **either** a downloadable URL link **or** by uploading a `.mp4` file
   - Importing a URL
@@ -49,7 +54,7 @@ feed gets transcoded to multiple renditions and sent to the CDN
 
 ![On Deamn Workflow](../../static/docs-assets/architechture/ondemandworkflow.png)
 
-## Mint Workflow
+### Mint Workflow
 
 - Livepeer Studio takes provided `.mp4` asset and metadata provided by the user
 - Write and deploy the smart contract

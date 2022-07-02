@@ -1,8 +1,8 @@
 const toc = [
   "aboutstudio/index",
   "aboutstudio/tech-overview",
-  "aboutstudio/features",
   "aboutstudio/architecture",
+  "aboutstudio/features",
   "aboutstudio/sampleapps",
   {
     type: "category",
@@ -20,7 +20,7 @@ const toc = [
     collapsible: true,
     collapsed: true,
     items: [
-    "aboutstudio/on-demand/index"
+     "aboutstudio/on-demand/index"
    ],
  },
  {
