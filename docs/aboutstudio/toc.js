@@ -2,8 +2,6 @@ const toc = [
   "aboutstudio/index",
   "aboutstudio/tech-overview",
   "aboutstudio/architecture",
-  "aboutstudio/features",
-  "aboutstudio/sampleapps",
   {
     type: "category",
     label: "Livestream",
@@ -28,6 +26,8 @@ const toc = [
     collapsed: true,
     items: ["aboutstudio/mint/index"],
   },
+  "aboutstudio/sampleapps",
+  "aboutstudio/features",
   "references/terminology",
 ];
 
