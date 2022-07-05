@@ -20,13 +20,11 @@ This Quick Start guide includes a step-by-step process to get you started develo
 
 This guide follows an implementation for building a livestream application with **OBS Professional Broadcasting** as included in the annotated list of applications you can build from this guide:
 
-| Implementation                                                                                                 | Advantages | Challenges |
-| -------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
-| * **OBS Professional Broadcasting (e.g. Livestreaming changing camera angles, or multiple "views" within a screen)** |            |            |
-| Livepeer Studio In-browser Applications                                                                          |            |            |
-| *> **Note:** Capabilities are available for implementations of InBrowser platforms (Restream/Streamyard).*                                                                     |            |            |
-| Pass in the Livepeer Studio address to YouTube, Twitch, etc.                                                        |            |            |
-| Multi-streaming                                                                                                |            |            |
+| Implementation                                               |
+| ------------------------------------------------------------ |
+| OBS Professional Broadcasting (e.g. Livestreaming changing camera angles, or multiple "views" within a screen) |
+| Livepeer Studio In-browser Applications  <br />**Note:** Capabilities are available for implementations of InBrowser platforms. |
+| Multi-streaming                                              |
 
 
 ## Livestreaming Methods
@@ -186,13 +184,13 @@ let streamKey = "05b0-nyoa-jf0p-s2x8";
 ```
 
 
-### Start streaming with OBS
+## Start streaming with OBS
 
 Now that you have created a new stream, you can start streaming in OBS.
 
 1. First, follow the [OBS tutorial](/guides/livestreaming/obs). 
 
-### Verify the stream is running
+## Verify the stream is running
 
 2. Once you complete the OBS Tutorial, you can verify that the stream is running by setting the following value:
 
@@ -237,7 +235,7 @@ The setting for recording a livestream indicates:
 
 > **Note:** Recording a livestream is not a development requirement for the livestreaming process. However, most streamers prefer to have a recording of their streams to show later, e.g. broadcasting/streaming/content creating
 
- ### Enable recording
+ ## Enable recording
 
 1. You will make the request to turn the recording setting `on` and record your stream:
 
@@ -267,7 +265,7 @@ The response should return a `204` message and `"record": true` in the livestrea
 
 Once the live stream is complete, you can stop the stream after 6 minutes from the end of the streaming session.
 
-### List recorded sessions
+## List recorded sessions
 
 1. Confirm that the session has been recorded:
 
@@ -302,7 +300,7 @@ const getRecording = async () => {
 
 
 
-### List assets
+## List assets
 
 Retrieve the `playbackURL` to play the recording
 
