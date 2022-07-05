@@ -17,8 +17,6 @@ The following includes information and instructions on how to work with Webhooks
 - Experience working with `cURL`
 - Familiarity working with webhooks
 
-
-
 ## Technical Preparation
 
 1. [A Livepeer account](https://livepeer.studio/login)
@@ -31,7 +29,7 @@ The following includes information and instructions on how to work with Webhooks
 
 Livepeer Studio uses webhooks to communicate with your application asynchronously when events for your stream occur. For example, you may want to know when a stream has become active or idle, so that you can surface this information to viewers. When these events happen, you can make a `POST` request to a URL that you specify.
 
-### Configuring Webhook Endpoints
+## Configuring Webhook Endpoints
 
 Webhook endpoints are specific for each `event`. Once the event is registered, all streams for this account will be triggering the specific event. 
 
@@ -55,7 +53,7 @@ curl \
 ```
 
 
-## Return
+### Return
 
 A JSON response with the events, event registration, `stream ID`, url of the webhook endpoint, and the `userID` of the stream
 
@@ -73,7 +71,7 @@ A JSON response with the events, event registration, `stream ID`, url of the web
 
 
 
-### Other webhooks endpoints
+## Other webhooks endpoints
 
 `GET /api/webhook`: Get a list of webhooks
 
@@ -84,56 +82,23 @@ A JSON response with the events, event registration, `stream ID`, url of the web
 
 `DEL /api/webhook/:webhookID`: Delete a webhook
 
-### Types of Events
+## Types of Events
 
-<Table
-  data={[
-    {
-      name: "stream.started",
-      description:
-        "The parent stream object's isActive value is marked as true and the .m3u8 HLS URL works",
-    },
-    {
-      name: "stream.idle",
-      description:
-        "The parent stream object's isActive value should be marked as false and the .m3u8 HLS URL no longer works",
-    },
-    {
-      name: "recording.ready",
-      description: "This fires when a recording is ready to be downloaded",
-    },
-    {
-      name: "recording.started",
-      description: "This fires when recording has started on an active stream",
-    },
-    {
-      name: "recording.waiting",
-      description:
-        "This fires after a stream with recording on has concluded and is not yet ready to be downloaded. Typically it takes 5 minutes for recordings to be ready for download.",
-    },
-    {
-      name: "multistream.connected",
-      description:
-        "This fires when we've successfully connected to the multistream target",
-    },
-    {
-      name: "multistream.error",
-      description:
-        "This fires when we've encountered an error either while attempting to connect to the third party streaming service or while broadcasting.",
-    },
-    {
-      name: "multistream.disconnected",
-      description:
-        "This fires when we are no longer sending video to the multistream target.",
-    },
-  ]}
-/>
+| Name                     | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| stream.started           | The parent stream object's isActive value is marked as true and the .m3u8 HLS URL works |
+| stream.idle              | The parent stream object's isActive value should be marked as false and the .m3u8 HLS URL no longer works |
+| recording.ready          | This fires when a recording is ready to be downloaded        |
+| recording.started        | This fires when recording has started on an active stream    |
+| recording.waiting        | This fires after a stream with recording on has concluded and is not yet ready to be downloaded. Typically it takes 5 minutes for recordings to be ready for download. |
+| multistream.connected    | This fires when we've successfully connected to the multistream target |
+| multistream.error        | This fires when we've encountered an error either while attempting to connect to the third party streaming service or while broadcasting. |
+| multistream.disconnected | This fires when we are no longer sending video to the multistream target. |
 
-### Retries
+## Retries
 
 Currently, if a webhook fails, Livepeer will attempt to deliver the webhook for
 ~15 minutes with an exponential back off.
-
 
 
 ## Webhook Signatures
