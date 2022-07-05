@@ -21,7 +21,6 @@ const toc = [
       "guides/livestreaming/verify",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/webhook",
-      "guides/livestreaming/check-webhook-signatures",
     ],
   },
   {

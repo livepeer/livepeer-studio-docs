@@ -41,11 +41,9 @@ Before getting started, you can set up your environment to prepare for developin
 1. Access the computer's terminal
 1. Access the [API Reference](https://livepeer.studio/docs/api-reference)
 
-## Stream Object
+## The `/stream` Object
 
-`/stream`
-
-To actually use a `Multistream Target`, you need to reference it from a `Stream`
+To use a `Multistream Target`, you need to reference it from a `Stream`
 object.
 
 The reference is made in the `targets` sub-field of the `multistream` field in
@@ -97,6 +95,7 @@ curl -X POST 'https://livepeer.studio/api/stream' \
     }
 }
 ```
+
 
 ### Response
 
@@ -191,7 +190,7 @@ curl -X POST 'https://livepeer.studio/api/stream' \
 }
 ```
 
-### Response
+### Response by inline
 
 ```json
 {
@@ -298,7 +297,10 @@ curl 'https://livepeer.studio/api/stream/{id}' \
 
 ### Patch Request
 
-##### 2. `PATCH` the Stream with the new target
+ `PATCH` the Stream with the new target.
+
+ `PATCH` can also add new `Multistream Targets` by `id` instead of inline,
+just like on `Stream` creation.
 
 ```bash
 curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
@@ -315,8 +317,6 @@ curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
     }'
 ```
 
-The `PATCH` can also add new `Multistream Targets` by `id` instead of inline,
-just like on `Stream` creation.
 
 ### Patch Response
 
@@ -331,7 +331,8 @@ array.
 After removing the reference from the `Stream`, you can also delete the
 `Multistream Target` object completetly by calling the separate
 [Delete `Multistream Target` API](/references/multistream-target/delete-target).
-Make sure that no other `Stream` has a reference to that `Multistream Target`
+
+> **Note:** Make sure that no other `Stream` has a reference to that `Multistream Target`
 before doing so.
 
 ## Removing a single Multistream Target
@@ -339,9 +340,11 @@ before doing so.
 To remove a specific target, we need to make a `PATCH` request maintaining only
 the targets that we want to keep in the stream, after removing the desired one.
 
-e.g. Removing only the first target from the example above:
+**For Example:** 
 
 ### Request
+
+This request removes only the first target from the example above.
 
 ```bash
 curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
@@ -362,8 +365,8 @@ The reponse should be a `204`
 
 We kept only the remaining targets in the `PATCH`, i.e. the second one.
 
-You can also use a single API call to change the `profile` that should be
-multistreamed to a specific target. For that, just change the `profile` field
+> **Note:** Additionally, you can use a single API call to change the `profile` that should be
+multistreamed to a specific target by changing the `profile` field
 for the given target when building the `PATCH` request payload.
 
 ## Removing all Multistream Targets
@@ -409,34 +412,22 @@ target name and then on `Edit` to open up the target settings. Select
 To delete a multistream target, click on the three dots to the right of the
 target name and then on `Delete`.
 
-<Alert css={{ mt: "$5", mb: "$5" }} variant="loContrast">
-  <Text size="3" variant="gray">
-    Note: Any changes to <code>Mulitstream Targets</code>, including creating
-    new targets, will apply only to the next active session. If you make changes
-    while a stream is active, those changes will not apply until the current
-    session has ended and a new session begins.
-  </Text>
-</Alert>
 
-## Manage Multistream targets with the API
+> **Note:** Any changes to <code>Mulitstream Targets</code>, including creating new targets, will apply only to the next active session. If you make changes while a stream is active, those changes will not apply until the current session has ended and a new session begins.
 
-## Multistream Target Object
- `/multistream/target`
 
-You can also manage `Multistream Target` objects from the API. Each target
-represents a specific endpoint where a stream could be multistreamed to. More
-details in the [API reference](/references/multistream-target/overview).
+## Managing Multistream targets with the API
+
+### About Multistream Target Objects
+
+You can also manage `Multistream Target` objects,  `/multistream/target`,  from the API. Each target
+represents a specific endpoint where a stream could be multistreamed to. ***See*** details in the [API reference](/references/multistream-target/overview).
 
 <!-- Add notice about how other platforms call this? Re-stream, simulcast, etc -->
 
-Notice that the existence of a `Multistream Target` object itself is not enough
-for the multistream to happen. You also need to reference the target from the
-`Stream` object that should be multistreamed. To avoid managing the separate
-`Multistream Target` objects, you can also create the targets inlined in the
-`Stream` creation and update APIs. Check the
-[Stream Object](#stream-object-stream) section for more information.
+Notice that the existence of a `Multistream Target` object itself is not enough for the multistream to happen. You also need to reference the target from the `Stream` object that should be multistreamed. To avoid managing the separate `Multistream Target` objects, you can also create the targets inlined in the `Stream` creation and update APIs. ***See:*** the [Stream Object](#stream-object-stream) section for more information.
 
-## Create
+## Create Targets inlined in the `Stream` creation
 
 ### Request 
 [`POST /api/multistream/target`](/references/multistream-target/create-target)
@@ -451,7 +442,7 @@ curl -X POST 'https://livepeer.studio/api/multistream/target' \
 }'
 ```
 
-_Supported Protocols: RTMP, RTMPS and SRT._
+> **Note:** Supported Protocols -- `RTMP, RTMPS and SRT.`
 
 ### Response
 
@@ -551,11 +542,8 @@ curl -X DELETE 'https://livepeer.studio/api/multistream/target/{id}' \
 -H 'authorization: Bearer {api-key}'
 ```
 ### Response
+
 There is no response on a success (HTTP `204 No Content`).
-
----
-
-
 
 ## Understanding Multistream Performance
 
@@ -584,5 +572,3 @@ We have 3 webhooks to help you monitor the state of your `Multistream Targets`::
 - `multistream.disconnected`: Sent after a stream is ended to indicate that
   Multistream has also ended for the respective target.
 
-For more information on how to use webhooks, please consult our
-[Webhooks Documentation](https://livepeer.studio/docs/guides/start-live-streaming/webhook).
