@@ -2,35 +2,44 @@
 title: Metrics
 ---
 
-To monitor any active stream for issues that may impact the quality of your
-stream and understand the metrics for  operating a live-streaming or user generated content platform. y
+This guide provides steps and information about using stream metrics:
 
-- View health checks of your Livestream 
-- Metrics for your Livestream
+- To monitor any active stream for issues that may impact the quality of your
+stream 
+- Understand the metrics for operating a live-streaming or user generated content platform
+- View health status of your livestream 
+  - Using the API for monitoring
+  - No-code monitoring using the dashboard
 
-## What you need to know
-- API 
+## What You Need To Know
+- Familiarity with Livepeer Studio core concepts
+- Experience working with APIs
+
+## What You Can Build Here
+
+| Implementation                          | Description                             |
+| --------------------------------------- | --------------------------------------- |
+| Get stream metrics with `sourceSegmensDuration`   | Getting the length of a live or recorded stream   |
+| Monitor stream health | Monitor the stream health using the dashboard or the API |
 
 ## Technical Preparation 
-- [`API key documentation`](/guides/livestreaming/api-key)
-- [Check your stream software configuration](https://livepeer.studio/docs/guides/start-live-streaming/debug-live-stream-issues)
 
-![image](https://user-images.githubusercontent.com/79172645/135450248-bf3edea4-e666-4927-8114-f972cd2879fe.png)
+- Sign up for a free Livepeer account
+- Get an API key
+- Access the API Reference
+- [Livestreaming](../livestreaming/tutorial) running
 
-During any Active stream, components on this page will display a variety of
-health indicators.
 
-![image](https://user-images.githubusercontent.com/79172645/135450296-168bd797-fafb-4371-af8a-86b346bbaa18.png)
 
-## sourceSegmentsDuration
+## Metrics with Source Segments Duration
 
-The value of sourceSegmentsDuration returned is the duration in seconds of the
+The value of `sourceSegmentsDuration` returned is the duration in seconds of the
 asset source processed by Livepeer Studio. On the parent stream object, this value
 equates to the total amount of source video ingested by Livepeer Studio all time.
 On the session object, this value is the length of the live stream session (or
 the session recording).
 
-#### Request
+### Request
 
 **`GET /stream/{id}` to retrieve a stream object**
 
@@ -46,10 +55,10 @@ curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/session/{id}"
 ```
 
-#### Response
-- 200 OK 
+### Response
+- Returns a `200` response with the following object:
 
-```bash
+```json
 {
     "name":"test_stream",
     "id":"ijkl61f3-95bd-4971-a7b1-4dcb5d39e78a",
@@ -74,8 +83,6 @@ curl -H 'authorization: Bearer {api-key}' \
 - `Idle` indicates that the stream is not currently active
 
 ## Health Checks
-
-![image](https://user-images.githubusercontent.com/79172645/135450340-4abed968-df77-473d-b926-88c11b5799d2.png)
 
 - **_Transcoding_** — A `Healthy` status indicates that video transcoding is
   occurring, and the multiple profiles of your stream are available for playback.
@@ -119,8 +126,6 @@ streaming software (e.g., OBS) and restart the stream.
 
 ## Session Ingest Rate
 
-![image](https://user-images.githubusercontent.com/79172645/135467197-08ec63ab-4c44-4cad-a0d5-95a76b80e5c5.png)
-
 Session ingest rate tells you the bitrate of the video received by Livepeer
 ingest servers, updated every 10 seconds. A high bitrate is suggestive that
 streams into the Livepeer system are high quality, your encoder is working
@@ -129,7 +134,25 @@ suggest that your encoder is misconfigured or that the streamer internet
 connection isn't as strong as it should be to deliver high-quality streams to
 your viewers.
 
-## Stream Health API
+## Monitoring Stream Health Using The Dashboard
+
+In the dashboard, there will be a `health` tab on the right side
+
+![image](https://user-images.githubusercontent.com/79172645/135450248-bf3edea4-e666-4927-8114-f972cd2879fe.png)
+
+During any Active stream, components on this page will display a variety of
+health indicators.
+
+![image](https://user-images.githubusercontent.com/79172645/135450296-168bd797-fafb-4371-af8a-86b346bbaa18.png)
+
+![image](https://user-images.githubusercontent.com/79172645/135450340-4abed968-df77-473d-b926-88c11b5799d2.png)
+
+At the bottom of the page, a chart will show the ingest rate of a livestream
+
+![image](https://user-images.githubusercontent.com/79172645/135467197-08ec63ab-4c44-4cad-a0d5-95a76b80e5c5.png)
+
+
+## Monitor Stream Health Using The API
 
 **Note:** The Stream Health API is currently in `beta` and some
     elements may change as we mature the product. Before you start building with
@@ -153,21 +176,24 @@ information. The API consists of the following endpoints:
 
 Now let's go into more detail about each of the mentioned API endpoints.
 
-### Health Status
+## Health Status
 
-#### Request: 
+### Request 
+
+ The stream ID is the same one as used in the Livestream API.
 
 `GET livepeer.studio/data/stream/{id}/health`
-  - id the stream ID is the same one as used in the regular API.
+
+`Content-Type: application/json`
 
 ```bash
 curl 'https://livepeer.studio/data/stream/{id}/health' \
 -H 'authorization: Bearer {api-key}'
 ```
 
-#### Response
-- 200 OK
-- `Content-Type: application/json`
+### Response
+
+Returns an object with a `200 OK` response 
 
 ```json
 {
@@ -264,22 +290,25 @@ In the above response payload:
   production systems. But the `last` field is a tuple containing the
   `timestamp` and the `value` of the last reading for that metric.
 
-### Events
+## Events
 
-#### Request 
+### Request 
+
+The stream ID is the same one used in the Livestream API.
 
 `GET livepeer.studio/data/stream/{id}/events`
-The stream ID is the same one used in the standard API.
+
+`Content-Type: text/event-stream`
 
 ```bash
 curl 'https://livepeer.studio/data/stream/{id}/events' \
 -H 'authorization: Bearer {api-key}'
 ```
 
-#### Response
+### Response
 
-- 200 OK
-- `Content-Type: text/event-stream`
+Returns an object with a `200 OK` response 
+
 
 ```json
 retry: 10000
@@ -328,8 +357,3 @@ example, to get all available information about a live stream to find any issues
 The specific events that are published and
 [their respective schemas](https://github.com/livepeer/livepeer-data/tree/main/pkg/data)
 will keep evolving, so they are still subject to changes.
-
-> **Find us at:** 
-- hello@livepeer.studio
-- [Support](https://livepeer.studio/contact)
-- [Livepeer Discord Channel](https://discord.com/invite/7D6hGG6dCZ)
