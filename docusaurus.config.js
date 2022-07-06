@@ -63,7 +63,7 @@ const config = {
             position: "left",
           },
           {
-            href: "/guides",
+            href: "/guides/livestreaming/",
             label: "Guides",
             position: "left",
           },
