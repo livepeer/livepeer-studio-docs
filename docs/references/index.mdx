@@ -1,13 +1,25 @@
 ---
-title: About Livepeer Studio API
+title: API & Additional References
 ---
 
 
-The [Livepeer.studio API](/references) is a video livestreaming API whereby you or the client can configure details for: 
+## About the Livepeer Studio API
+
+The API is a video livestreaming API whereby you or the client can configure details for: 
 
 - Live broadcasting software
 - Generating a playback URL for stream viewers
 - Getting usage data about your stream sessions
+
+
+## API Features
+
+| API                                                          | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Stream](/references/stream/)                                | The `stream` object is the core building block of the Livepeer Studio API with configuration data and metadata about all livestream sessions associated with it. |
+| [Session](/references/session/)                              | The `session` object is a single livestreaming session, especially important to referencing recorded livestream sessions. |
+| [Multistream Target](/references/multistream-target/overview) | The `multistream target` object is a single endpoint to where a `stream` can be multistreamed, i.e. pushing the media from the given stream in real-time (also referred to as `simulcast`). |
+| [On Demand](/references/vod/import)                          | In the API, this is referred to as Video-on-Demand (VOD); you can send video files to Livepeer Studio, get them ready for optimized playback, and work with assets, methods for uploading, updating, and monitoring assets. |
 
 ## Making requests on the API
 
@@ -148,7 +160,7 @@ Returns in JSON format information related to the asset
 }
 ```
 
-## Errors
+## Error Status Codes
 
 The API uses conventional HTTP status codes.
 
@@ -158,8 +170,15 @@ The API uses conventional HTTP status codes.
 
 `5XX` = internal server error, problem with Livepeer Studio servers
 
-
  
+## Additional References
 
+### Support FAQs
+
+Support FAQs includes information and instructions about common issues you may find when using Livepeer Studio.
+
+### Terminology
+
+Terminology includes common standard industry terms and glossary entries that are described within the context of Livepeer Studio.
 
 

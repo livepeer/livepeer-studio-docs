@@ -1,5 +1,6 @@
 const toc = [
   "references/index",
+    
   {
     type: "category",
     label: "Stream",
@@ -55,11 +56,9 @@ const toc = [
       "references/vod/list-tasks",
     ],
   },
-  "references/other-references",
   "references/ingest",
-  "references/errors",
-  "references/terminology",
   "references/support-references",
+  "references/terminology",
 ];
 
 module.exports = toc;
