@@ -31,19 +31,19 @@ First, it’s important to understand the relationship between a Livepeer Studio
 Every `session` has a parent `stream`. The `session` `parentId` value is the
 same as the `stream` `id` value. When you set the `record` value of the parent `stream`, each new `session` adopts that value.
 
-On a `stream` object.
+### On a `stream` object.
 
 - `record: true` means that each _new_ `session` is recorded.
 - `record: false` means that each _new_ `session` is not recorded.
 
-On a `session` object, the `record` value is read-only.
+### On a `session` object, the `record` value is read-only.
 
 - `record: true` means that the `session` is actively being recorded or was
   recorded.
 - `record: false` means that the session is not being recorded or was not
   recorded.
 
-The absence of a `record` parameter on a `stream` or `session` object is
+> **Note:** The absence of a `record` parameter on a `stream` or `session` object is
 equivalent to `record: false`.
 
 ### Notable parameters for a `session` with `record:true`
