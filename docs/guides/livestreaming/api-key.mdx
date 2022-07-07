@@ -75,9 +75,9 @@ If you are using a non-standard port, you will also need to include the port num
 
 ### Enable CORS access
 
-1. tick the `Allow CORS access` checkbox when creating your API key. 
+1. Tick the `Allow CORS access` checkbox when creating your API key. 
 
-1. You will then be prompted to add all the origins that you would like the API key to be used from:
+2. You will then be prompted to add all the origins that you would like the API key to be used from:
 
 ![image](https://ipfs.livepeer.studio/ipfs/QmTCaxyntJoKdRQ8Pnbcn3D1WdRgM7SLioQyRG1YTT67Pm)
 
@@ -101,7 +101,7 @@ For example, APIs that expose PIIs, payment information, or list API resources c
 
 ### Access List of CORS restricted API endpoints 
 
-The following are the main API endpoints that a restricted CORS API key will have access to. These endpoints allow you to use all the features of the [Video NFT SDK (https://www.npmjs.com/package/@livepeer/video-nft) from the browser. 
+The following are the main API endpoints that a restricted CORS API key will have access to. These endpoints allow you to use all the features of the [Video NFT SDK](https://www.npmjs.com/package/@livepeer/video-nft) from the browser. 
 
 | API Group | API                                                          | Description                                    |
 | --------- | ------------------------------------------------------------ | ---------------------------------------------- |
@@ -110,13 +110,13 @@ The following are the main API endpoints that a restricted CORS API key will hav
 | Live      | [GET /api/stream/{id}/sessions](https://livepeer.studio/docs/api-reference/session/list-sessions) | List sessions from a specific parent stream ID |
 | Live      | [GET /api/session/{id}](https://livepeer.studio/docs/api-reference/session/get-session) | Retrieve a session by ID                       |
 | Live      | [PATCH /api/stream/{id}](https://livepeer.studio/docs/api-reference/stream/update-stream) | Update a specific stream by ID                 |
-| VOD       | [POST /api/asset/request-upload](https://livepeer.studio/docs/api-reference/vod/upload) | Create an asset via direct upload              |
-| VOD       | [GET /api/asset/{id}](https://livepeer.studio/docs/api-reference/vod/list#retrieve-an-asset) | Retrieve an asset by ID                        |
-| VOD       | [POST /api/asset/{id}/export](https://livepeer.studio/docs/api-reference/vod/export) | Export an asset (e.g. to IPFS)                 |
-| VOD       | POST  /api/asset/{id}/transcode                              | Transcode an asset to another rendition        |
-| VOD       | [GET /api/task/{id}](https://livepeer.studio/docs/api-reference/vod/list-tasks#retrieve-a-task) | Monitor the progress of a specific task by ID  |
+| On Demand      | [POST /api/asset/request-upload](https://livepeer.studio/docs/api-reference/vod/upload) | Create an asset via direct upload              |
+| On Demand       | [GET /api/asset/{id}](https://livepeer.studio/docs/api-reference/vod/list#retrieve-an-asset) | Retrieve an asset by ID                        |
+| On Demand       | [POST /api/asset/{id}/export](https://livepeer.studio/docs/api-reference/vod/export) | Export an asset (e.g. to IPFS)                 |
+| On Demand       | POST  /api/asset/{id}/transcode                              | Transcode an asset to another rendition        |
+| On Demand       | [GET /api/task/{id}](https://livepeer.studio/docs/api-reference/vod/list-tasks#retrieve-a-task) | Monitor the progress of a specific task by ID  |
 
-> **Note:** If you still have any issues using the [Video NFT SDK (https://www.npmjs.com/package/@livepeer/video-nft), let us know through any of the [support channels (https://livepeer.studio/contact).
+> **Note:** If you still have any issues using the [Video NFT SDK](https://www.npmjs.com/package/@livepeer/video-nft), let us know through any of the [support channels](https://livepeer.studio/contact).
 
 ## Non-restricted API Access
 
