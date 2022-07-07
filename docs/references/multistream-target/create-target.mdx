@@ -19,6 +19,12 @@ information.
 
 Here is an example request:
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="bash" label="bash">
+
 ```bash
 curl -X POST 'https://livepeer.studio/api/multistream/target' \
 -H 'content-type: application/json' \
@@ -28,6 +34,27 @@ curl -X POST 'https://livepeer.studio/api/multistream/target' \
     "url": "rtmp://rtmp.streaming.tv/live/SECRET"
 }'
 ```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+
+```
+
+</TabItem>
+</Tabs>
+
+
+
+
 
 201 Created
 
