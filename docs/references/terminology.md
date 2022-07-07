@@ -3,7 +3,9 @@ title: Terminology
 ---
 
 
-A list of terms to assist developers navigate in the video tech world
+A list of terms to assist developers navigate in the video tech world are included in this table. Terminology covers common standard industry terms and glossary entries that are described within the contexts of Livepeer Studio.
+
+
 
 | A    | Terms                                   | Definition                                                   |
 | ---- | --------------------------------------- | ------------------------------------------------------------ |
