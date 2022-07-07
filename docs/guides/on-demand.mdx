@@ -127,7 +127,7 @@ When using the upload via URL method:
 ### Request
 
 
-```JavaScript
+```js
 
 const axios = require('axios');
 const fs = require('fs');
@@ -156,7 +156,7 @@ const response = await axios.post("https://livepeer.studio/api/asset/import", {
 
 The status here is pending, it might take a few minutes for it to be imported. 
 
-```JSON
+```json
 {
   "asset": {
     "id": "87289307-b60f-432b-984a-8ede174fa152",
@@ -189,11 +189,11 @@ The status here is pending, it might take a few minutes for it to be imported.
 
 ### Request
 
-Use `https://livepeer.studio/api/asset/$ASSET_ID/` with the provided `asset.id` in the response above
+Use `https://livepeer.studio/api/asset/$ASSET_ID/` with the provided `asset.id` in the response above.
 
 ### Response
 
-```JavaScript
+```json
 {
   "id": "87289307-b60f-432b-984a-8ede174fa152",
   "hash": [
@@ -256,7 +256,7 @@ The upload locally method includes a two-step process:
 
 ### Request
 
-```JavaScript
+```js
 
 const uploadAsset = async () => {
   const response = await axios.post(
@@ -278,7 +278,7 @@ const uploadAsset = async () => {
 ### Response
 
 
-```JSON
+```json
 {
   "url": "https://origin.livepeer.studio/api/asset/upload/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcmVzaWduZWRVcmwiOiJodHRwczovL3N0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vbHAtdXMtdm9kLWNvbS9kaXJlY3RVcGxvYWQvNGMyMWs3ejJ0amNkZzh3dC9zb3VyY2U_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ29udGVudC1TaGEyNTY9VU5TSUdORUQtUEFZTE9BRCZYLUFtei1DcmVkZW50aWFsPUdPT0cxRVlVTldOVjZSWUlLNTQySFdBM1JMN1JCN0pVT0VRM1lMMjNRWUI2Q0hQRzVITzJRQzMzTUpWVVklMkYyMDIyMDUxOCUyRnVzJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIyMDUxOFQxOTIyMDVaJlgtQW16LUV4cGlyZXM9OTAwJlgtQW16LVNpZ25hdHVyZT0wZWJmNmMwNWFlZTA2ZGVhOGZmM2U1MzNmNjMxZjk1ZTY3M2I4ZWRiOTI3MWJlOWQzYjdhZWQ4YjI1YTUzZTM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZ4LWlkPVB1dE9iamVjdCIsImF1ZCI6Imh0dHBzOi8vbGl2ZXBlZXIuY29tIiwiaWF0IjoxNjUyOTAxNzI1fQ.2wSQMC3s6QFFkmyhQZuecbQF2R8E_j3VGTg9tblc0Dc",
   "asset": {
@@ -319,7 +319,7 @@ https://livepeer.studio/api/asset/$ASSET_ID/ with provided asset.id
 ### Request
 
 
-```JavaScript
+```js
 {
   "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
   "name": "Waterfall",
@@ -334,7 +334,7 @@ https://livepeer.studio/api/asset/$ASSET_ID/ with provided asset.id
 
 ### Request
 
-```JavaScript
+```js
 
 const uploadAsset = async () => {
 
@@ -354,7 +354,7 @@ const response = await axios
 
 When the video is uploaded, the result should return a 200 response
 
-```JSON
+```json
 {
   "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
   "hash": [
@@ -410,7 +410,7 @@ When listing assets, look for the status in the response body, it should return 
 
 ### Request
 
-```JavaScript
+```js
 
 const listAsset = async () => {
   const response = await axios.get("https://livepeer.studio/api/asset", {
@@ -426,7 +426,7 @@ const listAsset = async () => {
 
 The response will return information on the uploaded asset including the video spec, the playbackUrl for the uploaded asset as well as the playbackId.
 
-```JSON
+```json
 [
   {
     // Uploaded asset locally
@@ -531,7 +531,7 @@ When updating an asset, make sure to have the asset.id available. The asset ID i
 
 ### Request
 
-```JavaScript
+```js
 
 const updateAsset = async () => {
   const response = await axios.patch(
@@ -553,7 +553,7 @@ const updateAsset = async () => {
 
 ### Response
 
-```
+```json
 {
   "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
   "hash": [
@@ -609,7 +609,7 @@ const updateAsset = async () => {
 
 ### Request
 
-```JavaScript
+```js
 
 const deleteAsset = async () => {
   const response = await axios.delete(
@@ -636,7 +636,7 @@ This method allows for exporting an asset imported or uploaded from Livepeer to 
 
 Provide the $ASSET_ID of the asset, this can be found using the List Asset method.
 
-```JavaScript
+```js
 
 const exportAsset = async () => {
   const response = await axios.post(
@@ -659,7 +659,7 @@ const exportAsset = async () => {
 
 The this example has the response show that the status is pending.
 
-```JSON
+```json
 {
   "task": {
     "id": "8b0cd796-8be1-412b-b1dc-8251a35ad2e7",
@@ -720,7 +720,7 @@ Use the list tasks method to get CID and metadata.
 
 To get the CID and metadata URL for the created asset, retrieve the task until it is completed. To do this, check the status field in the response. 
 
-```JavaScript
+```js
 
 
 const list Task = async () => {

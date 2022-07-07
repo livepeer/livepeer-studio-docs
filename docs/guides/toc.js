@@ -21,7 +21,6 @@ const toc = [
       "guides/livestreaming/verify",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/webhook",
-      "guides/livestreaming/check-webhook-signatures",
     ],
   },
   {
@@ -36,6 +35,7 @@ const toc = [
       "guides/development/metrics"
     ],
   },
+
   {
     type: "category",
     label: "Mint",
@@ -46,23 +46,10 @@ const toc = [
             "guides/mint-guides/mint-a-video-nft", 
             "guides/mint-guides/build-a-video-nft-app"],
   },
-  {
-    type: "category",
-    label: "On Demand",
-    link: { type: "doc", id: "guides/on-demand-guides/index" },
-    collapsible: true,
-    collapsed: true,
-    items: ["guides/on-demand-guides/index"],
-  },
-  {
-    type: "category",
-    label: "Sample Apps Library",
-    link: { type: "doc", id: "guides/sampleslib/index" },
-    collapsible: true,
-    collapsed: true,
-    items: ["guides/sampleslib/index"],
-  },
-  "guides/usage-billing",
+
+
+  "guides/on-demand", 
+  "guides/sampleslib",
   "references/terminology",
 ];
 
