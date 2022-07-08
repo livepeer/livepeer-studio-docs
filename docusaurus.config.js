@@ -59,7 +59,7 @@ const config = {
           },
           {
             href: "/guides",
-            label: "Quick Start",
+            label: "Quickstart",
             position: "left",
           },
           {

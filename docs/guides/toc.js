@@ -35,7 +35,7 @@ const toc = [
       "guides/development/metrics"
     ],
   },
-
+      "guides/on-demand", 
   {
     type: "category",
     label: "Mint",
@@ -48,7 +48,6 @@ const toc = [
   },
 
 
-  "guides/on-demand", 
   "guides/sampleslib",
   "references/terminology",
 ];
