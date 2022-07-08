@@ -21,18 +21,7 @@ const toc = [
       "guides/livestreaming/verify",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/webhook",
-    ],
-  },
-  {
-    type: "category",
-    label: "Application Development",
-    link: { type: "doc", id: "guides/development/index" },
-    collapsible: true,
-    collapsed: true,
-    items: [
-      "guides/development/live-streaming-from-your-app",
-      "guides/development/video-playback-in-your-app",
-      "guides/development/metrics"
+      "guides/livestreaming/metrics",
     ],
   },
       "guides/on-demand", 
