@@ -58,8 +58,8 @@ const toc = [
   },
   "references/ingest",
   "references/support-references",
-  "references/protocols",
   "references/terminology",
+  "references/protocols",
 ];
 
 module.exports = toc;

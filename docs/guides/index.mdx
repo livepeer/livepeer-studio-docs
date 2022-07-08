@@ -72,7 +72,7 @@ The following request will return:
 
 > **Note:** These parameters will be used in [OBS](https://obsproject.com/) along with an `id` to enable recording for the stream.
 
-<!-- link the above to existing documentation-->
+
 
 ```js
 const axios = require("axios");
@@ -229,8 +229,8 @@ const streamOn = async () => {
 
 The setting for recording a livestream indicates:
 
-- the ability to record a livestream, and
-- save the livestream for later views  
+- The ability to record a livestream, and
+- **Save** the livestream for later views  
 
 **By default**, this setting is set to `"record": false`. You will be able to change this in the following steps:
 
@@ -382,7 +382,7 @@ This returns the `playbackURL` at the bottom of the response which we will use t
 The response from requesting an asset in the API will return the `playbackId` which is used for the `playbackUrl`. https://livepeercdn.com/hls/{playbackId}/index.m3u8
 > **Note:** You can also get the `playbackUrl` from the dashboard of the stream.
 
-
+## Options to view a livestream
 There are different options to view a livestream.
 
 **For example:**
@@ -403,4 +403,6 @@ You can check a recorded video via [Bitmovin test player](https://bitmovin.com/d
 
 > **Note:** The process of playing back a recorded video is the same as above.
 
-> **Note:** There are two ways to playback a recorded stream, via the API by getting the asset and the response returns a `playbackUrl` or download it via the `downloadUrl` link. (ALternatively you can get the download link from the dashboard)
+> **Note:** There are two ways to playback a recorded stream:
+- via the API by getting the asset and the response returns a `playbackUrl`, or 
+- download it via the `downloadUrl` link. (ALternatively you can get the download link from the [dashboard](https://livepeer.studio/login?next=%2Fdashboard))
