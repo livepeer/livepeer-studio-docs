@@ -58,6 +58,7 @@ const toc = [
   },
   "references/ingest",
   "references/support-references",
+  "references/protocols",
   "references/terminology",
 ];
 
