@@ -53,24 +53,24 @@ const config = {
         },
         items: [
           {
-            href: "/aboutstudio",
+            to: "/aboutstudio",
             label: "About Studio",
-            position: "left",
+            position: "left"
           },
           {
-            href: "/guides",
+            to: "/guides",
             label: "Quickstart",
-            position: "left",
+            position: "left"
           },
           {
-            href: "/guides/livestreaming",
+            to: "/guides/livestreaming",
             label: "Guides",
-            position: "left",
+            position: "left"
           },
           {
-            href: "/references",
+            to: "/references",
             label: "API",
-            position: "left",
+            position: "left"
           },
           {
             href: "https://forum.livepeer.com/",
