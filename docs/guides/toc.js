@@ -33,8 +33,6 @@ const toc = [
             "guides/mint-guides/mint-a-video-nft", 
             "guides/mint-guides/build-a-video-nft-app"],
   },
-
-
   "guides/sampleslib",
   "references/terminology",
 ];

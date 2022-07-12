@@ -21,7 +21,7 @@ const toc = [
       {
         type: "category",
         label: "Guides",
-        link: { type: "doc", id: "guides/livestreaming" },
+        link: { type: "doc", id: "guides/livestreaming/index" },
         collapsible: true,
         collapsed: true,
         items: [
