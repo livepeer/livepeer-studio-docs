@@ -63,10 +63,9 @@ const toc = [
       "references/terminology",
     ],
   },
-  "references/index",
   {
     type: "category",
-    label: "API",
+    label: "API & Other References",
     link: { type: "doc", id: "references/index" },
     collapsible: true,
     collapsed: true,
