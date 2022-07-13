@@ -1,22 +1,22 @@
 const toc = [
   "intro",
+  "guides/index",
   {
     type: "category",
     label: "Core Concepts",
-    link: { type: "doc", id: "aboutstudio/index" },
+    link: { type: "doc", id: "core-concepts/index" },
     collapsible: true,
     collapsed: true,
     items: [
-      "aboutstudio/tech-overview",
-      "aboutstudio/architecture",
-      "aboutstudio/livestream",
-      "aboutstudio/on-demand",
-      "aboutstudio/mint",
-      "aboutstudio/sampleapps",
-      "aboutstudio/features",
+      "core-concepts/tech-overview",
+      "core-concepts/architecture",
+      "core-concepts/livestream",
+      "core-concepts/on-demand",
+      "core-concepts/mint",
+      "core-concepts/sampleapps",
+      "core-concepts/features",
     ],
   },
-  "guides/index",
   {
     type: "category",
     label: "Guides",
@@ -54,9 +54,9 @@ const toc = [
         collapsed: true,
         items: [
           "guides/mint-guides/mint-a-video-nft",
-          "guides/mint-guides/build-a-video-nft-app"],
+          "guides/mint-guides/build-a-video-nft-app",
+        ],
       },
-
 
       "guides/sampleslib",
     ],
@@ -127,11 +127,8 @@ const toc = [
       "references/support-references",
       "references/terminology",
       "references/protocols",
-    ]
-  }
-
-
-
-]
+    ],
+  },
+];
 
 module.exports = toc;

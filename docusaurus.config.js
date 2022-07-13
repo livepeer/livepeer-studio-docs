@@ -53,29 +53,29 @@ const config = {
         },
         items: [
           {
-            to: "/aboutstudio",
+            to: "/core-concepts",
             label: "Core Concepts",
-            position: "left"
+            position: "left",
           },
           {
             to: "/guides",
             label: "Quickstart",
-            position: "left"
+            position: "left",
           },
           {
             to: "/guides/livestreaming",
             label: "Guides",
-            position: "left"
+            position: "left",
           },
           {
             to: "/references",
             label: "API",
-            position: "left"
+            position: "left",
           },
-           {
+          {
             to: "/references/terminology",
             label: "Glossary",
-            position: "left"
+            position: "left",
           },
           {
             href: "https://discord.com/invite/7D6hGG6dCZ",

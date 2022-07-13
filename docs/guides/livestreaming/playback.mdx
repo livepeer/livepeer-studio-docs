@@ -19,17 +19,17 @@ Livepeer Studio playback URL is formatted:
 
 ## What You Need to Know
 
-- Familiarity with [Livepeer Studio core concepts](/aboutstudio)
+- Familiarity with [Livepeer Studio core concepts](/core-concepts)
 - Experience working with APIs
 
 ## What You Can Build Here
 
-| Implementation      | Description                                                            |
-| ------------------- | ---------------------------------------------------------------------- |
-| Get a playback URL  | Using the `playbackUrl` to view the livestream                         |
-| Embed video player  | HLS supported video player is required for viewing livestreams with the playback URL |
-| Build a  video player  | HLS supported video player is required for viewing livestreams with the playback URL |
-| Get audio of stream | Provide only the audio of a stream                                     |
+| Implementation       | Description                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| Get a playback URL   | Using the `playbackUrl` to view the livestream                                       |
+| Embed video player   | HLS supported video player is required for viewing livestreams with the playback URL |
+| Build a video player | HLS supported video player is required for viewing livestreams with the playback URL |
+| Get audio of stream  | Provide only the audio of a stream                                                   |
 
 ## Technical Preparation
 
@@ -47,8 +47,8 @@ Livepeer Studio playback URL is formatted:
 Make a `GET` request to `https://livepeer.studio/api/stream/{id}`.
 
 - Note the value of `playbackId` in the response.
--  The playback URL is
-`https://livepeercdn.com/hls/{playbackId}/index.m3u8`.
+- The playback URL is
+  `https://livepeercdn.com/hls/{playbackId}/index.m3u8`.
 
 ## cURL Method
 
@@ -159,6 +159,7 @@ To build an application that plays your livestream or On Demand assets, you need
 ### Embed a video player
 
 You can build an embeddable player:
+
 > **Note:** The embeddable player is currently in `beta` and some elements may change as we mature the product. For a production-grade application consider using your own player, like the ones suggested above. You can also check or copy the [Livepeer Player source code](https://github.com/livepeer/player) to get started quickly.
 
 To make getting started easier, you can also use the Livepeer Studio embeddable player on your page. To use it, you just need to create an `<iframe>` element in your application with the URL pointing to the hosted player.
@@ -173,7 +174,8 @@ You only need to send it some information about what content it is supposed to p
   frameborder="0"
   allowfullscreen
   allow="autoplay; encrypted-media; picture-in-picture"
-  sandbox="allow-scripts">
+  sandbox="allow-scripts"
+>
 </iframe>
 ```
 
@@ -190,6 +192,7 @@ Some options can be changed in the player for better integration with your appli
 > **Warning ⚠️** The theme option is the most subject to stop working in the future as we change the underlying technology used in the player. Consider setting up your own player if you need to customize that on a production app.
 
 ### Build a video player
+
 You can also learn how to build your own [video player](../development/video-playback-in-your-app).
 
 ## Audio-only streams

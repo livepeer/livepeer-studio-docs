@@ -5,24 +5,23 @@ metaTitle: Video NFTs - Livepeer Studio
 metaDescription: Livepeer's On Demand documentation
 ---
 
-
 This guide walks you through the process of working with the On Demand feature to upload videos and play them back in your application:
 
 - Understanding the On Demand API
 - Working with assets
 - Methods for Uploading
 - Updating assets
-- Monitoring assets 
+- Monitoring assets
 
 ## What you need to Know
 
-- Understanding Livepeer Studio [core concepts](/aboutstudio)
+- Understanding Livepeer Studio [core concepts](/core-concepts)
 - Experience working with [`Node.js`](https://nodejs.org/en/)
 - Experience working with [`Axios`](https://axios-http.com/)
 
 ## Technical Preparation
 
-Before getting started, you will need to meet the following dependencies for working with the [On Demand](/aboutstudio/on-demand/) feature:
+Before getting started, you will need to meet the following dependencies for working with the [On Demand](/core-concepts/on-demand/) feature:
 
 - [A Livepeer Account](https://livepeer.studio/login)
 - Install [`Node.js`](https://nodejs.org/en/)
@@ -50,7 +49,7 @@ When adding a video file, this is an asynchronous process that requires processi
 
 ## Listing the assets
 
-Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset. 
+Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset.
 
 ### Request
 
@@ -64,47 +63,47 @@ the response will return the `id` of that asset
 
 ### Request
 
-`GET /api/asset/$ASSET_ID` 
+`GET /api/asset/$ASSET_ID`
 
 ### Response
 
-The response will indicate the status of the uploaded assets as status: 
+The response will indicate the status of the uploaded assets as status:
 
-- `waiting` or `status`: "ready". 
+- `waiting` or `status`: "ready".
 
-- If status: "waiting" is returned in the response, the asset is not available: 
+- If status: "waiting" is returned in the response, the asset is not available:
 
-  - make the API call again until status: "ready". 
+  - make the API call again until status: "ready".
 
 - If the status indicates that it is "ready", it is available.
 
-
 ## Listing the Tasks
 
-To check the status on an asset imported /import to Livepeer or exported /export to IPFS, get the `task.id` from the response of the uploaded asset. 
+To check the status on an asset imported /import to Livepeer or exported /export to IPFS, get the `task.id` from the response of the uploaded asset.
 
 ### Request
 
 To retrieve the status use:
 
-`GET /api/task/$TASK_ID` 
+`GET /api/task/$TASK_ID`
 
 ## To Monitor progress of the task
 
-If the asset is available, 
-- the response will return `status.phase.complete`, 
+If the asset is available,
 
-otherwise 
+- the response will return `status.phase.complete`,
 
-- the value will be `status.phase.pending`. 
+otherwise
 
-- The API call will need to be made again until it is complete. 
+- the value will be `status.phase.pending`.
 
-> **Note:** using the `GET /api/task/$TASK_ID` request provides different information depending on whether the asset is *imported* or *exported* . 
+- The API call will need to be made again until it is complete.
+
+> **Note:** using the `GET /api/task/$TASK_ID` request provides different information depending on whether the asset is _imported_ or _exported_ .
 
 ### For imported assets
 
-- Information on video specs such as codec and formats are present. 
+- Information on video specs such as codec and formats are present.
 
 ### For assets exported to IPFS
 
@@ -114,7 +113,7 @@ otherwise
 
 There are two methods to upload a video to Livepeer:
 
-- Upload via URL 
+- Upload via URL
 - Upload locally with an `.mp4` file format
 
 ## Upload via URL
@@ -125,7 +124,6 @@ When using the upload via URL method:
 - Provide the URL of the asset that should be imported
 
 ### Request
-
 
 ```js
 
@@ -151,10 +149,9 @@ const response = await axios.post("https://livepeer.studio/api/asset/import", {
 };
 ```
 
-
 ### Response
 
-The status here is pending, it might take a few minutes for it to be imported. 
+The status here is pending, it might take a few minutes for it to be imported.
 
 ```json
 {
@@ -185,7 +182,7 @@ The status here is pending, it might take a few minutes for it to be imported.
 }
 ```
 
-## Verify that the status is ready 
+## Verify that the status is ready
 
 ### Request
 
@@ -242,8 +239,6 @@ Use `https://livepeer.studio/api/asset/$ASSET_ID/` with the provided `asset.id` 
 }
 ```
 
-
-
 ## Upload Locally
 
 The upload locally method includes a two-step process:
@@ -257,7 +252,6 @@ The upload locally method includes a two-step process:
 ### Request
 
 ```js
-
 const uploadAsset = async () => {
   const response = await axios.post(
     "https://livepeer.studio/api/asset/request-upload",
@@ -276,7 +270,6 @@ const uploadAsset = async () => {
 ```
 
 ### Response
-
 
 ```json
 {
@@ -317,7 +310,6 @@ Check the status of the generated url.
 https://livepeer.studio/api/asset/$ASSET_ID/ with provided asset.id
 
 ### Request
-
 
 ```js
 {
@@ -403,7 +395,6 @@ When the video is uploaded, the result should return a 200 response
 }
 ```
 
-
 ## List Assets
 
 When listing assets, look for the status in the response body, it should return status:“ready”. If the response returns status:“waiting”, then wait a little longer and repeat this step until the status is ready before moving to the exporting step.
@@ -411,7 +402,6 @@ When listing assets, look for the status in the response body, it should return 
 ### Request
 
 ```js
-
 const listAsset = async () => {
   const response = await axios.get("https://livepeer.studio/api/asset", {
     headers: {
@@ -532,7 +522,6 @@ When updating an asset, make sure to have the asset.id available. The asset ID i
 ### Request
 
 ```js
-
 const updateAsset = async () => {
   const response = await axios.patch(
     "https://livepeer.studio/api/asset/$ASSET_ID",
@@ -548,7 +537,6 @@ const updateAsset = async () => {
   );
   console.log(JSON.stringify(response.data));
 };
-
 ```
 
 ### Response
@@ -610,7 +598,6 @@ const updateAsset = async () => {
 ### Request
 
 ```js
-
 const deleteAsset = async () => {
   const response = await axios.delete(
     "https://livepeer.studio/api/asset/{id}",
@@ -637,7 +624,6 @@ This method allows for exporting an asset imported or uploaded from Livepeer to 
 Provide the $ASSET_ID of the asset, this can be found using the List Asset method.
 
 ```js
-
 const exportAsset = async () => {
   const response = await axios.post(
     "https://livepeer.studio/api/asset/$ASSET_ID/export",
@@ -718,7 +704,7 @@ When listing tasks, the response will provide information on imported or exporte
 
 Use the list tasks method to get CID and metadata.
 
-To get the CID and metadata URL for the created asset, retrieve the task until it is completed. To do this, check the status field in the response. 
+To get the CID and metadata URL for the created asset, retrieve the task until it is completed. To do this, check the status field in the response.
 
 ```js
 
