@@ -4,25 +4,24 @@ title: Stream via OBS
 
 OBS is the way that most users stream into Livepeer because it is easy to use and offers a high degree of customization. The purpose of this guide is to allow you to get a more in-dept look at setting up a livestream using Livepeer Studio with OBS.
 
-## What you need to know
+## What You Need To know
 
+- Familiarity with Livepeer Studio core concepts
 - Familiarity with using OBS
 
-## What you are going to build
+## What You Can Build Here
 
-In this quick tutorial, you will learn how to pass in a live stream using OBS with a provided RTMP URL from Livepeer Studio.
+In this quick tutorial, you will learn how to pass in a livestream using OBS with a provided RTMP URL from Livepeer Studio.
 
-## What the methods are
+## Technical Preparation
 
-- Live streaming with a broadcasting software
-
-## Prepare the environment
+Before getting started, you can set up your environment to prepare for developing your application:
 
 - Download [OBS](https://obsproject.com/)
-- Login or Sign up for a [Livpeer Studio](https://livepeer.studio) account
+- Sign up for a free [Livpeer Studio](https://livepeer.studio) account
 - [Create a stream](https://livepeer.studio/preview/blog/stream-into-livepeer-studio-first-time)
 
-## Step 1: Open OBS and create a source
+## Create a Source In OBS
 
 - Click the **+ icon** under sources and select **Video Capture Device** if you’d like to stream using a camera or webcam. If you’d like to stream a browser window, select **Window Capture**.
 - Give the device a name
@@ -31,7 +30,7 @@ In this quick tutorial, you will learn how to pass in a live stream using OBS wi
 ![OBS2](../../../static/docs-assets/obs/OBS2.png)
 ![OBS3](../../../static/docs-assets/obs/OBS3.png)
 
-## Step 2: Go to the settings
+## Setting Up Server In OBS
 
 - Select **Stream** settings
 - Select **custom** for services
@@ -43,7 +42,7 @@ In this quick tutorial, you will learn how to pass in a live stream using OBS wi
 
   ![OBS4](../../../static/docs-assets/obs/OBS4.png)
 
-## Step 3: Select the Output settings and the Streaming tab
+##  Output settings In OBS
 
 - In the Output Mode select Advance
 - Set the keyframe interval to 2 seconds
@@ -51,7 +50,7 @@ In this quick tutorial, you will learn how to pass in a live stream using OBS wi
 
 ![OBS5](../../../static/docs-assets/obs/OBS5.png)
 
-## Step 4: Stream and check output
+## Confirm Stream and Check Output
 
 After saving your settings, OBS will return to the stream console. Press start
 streaming from the output you selected in Step 2.
