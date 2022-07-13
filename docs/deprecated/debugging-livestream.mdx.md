@@ -2,7 +2,6 @@
 title: Debugging Livestream issues
 ---
 
-
 ## Debugging livestream issues
 
 You can follow these steps to [debug common stream playback issues](https://livepeer.studio/preview/blog/debugging-playback-issues).
@@ -15,9 +14,9 @@ You can follow these steps to [debug common stream playback issues](https://live
 stream playback URL.
 
 1. Load your playback URL in the [Livepeer Studio test player](https://livepeer.studio/app/test-player). If
-you get a "Stream not found" error, confirm that your URL is correct. It should
-look something like this:
-`https://livepeercdn.com/hls/123456abcdef7890/index.m3u8`
+   you get a "Stream not found" error, confirm that your URL is correct. It should
+   look something like this:
+   `https://livepeercdn.com/hls/123456abcdef7890/index.m3u8`
 
 1. Identify the problem you are experiencing?
 
@@ -26,14 +25,13 @@ look something like this:
 - **I don't know.** Go to step 4.
 
 1. In the [Livepeer Studio test players](https://livepeer.studio/app/test-player),
-Check to see if your stream playback is working:
+   Check to see if your stream playback is working:
 
 - **Yes, the quality is great:** There may be something wrong with your player
   configuration. Start by checking if your player is loading the correct
   playback URL.
 - **No:** Go to the next step.
 - **Yes, but the quality is poor:** Go to step 5
-
 
 1. Check the stream status is active below the Livepeer Studio test player.
 
@@ -44,12 +42,12 @@ Check to see if your stream playback is working:
 - **Yes:** Go to the next step.
 
 1. Check the your stream's ingest rate by looking at the graph in the Stream Info
-section of the test player. Every 10 seconds, the rate at which your stream is
-being ingested into Livepeer Studio is updated. Is the plotted ingest rate line
-relatively flat?
+   section of the test player. Every 10 seconds, the rate at which your stream is
+   being ingested into Livepeer Studio is updated. Is the plotted ingest rate line
+   relatively flat?
 
 - **No:** If the chart shows a lot of sharp peaks and valleys, this indicates
-  your broadcasting workflow is unstable. The RTMP stream hitting Livepeer's
+  your broadcasting workflow is unstable. The RTMP stream hitting the Livepeer Studio
   ingest server has problems. Try ensuring a stronger internet connection at the
   source via a wired ethernet connection or by broadcasting on a more reliable
   network.
@@ -57,14 +55,14 @@ relatively flat?
   good internet connection. Go to the next step.
 
 1. Check if you are transcoding. Is nothing listed next to `Playback settings`
-below the Livepeer Studio test player?
+   below the Livepeer Studio test player?
 
 - **Yes:** You are not transcoding your source stream, and only the source
   profile is available for playback (no ABR) via the Livepeer Studio CDN. There may
   be something wrong with your source stream. If you can, instruct the streamer
   to set the keyframe interval to 2 in their broadcasting software; this can
   help. In general, make sure your broadcasting workflow is stable. The RTMP
-  stream hitting Livepeer's ingest server has problems. Try ensuring a stronger
+  stream hitting the Livepeer Studio ingest server has problems. Try ensuring a stronger
   internet connection at the source via a wired ethernet connection or by
   broadcasting on a more reliable network.
   <br />
@@ -75,16 +73,16 @@ below the Livepeer Studio test player?
 - **No:** If one or more `profiles` are listed, go to the next step.
 
 1. Do all the `profiles` have the same FPS? Between 5 FPS and 60 FPS work best.
-Setting FPS to `0` is also acceptable and passes through the source FPS to the
-transcoded renditions.
+   Setting FPS to `0` is also acceptable and passes through the source FPS to the
+   transcoded renditions.
 
 - **No:** Your `profiles` FPS is configured incorrectly. Create a new stream,
   and set all `profiles` FPS to the same value.
 - **Yes:** Go to the next step.
 
 1.  Check if something is wrong with the source stream. The source stream is the
-stream sent from your broadcast software. Livepeer Studio serves the source stream
-with the transcoded renditions via the playback URL.
+    stream sent from your broadcast software. Livepeer Studio serves the source stream
+    with the transcoded renditions via the playback URL.
 
 The left player shows your source stream, as served by the Livepeer Studio CDN.
 This player is configured to only playback the highest resolution available.
@@ -100,7 +98,7 @@ the renditions on the right player show more problems than in the left source?
   transcoded renditions, there is something wrong with your source stream. If
   you can, instruct the streamer to set the keyframe interval to 2 in their
   broadcasting software; this can help. In general, make sure your broadcasting
-  workflow is stable. The RTMP stream hitting Livepeer's ingest server has
+  workflow is stable. The RTMP stream hitting the Livepeer Studio ingest server has
   problems. Try ensuring a stronger internet connection at the source via a
   wired ethernet connection or by broadcasting on a more reliable network.
 

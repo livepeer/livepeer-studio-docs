@@ -9,7 +9,7 @@ This guide will provide an introduction to livestreaming along with understandin
 
 ## What You Need To Know
 
-- Familiarity with [Livepeer Studio core concepts](../../aboutstudio)
+- Familiarity with [Livepeer Studio core concepts](../../core-concepts)
 
 ## What You Can Build Here
 
@@ -17,28 +17,24 @@ This guide will go through the general workflow of:
 
 - Creating a stream
 - Introduce two different methods for broadcasting a stream
-- Playing back the stream 
+- Playing back the stream
 
-| Implementation                                                                                                 | Advantages | Challenges |
-| -------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
-| Create a stream|   Livestream to multiple platforms at the same time         | Monitoring the different platforms' status during stream 
-| Livestream using OBS broadcasting software|   Create professional looking streams with transition of scenes and different camera angles        | Need to install software
-| Livestream buidling a simple app using WebRTMP SDK| Stream using in-browser capabilities | Understanding of basic website development
-| Playback a livestream|   Allow the stream to be viewed by others         | Basic knowldge of video playback with a video player
-
+| Implementation                                     | Advantages                                                                                | Challenges                                               |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Create a stream                                    | Livestream to multiple platforms at the same time                                         | Monitoring the different platforms' status during stream |
+| Livestream using OBS broadcasting software         | Create professional looking streams with transition of scenes and different camera angles | Need to install software                                 |
+| Livestream buidling a simple app using WebRTMP SDK | Stream using in-browser capabilities                                                      | Understanding of basic website development               |
+| Playback a livestream                              | Allow the stream to be viewed by others                                                   | Basic knowldge of video playback with a video player     |
 
 ## Technical Preparation
 
 There are multiple ways to livestream with Livepeer Studio. The only prerequisite
 for using Livepeer Studio is to be able to create an RTMP stream.
 
-
 - **Operating System:** Livepeer Studio services can be run on any operating system
 
 1. **[Sign up for a free Livepeer account](https://livepeer.studio/login)**
 1. **[Get Stream Key](https://livepeer.studio/dashboard/streams)**
-
-
 
 ## Create a Stream
 
@@ -48,21 +44,21 @@ right corner. When you name your stream, pick a unique name and include URL
 compatible characters only.
 
 Then you’ll be redirected to a detailed page with information about your new
-stream. Keep this page open. You will need the stream key for both using OBS or WebRTMP methods. 
+stream. Keep this page open. You will need the stream key for both using OBS or WebRTMP methods.
 
 Visit [here](./create-a-stream) for a detailed tutorial.
 
 ### Using OBS Broadcaster
 
-OBS is the way that most users stream into Livepeer because it is easy to use and offers a high degree of customization. OBS is open source and free to use. 
+OBS is the way that most users stream into Livepeer because it is easy to use and offers a high degree of customization. OBS is open source and free to use.
 
 Visit [here](./obs) for a detailed tutorial.
 
 ### Using In-browser Broadcaster
 
-The in-browser approach is when streamers are using a website that allows them to stream directly from it without additional software. There isn’t a need to download anything as everything is already set up on the web page. 
+The in-browser approach is when streamers are using a website that allows them to stream directly from it without additional software. There isn’t a need to download anything as everything is already set up on the web page.
 
- For streamers who don’t need as much control over their settings, or perhaps don’t want to download software to start streaming like OBS, in-browser streaming is a good option. 
+For streamers who don’t need as much control over their settings, or perhaps don’t want to download software to start streaming like OBS, in-browser streaming is a good option.
 
 Visit [here](./webrtmp) for a detailed tutorial.
 
@@ -81,13 +77,13 @@ You can check a recorded video via [Bitmovin test player](https://bitmovin.com/d
 
 1. To see the recorded live stream:
 
-    - Click the  `Load Settings` button when you press `play`.
+   - Click the `Load Settings` button when you press `play`.
 
 1. For other options of playback:
 
-    - ***For Safari web browser only***,  you can directly paste the `playbackURL` in the address bar.
+   - **_For Safari web browser only_**, you can directly paste the `playbackURL` in the address bar.
 
-    - ***Alternatively**, you can build your own video player: ***See*** [How to implement a player in the front end](https://github.com/codentell/livepeer-player-tutorial)
+   - **\*Alternatively**, you can build your own video player: **_See_** [How to implement a player in the front end](https://github.com/codentell/livepeer-player-tutorial)
 
 > **Note:** The process of playing back a recorded video is the same as above.
 

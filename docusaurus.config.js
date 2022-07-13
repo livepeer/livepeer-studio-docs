@@ -53,43 +53,33 @@ const config = {
         },
         items: [
           {
-            to: "/aboutstudio",
-            label: "About Studio",
-            position: "left"
+            to: "/core-concepts",
+            label: "Core Concepts",
+            position: "left",
           },
           {
             to: "/guides",
             label: "Quickstart",
-            position: "left"
+            position: "left",
           },
           {
             to: "/guides/livestreaming",
             label: "Guides",
-            position: "left"
+            position: "left",
           },
           {
             to: "/references",
             label: "API",
-            position: "left"
+            position: "left",
           },
-           {
+          {
             to: "/references/terminology",
             label: "Glossary",
-            position: "left"
-          },
-          {
-            href: "https://forum.livepeer.com/",
-            label: "Forum",
-            position: "right",
-          },
-          {
-            href: "https://twitter.com/livepeerstudio",
-            label: "Follow us",
-            position: "right",
+            position: "left",
           },
           {
             href: "https://discord.com/invite/7D6hGG6dCZ",
-            label: "Support",
+            label: "Discord",
             position: "right",
           },
           {

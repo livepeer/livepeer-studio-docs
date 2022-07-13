@@ -1,5 +1,5 @@
 ---
-title: MultiStreams
+title: Multistream
 ---
 
 Multistream allows a source stream and transcoded renditions to be
@@ -8,7 +8,7 @@ YouTube Live. This guide will provide an understanding and use of multistream wi
 
 - Stream Object
 - Creating a Stream with Multistream Targets
-- Manage Multistream Targets 
+- Manage Multistream Targets
   - In the Livepeer Studio Dashboard
   - With the API
 - Understanding Multistream Performance
@@ -17,16 +17,16 @@ YouTube Live. This guide will provide an understanding and use of multistream wi
 
 ## What You Need to Know
 
-- Familiarity with [Livepeer Studio core concepts](/aboutstudio)
+- Familiarity with [Livepeer Studio core concepts](/core-concepts)
 - Experience working with `cURL`
 
 ## What You Can Build Here
 
 The following is an annotated list of applications you can build following this tutorial. It includes brief descriptions of use cases with advantages and challenges of each implementation including but not limited to:
 
-| Implementation                                                                                                 | Advantages | Challenges |
-| -------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
-| Pass in the RTMP URL address from platforms such as YouTube and Twitch into Livepeer Studio                                                    |   Livestream to multiple platforms at the same time         | Monitoring the different platforms' status during stream 
+| Implementation                                                                              | Advantages                                        | Challenges                                               |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------- |
+| Pass in the RTMP URL address from platforms such as YouTube and Twitch into Livepeer Studio | Livestream to multiple platforms at the same time | Monitoring the different platforms' status during stream |
 
 ## Technical Preparation
 
@@ -96,65 +96,64 @@ curl -X POST 'https://livepeer.studio/api/stream' \
 }
 ```
 
-
 ### Response
 
 ```json
 {
-    "lastSeen": 0,
-    "isActive": false,
-    "record": false,
-    "suspended": false,
-    "sourceSegments": 0,
-    "transcodedSegments": 0,
-    "sourceSegmentsDuration": 0,
-    "transcodedSegmentsDuration": 0,
-    "sourceBytes": 0,
-    "transcodedBytes": 0,
-    "profiles": [
-        {
-            "name": "720p",
-            "bitrate": 2000000,
-            "fps": 30,
-            "width": 1280,
-            "height": 720
-        },
-        {
-            "name": "480p",
-            "bitrate": 1000000,
-            "fps": 30,
-            "width": 854,
-            "height": 480
-        },
-        {
-            "name": "360p",
-            "bitrate": 500000,
-            "fps": 30,
-            "width": 640,
-            "height": 360
-        }
-    ],
-    "name": "test_multistream_reference",
-    "multistream": {
-        "targets": [
-            {
-                "id": "936aad06-2165-48d7-bec3-41d4af328281",
-                "profile": "source"
-            },
-            {
-                "id": "36e73bf6-92bb-49cc-838a-2831ef746ecf",
-                "profile": "720p"
-            }
-        ]
+  "lastSeen": 0,
+  "isActive": false,
+  "record": false,
+  "suspended": false,
+  "sourceSegments": 0,
+  "transcodedSegments": 0,
+  "sourceSegmentsDuration": 0,
+  "transcodedSegmentsDuration": 0,
+  "sourceBytes": 0,
+  "transcodedBytes": 0,
+  "profiles": [
+    {
+      "name": "720p",
+      "bitrate": 2000000,
+      "fps": 30,
+      "width": 1280,
+      "height": 720
     },
-    "kind": "stream",
-    "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-    "renditions": {},
-    "id": "f9f8de67-f032-4efd-af77-a664538596e7",
-    "createdAt": 1656436202327,
-    "streamKey": "f9f8-tesi-a2co-187v",
-    "playbackId": "f9f8nwl0eou5lxv4",
-    "createdByTokenName": "Test"
+    {
+      "name": "480p",
+      "bitrate": 1000000,
+      "fps": 30,
+      "width": 854,
+      "height": 480
+    },
+    {
+      "name": "360p",
+      "bitrate": 500000,
+      "fps": 30,
+      "width": 640,
+      "height": 360
+    }
+  ],
+  "name": "test_multistream_reference",
+  "multistream": {
+    "targets": [
+      {
+        "id": "936aad06-2165-48d7-bec3-41d4af328281",
+        "profile": "source"
+      },
+      {
+        "id": "36e73bf6-92bb-49cc-838a-2831ef746ecf",
+        "profile": "720p"
+      }
+    ]
+  },
+  "kind": "stream",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "renditions": {},
+  "id": "f9f8de67-f032-4efd-af77-a664538596e7",
+  "createdAt": 1656436202327,
+  "streamKey": "f9f8-tesi-a2co-187v",
+  "playbackId": "f9f8nwl0eou5lxv4",
+  "createdByTokenName": "Test"
 }
 ```
 
@@ -194,61 +193,61 @@ curl -X POST 'https://livepeer.studio/api/stream' \
 
 ```json
 {
-    "lastSeen": 0,
-    "isActive": false,
-    "record": false,
-    "suspended": false,
-    "sourceSegments": 0,
-    "transcodedSegments": 0,
-    "sourceSegmentsDuration": 0,
-    "transcodedSegmentsDuration": 0,
-    "sourceBytes": 0,
-    "transcodedBytes": 0,
-    "profiles": [
-        {
-            "name": "720p",
-            "bitrate": 2000000,
-            "fps": 30,
-            "width": 1280,
-            "height": 720
-        },
-        {
-            "name": "480p",
-            "bitrate": 1000000,
-            "fps": 30,
-            "width": 854,
-            "height": 480
-        },
-        {
-            "name": "360p",
-            "bitrate": 500000,
-            "fps": 30,
-            "width": 640,
-            "height": 360
-        }
-    ],
-    "name": "test_multistream_reference",
-    "multistream": {
-        "targets": [
-            {
-                "profile": "720p",
-                "videoOnly": true,
-                "id": "936aad06-2165-48d7-bec3-41d4af328281"
-            },
-            {
-                "profile": "360p",
-                "id": "36e73bf6-92bb-49cc-838a-2831ef746ecf"
-            }
-        ]
+  "lastSeen": 0,
+  "isActive": false,
+  "record": false,
+  "suspended": false,
+  "sourceSegments": 0,
+  "transcodedSegments": 0,
+  "sourceSegmentsDuration": 0,
+  "transcodedSegmentsDuration": 0,
+  "sourceBytes": 0,
+  "transcodedBytes": 0,
+  "profiles": [
+    {
+      "name": "720p",
+      "bitrate": 2000000,
+      "fps": 30,
+      "width": 1280,
+      "height": 720
     },
-    "kind": "stream",
-    "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-    "renditions": {},
-    "id": "",
-    "createdAt": 1656435768386,
-    "streamKey": "cf00-nkaf-odbr-dqib",
-    "playbackId": "cf00sa2snftzfj5p",
-    "createdByTokenName": "Test"
+    {
+      "name": "480p",
+      "bitrate": 1000000,
+      "fps": 30,
+      "width": 854,
+      "height": 480
+    },
+    {
+      "name": "360p",
+      "bitrate": 500000,
+      "fps": 30,
+      "width": 640,
+      "height": 360
+    }
+  ],
+  "name": "test_multistream_reference",
+  "multistream": {
+    "targets": [
+      {
+        "profile": "720p",
+        "videoOnly": true,
+        "id": "936aad06-2165-48d7-bec3-41d4af328281"
+      },
+      {
+        "profile": "360p",
+        "id": "36e73bf6-92bb-49cc-838a-2831ef746ecf"
+      }
+    ]
+  },
+  "kind": "stream",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "renditions": {},
+  "id": "",
+  "createdAt": 1656435768386,
+  "streamKey": "cf00-nkaf-odbr-dqib",
+  "playbackId": "cf00sa2snftzfj5p",
+  "createdByTokenName": "Test"
 }
 ```
 
@@ -260,7 +259,7 @@ referenced with an `id` or created inline with a `spec`. You can also add,
 remove or update multiple `Multistream Targets` on the same API call.
 
 > **Note:** Changes to an existing `Stream` will only take effect when the next
-stream session is started.
+> stream session is started.
 
 ## Adding Multistream Targets
 
@@ -297,9 +296,9 @@ curl 'https://livepeer.studio/api/stream/{id}' \
 
 ### Patch Request
 
- `PATCH` the Stream with the new target.
+`PATCH` the Stream with the new target.
 
- `PATCH` can also add new `Multistream Targets` by `id` instead of inline,
+`PATCH` can also add new `Multistream Targets` by `id` instead of inline,
 just like on `Stream` creation.
 
 ```bash
@@ -317,7 +316,6 @@ curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
     }'
 ```
 
-
 ### Patch Response
 
 The reponse should be a `204`
@@ -333,14 +331,14 @@ After removing the reference from the `Stream`, you can also delete the
 [Delete `Multistream Target` API](/references/multistream-target/delete-target).
 
 > **Note:** Make sure that no other `Stream` has a reference to that `Multistream Target`
-before doing so.
+> before doing so.
 
 ## Removing a single Multistream Target
 
 To remove a specific target, we need to make a `PATCH` request maintaining only
 the targets that we want to keep in the stream, after removing the desired one.
 
-**For Example:** 
+**For Example:**
 
 ### Request
 
@@ -366,8 +364,8 @@ The reponse should be a `204`
 We kept only the remaining targets in the `PATCH`, i.e. the second one.
 
 > **Note:** Additionally, you can use a single API call to change the `profile` that should be
-multistreamed to a specific target by changing the `profile` field
-for the given target when building the `PATCH` request payload.
+> multistreamed to a specific target by changing the `profile` field
+> for the given target when building the `PATCH` request payload.
 
 ## Removing all Multistream Targets
 
@@ -412,24 +410,23 @@ target name and then on `Edit` to open up the target settings. Select
 To delete a multistream target, click on the three dots to the right of the
 target name and then on `Delete`.
 
-
 > **Note:** Any changes to <code>Mulitstream Targets</code>, including creating new targets, will apply only to the next active session. If you make changes while a stream is active, those changes will not apply until the current session has ended and a new session begins.
-
 
 ## Managing Multistream targets with the API
 
 ### About Multistream Target Objects
 
-You can also manage `Multistream Target` objects,  `/multistream/target`,  from the API. Each target
-represents a specific endpoint where a stream could be multistreamed to. ***See*** details in the [API reference](/references/multistream-target/overview).
+You can also manage `Multistream Target` objects, `/multistream/target`, from the API. Each target
+represents a specific endpoint where a stream could be multistreamed to. **_See_** details in the [API reference](/references/multistream-target/overview).
 
 <!-- Add notice about how other platforms call this? Re-stream, simulcast, etc -->
 
-Notice that the existence of a `Multistream Target` object itself is not enough for the multistream to happen. You also need to reference the target from the `Stream` object that should be multistreamed. To avoid managing the separate `Multistream Target` objects, you can also create the targets inlined in the `Stream` creation and update APIs. ***See:*** the [Stream Object](#stream-object-stream) section for more information.
+Notice that the existence of a `Multistream Target` object itself is not enough for the multistream to happen. You also need to reference the target from the `Stream` object that should be multistreamed. To avoid managing the separate `Multistream Target` objects, you can also create the targets inlined in the `Stream` creation and update APIs. **_See:_** the [Stream Object](#stream-object-stream) section for more information.
 
 ## Create Targets inlined in the `Stream` creation
 
-### Request 
+### Request
+
 [`POST /api/multistream/target`](/references/multistream-target/create-target)
 
 ```bash
@@ -482,17 +479,21 @@ curl 'https://livepeer.studio/api/multistream/target/{id}' \
 ```
 
 ## List
+
 You can also list all existing `Multistream Targets` in the account by omitting
 the `{id}` segment in the above request.
 
 ### Request
+
 [`GET /api/multistream/target`](/references/multistream-target/list-targets)
 
 ```bash
 curl 'https://livepeer.studio/api/multistream/target' \
 -H 'authorization: Bearer {api-key}'
 ```
+
 ### Response
+
 The response is an array of `Multistream Target` objects, as returned from the
 read API above. The pagination should be done exactly the same as the other
 Livepeer Studio list APIs.
@@ -508,6 +509,7 @@ disable multistreaming to a specific target without the need of removing them
 from streams nor deleting the target completely.
 
 ### Request
+
 [`PATCH /api/multistream/target/{id}`](/references/multistream-target/update-target)
 
 ```bash
@@ -520,7 +522,8 @@ curl -X PATCH 'https://livepeer.studio/api/multistream/target/{id}' \
     "disabled": true
 }'
 ```
-### Response 
+
+### Response
 
 All request fields are optional. There is no response on a success (HTTP
 `204 No Content`).
@@ -541,6 +544,7 @@ actually delete it.
 curl -X DELETE 'https://livepeer.studio/api/multistream/target/{id}' \
 -H 'authorization: Bearer {api-key}'
 ```
+
 ### Response
 
 There is no response on a success (HTTP `204 No Content`).
@@ -571,4 +575,3 @@ We have 3 webhooks to help you monitor the state of your `Multistream Targets`::
   or the other service you are multistreaming to.
 - `multistream.disconnected`: Sent after a stream is ended to indicate that
   Multistream has also ended for the respective target.
-
