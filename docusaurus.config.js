@@ -53,13 +53,13 @@ const config = {
         },
         items: [
           {
-            to: "/core-concepts",
-            label: "Core Concepts",
+            to: "/guides",
+            label: "Quickstart",
             position: "left",
           },
           {
-            to: "/guides",
-            label: "Quickstart",
+            to: "/core-concepts",
+            label: "Core Concepts",
             position: "left",
           },
           {
