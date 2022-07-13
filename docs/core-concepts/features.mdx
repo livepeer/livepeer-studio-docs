@@ -6,16 +6,15 @@ The following technical descriptions highlight capabilities of Livepeer Studio f
 
 ## Livepeer Studio Features
 
-
-| Feature                                | Description                                          | Capabilities                                                 |
-| -------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
-| [Livestream](/aboutstudio/livestream/) | Livestreaming using broadcasting software or WebRTMP | <li> Multistream</li> <li>Livestream Recording</li> <li>Suspend streams</li> |
-| [On Demand](/aboutstudio/on-demand/)   | **Upload** and **store videos** for on demand access | <li>Export to IPFS or other services</li> <li>Upload video to Livepeer Studio (API or Dashboard)</li> <li>Store assets on decentralized storage</li> |
-| [Mint](/aboutstudio/mint/)             | Minting `.mp4` video as an NFT                       | <li>Mint `.mp4` video files</li> <li>Use to create custom ERC-721 smart contracts</li> <li>Deploy to mainnet, testnet or layer 2 solutions like  Polygon in you custom smart contract</li> |
+| Feature                                  | Description                                          | Capabilities                                                                                                                                                                              |
+| ---------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Livestream](/core-concepts/livestream/) | Livestreaming using broadcasting software or WebRTMP | <li> Multistream</li> <li>Livestream Recording</li> <li>Suspend streams</li>                                                                                                              |
+| [On Demand](/core-concepts/on-demand/)   | **Upload** and **store videos** for on demand access | <li>Export to IPFS or other services</li> <li>Upload video to Livepeer Studio (API or Dashboard)</li> <li>Store assets on decentralized storage</li>                                      |
+| [Mint](/core-concepts/mint/)             | Minting `.mp4` video as an NFT                       | <li>Mint `.mp4` video files</li> <li>Use to create custom ERC-721 smart contracts</li> <li>Deploy to mainnet, testnet or layer 2 solutions like Polygon in you custom smart contract</li> |
 
 ## What We Support
 
-The components of our [Architecture](/aboutstudio/architecture) handle:
+The components of our [Architecture](/core-concepts/architecture) handle:
 
 - Ingest Support
 - Transcoding Support
@@ -24,7 +23,7 @@ The components of our [Architecture](/aboutstudio/architecture) handle:
 ### Ingest Support
 
 | attribute                    | notes                                                                                                                                                                                      |
-|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Location                     | EU, US                                                                                                                                                                                     |
 | Ingest Format                | RTMP, SRT                                                                                                                                                                                  |
 | Ingest Codec                 | H264 + AAC                                                                                                                                                                                 |
@@ -34,8 +33,9 @@ The components of our [Architecture](/aboutstudio/architecture) handle:
 | GOP Size (Keyframe Interval) | Supported tested: Constant GOP, Variable GOP of 0.5s to 8sSupported untested: Xsplit, Other versions of OBS and ffmpeg, other RTMP encodersUnsupported: Variable GOP not within 0.5s to 8s |
 
 ### Transcoding Support
+
 | attribute                 | notes                                                                                                                            |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Location                  | EU, US                                                                                                                           |
 | Codec                     | H264 + AAC                                                                                                                       |
 | H264 Transcoding Profiles | Baseline, Main, High                                                                                                             |
@@ -44,8 +44,9 @@ The components of our [Architecture](/aboutstudio/architecture) handle:
 | Pixel format              | YUV4:2:0                                                                                                                         |
 
 ### Video Workflow Support
+
 | attribute                 | notes                                                                                                                                                                                              |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Latency                   | 10-18 seconds with good RTMP ingest health, 2s segment size, and standard 3 seg buffering in player                                                                                                |
 | Live output format        | HLS playback URL (m3u8)                                                                                                                                                                            |
 | H264 Transcoding Profiles | Baseline, Main, High                                                                                                                                                                               |
@@ -59,4 +60,3 @@ The components of our [Architecture](/aboutstudio/architecture) handle:
 | Stream Status             | active or inactive                                                                                                                                                                                 |
 | Stream length             | We can support streams up to 12 hours in length. Please reach out to hello@livepeer.com if you’re looking to run longer uninterrupted streams through Livepeer.com.                                |
 | Scalability               | 1000 concurrent streams across all users. Please contact us at hello@livepeer.com for additional capacity                                                                                          |
-

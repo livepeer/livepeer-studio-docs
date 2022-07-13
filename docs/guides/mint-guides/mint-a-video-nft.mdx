@@ -9,15 +9,14 @@ This guide provides information and instructions about minting video NFTs using 
 - Create the Transaction
 - View the NFT
 
-
-## What You Can Build 
+## What You Can Build
 
 - Your own Video NFT
 
 ## What You Need to Know
 
-- Familiarity with [Livepeer Studio Concepts](/aboutstudio) 
-- Experience developing with APIs 
+- Familiarity with [Livepeer Studio Concepts](/core-concepts)
+- Experience developing with APIs
 
 ## Technical Preparation
 
@@ -26,25 +25,24 @@ This guide provides information and instructions about minting video NFTs using 
 - [Build a Video NFT app](https://livepeer.studio/docs/guides/video-nfts/build-a-video-nft-app)
 - [Get an API key](https://livepeer.studio/docs/guides/start-live-streaming/api-key)
 
-
-> **Note:**  If you know how to use `tokenURI` to mint an NFT only **Step 1.** and use the nftMetadataUrl field as the  `tokenURI` for your NFT. The URL is compatible with both ERC-721
-and ERC-1155.
+> **Note:** If you know how to use `tokenURI` to mint an NFT only **Step 1.** and use the nftMetadataUrl field as the `tokenURI` for your NFT. The URL is compatible with both ERC-721
+> and ERC-1155.
 
 ## Minting a Video NFT using Livepeer Studio
 
 1. Upload the Video and configure the metadata for your NFT
 
 - You can use the `@livepeer/video-nft.` [npm](https://www.npmjs.com/package/@livepeer/video-nft) script to have a local file uploaded to Livepeer, exported to IPFS, and then mint the NFT out of it.
- 
+
 - Alternatively, if you do not have `node` installed, you can use
-[this script](https://gist.github.com/victorges/3369cc04c0002a63b2fab33079d8827e)
-(`bash`) which works similarly.
+  [this script](https://gist.github.com/victorges/3369cc04c0002a63b2fab33079d8827e)
+  (`bash`) which works similarly.
 
 2. Get a [Livepeer API key] to use from the tool. (/guides/api-key)
 
 3. Then simply run `npx @livepeer/video-nft`. The CLI will ask you for any
-the information it needs and, in the end, will give you a URL for a simple page for
-minting the NFT.
+   the information it needs and, in the end, will give you a URL for a simple page for
+   minting the NFT.
 
 Some tips in case you use it often:
 
@@ -115,11 +113,10 @@ A minimal UI should show where all you have to do is connect your MetaMask walle
 
 ![image](https://ipfs.livepeer.studio/ipfs/QmVqrWFnHi1WkJYQYNAmcVngEWMPsvZdibUFdNC4QNqXW6)
 
-
 > **Note:** If you are happy with the NFT minted on the page above, you can stop here!
+
     Keep going if you are curious about how to create custom ERC-721 contracts or have your NFT minting app. You can reference the duplicate exported files
     on IPFS for your custom NFTs, grabbed from the script output.
-
 
 ## Install web3
 
@@ -132,10 +129,10 @@ In this example, you will use [Alchemy](https://www.alchemy.com/) as the Eth ser
 npm install @alch/alchemy-web3
 ```
 
-2. Create a mint-nft.js file**
+2. Create a mint-nft.js file\*\*
 
 3. Inside your `scripts` directory, create a `mint-nft.js` file and add the
-following lines of code:
+   following lines of code:
 
 ```json
 require('dotenv').config();
@@ -176,7 +173,7 @@ For this example, our contract address is:
 `0xD6A8375E7A3BE7157f9bBD9D53348b39d75bEb3E`
 
 6. Next, we will use the web3 `contract` method to create our contract using the ABI
-and address. In your `mint-nft.js` file, add the following:
+   and address. In your `mint-nft.js` file, add the following:
 
 ```json
 const contractAddress = "0xD6A8375E7A3BE7157f9bBD9D53348b39d75bEb3E";
@@ -190,7 +187,7 @@ your public Ethereum account address to get the account `nonce` (explained
 below).
 
 8. Add your public key to your `.env` file —if you completed part 1 of the
-tutorial, our .`env` file should now look like this:
+   tutorial, our .`env` file should now look like this:
 
 ```json
 API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
@@ -206,8 +203,7 @@ Define a function called `mintNFT(tokenData)` and create the transaction by doin
 2. Next, we'll need to figure out the account `nonce`; the nonce specification to keep track of the number of transactions sent from your address— required for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/alchemy/resources/blockchain-glossary#account-nonce).
 3. To get the number of transactions sent from your address, use [getTransactionCount](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
 4. Finally, you can set up our `transaction` with the following info:
-5. "from ': PUBLIC_KEY`: The origin of our transaction is our public address
-. "to ': contractAddress`: The contract we wish to interact with and send the
+5. "from ': PUBLIC_KEY`: The origin of our transaction is our public address . "to ': contractAddress`: The contract we wish to interact with and send the
    transaction
 6. "nonce': nonce`: The account nonce with the number of transactions sent
    from the address
@@ -215,7 +211,6 @@ Define a function called `mintNFT(tokenData)` and create the transaction by doin
 8. "maxPriorityFeePerGas': estimatedFee`: The estimated fee to bid per gas.
 9. `'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()` : The
    computation to perform in this transaction— which in this case is minting an NFT
-
 
 Your `mint-nft.js` file should look like this:
 
@@ -333,12 +328,13 @@ mintNFT("ipfs://QmTju7Q4iPbosYJfFvSdxcRkT4KPYCpem31Z6mGL979Kkg");
 ```
 
 12. Run `node scripts/mint-nft.js` to deploy your NFT. After a couple of
-seconds, you should see a response like this in your terminal:
+    seconds, you should see a response like this in your terminal:
 
 ```jsx
 The hash of your transaction is: 0x13edd7e9f1349ac7a92ed187686afd7c48e211f28ac1041b700d9691cc816455
 Check Alchemy's Mempool to view the status of your transaction!
 ```
+
 ### View the NFT
 
 Using the `mint-nft.js`, you can mint as many NFTs as you want! Just be sure to
@@ -347,5 +343,5 @@ end up making many identical NFTs with different IDs.
 
 Now that you have minted your video NFT! You can take a look at the NFT:
 
-- on Etherscan through the contract address, or 
+- on Etherscan through the contract address, or
 - on OpenSea at `https://testnets.opensea.io/assets/{contract_address}/{id}`
