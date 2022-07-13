@@ -2,7 +2,7 @@ const toc = [
   "intro",
   {
     type: "category",
-    label: "About Livepeer Studio",
+    label: "Core Concepts",
     link: { type: "doc", id: "aboutstudio/index" },
     collapsible: true,
     collapsed: true,

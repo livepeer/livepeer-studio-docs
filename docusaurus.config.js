@@ -54,7 +54,7 @@ const config = {
         items: [
           {
             to: "/aboutstudio",
-            label: "About Studio",
+            label: "Core Concepts",
             position: "left"
           },
           {
@@ -78,18 +78,8 @@ const config = {
             position: "left"
           },
           {
-            href: "https://forum.livepeer.com/",
-            label: "Forum",
-            position: "right",
-          },
-          {
-            href: "https://twitter.com/livepeerstudio",
-            label: "Follow us",
-            position: "right",
-          },
-          {
             href: "https://discord.com/invite/7D6hGG6dCZ",
-            label: "Support",
+            label: "Discord",
             position: "right",
           },
           {
