@@ -1,0 +1,21 @@
+---
+title: Authentication
+---
+
+
+The Livepeer Studio API uses API keys to authenticate most requests, including all
+requests associated with creating and retrieving a stream or session object. 
+
+- All API requests must be made over HTTPS. 
+- API requests without proper authentication will fail.
+
+The Livepeer Studio API uses Bearer authentication. You or the client must send an
+API key in the Authorization header when making requests to protected information:
+
+**For Example:**
+
+```bash
+Authorization: Bearer <api-key>
+```
+
+

@@ -11,31 +11,18 @@ const toc = [
       "guides/livestreaming/tutorial",
       "guides/livestreaming/obs",
       "guides/livestreaming/webrtmp",
-      "guides/livestreaming/create-a-stream",
       "guides/livestreaming/broadcasting",
       "guides/livestreaming/verify",
-      "guides/livestreaming/playback",
       "guides/livestreaming/create-a-stream",
+      "guides/livestreaming/playback",
       "guides/livestreaming/record",
       "guides/livestreaming/multistream",
-      "guides/livestreaming/verify",
-      "guides/livestreaming/broadcasting",
+      "guides/livestreaming/back-up-transcoding",
       "guides/livestreaming/webhook",
+      "guides/livestreaming/metrics",
     ],
   },
-  {
-    type: "category",
-    label: "Application Development",
-    link: { type: "doc", id: "guides/development/index" },
-    collapsible: true,
-    collapsed: true,
-    items: [
-      "guides/development/live-streaming-from-your-app",
-      "guides/development/video-playback-in-your-app",
-      "guides/development/metrics"
-    ],
-  },
-
+      "guides/on-demand", 
   {
     type: "category",
     label: "Mint",
@@ -46,9 +33,6 @@ const toc = [
             "guides/mint-guides/mint-a-video-nft", 
             "guides/mint-guides/build-a-video-nft-app"],
   },
-
-
-  "guides/on-demand", 
   "guides/sampleslib",
   "references/terminology",
 ];

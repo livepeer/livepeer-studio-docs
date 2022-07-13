@@ -45,10 +45,11 @@ const toc = [
   },
   {
     type: "category",
-    label: "Video On Demand",
+    label: "On Demand",
     collapsible: true,
     collapsed: true,
     items: [
+      "references/vod/index",
       "references/vod/import",
       "references/vod/upload",
       "references/vod/list",
@@ -56,9 +57,9 @@ const toc = [
       "references/vod/list-tasks",
     ],
   },
-  "references/ingest",
   "references/support-references",
   "references/terminology",
+  "references/protocols",
 ];
 
 module.exports = toc;

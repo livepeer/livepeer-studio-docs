@@ -1,8 +1,5 @@
 ---
 title: "GET retrieve a stream"
-description: Livepeer Studio API Reference | GET retrieve a stream
-metaTitle: GET retrieve a stream - Livepeer Studio
-metaDescription: Livepeer Studio API Reference | GET retrieve a stream
 ---
 
 # `GET` retrieve a stream
@@ -21,7 +18,7 @@ curl -H 'authorization: Bearer {api-key}' \
 
 200 OK
 
-```bash
+```json
 {
     "name":"test_stream",
     "id":"ijkl61f3-95bd-4971-a7b1-4dcb5d39e78a",
@@ -29,12 +26,12 @@ curl -H 'authorization: Bearer {api-key}' \
     "streamKey":"abcd-uimq-jtgy-x98v",
     "playbackId":"efghb2mxupongp5k",
     "isActive":"false",
-    "lastSeen":1596119750455",
+    "lastSeen":1596119750455,
     "record":"true",
     "sourceSegments":1360,
     "transcodedSegments":5480,
     "sourceSegmentsDuration":2630.53200000000004,
-    "transcodedSegmentsDuration":10620.1280000000004,
+    "transcodedSegmentsDuration": 10620.1280000000004,
     {other asset object keys, like profiles and parentId}
 }
 ```

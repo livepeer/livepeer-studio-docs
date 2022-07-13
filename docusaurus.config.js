@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Livepeer Studio",
   tagline: "The world's open video infrastructure",
-  url: "https://livepeer.org",
+  url: "https://livepeer.studio/",
   baseUrl: "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",
@@ -53,24 +53,24 @@ const config = {
         },
         items: [
           {
-            href: "/aboutstudio",
+            to: "/aboutstudio",
             label: "About Studio",
-            position: "left",
+            position: "left"
           },
           {
-            href: "/guides",
-            label: "Quick Start",
-            position: "left",
+            to: "/guides",
+            label: "Quickstart",
+            position: "left"
           },
           {
-            href: "/guides/livestreaming/",
+            to: "/guides/livestreaming",
             label: "Guides",
-            position: "left",
+            position: "left"
           },
           {
-            href: "/references",
+            to: "/references",
             label: "API",
-            position: "left",
+            position: "left"
           },
           {
             href: "https://forum.livepeer.com/",
@@ -78,12 +78,12 @@ const config = {
             position: "right",
           },
           {
-            href: "https://livepeer.studio",
+            href: "https://twitter.com/livepeerstudio",
             label: "Follow us",
             position: "right",
           },
           {
-            href: "https://livepeer.studio",
+            href: "https://discord.com/invite/7D6hGG6dCZ",
             label: "Support",
             position: "right",
           },

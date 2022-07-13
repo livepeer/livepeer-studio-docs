@@ -1,0 +1,285 @@
+---
+title: About Streaming Protocols
+--- 
+
+
+The following provides detailed high-level descriptions about the most commonly used streaming protocols that handle both video and audio data, and how they operate with streaming media (**Note:** *not all are supported by Livepeer at this time*), they include but are not limited to:
+
+- Types of protocols
+- Delivery methods
+- Descriptions of the protocols
+- Advantages/disadvantages
+- Comparing Protocols
+- Recommendations
+- Reference Resources
+
+# Types of protocols
+
+A protocol is a well-defined method used to send/receive data. The two types of protocols covered in this reference are categorized as:
+
+- Stream based protocols
+- File based protocols
+
+## Stream Based Protocols
+
+Stream based protocols are true streaming protocols developed specifically for streaming whereby two-way communication is always maintained with an open connection between the server and the client. This provides faster, more efficient delivery and lower latency. These properties make stream based protocols the best option, with the caveat that your media player supports these protocols.
+
+## File Based Protocols
+
+File based protocols use media containers to move data from one point to another. There are two main methods to implement file based protocols:
+
+- **Progressive delivery** has shorter start times and latencies.
+- **Segmented delivery** has longer start times and latencies.
+
+### Progressive Delivery
+
+With progressive delivery, a single file is either simulated or present and transmitted in one large chunk to the viewer.
+
+- **Advantage**: When the file is downloaded, it becomes one individual file.
+- **Disadvantage**: "Trick play" (seeking, reverse playback, fast forward, etc.) is only possible if the player supports it for the container format being used.
+
+### Segmented Delivery
+
+Segmented delivery is a method that transmits multiple files distributed in smaller chunks to the viewer.
+
+- **Advantage**: Segmented delivery provides for **Trick play** even without direct support for a container, and
+- **Disadvantage:** It is more suited to infinite duration streams, e.g. live streams.
+
+# Protocol Descriptions
+
+Below is a list with descriptions of the following types of protocols:
+
+- Streaming Protocols
+- Progressive File Delivery Protocols
+- Segmented File Delivery Protocols
+
+## Streaming Protocols
+
+The following covers of descriptions including advantages and disadvantages of Streaming protocols, also referred to as [Stream Based Protocols](/references/protocols#stream-based-protocols):
+
+### Flash RTMP
+
+Real-Time Messaging Protocol (RTMP) delivers Flash video to viewers.
+
+- **Advantage:** Flash is one of the true streaming protocols.
+- **Disadvantage:** With the standardization of HTML5 and the removal of Flash installed with browsers, its use is being replaced with other protocols. Currently, this protocol is mainly used as a streaming ingest for streaming platforms rather than a delivery method to viewers, et. al.
+
+### RTSP
+
+Real-Time Streaming Protocol (RTSP) is one of the first streaming protocols and the most commonly used protocol for media delivery. Currently, it is mostly used in IoT devices such as cameras. Additionally, RTSP has been used for LAN broadcasts. Internally RTSP uses RTP for delivery.
+
+> **Note:** RTSP itself does not technically specify the media transport, it is just signaling. It helps two endpoints negotiate how they will send media between each other, and RTP is the de-facto standard method negotiated.
+
+- **Advantage:** Because of its excellence in maintaining low latency and compatibility with practically all codecs, RTSP continues to be a popular/commonly used streaming protocol.
+- **Disadvantage:** TBD
+
+### WebRTC
+
+Web Real-Time Communications (WebRTC) is a set of browser APIs compatible with secure RTP (SRTP).
+
+- **Advantage:** It has all the properties of RTSP with the added bonus of browser compatibility.
+- **Disadvantage:** It is still relatively new and has not seen much use yet, but promises to be the most prevalent protocol in the near future.
+
+## Progressive File Delivery Protocols
+
+The following covers of descriptions including advantages and disadvantages of Delivery protocols:
+
+### Flash Progressive FLV
+
+Flash video format (FLV) was once the most common delivery format for web-based streaming i.e., the only way for a video to play in a browser.
+
+- **Advantage:** FLV is commonly available with older browsers.
+- **Disadvantage:** With the standardization of HTML5 and the removal of Flash installed with browsers, its use is being replaced with other protocols.
+
+### Progressive MP4
+
+MPEG-4 (MP4) is supported by most modern devices and browsers.
+
+- **Advantage:** The high compatibility makes it a popular choice.
+- **Disadvantage:** MP4 requires high overhead. This is relatively complicated for live streams.
+
+### MPEG-Transport Stream (MPEG-TS)
+
+Also known as MPEG-TS, this is the standard used for Digital Video Broadcast (DVB) i.e., the old-and-proven TV standard.
+
+- **Advantage:** It is developed for broadcast and thus extremely robust to handle high levels of packet loss.
+- **Disadvantage:** It takes about 20% of overhead.
+
+### Ogg
+
+The Ogg container (from "ogging") can multiplex. It is one of the first open-source and patent-unencumbered container formats.
+
+- **Advantage:** It is relatively popular due to its open nature and free usage.
+- **Disadvantage:** The compatibility is not wide enough for it to be the sole delivery method; is mostly utilized as an addition to existing solutions.
+
+### Matroska
+
+Matroska (MKV), is a later open source container format that has widespread adoption.
+
+- **Advantage:** MKV has excellent compatibility with almost all codecs and subtitle formats in existence.
+- **Disadvantage:** Because of the wide compatibility in codecs, its play in-browser is unpredictable.
+
+### WebM
+
+WebM is a subset of Matroska simplified for use on the web. It was developed to solve the browser compatibility issues of Matroska.
+
+- **Advantage:** WebM plays in almost all modern browsers.
+- **Disadvantage:** The codecs are very restricted.
+
+## Segmented File Delivery Protocols
+
+### HTTP Smooth Streaming (HSS)
+
+HTTP Smooth Streaming (HSS) was created by Microsoft as an adaptive streaming solution for web browsers.
+
+- **Advantage:** Available for Windows browsers prior to Edge.
+- **Disadvantage:** It has no support outside of Windows systems and has been dropped in the latest browser Edge in favor of HLS (***See*** [HLS](/references/protocols#http-live-streaming-hls) ).
+
+### HTTP Live Streaming (HLS)
+
+Also known as HLS. This uses segmented TS files internally and is the streaming protocol developed for iOS devices.
+
+- **Advantage:** Due to the many iOS devices it sees widespread use.
+- **Disadvantage:** The biggest downsides are the high overhead and high latency.
+
+### Common Media Application Format (CMAF)
+
+CMAF is a newer container for both HLS and DASH and addresses some of that low latency issues.
+
+### Low Latency HTTP Live Streaming (LLHLS)
+
+LLHLS is a newer version of HLS. Instead of just MPEG-TS files, support for MPEG-4 files has been added through CMAF with the interest to bring down the latency. The general expectation is a latency of 5 seconds or less.
+
+- **Disadvantage:** While on paper LLHLS should work with MPEG-TS based HLS, it will ONLY work with the Common Media Application Format (CMAF) styled MPEG-4 HLS.
+
+### Flash: HTTP Dynamic Streaming (HDS)
+
+HTTP Dynamic Streaming, also known as HDS uses segmented F4S (FLV-based) files internally and is the latest Flash protocol. It was created as a response to HLS.
+
+- **Disadvantage:** HTTP Dynamic Streaming (HDS) has not reached widespread use.
+
+### Dynamic Adaptive Streaming over HTTP (MPEG-DASH)
+
+More commonly known as MPEG-DASH. MPEG_DASH is meant to unify the splintered segmented streaming ecosystem under DASH. Instead, it standardized all of the existing protocols under a single name with the interest of reducing complexity and latency.
+
+### Common Media Application Format (CMAF)
+
+CMAF is a newer container for both DASH and HLS.
+
+## Selecting a Protocol
+
+It is recommended you choose a stream based protocol if it is an available option.
+
+- **Advantage:** Stream based protocols provide the best results.
+- **Disadvantage:** Since each device has its own preferred delivery format, most devices/browsers do not support most stream based protocols.
+
+## Protocol Comparison Table
+
+Some protocols appear to be supported by any device. However, every protocol also comes with their own advantages and disadvantages. The following table provides information about the differences among protocols:
+
+| Protocol | Type             | Platforms                              | Trick play | Latency   | Overhead  | Video codecs*        | Audio codecs*   | Status             |
+| -------- | ---------------- | -------------------------------------- | ---------- | --------- | --------- | -------------------- | --------------- | ------------------ |
+| RTMP     | Streaming        | Flash                                  | Yes        | Low       | Low       | H264                 | AAC, MP3        | Legacy             |
+| RTSP     | Streaming        | Android, native players                | Yes        | Low       | Low       | Practically all      | Practically all | Legacy             |
+| WebRTC   | Streaming        | Browsers                               | Yes        | Low       | Low       | H264, VP8, VP9       | Opus, AAC, MP3  | Active development |
+| FLV      | Progressive file | Flash                                  | No         | Low       | Medium    | H264                 | AAC, MP3        | Legacy             |
+| MP4      | Progressive file | Browsers, native players               | No         | Low       | High      | H264, HEVC, VP8, VP9 | AAC, MP3        | Maintained         |
+| MPEG-TS  | Progressive file | TV, native players                     | No         | Low       | Very high | H264, HEVC           | AAC, MP3, Opus  | Maintained         |
+| Ogg      | Progressive file | Browsers, native players               | No         | Low       | Medium    | Theora               | Opus, Vorbis    | Maintained         |
+| Matroska | Progressive file | Native players                         | No         | Low       | Low       | Practically all      | Practically all | Maintained         |
+| WebM     | Progressive file | Browsers, native players               | No         | Low       | Low       | VP8, VP9             | Opus, Vorbis    | Active development |
+| HSS      | Segmented file   | Scripted players, Silverlight          | Yes        | High      | High      | H264, HEVC           | AAC, MP3        | Legacy             |
+| HLS      | Segmented file   | iOS, Safari, Android, scripted players | Yes        | Very high | Very high | H264, HEVC           | AAC, MP3        | Active development |
+| HDS      | Segmented file   | Flash                                  | Yes        | High      | Medium    | H264                 | AAC, MP3        | Legacy             |
+| DASH     | Segmented file   | Scripted players                       | Yes        | High      | Varies    | Varies               | Varies          | Active development |
+
+> **Note:** Only those codecs commonly in use today are listed herein above.
+
+## Recommended Protocols by Focus
+
+### Low Latency
+
+If your focus is low latency you will want to choose protocols in the following order:
+
+```
+ Stream based protocol > Progressive delivery  >Segmented delivery
+```
+
+#### Stream based protocols
+
+- **Advantage:** Stream based protocols have the best latency results.
+- **Disadvantage:** Stream based protocols are often more difficult to configure to work properly in the browser.
+
+#### WebRTC
+
+WebRTC is the current best match.
+
+- **Disadvantage:** You may be more locked into which protocols to use.
+
+#### Progressive Delivery
+
+If WebRTC is not an option, progressive delivery would be the next option, i.e. protocols like FLV, MP4, and MKV/WebM.
+
+- **Disadvantage:** Progressive Delivery will not work for IOS/MacOS.
+
+#### Segmented delivery
+
+- **Advantage:** Segmented delivery works everywhere.
+- **Disadvantage:** Segmented delivery tends to be at least 10-15 seconds behind on live, even when optimized for latency.
+
+> **Note:** LLHLS is a special version of HLS that can get this latency down to 5 seconds or less. However, this version only works for CMAF-styled HLS and hence, not a solution for older IOS/MacOS versions that are unable to use CMAF-styled HLS.
+
+```
+WebRTC > MP4 > LLHLS > MKV/WebM > HLS > DASH
+```
+
+### Stability
+
+If the priority is for viewers to have a stable experience with as few issues as possible, you may want to keep to the following order:
+
+```
+Segmented delivery > Progressive delivery  > Stream based protocol
+```
+
+#### **Segmented delivery:** is recommended when stability is the main priority.
+
+Segmented delivery is recommended when stability is the main priority.
+
+- **Advantage:** Segmented Delivery provides the most consistent playback for the trick play option. Segmented protocols work by loading multiple seconds ahead of time -- you can expect the best consistent playback as there is enough time to address any connectivity issues.
+
+#### Progressive delivery
+
+- **Advantage:** Progressive delivery has a little bit of a buffer but may have connectivity issues.
+- **Disadvantage:** Progressive delivery may have connectivity issues and it most likely does not having any trick play options.
+
+#### Stream based protocols
+
+- **Advantage:** WebRTC support is available in all modern browsers
+- **Disadvantage:** Stream based protocols provide the least stability. They are meant to be so close to live that connectivity issues may come up, and most stream based protocols require a specific player.
+
+```
+HLS > DASH > MP4 > MKV/WebM > LLHLS > WebRTC
+```
+
+### Using a Single Protocol
+
+HLS is currently the best option if you are interested in using only one protocol.
+
+- **Advantage:** It has the broadest support over all devices currently in use. You will be able to reach 99% of your viewers with this protocol.
+- **Disadvantage:** It has high latency.
+
+### Recommendations
+
+We recommend using a combination of all types of protocols.
+
+#### Low latency
+
+```
+WebRTC > MP4 > LLHLS > MKV/WebM > HLS > DASH
+```
+
+#### Stability
+
+```
+HLS > DASH > MP4 > MKV/WebM > LLHLS > WebRTC
+```
