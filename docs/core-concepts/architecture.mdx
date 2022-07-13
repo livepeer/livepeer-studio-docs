@@ -11,9 +11,9 @@ According to the devices being used, there are multiple options for streaming wo
 - Via a streaming software
 - In-Browser streaming
 
-> **Note** To learn more about how to work with these methods, ***See*** Our [Start Livestreaming](/guides/livestreaming/tutorial) guide.
+> **Note** To learn more about how to work with these methods, **_See_** Our [Start Livestreaming](/guides/livestreaming/tutorial) guide.
 
-## Architecture Workflows 
+## Architecture Workflows
 
 The following are the architecture and workflows of the different features available in Livepeer Studio utilizing the decentralized transcoding of the Livepeer network:
 
@@ -21,7 +21,6 @@ The following are the architecture and workflows of the different features avail
 - Multistreaming
 - On-Demand
 - Mint
-
 
 ### Livestream Workflow
 
@@ -41,10 +40,11 @@ The following are the architecture and workflows of the different features avail
 ![Multistream Workflow](../../static/docs-assets/architechture/multistreamworkflow.png)
 
 ### On-Demand Workflow
+
 - An asset can be provided by **either** a downloadable URL link **or** by uploading a `.mp4` file
   - Importing a URL
     - Asset in a downloadable link is transcoded in the Livepeer Network, gets passed back to Livepeer Studio, and saved in storage
-  - Uploading a file  
+  - Uploading a file
     - Generates a URL for storage if the `Upload` option is used
     - The File is provided if it is transcoded in the Livepeer Network, gets passed back to Livepeer Studio, and is saved in storage
   - The Stored asset now contains the `playbackUrl` used for viewing
@@ -57,7 +57,7 @@ The following are the architecture and workflows of the different features avail
 - Livepeer Studio takes the `.mp4` asset and metadata provided by the user
 - Writes and deploys the `smart contract`
 - Passes in the metadata from the uploaded asset
-- Sends the asset to Livepeer's decentralized transcoding network for transcoding
+- Sends the asset to the Livepeer network for transcoding
 - Mints the video NFT by calling the Ethereum blockchain (Polygon layer 2 solution is used for more cost-effective gas fees)
 
 ![Mint Workflow](../../static/docs-assets/architechture/mintworkflow.png)
