@@ -1,10 +1,10 @@
 ---
-title: Terminology
+title: Glossary of Terms
 
 ---
 
 
-A list of terms to assist developers navigate in the video tech world are included in this table. Terminology covers common standard industry terms, acronyms, and glossary entries that are described within the context of Livepeer Studio.
+Included in this table is a collection of terms you may find while navigating the video tech world . This glossary of terms covers common standard industry terms, acronyms, and glossary entries that are described within the context of Livepeer Studio.
 
 
 | Term                              | Definition                                                   |
@@ -22,3 +22,6 @@ A list of terms to assist developers navigate in the video tech world are includ
 | Webhook                             | ***See*** our guide on [Webhooks](/guides/livestreaming/webhook).           |
 | WebRTC                              | Web Real-Time Communications (WebRTC) is a set of browser APIs compatible with secure RTP (SRTP). |
 |                                     | **Advantage:** It has all the properties of RTSP with the added bonus of browser compatibility. **Disadvantage:** It is still relatively new and has not seen much use yet, but promises to be the most prevalent protocol in the near future. |
+
+
+You can suggest the correction of terms or the addition of new terms: [Contact us](https://livepeer.studio/contact).

@@ -72,6 +72,11 @@ const config = {
             label: "API",
             position: "left"
           },
+           {
+            to: "/references/terminology",
+            label: "Glossary",
+            position: "left"
+          },
           {
             href: "https://forum.livepeer.com/",
             label: "Forum",

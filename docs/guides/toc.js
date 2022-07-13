@@ -34,7 +34,6 @@ const toc = [
             "guides/mint-guides/build-a-video-nft-app"],
   },
   "guides/sampleslib",
-  "references/terminology",
 ];
 
 module.exports = toc;

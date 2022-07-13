@@ -1,33 +1,36 @@
 ---
-title: "POST create a multistream target"
+title: POST create a multistream target
 ---
 
-# `POST` create a multistream target
+
+## `POST` create a multistream target
 
 `POST /multistream/target` creates a `multistream target` object. 
 
 ## Parameters
 
-The only parameter you are required to set is the `url` of your target. The `name` will
-be derived from the `url` host, if not specified.
+**Required** 
 
-Notice that only creating a `multistream target` is not enough for multistream
-to start happening. You also need to reference the target from the `stream` that
-you want to streamed. 
+- The only parameter you are required to set is the `url` of your target. 
 
-Refer to [Multistream](/guides/livestreaming/multistream) guide for more
+- The `name` will be derived from the `url` host, if not specified.
+
+> **Note:** Creating only a `multistream target` is not sufficient to start multistreaming.
+You also need to reference the target from the `stream` that you want to streamed. 
+
+You can also refer to the [Multistreams](/guides/livestreaming/multistream) guide for more
 information.
 
 ## Example Request
 
-
-
-### Request
+Create and name a `multistream target`,  and reference the target from the `stream` that you want to streamed. 
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ### Request
+
+
 <Tabs>
   <TabItem value="bash" label="bash">
 

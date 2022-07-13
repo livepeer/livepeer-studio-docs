@@ -7,7 +7,6 @@ const toc = [
   "aboutstudio/mint" ,
   "aboutstudio/sampleapps",
   "aboutstudio/features",
-  "references/terminology",
 ];
 
 module.exports = toc;

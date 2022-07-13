@@ -14,7 +14,6 @@ const toc = [
       "aboutstudio/mint",
       "aboutstudio/sampleapps",
       "aboutstudio/features",
-      "references/terminology",
     ],
   },
   "guides/index",
@@ -60,7 +59,6 @@ const toc = [
 
 
       "guides/sampleslib",
-      "references/terminology",
     ],
   },
   {

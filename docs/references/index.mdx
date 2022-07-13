@@ -78,15 +78,47 @@ All API requests must be made over HTTPS. API requests without proper authentica
 
 ### Request
 
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+
+
+<Tabs>
+  <TabItem value="bash" label="bash">
+
+
 ```bash
 curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/stream/{id}"
 
 ```
 
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+
+```
+
+</TabItem>
+</Tabs>
+
+
+
+
 ### Response
 
-Returns in JSON format information related to the asset
+Returns in  `JSON`  information related to the asset:
 
 ```json
 {
