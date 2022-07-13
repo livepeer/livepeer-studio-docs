@@ -1,23 +1,28 @@
 ---
 title: "POST create a multistream target"
-description: Livepeer Studio API Reference | POST create a target
-metaTitle: POST create a target - Livepeer Studio
-metaDescription: Livepeer Studio API Reference | POST create a target
 ---
 
 # `POST` create a multistream target
 
-`POST /multistream/target` creates a `multistream target` object. The only
-parameter you are required to set is the `url` of your target. The `name` will
+`POST /multistream/target` creates a `multistream target` object. 
+
+## Parameters
+
+The only parameter you are required to set is the `url` of your target. The `name` will
 be derived from the `url` host, if not specified.
 
 Notice that only creating a `multistream target` is not enough for multistream
 to start happening. You also need to reference the target from the `stream` that
-you want to streamed. Refer to
-[Multistream](/guides/livestreaming/multistream) guide for more
+you want to streamed. 
+
+Refer to [Multistream](/guides/livestreaming/multistream) guide for more
 information.
 
-Here is an example request:
+## Example Request
+
+
+
+### Request
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -36,6 +41,7 @@ curl -X POST 'https://livepeer.studio/api/multistream/target' \
     "url": "rtmp://rtmp.streaming.tv/live/SECRET"
 }'
 ```
+
 
 </TabItem>
 <TabItem value="js" label="JavaScript">
