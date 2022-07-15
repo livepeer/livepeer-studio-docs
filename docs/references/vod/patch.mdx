@@ -1,0 +1,76 @@
+---
+title: PATCH updating storage
+---
+
+
+`PATCH /asset/:id -d {"storage": {"ipfs": {}}` can be used to modify any `asset` that was stored with On Demand. It is a single endpoint that can update only the following mutable properties of an asset:
+
+- `name`
+- `storage`
+- `meta`
+
+
+
+## Update Stored Asset
+
+> **NOTE:** When updating the asset information, the `storage` object must be included in the body of the request
+
+## Updating Asset Name
+
+This will allow the name of the stored asset in Livepeer Studio to be changed.
+
+### Request
+
+```bash
+curl -X PATCH https://livepeer.studio/api/asset/{id} \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api-key}' \
+-d {
+  "name": "New name"
+  "storage": {"ipfs": {}}
+  }
+```
+
+## Updating Storage
+
+This allows to add additional storage location of where the assets are to be stored.
+
+>**NOTE:** 
+- Currently assets cannot be deleted from storage if stored on Livepeer Studio. 
+- Only IPFS is support as an additional storge option at the moment
+
+
+### Request
+
+```bash
+curl -X PATCH https://livepeer.studio/api/asset/{id} \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api-key}' \
+-d {"storage": {"ipfs": {}}}
+```
+
+## Updating Metadata
+
+This allows for modifying the metadata of the asset.
+
+### Request
+
+```bash
+curl -X PATCH https://livepeer.studio/api/asset/{id} \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api-key}' \
+-d {
+  "storage": {"ipfs": {}},
+  "meta": 
+    {
+      "title": "My awesome video",
+      "description": "This is a video of my awesome life",
+      "tags": ["awesome", "life", "video"],
+    }
+  }
+```
+
+
+### Response
+
+Returns a `200 OK` response with an object containing the updated properties indicates that the `asset` was succussfully updated.
