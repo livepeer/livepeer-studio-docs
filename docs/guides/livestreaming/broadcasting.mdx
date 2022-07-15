@@ -15,10 +15,10 @@ Understanding how to configure the broadcasting software being used so that you 
 
 ## What You Can Build Here
 
-| Implementation                           | Description                                             |
-| ---------------------------------------- | ------------------------------------------------------- |
-| Set up broadcast software configuration | Configuring the settings of the broadcasting software using the `RTMP URL` long with the stream key  |
-| Set up keyframe intervals      | Adjusting the keyframe levels for optimizing the stream    |
+| Implementation                          | Description                                                                                         |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Set up broadcast software configuration | Configuring the settings of the broadcasting software using the `RTMP URL` long with the stream key |
+| Set up keyframe intervals               | Adjusting the keyframe levels for optimizing the stream                                             |
 
 ## What You Need To Know
 
@@ -29,7 +29,7 @@ Understanding how to configure the broadcasting software being used so that you 
 
 Before getting started, you can set up your environment to prepare for developing your application:
 
-- Sign up for a free Livepeer account
+- Sign up for a free Livepeer Studio account
 - Get an API key
 - Access the [API Reference](../references/stream)
 
@@ -40,76 +40,78 @@ Ther are two ways to find the stream key:
 - Via the API
 - Via the dashboard(no code)
 
-
 ## Get the stream key using the API
 
 ### Getting the stream key from creating a stream
 
 ### Request
+
 When you create a `stream` object with a `POST` request to `/api/stream`
+
 > **Note:** The value of the `streamKey` in the response.
 
 ### Response
 
 ```json
 {
-   "lastSeen": 0,
-   "isActive": false,
-   "record": false,
-   "suspended": false,
-   "sourceSegments": 0,
-   "transcodedSegments": 0,
-   "sourceSegmentsDuration": 0,
-   "transcodedSegmentsDuration": 0,
-   "sourceBytes": 0,
-   "transcodedBytes": 0,
-   "profiles": [
-       {
-           "name": "720p",
-           "bitrate": 2000000,
-           "fps": 30,
-           "width": 1280,
-           "height": 720
-       },
-       {
-           "name": "480p",
-           "bitrate": 1000000,
-           "fps": 30,
-           "width": 854,
-           "height": 480
-       },
-       {
-           "name": "360p",
-           "bitrate": 500000,
-           "fps": 30,
-           "width": 640,
-           "height": 360
-       }
-   ],
-   "name": "test_stream",
-   "kind": "stream",
-   "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-   "renditions": {},
-   "id": "ijkl61f3-95bd-4971-a7b1-4dcb5d39e78a",
-   "createdAt": 1596081229373,
-   "streamKey": "abcd-uimq-jtgy-x98v",
-   "playbackId": "efghb2mxupongp5k",
-   "createdByTokenName": "test_stream",
-   "multistream": {
-       "targets": []
-   }
+  "lastSeen": 0,
+  "isActive": false,
+  "record": false,
+  "suspended": false,
+  "sourceSegments": 0,
+  "transcodedSegments": 0,
+  "sourceSegmentsDuration": 0,
+  "transcodedSegmentsDuration": 0,
+  "sourceBytes": 0,
+  "transcodedBytes": 0,
+  "profiles": [
+    {
+      "name": "720p",
+      "bitrate": 2000000,
+      "fps": 30,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "480p",
+      "bitrate": 1000000,
+      "fps": 30,
+      "width": 854,
+      "height": 480
+    },
+    {
+      "name": "360p",
+      "bitrate": 500000,
+      "fps": 30,
+      "width": 640,
+      "height": 360
+    }
+  ],
+  "name": "test_stream",
+  "kind": "stream",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "renditions": {},
+  "id": "ijkl61f3-95bd-4971-a7b1-4dcb5d39e78a",
+  "createdAt": 1596081229373,
+  "streamKey": "abcd-uimq-jtgy-x98v",
+  "playbackId": "efghb2mxupongp5k",
+  "createdByTokenName": "test_stream",
+  "multistream": {
+    "targets": []
+  }
 }
 ```
-
 
 ### Getting the stream key from a stream
 
 ### Request
 
- Make a `GET` request to `/api/stream/[id]`
+Make a `GET` request to `/api/stream/[id]`
+
 > **Note** The value of the`streamKey` in the response.
 
 ### Reponse
+
 ```json
   {
       "name":"test_stream",
@@ -131,7 +133,6 @@ When you create a `stream` object with a `POST` request to `/api/stream`
 - Login to the Livepeer Studio Dashboard, navigate to the
   [streams list page](https://livepeer.studio/dashboard/streams), and
   click on a stream name. Reveal and copy your secret stream key.
-
 
 When configuring broadcast software to push streams, use the secret `streamKey`
 and the Livepeer Studio RTMP ingest URL, `rtmp://rtmp.livepeer.studio/live`.
