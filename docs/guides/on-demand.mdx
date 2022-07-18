@@ -67,17 +67,17 @@ the response will return the `id` of that asset
 
 The response will indicate the status of the uploaded assets as status:
 
-- `waiting` or `status`: "ready".
+- `status: "waiting"` or `status: "ready"`.
 
-- If status: "waiting" is returned in the response, the asset is not available:
+- If `status: "waiting"` is returned in the response, the asset is not available:
 
-  - make the API call again until status: "ready".
+  - make the API call again until `status: "ready"`.
 
-- If the status indicates that it is "ready", it is available.
+- If the status indicates that it is `"ready"`, it is available.
 
 ## Listing the Tasks
 
-To check the status on an asset imported /import to Livepeer or exported /export to IPFS, get the `task.id` from the response of the uploaded asset.
+To check the status on an asset uploaded with URL `/import` to Livepeer or exported `/export` to IPFS, get the `task.id` from the response of the uploaded asset.
 
 ### Request
 
@@ -99,11 +99,11 @@ otherwise
 
 > **Note:** using the `GET /api/task/$TASK_ID` request provides different information depending on whether the asset is _imported_ or _exported_ .
 
-### For imported assets
+### Assets uploaded with URL
 
 - Information on video specs such as codec and formats are present.
 
-### For assets exported to IPFS
+### Assets exported to IPFS
 
 - The response will provide information such as the `metadat` and `CID`.
 
@@ -111,15 +111,15 @@ otherwise
 
 There are two methods to upload a video to Livepeer:
 
-- Upload via URL
-- Upload locally with an `.mp4` file format
+- Upload with URL
+- Upload from local storage with an `.mp4` file format
 
-## Upload via URL
+## Upload with URL
 
-When using the upload via URL method:
+When using the upload with URL method:
 
 - Provide the name of the asset
-- Provide the URL of the asset that should be imported
+- Provide the URL of the asset that should be uploaded
 
 ### Request
 
@@ -130,7 +130,7 @@ const fs = require('fs');
 
 var url = "https://example.com";
 
-const importAsset = async () => {
+const uploadAssetURL = async () => {
 
 const response = await axios.post("https://livepeer.studio/api/asset/import", {
   headers: {
@@ -237,9 +237,9 @@ Use `https://livepeer.studio/api/asset/$ASSET_ID/` with the provided `asset.id` 
 }
 ```
 
-## Upload Locally
+## Upload From Local Storage
 
-The upload locally method includes a two-step process:
+The upload from local storage method includes a two-step process:
 
 - Only `MP4` files encoded with `H.264` and `AAC` are supported
 
@@ -301,11 +301,11 @@ const uploadAsset = async () => {
 
 2. Upload the asset to the generated URL
 
-Get the “url”: “https://origin.livepeer.studio/api/assets/…“ from the response.
+- Get the `“url”: “https://origin.livepeer.studio/api/assets/…“` from the response.
 
-Check the status of the generated url.
+- Check the status of the generated url.
 
-https://livepeer.studio/api/asset/$ASSET_ID/ with provided asset.id
+- ` PUT /api/asset/$ASSET_ID/` with provided `asset.id`.
 
 ### Request
 
@@ -342,60 +342,16 @@ const response = await axios
 
 ### Response
 
-When the video is uploaded, the result should return a 200 response
+When the video is uploaded, a response with an empty body and a status code of `200 OK` should be returned.
 
-```json
-{
-  "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
-  "hash": [
-    {
-      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
-      "algorithm": "md5"
-    },
-    {
-      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
-      "algorithm": "sha256"
-    }
-  ],
-  "name": "Waterfall",
-  "size": 32407849,
-  "status": "ready",
-  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-  "createdAt": 1652901725324,
-  "updatedAt": 1652901778931,
-  "videoSpec": {
-    "format": "mp4",
-    "tracks": [
-      {
-        "fps": 23.976023976023978,
-        "type": "video",
-        "codec": "h264",
-        "width": 4096,
-        "height": 2048,
-        "bitrate": 21324821,
-        "duration": 12.011667,
-        "pixelFormat": "yuv420p"
-      },
-      {
-        "type": "audio",
-        "codec": "aac",
-        "bitrate": 253375,
-        "channels": 2,
-        "duration": 12.031667,
-        "sampleRate": 48000
-      }
-    ],
-    "duration": 12.031667
-  },
-  "playbackId": "4c21k7z2tjcdg8wt",
-  "playbackUrl": "https://livepeercdn.com/recordings/54aeff83-404c-490a-9afa-99296a932401/index.m3u8",
-  "downloadUrl": "https://livepeercdn.com/asset/4c21k7z2tjcdg8wt/video"
-}
-```
+> **NOTE:** If you want to track the status of your upload, you can use the `task`
+  endpoint by passing the `task.id` you received during the previous request. To
+  retrieve the data of your uploaded asset, you can use the `asset` endpoint by
+  passing the `asset.id` as a parameter.
 
 ## List Assets
 
-When listing assets, look for the status in the response body, it should return status:“ready”. If the response returns status:“waiting”, then wait a little longer and repeat this step until the status is ready before moving to the exporting step.
+When listing assets, look for the status in the response body, it should return `status:“ready”`. If the response returns `status:“waiting”`, then wait a little longer and repeat this step until the status is ready before moving to the exporting step.
 
 ### Request
 
@@ -515,7 +471,7 @@ The response will return information on the uploaded asset including the video s
 
 ## Update an asset
 
-When updating an asset, make sure to have the asset.id available. The asset ID is provided in the response when an asset is uploaded.
+When updating an asset, make sure to have the `asset.id` available. The asset ID is provided in the response when an asset is uploaded.
 
 ### Request
 
@@ -619,7 +575,7 @@ This method allows for exporting an asset imported or uploaded from Livepeer to 
 
 ### Request
 
-Provide the $ASSET_ID of the asset, this can be found using the List Asset method.
+Provide the `$ASSET_ID` of the asset, this can be found using the List Asset method.
 
 ```js
 const exportAsset = async () => {
