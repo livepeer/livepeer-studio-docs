@@ -3,7 +3,7 @@ title: PATCH updating storage
 ---
 
 
-`PATCH /asset/:id -d {"storage": {"ipfs": {}}` can be used to modify any `asset` that was stored with On Demand. It is a single endpoint that can update only the following mutable properties of an asset:
+`PATCH /asset/:id -d {"storage": {"ipfs": {}}` can be used to modify any `asset` that was uploaded with On Demand. It is a single endpoint that can update only the following mutable properties of an asset:
 
 - `name`
 - `storage`
@@ -13,7 +13,6 @@ title: PATCH updating storage
 
 ## Update Stored Asset
 
-> **NOTE:** When updating the asset information, the `storage` object must be included in the body of the request
 
 ## Updating Asset Name
 
@@ -25,10 +24,7 @@ This will allow the name of the stored asset in Livepeer Studio to be changed.
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
--d {
-  "name": "New name"
-  "storage": {"ipfs": {}}
-  }
+-d { "name": "New name" }
 ```
 
 ## Updating Storage
@@ -36,8 +32,8 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 This allows to add additional storage location of where the assets are to be stored.
 
 >**NOTE:** 
-- Currently assets cannot be deleted from storage if stored on Livepeer Studio. 
-- Only IPFS is support as an additional storge option at the moment
+- Currently assets cannot be deleted from the default Livepeer Studio storage. You can  customize any additional storage though. 
+- Only IPFS is supported as an additional storge at the moment. We are currently working on support for other decentralized storages like Arweave and Storj.
 
 
 ### Request
@@ -51,7 +47,7 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 
 ## Updating Metadata
 
-This allows for modifying the metadata of the asset.
+This allows for modifying the metadata of the asset, which can be used to customize the asset of the NFT metadata.
 
 ### Request
 
@@ -59,13 +55,10 @@ This allows for modifying the metadata of the asset.
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
--d {
-  "storage": {"ipfs": {}},
-  "meta": 
-    {
-      "title": "My awesome video",
-      "description": "This is a video of my awesome life",
-      "tags": ["awesome", "life", "video"],
+-d {  "meta": {
+        "title": "My awesome video",
+        "description": "This is a video of my awesome life",
+        "tags": ["awesome", "life", "video"],
     }
   }
 ```
