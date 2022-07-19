@@ -3,7 +3,7 @@ title: PATCH updating storage
 ---
 
 
-`PATCH /asset/:id -d {"storage": {"ipfs": {}}` can be used to modify any `asset` that was uploaded with On Demand. It is a single endpoint that can update only the following mutable properties of an asset:
+`PATCH /asset/:id -d { }` can be used to modify any `asset` that was uploaded with On Demand. It is a single endpoint that can update only the following mutable properties of an asset:
 
 - `name`
 - `storage`
@@ -47,7 +47,7 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 
 ## Updating Metadata
 
-This allows for modifying the metadata of the asset, which can be used to customize the asset of the NFT metadata.
+This allows for modifying the metadata of the asset, which is customizable NFT. Since each marketplace has their own standard for the `metatdata` of the NFT, it is up to you to determine which standard to use and fields to include.
 
 ### Request
 
@@ -56,6 +56,28 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
 -d {  "meta": {
+        "title": "My awesome video",
+        "description": "This is a video of my awesome life",
+        "tags": ["awesome", "life", "video"],
+    }
+  }
+```
+
+
+## Updating Multiple parameters
+
+This allows for modifying the metadata of the asset, which can be used to customize the asset of the NFT metadata. These fields are customizable and are not set.
+
+### Request
+
+```bash
+curl -X PATCH https://livepeer.studio/api/asset/{id} \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api-key}' \
+-d {  
+  "name": "New name",
+  "storage": {"ipfs": {}},
+  "meta": {
         "title": "My awesome video",
         "description": "This is a video of my awesome life",
         "tags": ["awesome", "life", "video"],
