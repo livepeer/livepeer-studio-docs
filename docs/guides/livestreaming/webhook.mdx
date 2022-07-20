@@ -40,12 +40,14 @@ Livepeer Studio uses webhooks to communicate with your application asynchronousl
 | multistream.error        | This fires when we've encountered an error either while attempting to connect to the third party streaming service or while broadcasting.                              |
 | multistream.disconnected | This fires when we are no longer sending video to the multistream target.                                                                                              |
 | asset.created| This fires after an asset has been created and the uploading process is complete.                                                                                              |
-| asset.status | This fires when                                                                                           |
-| asset.ready | This fires when exisiting asset is ready to be played without any errors.                                                                                           |
-| asset.error | This fires when                                                                                           |
+| asset.updated | This fires when an asset been updated (updated the metadata, renamed the file).                                                                                           |
+| asset.ready | This fires when an asset is ready to be played without any errors.                                                                                           |
+| asset.error | This fires when an asset encoutners an error. is                                                                                        |
+| asset.deleted | This fires when an asset has been deleted                                                                                      |
 | task.spawned                                                                                              |This fires when an upload task has been created.
-| task.status|    This fires when                                                                                         |
-| task.finished | This fires when           | 
+| task.updated|    This fires when the status of a taks has changed. Payload will indicate the status of the task.                                                                                        |
+| task.succeeded | This fires when the status of an upload task in `ready`.          | 
+| task.failed | This fires when the upload task has errored.        | 
 
 ## Configuring Webhook Endpoints
 
