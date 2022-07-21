@@ -22,7 +22,14 @@ const toc = [
       "guides/livestreaming/metrics",
     ],
   },
-  "guides/on-demand", 
+  {
+    type: "category",
+    label: "On Demand",
+    link: { type: "doc", id: "guides/on-demand/index" },
+    collapsible: true,
+    collapsed: true,
+    items: ["guides/on-demand/on-demand",],
+  },
   {
     type: "category",
     label: "Mint",

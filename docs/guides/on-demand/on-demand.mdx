@@ -1,11 +1,11 @@
 ---
-title: On Demand
+title: On Demand Guide
 description: Livepeer Studio On Demand Video
 metaTitle: Video NFTs - Livepeer Studio
 metaDescription: Livepeer Studio On Demand Video documentation
 ---
 
-This guide walks you through the process of working with the On Demand feature to upload videos and play them back in your application:
+This guide provides information and instructions for working with the On Demand feature to upload videos and play them back in your application:
 
 - Understanding the On Demand API
 - Working with assets
@@ -17,6 +17,21 @@ This guide walks you through the process of working with the On Demand feature t
 
 - Understanding Livepeer Studio [core concepts](/core-concepts)
 - Experience working with Javascript
+- Working with video assets
+
+## On Demand Capabilities
+
+On Demand uploading includes:
+
+| Capabilities | Description  |
+| ------------ | ------------ |
+|  Import assets  | An asset provided in a downloadable link is sent to the Livepeer Network for transcoding and saved in storage. | 
+|  Upload assets  | A direct upload URL is generated and the asset provided in the `.mp4` file format is sent to the Livepeer Network for transcoding and saved in storage.  | 
+|  Get assets | Retrieves a specific asset or list of assets with provided information such as `playbackUrl`, `playbackId`, and `downloadUrl` | 
+|  Get tasks | Retrieves a specific task or a list of tasks associated with an asset and provides information such as `type`, `status`, and `params` | 
+
+To learn more on using the Livestream feature, follow the [Uploading guide](../../guides/on-demand-guides/) or the [Upload API Reference](../../references/vod/upload) for more detailed instructions.
+
 
 ## Technical Preparation
 
@@ -35,12 +50,6 @@ The Video-on-Demand (VOD) API allows you to send video files to Livepeer and get
 
 Those videos can be provided either by you (static content) or your users, given your application offers an interface for them to do so.
 
-### Caveats
-
-- Files are currently limited to 1GB in size. Any files greater than that will likely error out during the upload or processing steps.
-
-- Only MP4 files encoded with H.264 and AAC are supported
-
 ## Asset Resources
 
 When adding a video file, this is an asynchronous process that requires processing the file. Here are resources for this process:
@@ -48,6 +57,7 @@ When adding a video file, this is an asynchronous process that requires processi
 ## Listing the assets
 
 Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset.
+
 
 ### Request
 
