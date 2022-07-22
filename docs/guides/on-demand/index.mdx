@@ -1,54 +1,57 @@
 ---
-description: On Demand
+title: On Demand
+description: On Demand Overview
 metaTitle: Livepeer Studio On Demand Video
 metaDescription: Upload a video
 ---
+ 
+On Demand supports several methods to import and manage videos.
 
+## About On Demand
 
-## About On Demand 
+When a video (`asset`) is uploaded, it gets transcoded via the network. This process generates information for playing the video. Livepeer Studio then stores assets for playback on the Cloud. Alternatively, for the time being, assets can be stored exporting to IPFS (this will be changed in future versions). Information on the uploaded `asset`, e.g. `playbackUrl`, can be retrieved for viewing via a video player or downloaded using the `downloadUrl`.
 
-When an asset is uploaded, it gets transcoded in the Livepeer Network which also generates information for playing the video. Livepeer Studio then stores assets for play back on Google Cloud. Optionally, assets can be stored on IPFS. Information on the uploaded `asset`, e.g. `playbackUrl`, can be retrieved for viewing via a video player or downloaded with the `downloadUrl`.
+## Asset Resources
+
+When adding a video file, an asynchronous process, requires processing the file with resources for this process as follows:
+
+### Listing `assets`
+
+Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset.
+
+### Upload `assets`
 
 Adding a video file is an asynchronous process requiring processing the file with the following resources:
-
 - Upload- includes upload via URL and locally, seeing status of assets, listing assets
-- Listing Assets - 
-- Tasks - includes listing tasks
-- Update and Delete
-- Storage - store on the google cloud or IPFS for playback
 
--- top line document with an introduction + "What you need to know" section + caveats, needs to include an explanation of tasks 
+### Listing `assets` 
 
-(this does not seem to be present in current documentation)
+### Listing Tasks
+
+### Updating an `asset`
+
+### Deleting an `asset` 
+
+### Storing an `asset` 
+
+All `assets` are stored and played back on Google Cloud, or alternatively, they may be extorted and stored on IPFS.
+
+## On Demand API
+
+You can send video files to Livepeer and get them ready for optimized playback via the [API](/references/vod/). 
+
+You or your users can provide videos (static content), given your application offers an interface for this.
 
 
-Upload - includes upload via URL and locally, seeing status of assets, listing assets
-Tasks -- includes listing tasks
-Update and Delete -- Includes update and delete sections
-Storage -- export an asset to IPFS include storage works all assets are stored and played back on Google Cloud, but can optionally be stored on IPFS
-
+<!--- top line document with an introduction + "What you need to know" section + caveats, needs to include an explanation of tasks 
+(this does not seem to be present in current documentation)-->
 
 
 ### Caveats
 
 It is important to **note** that:
 
-- Files are currently limited to 1GB in size. Any files greater than that will likely error out during the upload or processing steps.
+- Files are limited to 1GB in size and are likely to error out during the upload or processing if they are greater than that.
 
 - Only `MP4` files encoded with `H.264` and `AAC` are supported.
 
-
-
-## Asset Resources
-
-When adding a video file, this is an asynchronous process that requires processing the file. Here are resources for this process:
-
-## Listing the assets
-
-Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset.
-
-## About the On Demand API
-
-The [On Demand API] allows you to send video files to Livepeer and get them ready for optimized playback.
-
-Those videos can be provided either by you (static content) or your users, given your application offers an interface for them to do so.
