@@ -1,0 +1,110 @@
+---
+title: On Demand
+---
+ 
+On Demand encompases the Video On Demand product that supports methods to import and manage videos.
+
+## About On Demand
+
+Once a video (`asset`) is **uploaded**, it is **transcoded** via the network (***See*** [Transcoding on the Livepeer Network](https://docs.livepeer.org/video-miners/#transcoding-on-the-livepeer-network). This process generates information for video playback and management of the video asset(s) stored by Livepeer studio on the Cloud or, alternatively, to IPFS. Information on the uploaded `asset`, e.g. `playbackUrl`, can be retrieved for viewing via a video player or downloaded using the `downloadUrl`.
+
+On Demand includes the features of our Web3 Video SDK and Resources to:
+
+- Upload an Asset (**C**) - A direct upload URL is generated and the asset provided in the `.mp4` file format is sent to the Livepeer Network for transcoding and saved in storage.
+- Update an Asset (**U**)
+- List an Asset (**R**) - to receive a specified asset or asset list
+- Delete an Asset (**D**) - remove an asset from storage
+- Play an Asset  (**R**) - retrieve an asset or list of assets for playback
+- Engagement Metrics (data) - streaming statistics
+
+### Tasks
+
+Tasks providing visibility into the progress of video uploads; what is being uploaded, upload progress, and errors.
+
+Statuses of tasks:
+    - `task.spawned`— An upload task has been created
+    - `task.updated` — Indicates that the status of the task has changed. Payload will indicate the status of the task
+    - `task.succeeded`— An upload task status is `ready`
+    - `task.failed` — An upload task has errored
+
+- status of assets
+    - `asset.created` — An asset has been created after upload is complete
+    - `asset.updated` — An asset has been updated (metadata has been updated, renamed)
+    - `asset.error` — An error has occurred with an asset
+    - `asset.ready`-- An asset is ready, with no errors, and is ready to be played
+    - `asset.deleted` — An asset has been deleted
+
+
+## Asset Resources
+
+When adding a video file, this asynchronous process requires processing the file with resources:
+
+### Listing `assets`
+
+Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset. 
+
+You can access the status of assets:
+- status of assets
+    - `asset.created` — An asset has been created after upload is complete
+    - `asset.updated` — An asset has been updated (metadata has been updated, renamed)
+    - `asset.error` — An error has occurred with an asset
+    - `asset.ready`-- An asset is ready, with no errors, and is ready to be played
+    - `asset.deleted` — An asset has been deleted
+
+### Uploading `assets` 
+
+Refers to the API end point that allows users to upload 
+Generates a URL for storage if the Upload option is used
+a File is provided if it is transcoded in the Livepeer Network, gets passed back to Livepeer Studio, and is saved in storage
+
+- via a downloadable URL, or 
+- uploading an `.mp4` file from local storage. 
+
+
+### TasksThe Stored asset now contains the playbackUrl used for viewing
+
+
+
+Tasks provide visibility into the progress of video uploads -- what is being uploaded, upload progress, and errors.
+
+Statuses of tasks:
+    - `task.spawned`— An upload task has been created
+    - `task.updated` — Indicates that the status of the task has changed. Payload will indicate the status of the task
+    - `task.succeeded`— An upload task status is `ready`
+    - `task.failed` — An upload task has errored
+
+
+### Update an `asset`
+
+### Delete an `asset` 
+
+### Store an `asset` 
+
+Store assets for playback on Google Cloud, or alternatively on IPFS. The asset contains the `playbackUrl` used for viewing a rendition of it based on the device and network when the `request` is made.
+
+## On Demand API
+
+You can send video files to Livepeer and get them ready for optimized playback via the [API On Demand](/references/vod/). You and your users can provide videos (static content), given your application offers an interface for this.
+
+
+### Caveats
+
+It is important to **note** that:
+
+- Files are limited to 1GB. 
+
+Files greater than this size are likely to error out during upload or processing.
+
+- Only `MP4` files encoded with `H.264` and `AAC` are supported.
+
+- 
+
+
+<!--- top line document with an introduction + "What you need to know" section + caveats, needs to include an explanation of tasks 
+(this does not seem to be present in current documentation)-->
+
+
+
+For a additional information about the On Demand feature ***See*** [About On Demand](/core-concepts/on-demand) and [Livepeer Studio Architecture and On Demand Workflow](/core-concepts/architecture#on-demand-workflow)
+
+For information and instructions on how to work with the On Demand feature, ***See*** The [On Demand Guide](/guides/on-demand/on-demand-guide) in this section.
