@@ -1,8 +1,5 @@
 ---
 title: On Demand Guide
-description: Livepeer Studio On Demand Video
-metaTitle: Video NFTs - Livepeer Studio
-metaDescription: Livepeer Studio On Demand Video documentation
 ---
 
 This guide provides information and instructions for working with the On Demand feature to upload videos and play them back in your application:
