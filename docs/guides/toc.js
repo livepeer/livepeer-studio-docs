@@ -28,7 +28,7 @@ const toc = [
     link: { type: "doc", id: "guides/on-demand/index" },
     collapsible: true,
     collapsed: true,
-    items: ["guides/on-demand/on-demand-guide",],
+    items: ["guides/on-demand/on-demand-guide"],
   },
   {
     type: "category",
