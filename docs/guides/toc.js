@@ -30,7 +30,6 @@ const toc = [
     collapsed: true,
     items: [
              "guides/on-demand/on-demand-guide",
-
            ],
   },
   {

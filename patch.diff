@@ -1,0 +1,345 @@
+From ae84b9ead7a81af29f7efc2c2012249c2fe0f9e4 Mon Sep 17 00:00:00 2001
+From: Hope <hnjolles@gmail.com>
+Date: Fri, 22 Jul 2022 13:14:04 -0400
+Subject: [PATCH] 141 in progress
+
+---
+ .vs/VSWorkspaceState.json                     |   7 -
+ .vs/livepeer-studio-docs/v17/.suo             | Bin 13312 -> 0 bytes
+ docs/guides/on-demand/index.mdx               | 165 ++++++++++++------
+ .../{on-demand.mdx => on-demand-guide.md}     |   3 -
+ docs/guides/toc.js                            |   4 +-
+ docs/references/terminology.md                |  31 ++--
+ docs/toc.js                                   |   2 +-
+ 7 files changed, 129 insertions(+), 83 deletions(-)
+ delete mode 100644 .vs/VSWorkspaceState.json
+ delete mode 100644 .vs/livepeer-studio-docs/v17/.suo
+ rename docs/guides/on-demand/{on-demand.mdx => on-demand-guide.md} (99%)
+
+diff --git a/.vs/VSWorkspaceState.json b/.vs/VSWorkspaceState.json
+deleted file mode 100644
+index fe8ef760..00000000
+--- a/.vs/VSWorkspaceState.json
++++ /dev/null
+@@ -1,7 +0,0 @@
+-{
+-  "ExpandedNodes": [
+-    ""
+-  ],
+-  "SelectedNode": "\\C:\\Users\\hjoll\\Documents\\livepeer-studio-docs",
+-  "PreviewInSolutionExplorer": true
+-}
+\ No newline at end of file
+diff --git a/.vs/livepeer-studio-docs/v17/.suo b/.vs/livepeer-studio-docs/v17/.suo
+deleted file mode 100644
+index c01015ba83f00aa8e2bd0bb6c36f0c06b515af19..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 13312
+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
+
+diff --git a/docs/guides/on-demand/index.mdx b/docs/guides/on-demand/index.mdx
+index cd64d69e..7c92e6f7 100644
+--- a/docs/guides/on-demand/index.mdx
++++ b/docs/guides/on-demand/index.mdx
+@@ -1,56 +1,109 @@
+----
+-title: On Demand
+-description: On Demand Overview
+-metaTitle: Livepeer Studio On Demand Video
+-metaDescription: Upload a video
+----
+- 
+-On Demand supports several methods to import and manage videos.
+-
+-## About On Demand
+-
+-When a video (`asset`) is uploaded, it gets transcoded via the network. This process generates information for playing the video. Livepeer Studio then stores assets for playback on the Cloud. Alternatively, for the time being, assets can be stored exporting to IPFS (this will be changed in future versions). Information on the uploaded `asset`, e.g. `playbackUrl`, can be retrieved for viewing via a video player or downloaded using the `downloadUrl`.
+-
+-## Asset Resources
+-
+-When adding a video file, an asynchronous process, requires processing the file with resources for this process as follows:
+-
+-### Listing `assets`
+-
+-Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset.
+-
+-### Uploading `assets`
+-Adding a video file is an asynchronous process requiring processing the file with the following resources:
+-- Upload- includes upload via URL and locally, seeing status of assets, listing assets
+-
+-### Listing `assets` 
+-
+-### Listing Tasks
+-
+-### Updating an `asset`
+-
+-### Deleting an `asset` 
+-
+-### Storing an `asset` 
+-
+-All `assets` are stored and played back on Google Cloud, or alternatively, they may be extorted and stored on IPFS.
+-
+-## On Demand API
+-
+-You can send video files to Livepeer and get them ready for optimized playback via the [API](/references/vod/). 
+-
+-You or your users can provide videos (static content), given your application offers an interface for this.
+-
+-
+-<!--- top line document with an introduction + "What you need to know" section + caveats, needs to include an explanation of tasks 
+-(this does not seem to be present in current documentation)-->
+-
+-
+-### Caveats
+-
+-It is important to **note** that:
+-
+-- Files are limited to 1GB in size and are likely to error out during the upload or processing if they are greater than that.
+-
+-- Only `MP4` files encoded with `H.264` and `AAC` are supported.
+-
++---
++title: On Demand
++---
++ 
++On Demand encompases the Video On Demand product that supports methods to import and manage videos.
++
++## About On Demand
++
++Once a video (`asset`) is **uploaded**, it is **transcoded** via the network (***See*** [Transcoding on the Livepeer Network](https://docs.livepeer.org/video-miners/#transcoding-on-the-livepeer-network). This process generates information for video playback and management of the video asset(s) stored by Livepeer studio on the Cloud or, alternatively, to IPFS. Information on the uploaded `asset`, e.g. `playbackUrl`, can be retrieved for viewing via a video player or downloaded using the `downloadUrl`.
++
++On Demand includes the features of our Web3 Video SDK and Resources to:
++
++- Upload an Asset (**C**) - A direct upload URL is generated and the asset provided in the `.mp4` file format is sent to the Livepeer Network for transcoding and saved in storage.
++- Update an Asset (**U**)
++- List an Asset (**R**) - to receive a specified asset or asset list
++- Delete an Asset (**D**) - remove an asset from storage
++- Play an Asset  (**R**) - retrieve an asset or list of assets for playback
++- Engagement Metrics (data) - streaming statistics
++
++### Tasks
++
++Tasks providing visibility into the progress of video uploads; what is being uploaded, upload progress, and errors.
++
++Statuses of tasks:
++    - `task.spawned`— An upload task has been created
++    - `task.updated` — Indicates that the status of the task has changed. Payload will indicate the status of the task
++    - `task.succeeded`— An upload task status is `ready`
++    - `task.failed` — An upload task has errored
++
++- status of assets
++    - `asset.created` — An asset has been created after upload is complete
++    - `asset.updated` — An asset has been updated (metadata has been updated, renamed)
++    - `asset.error` — An error has occurred with an asset
++    - `asset.ready`-- An asset is ready, with no errors, and is ready to be played
++    - `asset.deleted` — An asset has been deleted
++
++
++## Asset Resources
++
++When adding a video file, this asynchronous process requires processing the file with resources:
++
++### Listing `assets`
++
++Once an asset is uploaded `/request-upload`, the response will return the `id` of that asset. 
++
++You can access the status of assets:
++- status of assets
++    - `asset.created` — An asset has been created after upload is complete
++    - `asset.updated` — An asset has been updated (metadata has been updated, renamed)
++    - `asset.error` — An error has occurred with an asset
++    - `asset.ready`-- An asset is ready, with no errors, and is ready to be played
++    - `asset.deleted` — An asset has been deleted
++
++### Uploading `assets` 
++
++Refers to the API end point that allows users to upload 
++Generates a URL for storage if the Upload option is used
++a File is provided if it is transcoded in the Livepeer Network, gets passed back to Livepeer Studio, and is saved in storage
++
++- via a downloadable URL, or 
++- uploading an `.mp4` file from local storage. 
++
++
++### TasksThe Stored asset now contains the playbackUrl used for viewing
++
++
++Tasks provide visibility into the progress of video uploads -- what is being uploaded, upload progress, and errors.
++
++Statuses of tasks:
++    - `task.spawned`— An upload task has been created
++    - `task.updated` — Indicates that the status of the task has changed. Payload will indicate the status of the task
++    - `task.succeeded`— An upload task status is `ready`
++    - `task.failed` — An upload task has errored
++
++
++### Update an `asset`
++
++### Delete an `asset` 
++
++### Store an `asset` 
++
++Store assets for playback on Google Cloud, or alternatively on IPFS. The asset contains the `playbackUrl` used for viewing a rendition of it based on the device and network when the `request` is made.
++
++## On Demand API
++
++You can send video files to Livepeer and get them ready for optimized playback via the [API On Demand](/references/vod/). You and your users can provide videos (static content), given your application offers an interface for this.
++
++
++### Caveats
++
++It is important to **note** that:
++
++- Files are limited to 1GB. 
++
++Files greater than this size are likely to error out during upload or processing.
++
++- Only `MP4` files encoded with `H.264` and `AAC` are supported.
++
++- 
++
++
++<!--- top line document with an introduction + "What you need to know" section + caveats, needs to include an explanation of tasks 
++(this does not seem to be present in current documentation)-->
++
++
++
++For a additional information about the On Demand feature ***See*** [About On Demand](/core-concepts/on-demand) and [Livepeer Studio Architecture and On Demand Workflow](/core-concepts/architecture#on-demand-workflow)
++
++For information and instructions on how to work with the On Demand feature, ***See*** The [On Demand Guide](/guides/on-demand/on-demand-guide) in this section.
+\ No newline at end of file
+diff --git a/docs/guides/on-demand/on-demand.mdx b/docs/guides/on-demand/on-demand-guide.md
+similarity index 99%
+rename from docs/guides/on-demand/on-demand.mdx
+rename to docs/guides/on-demand/on-demand-guide.md
+index 9c74f5fa..7fee6ec3 100644
+--- a/docs/guides/on-demand/on-demand.mdx
++++ b/docs/guides/on-demand/on-demand-guide.md
+@@ -1,8 +1,5 @@
+ ---
+ title: On Demand Guide
+-description: Livepeer Studio On Demand Video
+-metaTitle: Video NFTs - Livepeer Studio
+-metaDescription: Livepeer Studio On Demand Video documentation
+ ---
+ 
+ This guide provides information and instructions for working with the On Demand feature to upload videos and play them back in your application:
+diff --git a/docs/guides/toc.js b/docs/guides/toc.js
+index a4a32049..85db07de 100644
+--- a/docs/guides/toc.js
++++ b/docs/guides/toc.js
+@@ -25,10 +25,10 @@ const toc = [
+   {
+     type: "category",
+     label: "On Demand",
+-    link: { type: "doc", id: "guides/on-demand" },
++    link: { type: "doc", id: "guides/on-demand/index" },
+     collapsible: true,
+     collapsed: true,
+-    items: ["guides/on-demand/on-demand",],
++    items: ["guides/on-demand/on-demand-guide",],
+   },
+   {
+     type: "category",
+diff --git a/docs/references/terminology.md b/docs/references/terminology.md
+index db170ae7..f3a2720c 100644
+--- a/docs/references/terminology.md
++++ b/docs/references/terminology.md
+@@ -4,20 +4,23 @@ title: Glossary of Terms
+ 
+ Included in this table is a collection of terms you may find while navigating the video tech world . This glossary of terms covers common standard industry terms, acronyms, and glossary entries that are described within the context of Livepeer Studio.
+ 
+-| Term                                | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| **API**                             | Refers to the Livepeer Studio API ("the API")                                                                                                                                                                                                                                                                                                                                                                                                                        |
++| Term                                | Definition                                                   |
++| ----------------------------------- | ------------------------------------------------------------ |
+ | ABR                                 | An Internet Video Streaming industry standard term, ABR streaming is known as "Adaptive Bitrate Streaming". The Adaptive Bitrate (ABR) ladder can be considered metaphorically and refers to "the array of segments of different quality and resolution which are available from the streaming server. If the bitrate rises, the logic in a video player can select a larger size file with better quality to play, thus resembling the "climbing up of the ladder". |
+-| Audio                               | Livepeer Studio has the capability for playing back audio separately from video (with the proper format for transcoding). For example, if you want to playback Audio only streams, once you upload a video with audio, you can turn the video off.<br />See [Audio Only Streams](/guides/livestreaming/playback#audio-only-streams).                                                                                                                                 |
+-| CDN                                 | [Stream deliver via CDN](/core-concepts/cdn)                                                                                                                                                                                                                                                                                                                                                                                                                         |
+-| Container                           | A package/wrapper for the media essence, a file format. When files are uploaded they are uploaded with audio and vidio in a "Container" or "Manifest"                                                                                                                                                                                                                                                                                                                |
+-| **DMS**                             | This refers to the Decentralized Media Server built on Web3 principles (in contrast to Web2 centralized media servers)                                                                                                                                                                                                                                                                                                                                               |
+-| Mint(ing)                           | Creating/converting an additional digital asset (e.g., a .pdft, jpeg, gif, mp3, mp4) and storing it onto the blockchain to take ownership of your digital NFTs.<br />See also NFT                                                                                                                                                                                                                                                                                    |
+-| NFT                                 | Non Fungible Tokens<br />vs FT "Fungible Token" (i.e. LPT -- Livepeer Token)                                                                                                                                                                                                                                                                                                                                                                                         |
+-| Progressive File Delivery Protocols | See in our reference section for more information **_See_** [File Delivery Protocols](/references/protocols).                                                                                                                                                                                                                                                                                                                                                        |
+-| Transcoding                         | Transcoding is the process of taking an input source video in one format andbitrate, and converting it to many output rendition videos with different formats and bitrates such that the video can be played on the majority of the devices in the world at any internet connection speed.<br />Additional details on transcoding can be found in [this blog post](https://livepeer.studio/blog/intro-to-transcoding).                                               |
+-| Webhook                             | **_See_** our guide on [Webhooks](/guides/livestreaming/webhook).                                                                                                                                                                                                                                                                                                                                                                                                    |
+-| WebRTC                              | Web Real-Time Communications (WebRTC) is a set of browser APIs compatible with secure RTP (SRTP).                                                                                                                                                                                                                                                                                                                                                                    |
+-|                                     | **Advantage:** It has all the properties of RTSP with the added bonus of browser compatibility. **Disadvantage:** It is still relatively new and has not seen much use yet, but promises to be the most prevalent protocol in the near future.                                                                                                                                                                                                                       |
++| API                                 | Refers to the Livepeer Studio API ("the API")                |
++| Asset (`asset`)                     | Asset refers to any stored video file accessible via Livepeer. This includes “upload assets” and “recording assets”, that refer to the source of the asset. “Recordings” is not current terminology — just “assets”, or more specifically “recording assets” |
++| Audio                               | Livepeer Studio has the capability for playing back audio separately from video (with the proper format for transcoding). For example, if you want to playback Audio only streams, once you upload a video with audio, you can turn the video off. See [Audio Only Streams](http://localhost:3000/guides/livestreaming/playback#audio-only-streams). |
++| CDN                                 | [Stream deliver via CDN](http://localhost:3000/core-concepts/cdn) |
++| Container                           | A package/wrapper for the media essence, a file format. When files are uploaded they are uploaded with audio and vidio in a "Container" or "Manifest" |
++| **DMS**                             | This refers to the Decentralized Media Server built on Web3 principles (in contrast to Web2 centralized media servers) |
++| Mint(ing)                           | Creating/converting an additional digital asset (e.g., a .pdft, jpeg, gif, mp3, mp4) and storing it onto the blockchain to take ownership of your digital NFTs. See also NFT |
++| NFT                                 | Non Fungible Tokens vs FT "Fungible Token" (i.e. LPT -- Livepeer Token) |
++| Progressive File Delivery Protocols | See in our reference section for more information ***See\*** [File Delivery Protocols](http://localhost:3000/references/protocols). |
++| Transcoding                         | Transcoding is the process of taking an input source video in one format andbitrate, and converting it to many output rendition videos with different formats and bitrates such that the video can be played on the majority of the devices in the world at any internet connection speed. Additional details on transcoding can be found in [this blog post](https://livepeer.studio/blog/intro-to-transcoding). |
++| Webhook                             | ***See\*** our guide on [Webhooks](http://localhost:3000/guides/livestreaming/webhook). |
++| WebRTC                              | Web Real-Time Communications (WebRTC) is a set of browser APIs compatible with secure RTP (SRTP).<br /><br /> WebRTC has all the properties of RTSP with the added bonus of browser compatibility, yet t is still relatively new and not commonly used as of yet but is considered to become the most prevalent protocol in the near future. |
++
++
++
+ 
+ You can suggest the correction of terms or the addition of new terms: [Contact us](https://livepeer.studio/contact).
+diff --git a/docs/toc.js b/docs/toc.js
+index 00f6cb99..2fefe08f 100644
+--- a/docs/toc.js
++++ b/docs/toc.js
+@@ -51,7 +51,7 @@ const toc = [
+         link: { type: "doc", id: "guides/on-demand/index" },
+         collapsible: true,
+         collapsed: true,
+-        items: ["guides/on-demand/on-demand"],
++        items: ["guides/on-demand/on-demand-guide"],
+       },
+       {
+         type: "category",
+-- 
+2.35.1.windows.2
+
