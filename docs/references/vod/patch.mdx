@@ -2,13 +2,11 @@
 title: PATCH updating storage
 ---
 
-
 `PATCH /asset/:id -d { }` can be used to modify any `asset` that was uploaded with On Demand. It is a single endpoint that can update only the following mutable properties of an asset:
 
 - `name`
 - `storage`
 - `meta`
-
 
 
 ## Update Stored Asset
@@ -48,6 +46,14 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 ## Updating Metadata
 
 This allows for modifying the metadata of the asset, which is customizable NFT. Since each marketplace has their own standard for the `metatdata` of the NFT, it is up to you to determine which standard to use and fields to include.
+
+>**NOTE:** 
+- Livepeer Studio's defaut fields for `metadata` are:
+```json
+    "name": ,
+    "description": ,
+    "cid": 
+```
 
 ### Request
 
