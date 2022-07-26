@@ -39,15 +39,14 @@ Livepeer Studio uses webhooks to communicate with your application asynchronousl
 | multistream.connected    | This fires when we've successfully connected to the multistream target                                                                                                 |
 | multistream.error        | This fires when we've encountered an error either while attempting to connect to the third party streaming service or while broadcasting.                              |
 | multistream.disconnected | This fires when we are no longer sending video to the multistream target.                                                                                              |
-| asset.created| This fires after an asset has been created and the uploading process is complete.                                                                                              |
-| asset.updated | This fires when an asset been updated (updated the metadata, renamed the file).                                                                                           |
-| asset.ready | This fires when an asset is ready to be played without any errors.                                                                                           |
-| asset.error | This fires when an asset encoutners an error. is                                                                                        |
-| asset.deleted | This fires when an asset has been deleted                                                                                      |
-| task.spawned                                                                                              |This fires when an upload task has been created.
-| task.updated|    This fires when the status of a taks has changed. Payload will indicate the status of the task.                                                                                        |
-| task.succeeded | This fires when the status of an upload task in `ready`.          | 
-| task.failed | This fires when the upload task has errored.        | 
+| asset.updated | This fires when a On Demand asset is updated.                                                                                           |
+| asset.failed | This fires when a On Demand asset fails during the upload or during processing.                                                                                           |
+| asset.ready | This fires when a On Demand asset is ready.                                                                                       |
+| asset.deleted | This fires when a On Demand asset is deleted.                                                                                    |
+| task.spawned                                                                                              |This fires when a task is spawned. (For example, an On Demand upload)
+| task.updated|  This fires when a task is updated.                                                                                      |
+| task.completed | This fires when a task completes its execution successfully.          | 
+| task.failed | This fires when a task has failed.        | 
 
 ## Configuring Webhook Endpoints
 
