@@ -65,29 +65,13 @@ curl --location --request GET 'https://livepeer.studio/api/asset/$ASSET_ID' \
     "updatedAt": 1644546541218,
     "videoSpec": {
         "format": "mp4",
-        "tracks": [
-            {
-                "fps": 30,
-                "type": "video",
-                "codec": "h264",
-                "width": 1280,
-                "height": 720,
-                "bitrate": 1225660,
-                "duration": 309.966667,
-                "pixelFormat": "yuv420p"
-            },
-            {
-                "type": "audio",
-                "codec": "aac",
-                "bitrate": 127999,
-                "channels": 2,
-                "duration": 309.986395,
-                "sampleRate": 44100
-            }
-        ],
         "duration": 309.986393
     },
     "playbackId": "$PLAYBACK_ID",
     "downloadUrl": "https://livepeercdn.com/asset/$PLAYBACK_ID/video"
 }
 ```
+> **NOTE**
+Notice that, by default, the asset comes without the audio and video `tracks`
+specification. You can pass `?details=true` as an additional parameter to the
+request to get the `videoSpec` with the `tracks` included.
