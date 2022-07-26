@@ -6,7 +6,20 @@ title: Upload with URL
 Upload a video `Asset` to Livepeer Studio from an external URL through the
 `POST /api/asset/import` API.
 
-```jsx
+
+## Request
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+
+
+<Tabs>
+  <TabItem value="bash" label="bash">
+
+
+```bash
 curl --location --request POST 'https://livepeer.studio/api/asset/import' \
 --header 'Authorization: Bearer $API_TOKEN' \
 --header 'Content-Type: application/json' \
@@ -14,9 +27,53 @@ curl --location --request POST 'https://livepeer.studio/api/asset/import' \
     "url":"$EXTERNAL_URL",
     "name":"Example name"
 }'
+
 ```
 
-### Request body parameters
+
+</TabItem>
+<TabItem value="js" label="NodeJS">
+
+```js
+app.post("https://livepeer.studio/api/asset/request-upload", {
+    headers: {
+      Authorization: "Bearer {api_key}",
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      name: "Example name",
+    }),
+  })
+  .then((res) => {
+    console.log(JSON.stringify(res.data));
+  })
+  .catch((error) => console.log(error));
+```
+
+</TabItem>
+<TabItem value="py" label="Fetch">
+
+```js
+fetch("https://livepeer.studio/api/asset/request-upload", {
+    headers: {
+      method: "POST"
+      Authorization: "Bearer {api_key}",
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      name: "Example name",
+    }),
+  })
+  .then((res) => {
+    console.log(JSON.stringify(res.data));
+  })
+  .catch((error) => console.log(error));
+```
+
+</TabItem>
+</Tabs>
+
+
 
 <!--
 <Table
@@ -34,6 +91,29 @@ curl --location --request POST 'https://livepeer.studio/api/asset/import' \
     },
   ]}
 /> -->
+
+
+## Response
+
+```jsx
+{
+    "url": "https://origin.livepeer.studio/api/asset/upload/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
+    "asset": {
+        "id": "$ASSET_ID",
+        "name": "Example name",
+        "playbackId": "$PLAYBACK_ID",
+        "userId": "$USER_ID",
+        "createdAt": 1644595454248,
+        "status": {
+          "phase": "waiting",
+          "updatedAt": 1644595454248
+        }
+    },
+    "task": {
+        "id": "$TASK_ID",
+    }
+}
+```
 
 ## How do I upload a livestream into my assets?
 
