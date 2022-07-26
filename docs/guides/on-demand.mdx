@@ -282,19 +282,6 @@ const uploadAsset = async () => {
   },
   "task": {
     "id": "58a9b4dc-89d8-40f5-8372-cacaec49024b",
-    "createdAt": 1652901725741,
-    "type": "import",
-    "outputAssetId": "4c21895e-2488-4c0a-9377-3369ff586ddd",
-    "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-    "params": {
-      "import": {
-        "uploadedObjectKey": "directUpload/4c21k7z2tjcdg8wt/source"
-      }
-    },
-    "status": {
-      "phase": "pending",
-      "updatedAt": 1652901725741
-    }
   }
 }
 ```
@@ -342,56 +329,14 @@ const response = await axios
 
 ### Response
 
-When the video is uploaded, the result should return a 200 response
+When the video is uploaded, the result should return a `200 OK` response with an
+empty body.
 
-```json
-{
-  "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
-  "hash": [
-    {
-      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
-      "algorithm": "md5"
-    },
-    {
-      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
-      "algorithm": "sha256"
-    }
-  ],
-  "name": "Waterfall",
-  "size": 32407849,
-  "status": "ready",
-  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-  "createdAt": 1652901725324,
-  "updatedAt": 1652901778931,
-  "videoSpec": {
-    "format": "mp4",
-    "tracks": [
-      {
-        "fps": 23.976023976023978,
-        "type": "video",
-        "codec": "h264",
-        "width": 4096,
-        "height": 2048,
-        "bitrate": 21324821,
-        "duration": 12.011667,
-        "pixelFormat": "yuv420p"
-      },
-      {
-        "type": "audio",
-        "codec": "aac",
-        "bitrate": 253375,
-        "channels": 2,
-        "duration": 12.031667,
-        "sampleRate": 48000
-      }
-    ],
-    "duration": 12.031667
-  },
-  "playbackId": "4c21k7z2tjcdg8wt",
-  "playbackUrl": "https://livepeercdn.com/recordings/54aeff83-404c-490a-9afa-99296a932401/index.m3u8",
-  "downloadUrl": "https://livepeercdn.com/asset/4c21k7z2tjcdg8wt/video"
-}
-```
+- If you want to track the status of your upload, you can use the `asset`
+  endpoint by passing the `asset.id` you received during the Request Upload request.
+
+You can also track partial progress using the Task API using the `task.id`.
+
 
 ## List Assets
 
@@ -437,26 +382,6 @@ The response will return information on the uploaded asset including the video s
     "updatedAt": 1652901778931,
     "videoSpec": {
       "format": "mp4",
-      "tracks": [
-        {
-          "fps": 23.976023976023978,
-          "type": "video",
-          "codec": "h264",
-          "width": 4096,
-          "height": 2048,
-          "bitrate": 21324821,
-          "duration": 12.011667,
-          "pixelFormat": "yuv420p"
-        },
-        {
-          "type": "audio",
-          "codec": "aac",
-          "bitrate": 253375,
-          "channels": 2,
-          "duration": 12.031667,
-          "sampleRate": 48000
-        }
-      ],
       "duration": 12.031667
     },
     "playbackId": "4c21k7z2tjcdg8wt",
@@ -484,26 +409,6 @@ The response will return information on the uploaded asset including the video s
     "updatedAt": 1652894675275,
     "videoSpec": {
       "format": "mp4",
-      "tracks": [
-        {
-          "fps": 23.976023976023978,
-          "type": "video",
-          "codec": "h264",
-          "width": 4096,
-          "height": 2048,
-          "bitrate": 21324821,
-          "duration": 12.011667,
-          "pixelFormat": "yuv420p"
-        },
-        {
-          "type": "audio",
-          "codec": "aac",
-          "bitrate": 253375,
-          "channels": 2,
-          "duration": 12.031667,
-          "sampleRate": 48000
-        }
-      ],
       "duration": 12.031667
     },
     "playbackId": "8728n2iaziowj67d",
@@ -512,6 +417,10 @@ The response will return information on the uploaded asset including the video s
   }
 ]
 ```
+ >**NOTE** that, by default, the asset comes without the audio and video `tracks`
+ >specification. You can pass `?details=true` as an additional parameter to the
+ >request to get the `videoSpec` with the `tracks` included_.
+
 
 ## Update an asset
 
