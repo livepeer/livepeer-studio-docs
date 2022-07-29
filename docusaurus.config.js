@@ -46,6 +46,11 @@ const config = {
       //   indexName: "2022-livepeer-org-docs",
       //   contextualSearch: true,
       // },
+      announcementBar: {
+        id: "support_us",
+        content: "⚠ The docs are undergoing a rewrite and subject to change.",
+        isCloseable: false,
+      },
       navbar: {
         logo: {
           alt: "Livepeer Studio Logo",
