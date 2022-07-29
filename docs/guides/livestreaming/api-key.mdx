@@ -2,7 +2,6 @@
 title: Livepeer Studio API key
 ---
 
-
 The following provides instructions to create an API key and information about working with API access:
 
 - Get an API key via the Livepeer Studio Dashboard
@@ -11,22 +10,22 @@ The following provides instructions to create an API key and information about w
 
 ## About Working with Livepeer Studio API Keys
 
-An API key is required to make requests of the Livepeer Studio API (the API). 
+An API key is required to make requests of the Livepeer Studio API (the API).
 
 > It is important to **note:** that you do not need to create an API key if you are creating and configuring livestreams using **only** the [Livepeer Studio Dashboard](https://livepeer.studio/dashboard).
 
 When you create a new API key, **be sure to copy and secure the value displayed to you.** This is the sole secret you will have to use when making requests to the Livepeer Studio API, so **share and store it with caution**.
 
 1. Log in to the Livepeer Studio Dashboard and navigate to
-[the API keys page within the Developers tab](https://livepeer.studio/dashboard/developers/api-keys).
+   [the API keys page within the Developers tab](https://livepeer.studio/dashboard/developers/api-keys).
 
 On this page, you can manage your API keys including creating or deleting them and monitoring their usage.
 
 ## Get an API Key using the Livepeer Studio Dashboard
 
-Make sure you register your Livepeer Video Service Account and get API Key:
+Make sure you register your Livepeer Studio Account and get API Key:
 
-1. Create a **free** [Livepeer Video Service Account](https://livepeer.studio/register)
+1. Create a **free** [Livepeer Studio Account](https://livepeer.studio/register)
 
 ![Api Guide 1](/docs-assets/api-key/api-guide1.png)
 
@@ -42,13 +41,13 @@ Make sure you register your Livepeer Video Service Account and get API Key:
 
 ![Api Guide 4](/docs-assets/api-key/api-guide4.png)
 
-> **Note:** Livepeer Studio currently allows you to reveal the secret of any existing API key. However, this behavior may change in the future. **Make sure to persist the API key safely.** 
+> **Note:** Livepeer Studio currently allows you to reveal the secret of any existing API key. However, this behavior may change in the future. **Make sure to persist the API key safely.**
 
 > You will always be able to delete an API key and create a new one as necessary.
 
 ## Usage
 
-To use an API key, you can simply add an `Authorization` header to your request with the`Bearer` scheme and the API key as the value. 
+To use an API key, you can simply add an `Authorization` header to your request with the`Bearer` scheme and the API key as the value.
 
 **For example:**
 
@@ -69,16 +68,16 @@ If you are developing a frontend application and want to get started quickly wit
 > **Note:** An origin is just a combination of a scheme, like: `https`, with a domain like `example.com`.
 
 ### Using a non-standard port
-If you are using a non-standard port, you will also need to include the port number, e.g.: 
 
-- `http://localhost:8080` when developing locally on `port 8080`, or 
+If you are using a non-standard port, you will also need to include the port number, e.g.:
+
+- `http://localhost:8080` when developing locally on `port 8080`, or
 
 - `https://my.app.io` after deploying it on a public domain
 
-
 ### Enable CORS access
 
-1. Tick the `Allow CORS access` checkbox when creating your API key. 
+1. Tick the `Allow CORS access` checkbox when creating your API key.
 
 2. You will then be prompted to add all the origins that you would like the API key to be used from:
 
@@ -86,9 +85,9 @@ If you are using a non-standard port, you will also need to include the port num
 
 **Recommended**
 
-3. We recommend adding the minimal list of origins to your API key. 
+3. We recommend adding the minimal list of origins to your API key.
 
-4. Ideally, you may also create separate API keys to be used for development or production. 
+4. Ideally, you may also create separate API keys to be used for development or production.
 
 5. At your discretion, you can use the same API key for all your environments and allow all the origins for it. You can also just add the `*` special value to allow the key to be used from any origin.
 
@@ -98,26 +97,26 @@ If you are using a non-standard port, you will also need to include the port num
 
 By default, CORS-enabled API keys have restricted access to the API. This means that they are only allowed to call some specific endpoints of the API.
 
-This is another intermediate security measure so that even if a malicious actor snoops the API key from your web page, they still will not be able to access the most sensitive data in your account. 
+This is another intermediate security measure so that even if a malicious actor snoops the API key from your web page, they still will not be able to access the most sensitive data in your account.
 
 For example, APIs that expose PIIs, payment information, or list API resources created by other users are disallowed.
 
-### Access List of CORS restricted API endpoints 
+### Access List of CORS restricted API endpoints
 
-The following are the main API endpoints that a restricted CORS API key will have access to. These endpoints allow you to use all the features of the [Video NFT SDK](https://www.npmjs.com/package/@livepeer/video-nft) from the browser. 
+The following are the main API endpoints that a restricted CORS API key will have access to. These endpoints allow you to use all the features of the [Video NFT SDK](https://www.npmjs.com/package/@livepeer/video-nft) from the browser.
 
-| API Group | API                                                          | Description                                    |
-| --------- | ------------------------------------------------------------ | ---------------------------------------------- |
-| Live      | [POST /api/stream](https://livepeer.studio/docs/api-reference/stream/post-stream) | Create a new stream                            |
-| Live      | [GET /api/stream/{id}](https://livepeer.studio/docs/api-reference/stream/get-stream) | Retrieve a stream by ID                        |
+| API Group | API                                                                                               | Description                                    |
+| --------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Live      | [POST /api/stream](https://livepeer.studio/docs/api-reference/stream/post-stream)                 | Create a new stream                            |
+| Live      | [GET /api/stream/{id}](https://livepeer.studio/docs/api-reference/stream/get-stream)              | Retrieve a stream by ID                        |
 | Live      | [GET /api/stream/{id}/sessions](https://livepeer.studio/docs/api-reference/session/list-sessions) | List sessions from a specific parent stream ID |
-| Live      | [GET /api/session/{id}](https://livepeer.studio/docs/api-reference/session/get-session) | Retrieve a session by ID                       |
-| Live      | [PATCH /api/stream/{id}](https://livepeer.studio/docs/api-reference/stream/update-stream) | Update a specific stream by ID                 |
-| On Demand      | [POST /api/asset/request-upload](https://livepeer.studio/docs/api-reference/vod/upload) | Create an asset via direct upload              |
-| On Demand       | [GET /api/asset/{id}](https://livepeer.studio/docs/api-reference/vod/list#retrieve-an-asset) | Retrieve an asset by ID                        |
-| On Demand       | [POST /api/asset/{id}/export](https://livepeer.studio/docs/api-reference/vod/export) | Export an asset (e.g. to IPFS)                 |
-| On Demand       | POST  /api/asset/{id}/transcode                              | Transcode an asset to another rendition        |
-| On Demand       | [GET /api/task/{id}](https://livepeer.studio/docs/api-reference/vod/list-tasks#retrieve-a-task) | Monitor the progress of a specific task by ID  |
+| Live      | [GET /api/session/{id}](https://livepeer.studio/docs/api-reference/session/get-session)           | Retrieve a session by ID                       |
+| Live      | [PATCH /api/stream/{id}](https://livepeer.studio/docs/api-reference/stream/update-stream)         | Update a specific stream by ID                 |
+| On Demand | [POST /api/asset/request-upload](https://livepeer.studio/docs/api-reference/vod/upload)           | Create an asset via direct upload              |
+| On Demand | [GET /api/asset/{id}](https://livepeer.studio/docs/api-reference/vod/list#retrieve-an-asset)      | Retrieve an asset by ID                        |
+| On Demand | [POST /api/asset/{id}/export](https://livepeer.studio/docs/api-reference/vod/export)              | Export an asset (e.g. to IPFS)                 |
+| On Demand | POST /api/asset/{id}/transcode                                                                    | Transcode an asset to another rendition        |
+| On Demand | [GET /api/task/{id}](https://livepeer.studio/docs/api-reference/vod/list-tasks#retrieve-a-task)   | Monitor the progress of a specific task by ID  |
 
 > **Note:** If you still have any issues using the [Video NFT SDK](https://www.npmjs.com/package/@livepeer/video-nft), let us know through any of the [support channels](https://livepeer.studio/contact).
 
@@ -127,15 +126,17 @@ If your application needs further access to the API, we strongly recommend that 
 
 If you are aware of the implications but still want to create an API key with full access to your account, you can do so by ticking the `Full API access` checkbox when creating your API key.
 
-An API key with `Full API access` will be able to access and manage every information in your account, including: 
+An API key with `Full API access` will be able to access and manage every information in your account, including:
+
 - all your contact info provided on registration,
-- change your billing plan, 
+- change your billing plan,
 - list and delete all the streams, and
 - assets stored in your account
 
-> **Note:** If you plan on deploying a production application with a Full API Access CORS API key, get in touch first and we may be able to help you. 
+> **Note:** If you plan on deploying a production application with a Full API Access CORS API key, get in touch first and we may be able to help you.
 
-> **Find us at:** 
+> **Find us at:**
+
 - hello@livepeer.studio
 - [Support](https://livepeer.studio/contact)
 - [Livepeer Discord Channel](https://discord.com/invite/7D6hGG6dCZ)
