@@ -48,6 +48,7 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 ```jsx
 {
     "url": "https://origin.livepeer.studio/api/asset/upload/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
+    "tusEndpoint: ""https://origin.livepeer.studio/api/asset/upload/tus?uploadToken=aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
     "asset": {
         "id": "$ASSET_ID",
         "playbackId": "$PLAYBACK_ID",
@@ -73,3 +74,52 @@ curl --location --request PUT "${url}" \
 Notice that we only support mp4 files encoded with H264 video and AAC audio for
 now. If you are unsure about these, try sending the file anyway and check any
 returned errors!
+
+# Resumable Uploads
+
+Livepeer Studio supports resumable uploads via [Tus](https://tus.io/).
+This section provides a simple example of how to use `tus-js-client` to upload a video file.
+
+From the previous section, we generated a URL to upload a video file to Livepeer on `POST /api/asset/request-upload`.
+We can use the `tusEndpoint` field of the response to upload the video file and track the progress:
+
+```jsx
+  const file = fs.createReadStream(path);
+  const upload = new tus.Upload(file, {
+      endpoint: tusEndpoint,
+      urlStorage: new (tus as any).FileUrlStorage("/tmp/file"),
+      metadata: {
+        filename,
+        filetype: "video/mp4",
+      },
+      uploadSize: size,
+      onError(error) {
+        throw error;
+      },
+      onProgress(bytesUploaded, bytesTotal) {
+        const percentage = ((bytesUploaded / bytesTotal) * 100).toFixed(2);
+        console.log("Uploaded " + percentage + "%");
+      },
+      onSuccess() {
+        console.log("Upload finished:", upload.url);
+      },
+    });
+```
+
+You can resume previously interrupted uploads, using the client:
+
+```jsx
+  upload.findPreviousUploads().then(function (previousUploads) {
+      // Found previous uploads so we select the first one. 
+      if (previousUploads.length) {
+          upload.resumeFromPreviousUpload(previousUploads[0])
+      }
+
+      // Start the upload
+      upload.start()
+  })
+```
+
+You can find further examples and documentation on [https://github.com/tus/tus-js-client/blob/master/docs/usage.md](https://github.com/tus/tus-js-client/blob/master/docs/usage.md) 
+or clients available in other languages at [https://tus.io/implementations.html](https://tus.io/implementations.html)
+
