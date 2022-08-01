@@ -103,9 +103,9 @@ otherwise
 
 - Information on video specs such as codec and formats are present.
 
-### Assets exported to IPFS
+### Assets stored on IPFS
 
-- The response will provide information such as the `metadat` and `CID`.
+- The response will provide information such as the `metadata` and `CID`.
 
 ## Methods for Uploading Video
 
@@ -251,18 +251,15 @@ The upload from local storage method includes a two-step process:
 
 ```js
 const uploadAsset = async () => {
-  const response = await axios.post(
-    "https://livepeer.studio/api/asset/request-upload",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      data: JSON.stringify({
-        name: "Example name",
-      }),
-    }
-  );
+  const response = await axios.post("https://livepeer.studio/api/asset/request-upload", {
+    headers: {
+      Authorization: `Bearer ${process.env.LP_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      name: "Example name",
+    }),
+  });
   console.log(JSON.stringify(response.data));
 };
 ```
@@ -299,43 +296,22 @@ const uploadAsset = async () => {
 }
 ```
 
-2. Upload the asset to the generated URL
-
-- Get the `“url”: “https://origin.livepeer.studio/api/assets/…“` from the response.
-
-- Check the status of the generated url.
-
-- ` PUT /api/asset/$ASSET_ID/` with provided `asset.id`.
-
-### Request
-
-```js
-{
-  "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
-  "name": "Waterfall",
-  "status": "waiting",
-  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-  "createdAt": 1652895834393,
-  "playbackId": "4c21k7z2tjcdg8wt"
-}
-```
-
 ### Upload the video
 
+2. Upload the asset to the generated URL
+
+- Get the `url` field from the response obtained above.
+
+- Make a `PUT` request to that URL with the contents of the file being uploaded.
+
 ### Request
 
 ```js
 
-const uploadAsset = async () => {
+const uploadAsset = async (url, path) => {
 
 const response = await axios
-  .put("${url}", {
-    headers: {
-      Authorization: `Bearer ${process.env.LP_API_KEY}`
-      "Content-Type": "video/mp4"
-    },
-    data: fs.createReadStream(path)
-  });
+  .put(url, { data: fs.createReadStream(path) });
     console.log(JSON.stringify(response.data));
   };
 ```
@@ -345,9 +321,9 @@ const response = await axios
 When the video is uploaded, a response with an empty body and a status code of `200 OK` should be returned.
 
 > **NOTE:** If you want to track the status of your upload, you can use the `task`
-  endpoint by passing the `task.id` you received during the previous request. To
-  retrieve the data of your uploaded asset, you can use the `asset` endpoint by
-  passing the `asset.id` as a parameter.
+> endpoint by passing the `task.id` you received during the previous request. To
+> retrieve the data of your uploaded asset, you can use the `asset` endpoint by
+> passing the `asset.id` as a parameter.
 
 ## List Assets
 
@@ -477,18 +453,15 @@ When updating an asset, make sure to have the `asset.id` available. The asset ID
 
 ```js
 const updateAsset = async () => {
-  const response = await axios.patch(
-    "https://livepeer.studio/api/asset/$ASSET_ID",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      data: JSON.strinify({
-        name: "Example name",
-      }),
-    }
-  );
+  const response = await axios.patch("https://livepeer.studio/api/asset/$ASSET_ID", {
+    headers: {
+      Authorization: `Bearer ${process.env.LP_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    data: JSON.strinify({
+      name: "Example name",
+    }),
+  });
   console.log(JSON.stringify(response.data));
 };
 ```
@@ -553,14 +526,11 @@ const updateAsset = async () => {
 
 ```js
 const deleteAsset = async () => {
-  const response = await axios.delete(
-    "https://livepeer.studio/api/asset/{id}",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-      },
-    }
-  );
+  const response = await axios.delete("https://livepeer.studio/api/asset/{id}", {
+    headers: {
+      Authorization: `Bearer ${process.env.LP_API_KEY}`,
+    },
+  });
   JSON.stringify(response.data);
 };
 ```
@@ -579,18 +549,15 @@ Provide the `$ASSET_ID` of the asset, this can be found using the List Asset met
 
 ```js
 const exportAsset = async () => {
-  const response = await axios.post(
-    "https://livepeer.studio/api/asset/$ASSET_ID/export",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      data: JSON.stringify({
-        ipfs: {},
-      }),
-    }
-  );
+  const response = await axios.post("https://livepeer.studio/api/asset/$ASSET_ID/export", {
+    headers: {
+      Authorization: `Bearer ${process.env.LP_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      ipfs: {},
+    }),
+  });
   console.log(JSON.stringify(res.data));
 };
 ```
