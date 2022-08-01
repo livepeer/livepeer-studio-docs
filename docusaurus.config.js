@@ -3,40 +3,54 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const tabs = require("remark-docusaurus-tabs");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Livepeer Studio",
-  tagline: "The world's open video infrastructure",
-  url: "https://livepeer.studio/",
+  title: "Livepeer Studio Docs",
+  tagline:
+    "Build creator-owned, live and on-demand video experiences with gateway access to the Livepeer API and a stunning user interface.",
+  url: "https://docs.livepeer.studio",
   baseUrl: "/",
-  onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "ignore",
+  // onBrokenLinks: "ignore",
+  // onBrokenMarkdownLinks: "ignore",
   favicon: "img/favicon.ico",
-  organizationName: "livepeer",
-  projectName: "docs",
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: "livepeer", // Usually your GitHub org/user name.
+  projectName: "livepeer-studio", // Usually your repo name.
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
   presets: [
     [
-      "@docusaurus/preset-classic",
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          remarkPlugins: [tabs],
           routeBasePath: "/",
           breadcrumbs: true,
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/livepeer/docs/blob/main",
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            "https://github.com/livepeer/studio/tree/main/packages/main/",
         },
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        googleAnalytics: {
-          trackingID: "UA-111259858-1",
-          anonymizeIP: true,
-        },
       }),
     ],
   ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -46,56 +60,95 @@ const config = {
       //   indexName: "2022-livepeer-org-docs",
       //   contextualSearch: true,
       // },
-      announcementBar: {
-        id: "support_us",
-        content: "⚠ The docs are undergoing a rewrite and subject to change.",
-        isCloseable: false,
-      },
       navbar: {
+        title: "",
         logo: {
-          alt: "Livepeer Studio Logo",
+          alt: "Livepeer Studio",
           src: "img/logo.svg",
         },
         items: [
           {
-            to: "/guides",
+            to: "/quickstart",
             label: "Quickstart",
             position: "left",
           },
+          // { to: "/concepts", label: "Concepts", position: "left" },
           {
-            to: "/core-concepts",
-            label: "Core Concepts",
+            to: "/category/guides",
             position: "left",
-          },
-          {
-            to: "/guides/livestreaming",
             label: "Guides",
+          },
+          {
+            to: "/category/api",
+            label: "API Reference",
             position: "left",
           },
           {
-            to: "/references",
-            label: "API",
-            position: "left",
-          },
-          {
-            to: "/references/terminology",
-            label: "Glossary",
-            position: "left",
-          },
-          {
-            href: "https://discord.com/invite/7D6hGG6dCZ",
-            label: "Discord",
-            position: "right",
-          },
-          {
-            href: "https://livepeer.studio/dashboard",
             label: "Dashboard",
+            href: "https://livepeer.studio/dashboard",
             position: "right",
           },
         ],
       },
-      colorMode: {
-        defaultMode: "dark",
+      footer: {
+        links: [
+          {
+            title: "Docs",
+            items: [
+              {
+                label: "Quickstart",
+                to: "/quickstart",
+              },
+              {
+                label: "Guides",
+                to: "/category/guides",
+              },
+              {
+                label: "API Reference",
+                to: "/category/api",
+              },
+            ],
+          },
+          {
+            title: "Ecosystem",
+            items: [
+              {
+                label: "Livepeer Studio",
+                href: "https://livepeer.studio",
+              },
+              {
+                label: "Livepeer.org",
+                href: "https://livepeer.org",
+              },
+              {
+                label: "Livepeer Explorer",
+                href: "https://explorer.livepeer.org",
+              },
+            ],
+          },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "Discord",
+                href: "https://discord.gg/7D6hGG6dCZ",
+              },
+              {
+                label: "GitHub",
+                href: "https://github.com/livepeer/studio",
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/livepeerstudio",
+              },
+              {
+                label: "Blog",
+                href: "https://livepeer.studio/blog",
+              },
+            ],
+          },
+        ],
+        // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
