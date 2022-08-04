@@ -82,7 +82,7 @@ Livepeer Studio supports resumable uploads via [Tus](https://tus.io/).
 This section provides a simple example of how to use `tus-js-client` to upload a video file.
 
 From the previous section, we generated a URL to upload a video file to Livepeer on `POST /api/asset/request-upload`.
-We can use the `tusEndpoint` field of the response to upload the video file and track the progress:
+You should use the `tusEndpoint` field of the response to upload the video file and track the progress:
 
 ```jsx
   //  This assumes there is an `input` element of `type="file"` with id `fileInput` in the HTML
