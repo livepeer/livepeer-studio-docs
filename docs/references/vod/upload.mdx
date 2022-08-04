@@ -48,7 +48,7 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 ```jsx
 {
     "url": "https://origin.livepeer.studio/api/asset/upload/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
-    "tusEndpoint: "https://origin.livepeer.studio/api/asset/upload/tus?uploadToken=aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
+    "tusEndpoint": "https://origin.livepeer.studio/api/asset/upload/tus?uploadToken=aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
     "asset": {
         "id": "$ASSET_ID",
         "playbackId": "$PLAYBACK_ID",
@@ -121,6 +121,6 @@ You can resume previously interrupted uploads, using the client:
   })
 ```
 
->  **Note:** If you are using` tus` from `node.js`, you need to add a custom URL storage to enable partial uploads recovery. On the browser, this is enabled by default using local storage. In `node.js`, add `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile` object definition above.
-Further examples and documentation can be found on [https://github.com/tus/tus-js-client/blob/master/docs/usage.md](https://github.com/tus/tus-js-client/blob/master/docs/usage.md) 
-
+**Note:** If you are using `tus` from `node.js`, you need to add a custom URL storage to enable partial uploads recovery.
+On the browser, this is enabled by default using local storage.
+In `node.js`, add `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile` object definition above.
