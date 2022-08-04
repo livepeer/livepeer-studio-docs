@@ -31,7 +31,6 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 ### Request body parameters
 
-<!--
 <Table
   data={[
     {
@@ -40,8 +39,14 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
       description:
         "The name of the `Asset` containing a custom human-readable description or title.",
     },
+    {
+      parameter: <code>meta</code>,
+      type: <code>object</code>,
+      description:
+        "Object with `string` keys and values for any metadata you want to associate with the asset (e.g. content tags).",
+    },
   ]}
-/> -->
+/>
 
 ### Response example
 
