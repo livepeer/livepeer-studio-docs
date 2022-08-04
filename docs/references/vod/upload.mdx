@@ -121,6 +121,4 @@ You can resume previously interrupted uploads, using the client:
   })
 ```
 
-**Note:** If you are using `tus` from `node.js`, you need to add a custom URL storage to enable partial uploads recovery.
-On the browser, this is enabled by default using local storage.
-In `node.js`, add `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile` object definition above.
+> **Note:** If you are using `tus` from `node.js`, you need to add a custom URL storage to enable partial uploads recovery. On the browser, this is enabled by default using local storage. In `node.js`, add `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile` object definition above.
