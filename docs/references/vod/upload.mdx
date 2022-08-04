@@ -106,21 +106,11 @@ You should use the `tusEndpoint` field of the response to upload the video file 
         console.log("Upload finished:", upload.url);
       },
     });
-  upload.start();
-```
-
-You can resume previously interrupted uploads, using the client:
-
-```jsx
-  upload.findPreviousUploads().then(function (previousUploads) {
-      // Found previous uploads so we select the first one. 
-      if (previousUploads.length) {
-          upload.resumeFromPreviousUpload(previousUploads[0])
-      }
-
-      // Start the upload
-      upload.start()
-  })
+  const previousUploads = await upload.findPreviousUploads();
+  if (previousUploads.length > 0) {
+      upload.resumeFromPreviousUpload(previousUploads[0])
+  }
+  upload.start()
 ```
 
 > **Note:** If you are using `tus` from `node.js`, you need to add a custom URL storage to enable partial uploads recovery. On the browser, this is enabled by default using local storage. In `node.js`, add `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile` object definition above.
