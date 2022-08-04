@@ -91,7 +91,7 @@ From the previous section, we generated a URL to upload a video file to Livepeer
 on `POST /api/asset/request-upload`. You should use the `tusEndpoint` field of
 the response to upload the video file and track the progress:
 
-```jsx
+```js
 //  This assumes there is an `input` element of `type="file"` with id `fileInput` in the HTML
 const input = document.getElementById("fileInput")
 const file = input.files[0]
