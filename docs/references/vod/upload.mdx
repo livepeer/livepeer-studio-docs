@@ -62,7 +62,9 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 ## Step 2a: Direct Upload
 
-Now upload (`PUT`) a video file on the exact URL in the `url` field of the
+You now have 2 options, resumable or direct upload. For a more reliable experience, you should use resumable uploads which will work better for users with unreliable or slow network connections. If you want a simpler implementation, you should just make a direct upload. 
+
+For a direct upload, make a `PUT` request to the URL received in the `url` field of the response above, with the raw video file as the request body. 
 response above:
 
 ```jsx
