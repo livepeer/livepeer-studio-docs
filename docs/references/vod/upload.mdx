@@ -121,7 +121,7 @@ upload.start()
 ```
 
 > **Note:** If you are using `tus` from `node.js`, you need to add a custom URL
-> storage to enable partial uploads recovery. On the browser, this is enabled by
-> default using local storage. In `node.js`, add
+> storage to enable resuming from previous uploads. On the browser, this is
+> enabled by default using local storage. In `node.js`, add
 > `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile`
 > object definition above.
