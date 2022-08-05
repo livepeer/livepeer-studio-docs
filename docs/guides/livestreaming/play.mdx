@@ -1,0 +1,170 @@
+---
+title: Play a Stream
+---
+
+This guide provides instructions on how to play Livepeer videos in your application.
+
+### In this guide
+1. Get your `playbackURL`
+2. Pick a player
+
+
+# 1. Get your `playbackURL`
+
+HLS is a standard protocol for streaming video over the internet. HLS URLs end with the `.m3u8`extension. On Demand assets also use this format for streaming playback. 
+
+Livepeer Studio playback URL is formatted:
+`https://livepeercdn.com/hls/{playbackId}/index.m3u8`.
+
+
+## Ways to get the `playbackURL`
+
+- Via the API (`cURL` or `JavaScript`)
+- Via the [Dashboard](https://livepeer.studio/dashboard)
+
+### Get the `playbackURL` through the API
+
+#### cURL request
+
+Request
+
+```bash
+curl --location --request GET 'https://livepeer.studio/api/stream/{id}' \
+--header 'Authorization: Bearer {api_key}'
+```
+
+#### Javascript request
+
+```javascript
+const axios = require("axios");
+
+axios
+  .get("https://livepeer.studio/api/stream/{id}", {
+    headers: {
+      Authorization: "Bearer {api_key}",
+    },
+  })
+  .then((res) => {
+    console.log(JSON.stringify(res.data));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+#### Response
+
+```json
+{
+  "lastSeen": 1654285662946,
+  "isActive": false,
+  "record": true,
+  "suspended": false,
+  "sourceSegments": 2041,
+  "transcodedSegments": 8168,
+  "sourceSegmentsDuration": 4074.216000000001,
+  "transcodedSegmentsDuration": 16304.863999999987,
+  "sourceBytes": 1886568720,
+  "transcodedBytes": 1175130472,
+  "id": "405a4ab4-9c5f-48a0-859a-4bb6445994a7",
+  "kind": "stream",
+  "name": "Test Stream",
+  "region": "mdw",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "profiles": [
+    {
+      "fps": 0,
+      "name": "240p0",
+      "width": 426,
+      "height": 240,
+      "bitrate": 250000
+    },
+    {
+      "fps": 0,
+      "name": "360p0",
+      "width": 640,
+      "height": 360,
+      "bitrate": 800000
+    },
+    {
+      "fps": 0,
+      "name": "480p0",
+      "width": 854,
+      "height": 480,
+      "bitrate": 1600000
+    },
+    {
+      "fps": 0,
+      "name": "720p0",
+      "width": 1280,
+      "height": 720,
+      "bitrate": 3000000
+    }
+  ],
+  "createdAt": 1651776454667,
+  "streamKey": "405a-lacy-ynpa-dnq2",
+  "ingestRate": 0,
+  "playbackId": "405ag6i16yojk2un",
+  "renditions": {},
+  "multistream": {
+    "targets": []
+  },
+  "outgoingRate": 0
+}
+```
+
+
+### Get the `playbackURL` through the Dashboard
+
+1. Log in to Livepeer Studio Dashboard
+2. Navigate to the [Streams page](https://livepeer.studio/dashboard/streams)
+3. Click on a stream name
+4. The playback URL is listed in the details section of the page.
+
+# 2. Pick a Player
+
+HLS playback requires that you choose a compatible player for your web application. There are a number of popular players, many of which are not listed here. As long as the player you choose supports HLS, it should work with your livestream. 
+
+- [Video.js](https://videojs.com/) - Free and open source, Video.js is highly customizable 
+- [HLS.js](https://github.com/video-dev/hls.js) -- Free and open source 
+- [Bitmovin](https://bitmovin.com/video-player/]) -- A feature rich and highly customizable commercial player. Bitmovin's [test player](https://bitmovin.com/demos/stream-test?format=dash&manifest=https%3A%2F%2Fbitmovin-a.akamaihd.net%2Fcontent%2FMI201109210084_1%2Fmpds%2Ff08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd) makes it quick to test your stream. 
+- [JWPlayer](https://www.jwplayer.com/html5-video-player/) -- A feature rich commercial player
+
+iOS and ExoPlayer (Android video player) support HLS natively, if you're building a mobile experience.
+
+
+## Embed a video player
+
+
+> **Note:** The embeddable player is currently in `beta` and some elements may change as we mature the product. For a production-grade application consider using one of the players listed above. You can also check or copy the [Livepeer Player source code](https://github.com/livepeer/player) to get started quickly.
+
+To make getting started easier, you can also use the Livepeer Studio embeddable player on your page. To use it, you just need to create an `<iframe>` element in your application with the URL pointing to the hosted player.
+
+You only need to send it some information about what content it is supposed to play, which is made via the `?v` query-string parameter, which should be set to the `playbackId`. Notice that this playback ID can be either a livestream or an On Demand asset and the player will figure out where to find the content to play.
+
+#### Example Code
+
+```html
+<iframe
+  src="https://lvpr.tv?v={playbackId}"
+  frameborder="0"
+  allowfullscreen
+  allow="autoplay; encrypted-media; picture-in-picture"
+  sandbox="allow-scripts"
+>
+</iframe>
+```
+
+### Customization
+
+Some options can be changed in the player for better integration with your application. Those are also configured through the query-string. Some examples are:
+
+- `autoplay:` By default, the player starts playing the video automatically. This also means that the video has to start muted due to browser restrictions. To disable that use the `?autoplay=0` option. To still start the video muted, you can include `&muted=1` as well.
+
+- `loop:` To repeatedly play the video in a loop, use `?loop=1`. This is useful for short videos to create a continuous experience for the user.
+
+- `theme` (experimental): Use this to change the theme of the player. We currently provide the default video.js themes as options (city, fantasy, forest, and sea) e.g. `?theme=sea`. By default, no theme is applied.
+
+> **Warning ⚠️** The theme option is the most subject to stop working in the future as we change the underlying technology used in the player. Consider setting up your own player if you need to customize that on a production app.
+
+
