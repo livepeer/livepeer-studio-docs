@@ -20,6 +20,7 @@ const toc = [
       "guides/livestreaming/back-up-transcoding",
       "guides/livestreaming/webhook",
       "guides/livestreaming/metrics",
+      "guides/livestreaming/srt",
     ],
   },
   "guides/on-demand", 
