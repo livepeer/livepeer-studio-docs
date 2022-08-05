@@ -2,7 +2,6 @@
 title: Upload from Local Storage
 ---
 
-
 To upload an asset to Livepeer Studio's storage, your first need to request
 for a direct upload URL and only then actually upload the contents of the asset.
 
@@ -16,7 +15,15 @@ though, from which an API token is available.
 First generate a URL to directly upload a video `Asset` to Livepeer on
 `POST /api/asset/request-upload`:
 
-```jsx
+### Request
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+  <TabItem value="bash" label="bash">
+
+```bash
 curl --location --request POST 'https://livepeer.studio/api/asset/request-upload' \
 --header 'Authorization: Bearer $API_TOKEN' \
 --header 'Content-Type: application/json' \
@@ -25,7 +32,30 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 }'
 ```
 
-### Request body parameters
+</TabItem>
+
+<TabItem value="py" label="Fetch">
+
+```js
+fetch("https://livepeer.studio/api/asset/request-upload", {
+    headers: {
+      method: "POST"
+      Authorization: "Bearer {api_key}",
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      name: "Example name",
+    }),
+  })
+  .then((res) => {
+    console.log(JSON.stringify(res.data));
+  })
+  .catch((error) => console.log(error));
+```
+
+</TabItem>
+</Tabs>
+
 
 <!--
 <Table
@@ -43,14 +73,34 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 ```jsx
 {
-    "url": "https://origin.livepeer.studio/api/asset/upload/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
+    "url": "https://origin.livepeer.com/api/asset/upload/direct?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5YmFja0lkIjoiZWViOWlsajBmODRnMzRueSIsInByZXNpZ25lZFVybCI6Imh0dHBzOi8vc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9scC11cy12b2QtY29tL2RpcmVjdFVwbG9hZC9lZWI5aWxqMGY4NGczNG55P1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNvbnRlbnQtU2hhMjU2PVVOU0lHTkVELVBBWUxPQUQmWC1BbXotQ3JlZGVudGlhbD1HT09HMUVZVU5XTlY2UllJSzU0MkhXQTNSTDdSQjdKVU9FUTNZTDIzUVlCNkNIUEc1SE8yUUMzM01KVlVZJTJGMjAyMjA4MDUlMkZ1cyUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMjA4MDVUMTYwMjUyWiZYLUFtei1FeHBpcmVzPTkwMCZYLUFtei1TaWduYXR1cmU9OTNjYmQ2MTM1ZDE0OGY5NWExMjdiNDdmMDM5Njk4NTQ1ODg4ZTM3YzkyMzZjMTQ3Y2MyYzhjOTdhYTViYjNmNSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmeC1pZD1QdXRPYmplY3QiLCJhdWQiOiJodHRwczovL2xpdmVwZWVyLmNvbSIsImlhdCI6MTY1OTcxNTM3Mn0.ifvnEp50JnlOqP0HAD9duuFkLG3QGtuwRI4mxOQFLKs",
+    "tusEndpoint": "https://origin.livepeer.com/api/asset/upload/tus?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF5YmFja0lkIjoiZWViOWlsajBmODRnMzRueSIsInByZXNpZ25lZFVybCI6Imh0dHBzOi8vc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9scC11cy12b2QtY29tL2RpcmVjdFVwbG9hZC9lZWI5aWxqMGY4NGczNG55P1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNvbnRlbnQtU2hhMjU2PVVOU0lHTkVELVBBWUxPQUQmWC1BbXotQ3JlZGVudGlhbD1HT09HMUVZVU5XTlY2UllJSzU0MkhXQTNSTDdSQjdKVU9FUTNZTDIzUVlCNkNIUEc1SE8yUUMzM01KVlVZJTJGMjAyMjA4MDUlMkZ1cyUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMjA4MDVUMTYwMjUyWiZYLUFtei1FeHBpcmVzPTkwMCZYLUFtei1TaWduYXR1cmU9OTNjYmQ2MTM1ZDE0OGY5NWExMjdiNDdmMDM5Njk4NTQ1ODg4ZTM3YzkyMzZjMTQ3Y2MyYzhjOTdhYTViYjNmNSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmeC1pZD1QdXRPYmplY3QiLCJhdWQiOiJodHRwczovL2xpdmVwZWVyLmNvbSIsImlhdCI6MTY1OTcxNTM3Mn0.ifvnEp50JnlOqP0HAD9duuFkLG3QGtuwRI4mxOQFLKs",
     "asset": {
-        "id": "$ASSET_ID",
-        "playbackId": "$PLAYBACK_ID",
-        "userId": "$USER_ID",
-        "createdAt": 1644595454248,
-        "status": "waiting",
+        "id": "eeb9e573-ebc2-4236-952a-2a09eba70c41",
+        "playbackId": "eeb9ilj0f84g34ny",
+        "userId": "80dc8f6e-69d5-401f-bbd7-bfc09a2a5320",
+        "createdAt": 1659715372244,
+        "status": {
+            "phase": "waiting",
+            "updatedAt": 1659715372244
+        },
         "name": "Example name"
+    },
+    "task": {
+        "id": "34d7618e-fd42-4798-acf5-19504616a11e",
+        "createdAt": 1659715372723,
+        "type": "import",
+        "outputAssetId": "eeb9e573-ebc2-4236-952a-2a09eba70c41",
+        "userId": "80dc8f6e-69d5-401f-bbd7-bfc09a2a5320",
+        "params": {
+            "import": {
+                "uploadedObjectKey": "directUpload/eeb9ilj0f84g34ny"
+            }
+        },
+        "status": {
+            "phase": "pending",
+            "updatedAt": 1659715372723
+        }
     }
 }
 ```
@@ -60,11 +110,37 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 Now upload (`PUT`) a video file on the exact URL in the `url` field of the
 response above:
 
-```jsx
+
+
+<Tabs>
+  <TabItem value="bash" label="bash">
+
+```bash
 curl --location --request PUT "${url}" \
 --header 'Content-Type: video/mp4' \
 --data-binary '@$VIDEO_FILE_PATH'
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Fetch">
+
+```js
+ fetch(`${assetURL}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "video/mp4",
+        },
+        body: file, // Asset for upload
+      });
+  .then((res) => {
+    console.log(JSON.stringify(res.data));
+  })
+  .catch((error) => console.log(error));
+```
+
+</TabItem>
+</Tabs>
 
 Notice that we only support mp4 files encoded with H264 video and AAC audio for
 now. If you are unsure about these, try sending the file anyway and check any

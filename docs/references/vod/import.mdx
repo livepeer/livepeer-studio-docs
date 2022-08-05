@@ -18,7 +18,6 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="bash" label="bash">
 
-
 ```bash
 curl --location --request POST 'https://livepeer.studio/api/asset/import' \
 --header 'Authorization: Bearer $API_TOKEN' \
@@ -32,35 +31,18 @@ curl --location --request POST 'https://livepeer.studio/api/asset/import' \
 
 
 </TabItem>
-<TabItem value="js" label="NodeJS">
 
-```js
-app.post("https://livepeer.studio/api/asset/request-upload", {
-    headers: {
-      Authorization: "Bearer {api_key}",
-      "Content-Type": "application/json",
-    },
-    data: JSON.stringify({
-      name: "Example name",
-    }),
-  })
-  .then((res) => {
-    console.log(JSON.stringify(res.data));
-  })
-  .catch((error) => console.log(error));
-```
-
-</TabItem>
 <TabItem value="py" label="Fetch">
 
 ```js
-fetch("https://livepeer.studio/api/asset/request-upload", {
+fetch("https://livepeer.studio/api/asset/import", {
     headers: {
       method: "POST"
       Authorization: "Bearer {api_key}",
       "Content-Type": "application/json",
     },
     data: JSON.stringify({
+      url: "$EXTERNAL_URL"
       name: "Example name",
     }),
   })
@@ -97,20 +79,32 @@ fetch("https://livepeer.studio/api/asset/request-upload", {
 
 ```jsx
 {
-    "url": "https://origin.livepeer.studio/api/asset/upload/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2xwLW55Yy12b2QtbW9uc3Rlci9kaXJlY3RVcGxvYWQvNjI3OHQyZWlrY2JqZXUxNC9zb3VyY2U%2F...",
     "asset": {
-        "id": "$ASSET_ID",
-        "name": "Example name",
-        "playbackId": "$PLAYBACK_ID",
-        "userId": "$USER_ID",
-        "createdAt": 1644595454248,
+        "id": "7d042176-230b-464c-a677-4a19b513193c",
+        "playbackId": "7d048tbcfrv6gvzs",
+        "userId": "80dc8f6e-69d5-401f-bbd7-bfc09a2a5320",
+        "createdAt": 1659715086322,
         "status": {
-          "phase": "waiting",
-          "updatedAt": 1644595454248
-        }
+            "phase": "waiting",
+            "updatedAt": 1659715086322
+        },
+        "name": "Example name"
     },
     "task": {
-        "id": "$TASK_ID",
+        "id": "d3a2ab1b-8dd1-450d-ac8e-498fd9d91865",
+        "createdAt": 1659715086440,
+        "type": "import",
+        "outputAssetId": "7d042176-230b-464c-a677-4a19b513193c",
+        "userId": "80dc8f6e-69d5-401f-bbd7-bfc09a2a5320",
+        "params": {
+            "import": {
+                "url": "$EXTERNAL_URL"
+            }
+        },
+        "status": {
+            "phase": "pending",
+            "updatedAt": 1659715086440
+        }
     }
 }
 ```
