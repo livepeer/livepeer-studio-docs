@@ -118,7 +118,7 @@ curl --location --request PUT "${url}" \
         headers: {
           "Content-Type": "video/mp4",
         },
-        body: file, // Asset for upload
+        body: file, // asset content to upload, grab one from file system libs
       });
   .then((res) => {
     console.log(JSON.stringify(res.data));
