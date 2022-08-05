@@ -67,11 +67,11 @@ the response will return the `id` of that asset
 
 The response will indicate the status of the uploaded assets as status:
 
-- `waiting` or `status`: "ready".
+- `status.phase: "waiting"` or `status.phase: "ready"`.
 
 - If status: "waiting" is returned in the response, the asset is not available:
 
-  - make the API call again until status: "ready".
+  - make the API call again until `status.phase: "ready"`.
 
 - If the status indicates that it is "ready", it is available.
 
@@ -124,15 +124,14 @@ When using the upload via URL method:
 ### Request
 
 ```js
-
-const axios = require('axios');
 const fs = require('fs');
 
 var url = "https://example.com";
 
 const importAsset = async () => {
 
-const response = await axios.post("https://livepeer.studio/api/asset/import", {
+const response = await fetch("https://livepeer.studio/api/asset/import", {
+  method: "POST",
   headers: {
     'Authorization': `Bearer ${process.env.LP_API_KEY}`,
     'Content-Type': 'application/json'
@@ -251,9 +250,10 @@ The upload locally method includes a two-step process:
 
 ```js
 const uploadAsset = async () => {
-  const response = await axios.post(
+  const response = await fetch(
     "https://livepeer.studio/api/asset/request-upload",
     {
+      method: "POST"
       headers: {
         Authorization: `Bearer ${process.env.LP_API_KEY}`,
         "Content-Type": "application/json",
