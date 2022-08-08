@@ -34,10 +34,10 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 </TabItem>
 
-<TabItem value="py" label="Fetch">
+<TabItem value="js" label="Fetch">
 
 ```js
-fetch("https://livepeer.studio/api/asset/request-upload", {
+const response = await fetch("https://livepeer.studio/api/asset/request-upload", {
     headers: {
       method: "POST"
       Authorization: "Bearer {api_key}",
@@ -47,10 +47,8 @@ fetch("https://livepeer.studio/api/asset/request-upload", {
       name: "Example name",
     }),
   })
-  .then((res) => {
-    console.log(JSON.stringify(res.data));
-  })
-  .catch((error) => console.log(error));
+  
+  const result = await response.json();
 ```
 
 </TabItem>
@@ -123,20 +121,18 @@ curl --location --request PUT "${url}" \
 
 </TabItem>
 
-<TabItem value="py" label="Fetch">
+<TabItem value="js" label="Fetch">
 
 ```js
- fetch(`${assetURL}`, {
+ const response = await fetch(`${assetURL}`, {
         method: "PUT",
         headers: {
           "Content-Type": "video/mp4",
         },
         body: file, // Asset for upload
       });
-  .then((res) => {
-    console.log(JSON.stringify(res.data));
-  })
-  .catch((error) => console.log(error));
+  
+  const result = await response.json();
 ```
 
 </TabItem>
