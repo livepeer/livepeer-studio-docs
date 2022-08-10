@@ -53,7 +53,6 @@ const toc = [
       "references/vod/import",
       "references/vod/upload",
       "references/vod/list",
-      "references/vod/export",
       "references/vod/list-tasks",
     ],
   },

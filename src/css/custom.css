@@ -14,11 +14,13 @@
   --ifm-color-primary-lighter: #0091ff;
   --ifm-color-primary-lightest: #0091ff;
   --ifm-code-font-size: 95%;
+  --site-announcement-bar-stripe-color: #242526;
 }
 
 :root[data-theme="light"]{
   background-color: white;
   --ifm-navbar-background-color: white;
+  --site-announcement-bar-stripe-color: white;
 }
 
 nav[data-theme="light"]{
@@ -27,6 +29,13 @@ nav[data-theme="light"]{
 
 :root[data-theme="dark"] img {
   filter: invert(1)
+}
+
+div[class^=announcementBar_] {
+  background-color: var(--site-announcement-bar-stripe-color);
+  color: inherit;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
 }
 
 .docusaurus-highlight-code-line {
