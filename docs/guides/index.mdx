@@ -74,12 +74,8 @@ const rtmpURL = "https://livepeer.studio/api";
 const playbackURL = "https://livepeercdn.com/hls/{playbackId}/index.m3u8";
 
 const createStream = async () => {
-  const response = await axios.post("https://livepeer.studio/api/stream", {
-    headers: {
-      Authorization: `Bearer ${process.env.LV_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    data: JSON.stringify({
+  const response = await axios.post("https://livepeer.studio/api/stream",
+    {
       name: "test_stream",
       profiles: [
         {
@@ -104,7 +100,12 @@ const createStream = async () => {
           height: 360,
         },
       ],
-    }),
+    },
+    {
+    headers: {
+      Authorization: `Bearer ${process.env.LV_API_KEY}`,
+      "Content-Type": "application/json",
+    },
   });
   console.log(JSON.stringify(response.data));
 };
