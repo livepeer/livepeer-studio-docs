@@ -13,17 +13,15 @@ This guide provides steps and information about verifying streams:
 
 ## What You Can Build Here
 
-| Implementation                           | Description                                             |
-| ---------------------------------------- | ------------------------------------------------------- |
-| Verify a stream  |Getting the status of a stream on whether live or idle |
-
-
+| Implementation  | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| Verify a stream | Getting the status of a stream on whether live or idle |
 
 ## Technical Preparation
 
 Before getting started, you can set up your environment to prepare for developing your application:
 
-- Sign up for a free Livepeer account
+- Sign up for a free Livepeer Studio account
 - Get an API key
 - Access the [API Reference](/../references/stream)
 
@@ -33,8 +31,6 @@ There are two ways to verify a livestream:
 
 - Via the API
 - Via the dashboard(no code)
-
-
 
 ## Verify stream status with the API
 
@@ -80,8 +76,9 @@ This is an example response:
 ## Return All Active Livestreams
 
 This example shows a decoded JSON object.
- > **NOTE:** Anything passed as
-a parameter in a `GET` request URL must be URL encoded.
+
+> **NOTE:** Anything passed as
+> a parameter in a `GET` request URL must be URL encoded.
 
 ### Request
 
@@ -90,7 +87,7 @@ curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": true}]"
 ```
 
-### Response 
+### Response
 
 If there are active streams, `isActive: true` will be listed in the response along with a list of the streams. If no active streams are present, the response returns an empty array `[]`.
 
@@ -106,7 +103,7 @@ curl -H 'authorization: Bearer {api-key}' \
 "https://livepeer.studio/api/stream?streamsonly=1&filters=[{"id": "isActive", "value": false}]"
 ```
 
-### Response 
+### Response
 
 If there are idle streams, `isActive: false` will be listed in the response along with a list of only idle streams.
 

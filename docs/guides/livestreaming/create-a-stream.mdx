@@ -34,7 +34,7 @@ about all [livestream sessions](/terminology) that are associated with the strea
 
 Before getting started, you can set up your environment to prepare for developing your application:
 
-- Sign up for a free Livepeer account
+- Sign up for a free Livepeer Studio account
 - Get an API key
 - Access the [API Reference](/references/stream/)
 
@@ -52,13 +52,14 @@ Livepeer Studio `stream` object.
 
 Use a Livepeer Studio API key as a part of the authorization header, and use a JSON
 body to specify the configuration for the stream. The only parameter you are
-required to set is the `name` of your stream, but we also highly recommend that
-you define the `profiles` parameter with 720p, 480p and 360p renditions.
+required to set is the `name` of your stream.
 
 If you do not define transcoding rendition `profiles` when creating the
-`stream`, no transcoding will happen. Your playback video will have the
-attributes of the source stream only, will not take advantage of adaptive
-bitrate streaming, and will likely buffer.
+`stream`, a default set of profiles will be used with 720p, 480p, 360p and 240p
+renditions. To disable transcoding for your stream you have to explicitly set an
+empty array of `profiles` in your stream object. Beware that in that setup, your
+playback video will have the attributes of the source stream only and will not
+take advantage of adaptive bitrate streaming, likely buffering on playback.
 
 ### Request
 
