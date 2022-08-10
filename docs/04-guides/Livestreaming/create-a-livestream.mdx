@@ -1,47 +1,154 @@
-import CodeBlock from "@theme/CodeBlock";
-import CodeBlockTabs from "@site/src/components/CodeBlockTabs";
-import CodeBlockTabItem from "@site/src/components/CodeBlockTabItem";
+
+import CodeBlock from "@theme/CodeBlock"; import CodeBlockTabs from "@site/src/components/CodeBlockTabs"; import CodeBlockTabItem from "@site/src/components/CodeBlockTabItem";
 
 # Create a Livestream
 
-This guide provides instructions on how to create streams from the Dashboard or
-the API.
+Get started creating RTMP streams of your own using the Livepeer Studio Dashboard or API.
 
 <!--tabs-->
 
 # Dashboard
 
-1. Log in to the Livepeer Studio Dashboard
-2. Navigate to the Streams page, livepeer.studio/dashboard/streams. On this
-   page, you can create a new stream and delete streams. When you name your
-   stream, pick a unique name and include URL-compatible characters only.
-3. On the Stream page (livepeer.studio/dashboard/streams), you can also click on
-   a stream to find out configuration and usage information.
+[Livepeer Studio Dashboard](https://docs.livepeer.studio/core-concepts/tech-overview#how-does-livepeer-studio-work) is a no-code solution that provides all of the infrastructure tools you need to create streams on a user-friendly interface.
+
+## Setup
+
+Before getting started, you must set up your environment for creating your stream:
+
+1. Sign up for a [free Livepeer Studio account](https://livepeer.studio/login).
+2. Download and install the broadcasting software of your preference that supports the RTMP protocol. We strongly recommend using [OBS](https://obsproject.com/). 
+
+> Livepeer Studio services can run on any operating system, and you can use any development environment that supports your IDE library (VS Code, Sublime, etc.).
+
+## Step by step 
+
+1. Log in to the [Livepeer Studio Dashboard](https://livepeer.studio/).
+2. Access the `Streams` section in the side menu:
+
+<img width="1785" alt="1-createalivestream" src="https://user-images.githubusercontent.com/111014748/184010172-af979015-abda-4738-8f20-b0c7bf162998.png">
+
+3. Tap `Create stream`.
+4. Give your stream a name:
+
+<img width="1791" alt="2-createalivestream" src="https://user-images.githubusercontent.com/111014748/184010222-33228fc0-75c9-407c-a970-581950445518.png">
+
+> Remember to pick a unique name with URL-compatible characters only.
+
+5. Copy the stream's `Playback URL` and `Stream Key` data in its Details description.  
+6. Paste them into your broadcasting software according to the required fields to create the stream. 
+7. Tap `Go Live` in your broadcasting software to start streaming. 
+
+> Notice that you can also manage configuration and usage information of a stream in the [Stream section](livepeer.studio/dashboard/streams).
 
 # API
 
-API instructions...
+The Livepeer Studio API provides a public endpoint to create optimal streams directly from your machine. 
 
-## Example of a tabbed code block
+## Setup
+
+Before getting started, you must set up your environment for creating your stream with the Livepeer Studio API:
+
+1. [Get an API key](https://docs.livepeer.studio/guides/livestreaming/api-key#get-an-api-key-using-the-livepeer-studio-dashboard).
+2. Install the broadcasting software of your preference that supports the RTMP protocol. We strongly recommend using [OBS](https://obsproject.com/). 
+3. Install [Node.js](https://nodejs.org/en/) and [Axios](https://axios-http.com/).
+
+> Livepeer Studio services can run on any operating system, and you can use any development environment that supports your IDE library (VS Code, Sublime, etc.).
+
+## Step by step 
+
+1. Create a `POST` request to the LivePeer Studio API (`https://livepeer.studio/api/stream`) using the following example code:
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="typescript" label="Typescript">
+<CodeBlockTabItem value="js" label="JavaScript">
 
 ```js
-function helloWorld() {
-  console.log("Hello, world!");
-}
+curl -X POST \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api_key}' \
+-d '{
+  "name": "test_stream",
+  "profiles": [
+    {
+      "name": "720p",
+      "bitrate": 2000000,
+      "fps": 30,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "480p",
+      "bitrate": 1000000,
+      "fps": 30,
+      "width": 854,
+      "height": 480
+    },
+    {
+      "name": "360p",
+      "bitrate": 500000,
+      "fps": 30,
+      "width": 640,
+      "height": 360
+    }
+  ]
+}' \
 ```
-
 </CodeBlockTabItem>
-<CodeBlockTabItem value="curl" label="curl">
-
-```curl
-curl -X post https://livepeer.studio/api
-```
-
-</CodeBlockTabItem>
-
 </CodeBlockTabs>
 
-<!--/tabs-->
+> All API requests must be made over HTTPS. API requests without proper authentication will fail.
+
+2. Update the  `Authorization` header with the `Bearer` scheme using the API Key previously fetched as the value.
+3. Update the `name` parameter to give your stream a name. 
+
+> Remember to pick a unique name with URL-compatible characters only.
+
+4. Update the `profile` parameter with the desired values for your stream. 
+
+> Caution: If you do not define transcoding rendering with the `profiles` parameter, no transcoding will happen. Your playback video will have the attributes of the source stream only, and it will not take advantage of adaptive bitrate streaming, likely buffering.
+
+5. Make the `POST` request to create your stream. If successful, the `POST` should return a response similar to the following example:
+
+
+<CodeBlockTabs>
+<CodeBlockTabItem value="js" label="JavaScript">
+ 
+```js
+{  
+"name":"test_stream",  
+"profiles":[  
+{"name":"720p","bitrate":2000000,"fps":30,"width":1280,"height":720},  
+{"name":"480p","bitrate":1000000,"fps":30,"width":854,"height":480}],  
+{"name":"360p","bitrate":500000,"fps":30,"width":640,"height":360}],  
+"id":"ijkl61f3-95bd-4971-a7b1-4dcb5d39e78a",  
+"createdAt":1596081229373,  
+"streamKey":"abcd-uimq-jtgy-x98v",  
+"playbackId":"efghb2mxupongp5k",  
+{...}  
+}
+```
+ 
+</CodeBlockTabItem>
+</CodeBlockTabs>
+
+6. Copy the parameters' `playbackId`, `streamKey` and `id` values.  
+7. Paste them into your broadcasting software according to the required fields to create the stream. 
+8. Tap `Go Live` in your broadcasting software to start streaming. 
+
+<!--/tabs--> 
+
+## Best practices
+
+When creating your Livestream, take into consideration the main criteria for a sucessful video rendering, such as:
+
+-   Proper formats of video files.
+-   Reliable internet connection.
+-   Proper video setting in broadcasting software for streaming.
+-   File sizes.
+-   Video players.
+
+> For more information on settings and configurations, access our [Support Matrix](https://docs.livepeer.studio/core-concepts/features).
+
+## Related topics
+
+- [Update a Livestream]()
+- [Delete a Livestream]()
