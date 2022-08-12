@@ -8,9 +8,7 @@ title: PATCH updating storage
 - `storage`
 - `meta`
 
-
 ## Update Stored Asset
-
 
 ## Updating Asset Name
 
@@ -29,10 +27,10 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 
 This allows to add additional storage location of where the assets are to be stored.
 
->**NOTE:** 
-- Currently assets cannot be deleted from the default Livepeer Studio storage. You can  customize any additional storage though. 
-- Only IPFS is supported as an additional storge at the moment. We are currently working on support for other decentralized storages like Arweave and Storj.
+> **NOTE:**
 
+- Currently assets cannot be deleted from the default Livepeer Studio storage. You can customize any additional storage though.
+- Only IPFS is supported as an additional storge at the moment. We are currently working on support for other decentralized storages like Arweave and Storj.
 
 ### Request
 
@@ -45,10 +43,12 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 
 ## Updating Metadata
 
-This allows for modifying the metadata of the asset, which is customizable NFT. Since each marketplace has their own standard for the `metatdata` of the NFT, it is up to you to determine which standard to use and fields to include.
+This allows for modifying the metadata of the asset, which can also be customizable for NFTs. Since each marketplace has their own standard for the `metatdata` of the NFT, it is up to you to determine which standard to use and fields to include.
 
->**NOTE:** 
+> **NOTE:**
+
 - Livepeer Studio's defaut fields for `metadata` are:
+
 ```json
     "name": , //Populated with the asset name
     "description": , //A default description referring to the asset name above
@@ -61,10 +61,9 @@ This allows for modifying the metadata of the asset, which is customizable NFT. 
     }
 ```
 
->**NOTICE** that you can change the value or delete any of these default fields by providing a value in the `nftMetadata` field. You can delete any of the above fields by specifying them as `null` in your overrides.
+> **NOTICE** that you can change the value or delete any of these default fields by providing a value in the `nftMetadata` field. You can delete any of the above fields by specifying them as `null` in your overrides.
 
 Example: `"animation_url": null`
-
 
 ### Request
 
@@ -72,14 +71,19 @@ Example: `"animation_url": null`
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
--d {  "meta": {
-        "title": "My awesome video",
-        "description": "This is a video of my awesome life",
-        "tags": "awesome,life,video"
+-d {
+    "storage": {
+    "ipfs": {
+        "spec": {
+            "nftMetadata": {
+                "description": "New description of asset",
+                "name": "New Name"
+            }
+        }
     }
   }
+}
 ```
-
 
 ## Updating Multiple parameters
 
@@ -91,17 +95,23 @@ This allows for modifying the metadata of the asset, which can be used to custom
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
--d {  
+-d {
   "name": "New name",
-  "storage": {"ipfs": {}},
   "meta": {
         "title": "My awesome video",
         "description": "This is a video of my awesome life",
         "tags": "awesome,life,video"
-    }
+    },
+  "storage": {"ipfs": {
+    "spec": {
+            "nftMetadata": {
+                "description": "New description of asset",
+                "name": "New Name"
+            }
+        }
+  }}
   }
 ```
-
 
 ### Response
 
