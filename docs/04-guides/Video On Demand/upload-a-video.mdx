@@ -138,6 +138,8 @@ After uploading your asset, get the `asset.id` from the response object of the P
 represents the status of your upload. When `asset.status == "ready"` that means the asset has 
 finished uploading and will be ready for playback.
 
+#### Request
+
 <CodeBlockTabs>
 <CodeBlockTabItem value="typescript" label="Typescript">
 
@@ -155,6 +157,57 @@ const getAsset = async () => {
 
 </CodeBlockTabItem>
 </CodeBlockTabs>
+
+#### Response
+
+```json
+{
+  "id": "87289307-b60f-432b-984a-8ede174fa152",
+  "hash": [
+    {
+      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
+      "algorithm": "md5"
+    },
+    {
+      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
+      "algorithm": "sha256"
+    }
+  ],
+  "name": "Waterfall",
+  "size": 32407849,
+  "status": "ready",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "createdAt": 1652894665364,
+  "updatedAt": 1652894675275,
+  "videoSpec": {
+    "format": "mp4",
+    "tracks": [
+      {
+        "fps": 23.976023976023978,
+        "type": "video",
+        "codec": "h264",
+        "width": 4096,
+        "height": 2048,
+        "bitrate": 21324821,
+        "duration": 12.011667,
+        "pixelFormat": "yuv420p"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "bitrate": 253375,
+        "channels": 2,
+        "duration": 12.031667,
+        "sampleRate": 48000
+      }
+    ],
+    "duration": 12.031667
+  },
+  "playbackId": "8728n2iaziowj67d",
+  "playbackUrl": "https://livepeercdn.com/recordings/e605988e-e8d3-4e14-b5b0-10b01ff94a8b/index.m3u8",
+  "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
+}
+```
 
 ### Uploading Locally
 
@@ -225,6 +278,8 @@ const uploadAsset = async () => {
 Get the `"url": "https://origin.livepeer.studio/api/assets/…"` from the response object. 
 Using the URL generated, upload your video with a PUT request. 
 
+#### Request
+
 <CodeBlockTabs>
 <CodeBlockTabItem value="typescript" label="Typescript">
 
@@ -245,10 +300,63 @@ const uploadAsset = async () => {
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
+#### Response
+
+```json
+{
+  "id": "87289307-b60f-432b-984a-8ede174fa152",
+  "hash": [
+    {
+      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
+      "algorithm": "md5"
+    },
+    {
+      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
+      "algorithm": "sha256"
+    }
+  ],
+  "name": "Waterfall",
+  "size": 32407849,
+  "status": "waiting",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "createdAt": 1652894665364,
+  "updatedAt": 1652894675275,
+  "videoSpec": {
+    "format": "mp4",
+    "tracks": [
+      {
+        "fps": 23.976023976023978,
+        "type": "video",
+        "codec": "h264",
+        "width": 4096,
+        "height": 2048,
+        "bitrate": 21324821,
+        "duration": 12.011667,
+        "pixelFormat": "yuv420p"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "bitrate": 253375,
+        "channels": 2,
+        "duration": 12.031667,
+        "sampleRate": 48000
+      }
+    ],
+    "duration": 12.031667
+  },
+  "playbackId": "8728n2iaziowj67d",
+  "playbackUrl": "https://livepeercdn.com/recordings/e605988e-e8d3-4e14-b5b0-10b01ff94a8b/index.m3u8",
+  "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
+}
+```
+
 #### Step 3: Check the upload status
 After uploading your asset, get the `asset.id` from the response object of the POST request. The `asset.id`
 represents the status of your upload. When `asset.status == "ready"` that means the asset has 
 finished uploading and will be ready for playback.
+
+#### Request
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="typescript" label="Typescript">
@@ -268,4 +376,53 @@ const getAsset = async () => {
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
+#### Response
 
+```json
+{
+  "id": "87289307-b60f-432b-984a-8ede174fa152",
+  "hash": [
+    {
+      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
+      "algorithm": "md5"
+    },
+    {
+      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
+      "algorithm": "sha256"
+    }
+  ],
+  "name": "Waterfall",
+  "size": 32407849,
+  "status": "ready",
+  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
+  "createdAt": 1652894665364,
+  "updatedAt": 1652894675275,
+  "videoSpec": {
+    "format": "mp4",
+    "tracks": [
+      {
+        "fps": 23.976023976023978,
+        "type": "video",
+        "codec": "h264",
+        "width": 4096,
+        "height": 2048,
+        "bitrate": 21324821,
+        "duration": 12.011667,
+        "pixelFormat": "yuv420p"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "bitrate": 253375,
+        "channels": 2,
+        "duration": 12.031667,
+        "sampleRate": 48000
+      }
+    ],
+    "duration": 12.031667
+  },
+  "playbackId": "8728n2iaziowj67d",
+  "playbackUrl": "https://livepeercdn.com/recordings/e605988e-e8d3-4e14-b5b0-10b01ff94a8b/index.m3u8",
+  "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
+}
+```
