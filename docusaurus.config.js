@@ -65,6 +65,12 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+      announcementBar: {
+        id: "support_us",
+        content:
+          "⚠ The docs are undergoing a rewrite and are subject to change.",
+        isCloseable: false,
+      },
       navbar: {
         title: "",
         logo: {

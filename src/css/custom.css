@@ -32,6 +32,11 @@
   --ifm-background-color: #151718;
   --ifm-navbar-shadow: #313538;
   --ifm-footer-background-color:#1a1d1e; 
+  --site-announcement-bar-stripe-color: #1a1d1e;
+}
+
+[data-theme="light"] {
+  --site-announcement-bar-stripe-color: white;
 }
 
 [data-theme="dark"] {
@@ -39,7 +44,7 @@
 }
 
 nav[data-theme="light"]{
-  background-color: white
+  background-color: white;
 }
 
 :root[data-theme="dark"] nav img {
@@ -72,4 +77,11 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 
 .tablist li + li {
   margin-top: 0;
+}
+
+div[class^=announcementBar_] {
+  background-color: var(--site-announcement-bar-stripe-color);
+  color: inherit;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
 }
