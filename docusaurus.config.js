@@ -60,6 +60,11 @@ const config = {
       //   indexName: "2022-livepeer-org-docs",
       //   contextualSearch: true,
       // },
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: "",
         logo: {
