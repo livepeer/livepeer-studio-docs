@@ -64,7 +64,7 @@ const sidebars = {
         {
           type: "category",
           label: "API",
-          collapsed: false,
+          collapsed: true,
           link: {
             type: "generated-index",
           },
