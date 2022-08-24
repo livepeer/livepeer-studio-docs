@@ -1,127 +1,108 @@
-# Upload a video asset
+import CodeBlock from "@theme/CodeBlock";
+import CodeBlockTabs from "@site/src/components/CodeBlockTabs";
+import CodeBlockTabItem from "@site/src/components/CodeBlockTabItem";
 
-This guide walks you through the following:
+# Upload a Video
 
-- Uploading video assets
-- Updating video assets
-- Monitoring video assets
+This guide provides you the instructions to upload a video from the Livepeer 
+Studio Dashboard or through the Livepeer API.
+
+## Technical Preparation
+
+Before getting started, you will need to meet the following dependencies for 
+working with the On Demand feature:
+
+- [A Livepeer Studio account](https://livepeer.studio/login)
+- Install [Node.js](https://nodejs.org/en/)
+- Access to the [API Reference](https://docs.livepeer.studio/references)
+- An [API Key](https://docs.livepeer.studio/guides/livestreaming/api-key) to call the VOD API
+    - Note: Calling the API from the frontend requires an API key with CORS access allowed
+
+Throughout this guide you'll see a few terms mentioned multiple times, asset and task:
+- **Asset**: an object that represents a file
+- **Task**: an action taken on the file
+
+## Dashboard
+
+The Livepeer Studio Dashboard is a frontend interface that enables users to interact 
+with Livepeer’s features without any code. Using the Dashboard you can upload a video 
+quickly just by uploading it to Livepeer.
+
+### Step 1: [Log in](https://livepeer.studio/login) to the Livepeer Studio Dashboard
+
+![Log in page](/../static/guides/Dashboard-1.png)
+
+### Step 2: Navigate to the [Assets page](https://livepeer.studio/dashboard/assets)
+
+![Assets page](/../static/guides/Dashboard-2.png)
+
+### Step 3: Create a new video on demand asset 
+Create a new asset by clicking create asset. When naming your asset, enter a unique 
+name and include URL-compatible characters. Then enter the URL of the file you want 
+to create an asset of. 
+- Note: the URL must end in .mp4
+
+![Assets page](/../static/guides/Dashboard-3.png)
+
+![Log in page](/../static/guides/Dashboard-4.png)
+
+### Step 4: Share, view or download your asset
+After creating your new asset, a download URL will be generated. You can share, 
+view or download the video using this URL.
+
+![Log in page](/../static/guides/Dashboard-5.png)
+
+## API
+
+The Video-on-Demand (VOD) API allows you to send video files to Livepeer and get them 
+ready for optimized playback. Those videos can be provided either by you (static content) 
+or your users, given your application offers an interface for them to do so.
 
 ### Caveats
-
-- Files are currently limited to 1GB in size. Any files greater than that will
-  likely error out during the upload or processing steps.
-
+- Files are currently limited to 1GB in size. Any files greater than that will likely error 
+out during the upload or processing steps.
 - Only MP4 files encoded with H.264 and AAC are supported
 
-## Listing the assets
+### Uploading via URL
 
-Once an asset is uploaded `/request-upload`, the response will return the `id`
-of that asset.
-
-### Request
-
-`/request-upload`
-
-### Response
-
-the response will return the `id` of that asset
-
-## Retrieve the Status of the Asset
-
-### Request
-
-`GET /api/asset/$ASSET_ID`
-
-### Response
-
-The response will indicate the status of the uploaded assets as status:
-
-- `status.phase: "waiting"` or `status.phase: "ready"`.
-
-- If `status.phase: "waiting"` is returned in the response, the asset is not
-  available:
-
-  - make the API call again until `status.phase: "ready"`.
-
-- If the `status.phase` indicates that it is `"ready"`, it is available.
-
-## Check status of uploaded asset
-
-To check the status of an asset uploaded with URL `/upload/url` to Livepeer or
-stored to IPFS, get the `task.id` from the response of the uploaded asset.
-
-### Request
-
-To retrieve the status use:
-
-`GET /api/task/$TASK_ID`
-
-## To Monitor progress of the task
-
-If the asset is available,
-
-- the response will return `status.phase.complete`,
-
-otherwise
-
-- the value will be `status.phase.pending`.
-
-- The API call will need to be made again until it is complete.
-
-> **Note:** using the `GET /api/task/$TASK_ID` request provides different
-> information depending on whether the asset is _imported_ or _exported_ .
-
-### Assets uploaded with URL
-
-- Information on video specs such as codec and formats are present.
-
-### Assets stored on IPFS
-
-- The response will provide information such as the `metadata` and `CID`.
-
-## Methods for Uploading Video
-
-There are two methods to upload a video to Livepeer:
-
-- Upload with URL
-- Upload from local storage with an `.mp4` file format
-
-## Upload with URL
-
-When using the upload with URL method:
-
+When using the upload via URL method:
 - Provide the name of the asset
-- Provide the URL of the asset that should be uploaded
+- Provide the URL of the asset that should be imported
 
-### Request
+#### Step 1: Upload asset by URL
+To upload the asset to the Livepeer network, you'll need to make a POST request 
+and include the URL of the asset to be uploaded. 
+
+#### Request
+
+<CodeBlockTabs>
+<CodeBlockTabItem value="typescript" label="Typescript">
 
 ```js
-
 const axios = require('axios');
 const fs = require('fs');
-
 var url = "https://example.com";
 
 const uploadAssetURL = async () => {
-
-const response = await axios.post("https://livepeer.studio/api/asset/import", {
-  headers: {
-    'Authorization': `Bearer ${process.env.LP_API_KEY}`,
-    'Content-Type': 'application/json'
-  },
-    data: JSON.stringify({
-      "url": "$EXTERNAL_URL",
-      "name": "Example name"
-      })
+    const response = await axios.post("https://livepeer.studio/api/asset/import", {
+        headers: {
+            'Authorization': `Bearer ${process.env.LP_API_KEY}`,
+            'Content-Type': 'application/json'
+        },
+        data: JSON.stringify({
+            "url": "$EXTERNAL_URL",
+            "name": "Example name"
+        })
     }
-  });
-   console.log(JSON.stringify(response.data))
-};
+
+    console.log(JSON.stringify(response.data))
+)};
 ```
 
-### Response
+</CodeBlockTabItem>
+</CodeBlockTabs>
 
-The status here is pending, it might take a few minutes for it to be imported.
+#### Response
 
 ```json
 {
@@ -152,76 +133,40 @@ The status here is pending, it might take a few minutes for it to be imported.
 }
 ```
 
-## Verify that the status is ready
+#### Step 2: Check the upload status
+After uploading your asset, get the `asset.id` from the response object of the POST request. The `asset.id`
+represents the status of your upload. When `asset.status == "ready"` that means the asset has 
+finished uploading and will be ready for playback.
 
-### Request
+<CodeBlockTabs>
+<CodeBlockTabItem value="typescript" label="Typescript">
 
-Use `https://livepeer.studio/api/asset/$ASSET_ID/` with the provided `asset.id`
-in the response above.
-
-### Response
-
-```json
-{
-  "id": "87289307-b60f-432b-984a-8ede174fa152",
-  "hash": [
-    {
-      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
-      "algorithm": "md5"
-    },
-    {
-      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
-      "algorithm": "sha256"
-    }
-  ],
-  "name": "Waterfall",
-  "size": 32407849,
-  "status": "ready",
-  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-  "createdAt": 1652894665364,
-  "updatedAt": 1652894675275,
-  "videoSpec": {
-    "format": "mp4",
-    "tracks": [
-      {
-        "fps": 23.976023976023978,
-        "type": "video",
-        "codec": "h264",
-        "width": 4096,
-        "height": 2048,
-        "bitrate": 21324821,
-        "duration": 12.011667,
-        "pixelFormat": "yuv420p"
-      },
-      {
-        "type": "audio",
-        "codec": "aac",
-        "bitrate": 253375,
-        "channels": 2,
-        "duration": 12.031667,
-        "sampleRate": 48000
-      }
-    ],
-    "duration": 12.031667
-  },
-  "playbackId": "8728n2iaziowj67d",
-  "playbackUrl": "https://livepeercdn.com/recordings/e605988e-e8d3-4e14-b5b0-10b01ff94a8b/index.m3u8",
-  "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
-}
+```js
+const getAsset = async () => {
+    const response = await axios.get("https://livepeer.studio/api/task/$ASSET_ID", {
+        headers: {
+            Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        },
+    })
+    
+    console.log(JSON.stringify(response.data));
+};
 ```
 
-## Upload From Local Storage
+</CodeBlockTabItem>
+</CodeBlockTabs>
 
-The upload from local storage method includes a two-step process:
+### Uploading Locally
 
-- Only `MP4` files encoded with `H.264` and `AAC` are supported
+#### Step 1: Generate upload URL
 
-- Files are currently limited to 1GB in size. Any files greater than that will
-  likely error out during the upload or processing steps
+To upload the asset to the Livepeer network locally, you'll need to make a POST request 
+to generate an upload URL.
 
-1. Generate the URL to upload assets
+#### Request
 
-### Request
+<CodeBlockTabs>
+<CodeBlockTabItem value="typescript" label="Typescript">
 
 ```js
 const uploadAsset = async () => {
@@ -241,7 +186,10 @@ const uploadAsset = async () => {
 };
 ```
 
-### Response
+</CodeBlockTabItem>
+</CodeBlockTabs>
+
+#### Response
 
 ```json
 {
@@ -273,286 +221,50 @@ const uploadAsset = async () => {
 }
 ```
 
-### Upload the video
+#### Step 2: Upload your video to the URL
+Get the `"url": "https://origin.livepeer.studio/api/assets/…"` from the response object. 
+Using the URL generated, upload your video with a PUT request. 
 
-2. Upload the asset to the generated URL
-
-- Get the url field from the response obtained above
-
-- Make a PUT request to that URL with the contents of the file being uploaded.
-
-### Request
+<CodeBlockTabs>
+<CodeBlockTabItem value="typescript" label="Typescript">
 
 ```js
-const uploadAsset = async (url, path) => {
-  const response = await axios.put(url, { data: fs.createReadStream(path) });
-  console.log(JSON.stringify(response.data));
-};
-```
-
-### Response
-
-When the video is uploaded, a response with an empty body and a status code of
-`200 OK` should be returned.
-
-> **NOTE:** If you want to track the status of your upload, you can use the
-> `task` endpoint by passing the `task.id` you received during the previous
-> request. To retrieve the data of your uploaded asset, you can use the `asset`
-> endpoint by passing the `asset.id` as a parameter.
-
-## List Assets
-
-When listing assets, look for the status in the response body, it should return
-`status.phase:“ready”`. If the response returns `status.phase:“waiting”`, then
-wait a little longer and repeat this step until the status is ready before
-moving to the exporting step.
-
-### Request
-
-```js
-const listAsset = async () => {
-  const response = await axios.get("https://livepeer.studio/api/asset", {
-    headers: {
-      Authorization: `Bearer ${process.env.LP_API_KEY}`,
-    },
-  });
-  console.log(JSON.stringify(response.data));
-};
-```
-
-### Response
-
-The response will return information on the uploaded asset including the video
-spec, the playbackUrl for the uploaded asset as well as the playbackId.
-
-```json
-[
-  {
-    "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
-    "hash": [
-      {
-        "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
-        "algorithm": "md5"
-      },
-      {
-        "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
-        "algorithm": "sha256"
-      }
-    ],
-    "name": "Waterfall",
-    "size": 32407849,
-    "status": "ready",
-    "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-    "createdAt": 1652901725324,
-    "updatedAt": 1652901778931,
-    "videoSpec": {
-      "format": "mp4",
-      "tracks": [
-        {
-          "fps": 23.976023976023978,
-          "type": "video",
-          "codec": "h264",
-          "width": 4096,
-          "height": 2048,
-          "bitrate": 21324821,
-          "duration": 12.011667,
-          "pixelFormat": "yuv420p"
+const uploadAsset = async () => {
+    const response = await axios.put("${url}", {
+        headers: {
+            Authorization: `Bearer ${process.env.LP_API_KEY}`
+            "Content-Type": "video/mp4"
         },
-        {
-          "type": "audio",
-          "codec": "aac",
-          "bitrate": 253375,
-          "channels": 2,
-          "duration": 12.031667,
-          "sampleRate": 48000
-        }
-      ],
-      "duration": 12.031667
-    },
-    "playbackId": "4c21k7z2tjcdg8wt",
-    "playbackUrl": "https://livepeercdn.com/recordings/54aeff83-404c-490a-9afa-99296a932401/index.m3u8",
-    "downloadUrl": "https://livepeercdn.com/asset/4c21k7z2tjcdg8wt/video"
-  },
-  {
-    "id": "87289307-b60f-432b-984a-8ede174fa152",
-    "hash": [
-      {
-        "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
-        "algorithm": "md5"
-      },
-      {
-        "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
-        "algorithm": "sha256"
-      }
-    ],
-    "name": "Waterfall",
-    "size": 32407849,
-    "status": "ready",
-    "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-    "createdAt": 1652894665364,
-    "updatedAt": 1652894675275,
-    "videoSpec": {
-      "format": "mp4",
-      "tracks": [
-        {
-          "fps": 23.976023976023978,
-          "type": "video",
-          "codec": "h264",
-          "width": 4096,
-          "height": 2048,
-          "bitrate": 21324821,
-          "duration": 12.011667,
-          "pixelFormat": "yuv420p"
-        },
-        {
-          "type": "audio",
-          "codec": "aac",
-          "bitrate": 253375,
-          "channels": 2,
-          "duration": 12.031667,
-          "sampleRate": 48000
-        }
-      ],
-      "duration": 12.031667
-    },
-    "playbackId": "8728n2iaziowj67d",
-    "playbackUrl": "https://livepeercdn.com/recordings/e605988e-e8d3-4e14-b5b0-10b01ff94a8b/index.m3u8",
-    "downloadUrl": "https://livepeercdn.com/asset/8728n2iaziowj67d/video"
-  }
-]
-```
+        data: fs.createReadStream(path)
+    });
 
-## Update an asset
-
-When updating an asset, make sure to have the `asset.id` available. The asset ID
-is provided in the response when an asset is uploaded.
-
-### Request
-
-```js
-const updateAsset = async () => {
-  const response = await axios.patch(
-    "https://livepeer.studio/api/asset/$ASSET_ID",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      data: JSON.strinify({
-        name: "Example name",
-      }),
-    }
-  );
-  console.log(JSON.stringify(response.data));
-};
-```
-
-### Response
-
-```json
-{
-  "id": "4c21895e-2488-4c0a-9377-3369ff586ddd",
-  "hash": [
-    {
-      "hash": "6dad0a8e7a92d537c6305fe6ae1e1881",
-      "algorithm": "md5"
-    },
-    {
-      "hash": "6132f4e43472b56b4047b7ad018147056c0c2dba9306cd04504e9c8208e72257",
-      "algorithm": "sha256"
-    }
-  ],
-  "name": "New waterfall",
-  "size": 32407849,
-  "status": {
-    "phase": "ready",
-    "updatedAt": 1652901778931
-  },
-  "userId": "eada599f-3d58-499b-ba24-c7f3faf988de",
-  "createdAt": 1652901725324,
-  "updatedAt": 1652901778931,
-  "videoSpec": {
-    "format": "mp4",
-    "tracks": [
-      {
-        "fps": 23.976023976023978,
-        "type": "video",
-        "codec": "h264",
-        "width": 4096,
-        "height": 2048,
-        "bitrate": 21324821,
-        "duration": 12.011667,
-        "pixelFormat": "yuv420p"
-      },
-      {
-        "type": "audio",
-        "codec": "aac",
-        "bitrate": 253375,
-        "channels": 2,
-        "duration": 12.031667,
-        "sampleRate": 48000
-      }
-    ],
-    "duration": 12.031667
-  },
-  "playbackId": "4c21k7z2tjcdg8wt",
-  "playbackUrl": "https://livepeercdn.com/recordings/54aeff83-404c-490a-9afa-99296a932401/index.m3u8",
-  "downloadUrl": "https://livepeercdn.com/asset/4c21k7z2tjcdg8wt/video"
-}
-```
-
-## Delete an asset
-
-### Request
-
-```js
-const deleteAsset = async () => {
-  const response = await axios.delete(
-    "https://livepeer.studio/api/asset/{id}",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-      },
-    }
-  );
-  JSON.stringify(response.data);
-};
-```
-
-### Response
-
-When the asset has been successfully deleted, the response should return a 204
-
-## List Tasks
-
-When listing tasks, the response will provide information on imported or
-exported information on the asset.
-
-### Request
-
-Use the list tasks method to get CID and metadata.
-
-To get the CID and metadata URL for the created asset, retrieve the task until
-it is completed. To do this, check the status field in the response.
-
-```js
-
-
-const list Task = async () => {
-
-const response = await axios
-  .get("https://livepeer.studio/api/task/$TASK_ID", {
-    headers: {
-      Authorization: `Bearer ${process.env.LP_API_KEY}`,
-    },
-  })
     console.log(JSON.stringify(response.data));
 };
 ```
 
-### Response
+</CodeBlockTabItem>
+</CodeBlockTabs>
 
-This finished task will have an output with all the information about that
-asset.
+#### Step 3: Check the upload status
+After uploading your asset, get the `asset.id` from the response object of the POST request. The `asset.id`
+represents the status of your upload. When `asset.status == "ready"` that means the asset has 
+finished uploading and will be ready for playback.
 
-- The `CID` information is located under the `output.export.ipfs` path.
+<CodeBlockTabs>
+<CodeBlockTabItem value="typescript" label="Typescript">
+
+```js
+const getAsset = async () => {
+    const response = await axios.get("https://livepeer.studio/api/task/$ASSET_ID", {
+        headers: {
+            Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        },
+    })
+    
+    console.log(JSON.stringify(response.data));
+};
+```
+
+</CodeBlockTabItem>
+</CodeBlockTabs>
+
