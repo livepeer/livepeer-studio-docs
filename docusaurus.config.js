@@ -42,6 +42,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/livepeer/studio/tree/main/packages/main/",
+          docItemComponent: "@theme/ApiItem",
         },
         blog: false,
         theme: {
@@ -166,6 +167,27 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "openapi",
+        docsPluginId: "classic",
+        config: {
+          petstore: {
+            specPath: "spec.yaml",
+            outputDir: "docs/api-reference",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
+        },
+      },
+    ],
+  ],
+
+  themes: ["docusaurus-theme-openapi-docs"],
 };
 
 module.exports = config;
