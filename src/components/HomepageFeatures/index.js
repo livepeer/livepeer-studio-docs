@@ -42,8 +42,6 @@ export default function HomepageFeatures() {
         css={{
           display: "grid",
           gap: 20,
-          gridAutoFlow: "column dense",
-          gridTemplateRows: "33% 33 33%",
           mb: 60,
           pb: 20,
           a: {
@@ -56,9 +54,15 @@ export default function HomepageFeatures() {
             transition: ".2s",
             textDecoration: "none",
           },
+          "@bp2": {
+            gridAutoFlow: "column dense",
+            gridTemplateRows: "33% 33 33%",
+          },
         }}>
         {FeatureList.map((props, idx) => (
-          <Link style={{ minHeight: "180px" }} to={props.link}>
+          <Link
+            style={{ minHeight: "180px", color: "inherit" }}
+            to={props.link}>
             <Card key={idx} {...props} />
           </Link>
         ))}

@@ -20,8 +20,9 @@ function HomepageHeader() {
               fontSize: "$8",
               fontWeight: "bold",
               letterSpacing: "-1px",
-              mb: "$1",
+              mb: "$2",
               pt: "$6",
+              lineHeight: "38px",
             }}>
             Your Gateway to Livepeer Development
           </Box>
