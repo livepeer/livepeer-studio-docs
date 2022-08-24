@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.0.0
 info:
   title: Livepeer API Reference
   version: 0.0.1-alpha.0
@@ -1957,7 +1957,10 @@ paths:
     tags:
       - stream
     post:
-      description: Creates a stream
+      tags:
+        - stream
+      summary: Create a new stream
+      description: Create a new stream
       requestBody:
         required: true
         content:
@@ -1983,7 +1986,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     get:
-      description: Lists streams
+      tags:
+        - stream
+      summary: List streams
+      description: List streams
       responses:
         200:
           description: Success
@@ -2012,7 +2018,10 @@ paths:
           type: string
 
     get:
-      description: Gets a specific stream details
+      tags:
+        - stream
+      summary: Get a specific stream details
+      description: Get a specific stream details
       responses:
         200:
           description: Success
@@ -2049,7 +2058,10 @@ paths:
     tags:
       - object-store
     post:
-      description: Receives store credentials
+      tags:
+        - object-store
+      summary: Receive store credentials
+      description: Receive store credentials
       requestBody:
         required: true
         content:
@@ -2075,7 +2087,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     get:
-      description: Lists object store credentials by userId
+      tags:
+        - object-store
+      summary: List object store credentials by userId
+      description: List object store credentials by userId
       responses:
         200:
           description: Success
@@ -2097,7 +2112,10 @@ paths:
       - multistream-target
 
     get:
-      description: Lists existing multistream targets
+      tags:
+        - multistream-target
+      summary: List existing multistream targets
+      description: List existing multistream targets
       responses:
         200:
           description: Success
@@ -2115,7 +2133,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     post:
-      description: Creates new multistream target
+      tags:
+        - multistream-target
+      summary: Create new multistream target
+      description: Create new multistream target
       requestBody:
         required: true
         content:
@@ -2150,7 +2171,10 @@ paths:
           type: string
 
     get:
-      description: Gets a specific multistream target details
+      tags:
+        - multistream-target
+      summary: Get a specific multistream target details
+      description: Get a specific multistream target details
       responses:
         200:
           description: Success
@@ -2166,7 +2190,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     patch:
-      description: Enables or disables an existing multistream target
+      tags:
+        - multistream-target
+      summary: Enable or disables an existing multistream target
+      description: Enable or disables an existing multistream target
       requestBody:
         required: true
         content:
@@ -2184,7 +2211,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     delete:
-      description: Deletes an existing multistream target
+      tags:
+        - multistream-target
+      summary: Delete an existing multistream target
+      description: Delete an existing multistream target
       responses:
         204:
           description: Success
@@ -2199,7 +2229,10 @@ paths:
     tags:
       - verification
     post:
-      description: Verifies user email
+      tags:
+        - verification
+      summary: Verify user email
+      description: Verify user email
       requestBody:
         required: true
         content:
@@ -2228,7 +2261,10 @@ paths:
     tags:
       - password-reset
     post:
-      description: Creates a password reset token
+      tags:
+        - password-reset
+      summary: Create a password reset token
+      description: Create a password reset token
       requestBody:
         required: true
         content:
@@ -2257,7 +2293,10 @@ paths:
     tags:
       - password-reset
     post:
-      description: Confirms password reset token
+      tags:
+        - password-reset
+      summary: Confirm password reset token
+      description: Confirm password reset token
       requestBody:
         required: true
         content:
@@ -2286,7 +2325,10 @@ paths:
     tags:
       - verify-email
     post:
-      description: Resend User Email Verification
+      tags:
+        - verify-email
+      summary: Resend user email verification
+      description: Resend user email verification
       requestBody:
         required: true
         content:
@@ -2309,7 +2351,10 @@ paths:
     tags:
       - make-admin
     post:
-      description: Changes user admin status
+      tags:
+        - make-admin
+      summary: Change user admin status
+      description: Change user admin status
       requestBody:
         required: true
         content:
@@ -2338,7 +2383,10 @@ paths:
     tags:
       - login
     post:
-      description: Receives user login information
+      tags:
+        - login
+      summary: Receive user login information
+      description: Receive user login information
       requestBody:
         required: true
         content:
@@ -2367,7 +2415,10 @@ paths:
     tags:
       - user
     post:
-      description: Receives user information
+      tags:
+        - user
+      summary: Receive user information
+      description: Receive user information
       requestBody:
         required: true
         content:
@@ -2392,7 +2443,10 @@ paths:
               schema:
                 $ref: "#/components/schemas/error"
     get:
-      description: Lists users
+      tags:
+        - user
+      summary: List users
+      description: List users
       responses:
         200:
           description: Success
@@ -2411,13 +2465,16 @@ paths:
 
   /user/{id}:
     patch:
+      tags:
+        - user
+      summary: Update user
+      description: Update user
       parameters:
         - name: id
           in: path
           required: true
           schema:
             type: string
-      description: updates a user
       responses:
         200:
           description: Success
@@ -2436,7 +2493,10 @@ paths:
     tags:
       - api-token
     post:
-      description: Contains api token information
+      tags:
+        - api-token
+      summary: Create a new api token
+      description: Create a new api token
       requestBody:
         required: true
         content:
@@ -2462,7 +2522,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     get:
-      description: Lists api tokens
+      tags:
+        - api-token
+      summary: List api tokens
+      description: List api tokens
       responses:
         200:
           description: Success
@@ -2483,7 +2546,10 @@ paths:
     tags:
       - webhook
     get:
-      description: gets a list of webhooks defined by the user
+      tags:
+        - webhook
+      summary: Get a list of webhooks defined by the user
+      description: Get a list of webhooks defined by the user
       responses:
         200:
           description: Success
@@ -2500,7 +2566,10 @@ paths:
               schema:
                 $ref: "#/components/schemas/error"
     post:
-      description: creates a new webhook
+      tags:
+        - webhook
+      summary: Create a new webhook
+      description: Create a new webhook
       responses:
         200:
           description: Success
@@ -2519,7 +2588,10 @@ paths:
     tags:
       - webhook
     get:
-      description: gets a specific webhook details
+      tags:
+        - webhook
+      summary: Get webhook details
+      description: Get webhook details
       parameters:
         - name: id
           in: path
@@ -2540,13 +2612,16 @@ paths:
               schema:
                 $ref: "#/components/schemas/error"
     put:
+      tags:
+        - webhook
+      summary: Update a webhook
+      description: Update a webhook
       parameters:
         - name: id
           in: path
           required: true
           schema:
             type: string
-      description: updates a specific webhook
       responses:
         200:
           description: Success
@@ -2561,13 +2636,16 @@ paths:
               schema:
                 $ref: "#/components/schemas/error"
     delete:
+      tags:
+        - webhook
+      summary: Delete a webhook
+      description: Delete a webhook
       parameters:
         - name: id
           in: path
           required: true
           schema:
             type: string
-      description: deletes a specific webhook details
       responses:
         200:
           description: Success
@@ -2586,7 +2664,10 @@ paths:
     tags:
       - asset
     get:
-      description: gets a list of assets defined by the user
+      tags:
+        - webhook
+      summary: Get a list of assets defined by the user
+      description: Get a list of assets defined by the user
       responses:
         200:
           description: Success
@@ -2607,7 +2688,10 @@ paths:
     tags:
       - regions
     get:
-      description: get a regions list of orchestrators
+      tags:
+        - regions
+      summary: Get a regions list of orchestrators
+      description: Get a regions list of orchestrators
       parameters:
         - name: region
           in: path
@@ -2628,13 +2712,16 @@ paths:
               schema:
                 $ref: "#/components/schemas/error"
     put:
+      tags:
+        - regions
+      summary: Update a specific region
+      description: Update a specific region
       parameters:
         - name: region
           in: path
           required: true
           schema:
             type: string
-      description: updates a specific region
       responses:
         200:
           description: Success
@@ -2649,13 +2736,16 @@ paths:
               schema:
                 $ref: "#/components/schemas/error"
     delete:
+      tags:
+        - regions
+      summary: Delete a region
+      description: Delete a region
       parameters:
         - name: region
           in: path
           required: true
           schema:
             type: string
-      description: deletes a specific region
       responses:
         200:
           description: Success

@@ -174,7 +174,7 @@ const config = {
         id: "openapi",
         docsPluginId: "classic",
         config: {
-          petstore: {
+          api: {
             specPath: "spec.yaml",
             outputDir: "docs/api-reference",
             sidebarOptions: {

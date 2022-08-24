@@ -1,0 +1,35 @@
+---
+id: delete-an-existing-multistream-target
+sidebar_label: Delete an existing multistream target
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["multistream-target"],"description":"Delete an existing multistream target","responses":{"204":{"description":"Success"},"default":{"description":"Error","content":{"application/json":{"schema":{"required":["errors"],"type":"object","properties":{"errors":{"type":"array","minItems":1,"items":{"type":"string","example":["id not provided","user not found"]}}}}}}}},"method":"delete","path":"/multistream/target/{id}","info":{"title":"Livepeer API Reference","version":"0.0.1-alpha.0"},"postman":{"name":"Delete an existing multistream target","description":{"content":"Delete an existing multistream target","type":"text/plain"},"url":{"path":["multistream","target",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) ID of the multistream target","type":"text/plain"},"type":"any","value":"","key":"id"}]},"header":[{"key":"Accept","value":"application/json"}],"method":"DELETE"}}
+sidebar_class_name: "delete api-method"
+info_path: api-reference/livepeer-api-reference
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Delete an existing multistream target
+
+
+
+Delete an existing multistream target
+
+<div><ApiTabs><TabItem label={"204"} value={"204"}><div>
+
+Success
+
+</div><div></div></TabItem><TabItem label={"default"} value={"default"}><div>
+
+Error
+
+</div><div><MimeTabs groupId={"mime-type"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs groupId={"schema-tabs"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"errors"} required={false} schemaDescription={undefined} schemaName={"string[]"} qualifierMessage={"**Possible values:** `>= 1`"} defaultValue={undefined}></SchemaItem></ul></details></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      
