@@ -37,18 +37,18 @@ tags:
   - name: asset
     x-displayName: Asset
     description: Asset Endpoints
-  - name: task
-    x-displayName: Task
-    description: Task Endpoints
-  - name: webhook-response
-    x-displayName: Webhook Response
-    description: webhook client responses
+  # - name: task
+  #   x-displayName: Task
+  #   description: Task Endpoints
+  # - name: webhook-response
+  #   x-displayName: Webhook Response
+  #   description: webhook client responses
   - name: verify-email
     x-displayName: Verify Email
     description: Resend User Email Verification
 
 x-tagGroups:
-  - name: General
+  - name: User Management
     tags:
       - user
       - verify-email
@@ -57,10 +57,6 @@ x-tagGroups:
       - password-reset
       - verification
       - make-admin
-
-  - name: User Management
-    tags:
-      - user
 
 components:
   schemas:
@@ -1983,8 +1979,6 @@ components:
 
 paths:
   /stream:
-    tags:
-      - stream
     post:
       tags:
         - stream
@@ -2036,8 +2030,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /stream/{id}:
-    tags:
-      - stream
     parameters:
       - name: id
         description: ID of the stream
@@ -2066,7 +2058,10 @@ paths:
                 $ref: "#/components/schemas/error"
 
     patch:
-      description: Patch a specific stream
+      tags:
+        - stream
+      summary: Patch a stream
+      description: Patch a stream
       requestBody:
         required: true
         content:
@@ -2084,8 +2079,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /object-store:
-    tags:
-      - object-store
     post:
       tags:
         - object-store
@@ -2137,9 +2130,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /multistream/target:
-    tags:
-      - multistream-target
-
     get:
       tags:
         - multistream-target
@@ -2189,8 +2179,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /multistream/target/{id}:
-    tags:
-      - multistream-target
     parameters:
       - name: id
         description: ID of the multistream target
@@ -2255,8 +2243,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /user-verification:
-    tags:
-      - verification
     post:
       tags:
         - verification
@@ -2287,8 +2273,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /password-reset-token:
-    tags:
-      - password-reset
     post:
       tags:
         - password-reset
@@ -2319,8 +2303,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /password-reset:
-    tags:
-      - password-reset
     post:
       tags:
         - password-reset
@@ -2351,8 +2333,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /verify-email:
-    tags:
-      - verify-email
     post:
       tags:
         - verify-email
@@ -2377,8 +2357,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /make-admin:
-    tags:
-      - make-admin
     post:
       tags:
         - make-admin
@@ -2409,8 +2387,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /user/token:
-    tags:
-      - login
     post:
       tags:
         - login
@@ -2441,8 +2417,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /user:
-    tags:
-      - user
     post:
       tags:
         - user
@@ -2519,8 +2493,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /api-token:
-    tags:
-      - api-token
     post:
       tags:
         - api-token
@@ -2572,8 +2544,6 @@ paths:
                 $ref: "#/components/schemas/api-token"
 
   /webhook:
-    tags:
-      - webhook
     get:
       tags:
         - webhook
@@ -2614,8 +2584,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /webhook/{id}:
-    tags:
-      - webhook
     get:
       tags:
         - webhook
@@ -2690,11 +2658,9 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /asset:
-    tags:
-      - asset
     get:
       tags:
-        - webhook
+        - asset
       summary: Get a list of assets defined by the user
       description: Get a list of assets defined by the user
       responses:
@@ -2714,8 +2680,6 @@ paths:
                 $ref: "#/components/schemas/error"
 
   /region/{region}:
-    tags:
-      - regions
     get:
       tags:
         - regions

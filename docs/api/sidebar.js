@@ -22,6 +22,12 @@ module.exports = [
         label: "Get a specific stream details",
         className: "api-method get",
       },
+      {
+        type: "doc",
+        id: "api/patch-a-stream",
+        label: "Patch a stream",
+        className: "api-method patch",
+      },
     ],
   },
   {
@@ -217,6 +223,13 @@ module.exports = [
         label: "Delete a webhook",
         className: "api-method delete",
       },
+    ],
+  },
+  {
+    type: "category",
+    label: "Asset",
+    link: { type: "doc", id: "api/asset" },
+    items: [
       {
         type: "doc",
         id: "api/get-a-list-of-assets-defined-by-the-user",
