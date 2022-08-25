@@ -5,33 +5,62 @@ info:
 
 tags:
   - name: stream
+    x-displayName: Stream
     description: Stream Endpoints
   - name: object-store
+    x-displayName: Object Store
     description: Object Stores Endpoints
   - name: multistream-target
+    x-displayName: Multistream Target
     description: Multistream Target Endpoints
   - name: user
+    x-displayName: User
     description: User Endpoints
   - name: api-token
+    x-displayName: API Token
     description: Api Token Endpoints
   - name: login
+    x-displayName: Login
     description: User login
   - name: verification
+    x-displayName: Verification
     description: User Email Verification
   - name: password-reset
+    x-displayName: Password Reset
     description: User Password Reset
   - name: make-admin
+    x-displayName: Make Admin
     description: Changes user admin status
   - name: webhook
+    x-displayName: Webhook
     description: Webhooks endpoints
   - name: asset
+    x-displayName: Asset
     description: Asset Endpoints
   - name: task
+    x-displayName: Task
     description: Task Endpoints
   - name: webhook-response
+    x-displayName: Webhook Response
     description: webhook client responses
   - name: verify-email
+    x-displayName: Verify Email
     description: Resend User Email Verification
+
+x-tagGroups:
+  - name: General
+    tags:
+      - user
+      - verify-email
+      - api-token
+      - login
+      - password-reset
+      - verification
+      - make-admin
+
+  - name: User Management
+    tags:
+      - user
 
 components:
   schemas:

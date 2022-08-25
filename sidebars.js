@@ -1,4 +1,4 @@
-const apiSidebar = require("./docs/api-reference/sidebar");
+const apiSidebar = require("./docs/api/sidebar");
 
 /**
  * Creating a sidebar enables you to:
@@ -63,23 +63,20 @@ const sidebars = {
       label: "Reference",
       collapsed: false,
       items: [
+        {
+          type: "category",
+          label: "API",
+          link: {
+            type: "generated-index",
+            title: "Livepeer API Reference",
+            slug: "/category/api",
+          },
+          items: apiSidebar,
+        },
         "reference/glossary",
         "reference/examples",
         "reference/support-matrix",
       ],
-    },
-  ],
-  "api-reference": [
-    {
-      type: "category",
-      label: "API Reference",
-      link: {
-        type: "generated-index",
-        title: "Livepeer API",
-        description: "The Livepeer API spec",
-        slug: "/category/livepeer-api",
-      },
-      items: apiSidebar,
     },
   ],
 };

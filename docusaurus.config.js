@@ -176,7 +176,7 @@ const config = {
         config: {
           api: {
             specPath: "spec.yaml",
-            outputDir: "docs/api-reference",
+            outputDir: "docs/api",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
