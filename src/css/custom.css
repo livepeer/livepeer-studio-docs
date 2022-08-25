@@ -14,6 +14,9 @@
   --ifm-color-primary-lighter: #006adc;
   --ifm-color-primary-lightest: #006adc;
   --ifm-code-font-size: 95%;
+  --ifm-color-success:  #30a46c;
+  --ifm-color-danger: #aa2429;
+  --ifm-color-warning: #f76808;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -26,6 +29,9 @@
   --ifm-color-primary-lighter: #52a9ff;
   --ifm-color-primary-lightest: #52a9ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-success:  #30a46c;
+  --ifm-color-danger: #aa2429;
+  --ifm-color-warning: #f76808;
   --ifm-navbar-background-color: #1a1d1e;
   --ifm-hero-background-color: #151718;
   --ifm-background-surface-color: #151718;
@@ -33,6 +39,7 @@
   --ifm-navbar-shadow: #313538;
   --ifm-footer-background-color:#1a1d1e; 
   --site-announcement-bar-stripe-color: #1a1d1e;
+  
 }
 
 [data-theme="light"] {
@@ -114,22 +121,22 @@ div[class^=announcementBar_] {
 
 .post > .menu__link::before {
   content: "post";
-  background-color: var(--openapi-code-green);
+  background-color: #30a46c;
 }
 
 .delete > .menu__link::before {
   content: "del";
-  background-color: var(--openapi-code-red);
+  background-color: #aa2429;
 }
 
 .put > .menu__link::before {
   content: "put";
-  background-color: var(--openapi-code-blue);
+  background-color: #0954a5;
 }
 
 .patch > .menu__link::before {
   content: "patch";
-  background-color: var(--openapi-code-orange);
+  background-color: #f76808;
 }
 
 .head > .menu__link::before {
