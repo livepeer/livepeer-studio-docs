@@ -6,8 +6,8 @@ module.exports = [
     items: [
       {
         type: "doc",
-        id: "api/create-a-new-stream",
-        label: "Create a new stream",
+        id: "api/create-a-stream",
+        label: "Create a stream",
         className: "api-method post",
       },
       {
@@ -50,14 +50,14 @@ module.exports = [
     items: [
       {
         type: "doc",
-        id: "api/list-existing-multistream-targets",
-        label: "List existing multistream targets",
+        id: "api/list-multistream-targets",
+        label: "List multistream targets",
         className: "api-method get",
       },
       {
         type: "doc",
-        id: "api/create-new-multistream-target",
-        label: "Create new multistream target",
+        id: "api/create-a-multistream-target",
+        label: "Create a multistream target",
         className: "api-method post",
       },
       {
@@ -68,14 +68,14 @@ module.exports = [
       },
       {
         type: "doc",
-        id: "api/enable-or-disables-an-existing-multistream-target",
-        label: "Enable or disables an existing multistream target",
+        id: "api/enable-or-disables-a-multistream-target",
+        label: "Enable or disables a multistream target",
         className: "api-method patch",
       },
       {
         type: "doc",
-        id: "api/delete-an-existing-multistream-target",
-        label: "Delete an existing multistream target",
+        id: "api/delete-a-multistream-target",
+        label: "Delete a multistream target",
         className: "api-method delete",
       },
     ],
@@ -87,8 +87,8 @@ module.exports = [
     items: [
       {
         type: "doc",
-        id: "api/receive-user-information",
-        label: "Receive user information",
+        id: "api/create-user",
+        label: "Create user",
         className: "api-method post",
       },
       {
@@ -112,8 +112,8 @@ module.exports = [
     items: [
       {
         type: "doc",
-        id: "api/create-a-new-api-token",
-        label: "Create a new api token",
+        id: "api/create-an-api-token",
+        label: "Create an api token",
         className: "api-method post",
       },
       {
@@ -195,8 +195,8 @@ module.exports = [
       },
       {
         type: "doc",
-        id: "api/create-a-new-webhook",
-        label: "Create a new webhook",
+        id: "api/create-a-webhook",
+        label: "Create a webhook",
         className: "api-method post",
       },
       {

@@ -1,9 +1,9 @@
 ---
-id: list-existing-multistream-targets
-sidebar_label: List existing multistream targets
+id: list-multistream-targets
+sidebar_label: List multistream targets
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["multistream-target"],"description":"List existing multistream targets","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","table":"multistream_target","required":["url"],"additionalProperties":false,"properties":{"id":{"type":"string","readOnly":true,"example":"09F8B46C-61A0-4254-9875-F71F4C605BC7"},"name":{"type":"string"},"url":{"type":"string","writeOnly":true,"description":"Livepeer-compatible multistream target URL (RTMP(S) or SRT)","example":"rtmps://live.my-service.tv/channel/secretKey","format":"uri","pattern":"^(srt|rtmps?)://"},"disabled":{"type":"boolean","description":"If true then this multistream target will not be used for pushing even if it is configured in a stream object."},"userId":{"type":"string","readOnly":true,"example":"66E2161C-7670-4D05-B71D-DA2D6979556F","index":true},"createdAt":{"type":"number","readOnly":true,"description":"Timestamp (in milliseconds) at which multistream target object was created","example":1587667174725}}}}}}},"default":{"description":"Error","content":{"application/json":{"schema":{"required":["errors"],"type":"object","properties":{"errors":{"type":"array","minItems":1,"items":{"type":"string","example":["id not provided","user not found"]}}}}}}}},"method":"get","path":"/multistream/target","info":{"title":"Livepeer API Reference","version":"0.0.1-alpha.0"},"postman":{"name":"List existing multistream targets","description":{"content":"List existing multistream targets","type":"text/plain"},"url":{"path":["multistream","target"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET"}}
+api: {"tags":["multistream-target"],"description":"List multistream targets","responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","table":"multistream_target","required":["url"],"additionalProperties":false,"properties":{"id":{"type":"string","readOnly":true,"example":"09F8B46C-61A0-4254-9875-F71F4C605BC7"},"name":{"type":"string"},"url":{"type":"string","writeOnly":true,"description":"Livepeer-compatible multistream target URL (RTMP(S) or SRT)","example":"rtmps://live.my-service.tv/channel/secretKey","format":"uri","pattern":"^(srt|rtmps?)://"},"disabled":{"type":"boolean","description":"If true then this multistream target will not be used for pushing even if it is configured in a stream object."},"userId":{"type":"string","readOnly":true,"example":"66E2161C-7670-4D05-B71D-DA2D6979556F","index":true},"createdAt":{"type":"number","readOnly":true,"description":"Timestamp (in milliseconds) at which multistream target object was created","example":1587667174725}}}}}}},"default":{"description":"Error","content":{"application/json":{"schema":{"required":["errors"],"type":"object","properties":{"errors":{"type":"array","minItems":1,"items":{"type":"string","example":["id not provided","user not found"]}}}}}}}},"method":"get","path":"/multistream/target","info":{"title":"Livepeer API Reference","version":"0.0.1-alpha.0"},"postman":{"name":"List multistream targets","description":{"content":"List multistream targets","type":"text/plain"},"url":{"path":["multistream","target"],"host":["{{baseUrl}}"],"query":[],"variable":[]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET"}}
 sidebar_class_name: "get api-method"
 info_path: api/livepeer-api-reference
 ---
@@ -17,11 +17,11 @@ import SchemaTabs from "@theme/SchemaTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import TabItem from "@theme/TabItem";
 
-## List existing multistream targets
+## List multistream targets
 
 
 
-List existing multistream targets
+List multistream targets
 
 <div><ApiTabs><TabItem label={"200"} value={"200"}><div>
 

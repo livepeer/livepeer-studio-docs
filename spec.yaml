@@ -1988,8 +1988,8 @@ paths:
     post:
       tags:
         - stream
-      summary: Create a new stream
-      description: Create a new stream
+      summary: Create a stream
+      description: Create a stream
       requestBody:
         required: true
         content:
@@ -2143,8 +2143,8 @@ paths:
     get:
       tags:
         - multistream-target
-      summary: List existing multistream targets
-      description: List existing multistream targets
+      summary: List multistream targets
+      description: List multistream targets
       responses:
         200:
           description: Success
@@ -2164,8 +2164,8 @@ paths:
     post:
       tags:
         - multistream-target
-      summary: Create new multistream target
-      description: Create new multistream target
+      summary: Create a multistream target
+      description: Create a multistream target
       requestBody:
         required: true
         content:
@@ -2221,8 +2221,8 @@ paths:
     patch:
       tags:
         - multistream-target
-      summary: Enable or disables an existing multistream target
-      description: Enable or disables an existing multistream target
+      summary: Enable or disables a multistream target
+      description: Enable or disables a multistream target
       requestBody:
         required: true
         content:
@@ -2242,8 +2242,8 @@ paths:
     delete:
       tags:
         - multistream-target
-      summary: Delete an existing multistream target
-      description: Delete an existing multistream target
+      summary: Delete a multistream target
+      description: Delete a multistream target
       responses:
         204:
           description: Success
@@ -2446,8 +2446,8 @@ paths:
     post:
       tags:
         - user
-      summary: Receive user information
-      description: Receive user information
+      summary: Create user
+      description: Create user
       requestBody:
         required: true
         content:
@@ -2524,8 +2524,8 @@ paths:
     post:
       tags:
         - api-token
-      summary: Create a new api token
-      description: Create a new api token
+      summary: Create an api token
+      description: Create an api token
       requestBody:
         required: true
         content:
@@ -2597,8 +2597,8 @@ paths:
     post:
       tags:
         - webhook
-      summary: Create a new webhook
-      description: Create a new webhook
+      summary: Create a webhook
+      description: Create a webhook
       responses:
         200:
           description: Success

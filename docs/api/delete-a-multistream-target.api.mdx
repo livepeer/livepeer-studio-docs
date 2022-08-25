@@ -1,9 +1,9 @@
 ---
-id: delete-an-existing-multistream-target
-sidebar_label: Delete an existing multistream target
+id: delete-a-multistream-target
+sidebar_label: Delete a multistream target
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["multistream-target"],"description":"Delete an existing multistream target","responses":{"204":{"description":"Success"},"default":{"description":"Error","content":{"application/json":{"schema":{"required":["errors"],"type":"object","properties":{"errors":{"type":"array","minItems":1,"items":{"type":"string","example":["id not provided","user not found"]}}}}}}}},"method":"delete","path":"/multistream/target/{id}","info":{"title":"Livepeer API Reference","version":"0.0.1-alpha.0"},"postman":{"name":"Delete an existing multistream target","description":{"content":"Delete an existing multistream target","type":"text/plain"},"url":{"path":["multistream","target",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) ID of the multistream target","type":"text/plain"},"type":"any","value":"","key":"id"}]},"header":[{"key":"Accept","value":"application/json"}],"method":"DELETE"}}
+api: {"tags":["multistream-target"],"description":"Delete a multistream target","responses":{"204":{"description":"Success"},"default":{"description":"Error","content":{"application/json":{"schema":{"required":["errors"],"type":"object","properties":{"errors":{"type":"array","minItems":1,"items":{"type":"string","example":["id not provided","user not found"]}}}}}}}},"method":"delete","path":"/multistream/target/{id}","info":{"title":"Livepeer API Reference","version":"0.0.1-alpha.0"},"postman":{"name":"Delete a multistream target","description":{"content":"Delete a multistream target","type":"text/plain"},"url":{"path":["multistream","target",":id"],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) ID of the multistream target","type":"text/plain"},"type":"any","value":"","key":"id"}]},"header":[{"key":"Accept","value":"application/json"}],"method":"DELETE"}}
 sidebar_class_name: "delete api-method"
 info_path: api/livepeer-api-reference
 ---
@@ -17,11 +17,11 @@ import SchemaTabs from "@theme/SchemaTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import TabItem from "@theme/TabItem";
 
-## Delete an existing multistream target
+## Delete a multistream target
 
 
 
-Delete an existing multistream target
+Delete a multistream target
 
 <div><ApiTabs><TabItem label={"204"} value={"204"}><div>
 
