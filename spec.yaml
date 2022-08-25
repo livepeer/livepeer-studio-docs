@@ -2041,8 +2041,8 @@ paths:
     get:
       tags:
         - stream
-      summary: Get a specific stream details
-      description: Get a specific stream details
+      summary: Get stream details
+      description: Get stream details
       responses:
         200:
           description: Success
@@ -2190,8 +2190,8 @@ paths:
     get:
       tags:
         - multistream-target
-      summary: Get a specific multistream target details
-      description: Get a specific multistream target details
+      summary: Get multistream target details
+      description: Get multistream target details
       responses:
         200:
           description: Success
@@ -2707,8 +2707,8 @@ paths:
     put:
       tags:
         - regions
-      summary: Update a specific region
-      description: Update a specific region
+      summary: Update region
+      description: Update region
       parameters:
         - name: region
           in: path
