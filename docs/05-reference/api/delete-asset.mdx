@@ -1,0 +1,18 @@
+---
+title: "DELETE asset"
+---
+
+# `DELETE` asset
+
+`DELETE /asset/{id}` deletes an existing `asset` object.
+
+This will remove an existing asset stored with Livepeer Studio.
+
+>**NOTE:** Assets are not deleted immediately when making this API call. If immediate removal of the asset is required, please [contact support ](https://livepeer.studio/contact)
+
+```bash
+curl -X DELETE 'https://livepeer.studio/api/asset/$ASSET_ID' \
+-H 'authorization: Bearer {api-key}'
+```
+
+204 No Content
