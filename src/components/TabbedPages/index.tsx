@@ -10,7 +10,7 @@ function TabbedPages({ pages }) {
   const activePage = slugs[slugs.length - 1];
 
   return (
-    <Box>
+    <Box css={{ mb: "$4" }}>
       {pages.map(({ slug, title }) => {
         return (
           <Box
