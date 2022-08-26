@@ -85,3 +85,11 @@ div[class^=announcementBar_] {
   border-bottom: 1px solid var(--ifm-toc-border-color);
   box-shadow: none;
 }
+
+.hide-chevron button {
+  display: none
+}
+
+.tabbed-page {
+  display: none
+}
