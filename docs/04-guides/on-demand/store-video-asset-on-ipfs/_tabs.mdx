@@ -1,0 +1,36 @@
+import TabbedPages from "@site/src/components/TabbedPages";
+
+<head>
+  <title>Store Video Asset on IPFS | Livepeer Studio Docs</title>
+  <meta
+    property="og:title"
+    content="Store Video Asset on IPFS | Livepeer Studio Docs"
+  />
+</head>
+
+# Store Video Asset on IPFS
+
+This guide provides you the instructions to store a video asset on IPFS from the [Livepeer Studio Dashboard](./dashboard) 
+or through the [Livepeer API](./api).
+
+## Technical Preparation
+
+Before getting started, you will need to meet the following dependencies for 
+working with the On Demand feature:
+
+- [A Livepeer Studio account](https://livepeer.studio/login)
+- Install [Node.js](https://nodejs.org/en/)
+- Access to the [API Reference](https://docs.livepeer.studio/references)
+- An [API Key](https://docs.livepeer.studio/guides/livestreaming/api-key) to call the VOD API
+    - Note: Calling the API from the frontend requires an API key with CORS access allowed
+
+Throughout this guide you'll see a few terms mentioned multiple times, asset and task:
+- **Asset**: an object that represents a file
+- **Task**: an action taken on the file
+
+<TabbedPages
+  pages={[
+    { slug: "dashboard", title: "Dashboard" },
+    { slug: "api", title: "API" },
+  ]}
+/>
