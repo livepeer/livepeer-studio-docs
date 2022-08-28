@@ -30,31 +30,31 @@ working with the On Demand feature:
   - Note: Calling the API from the frontend requires an API key with CORS access
     allowed
 
-### Caveats
+## Caveats
 
 - Files are currently limited to 1GB in size. Any files greater than that will
   likely error out during the upload or processing steps.
 - Only MP4 files encoded with H.264 and AAC are supported
 
-### Uploading via URL
+## Uploading via URL
 
 When using the upload via URL method:
 
 - Provide the name of the asset
 - Provide the URL of the asset that should be imported
 
-#### Step 1: Upload asset by URL
+### Step 1: Upload asset by URL
 
 To upload the asset to the Livepeer network, you'll need to make a POST request
 and include the URL of the asset to be uploaded.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="javascript" label="javascript">
+<CodeBlockTabItem value="javascript" label="Javascript">
 
 ```js
 const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
+    method: "POST",
     headers: {
-        method: "POST",
         Authorization: `Bearer ${process.env.LP_API_KEY}`,
         "Content-Type": "application/json",
     },
@@ -68,7 +68,7 @@ const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-#### Step 2: Check the upload status
+### Step 2: Check the upload status
 
 After uploading your asset, get the `asset.id` from the
 [response object](/reference/api/create-asset-with-url#response) of the POST
@@ -77,58 +77,55 @@ request. The `asset.id` represents the status of your upload. When
 be ready for playback.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="javascript" label="javascript">
+<CodeBlockTabItem value="javascript" label="Javascript">
 
 ```js
 const getAsset = await fetch("https://livepeer.studio/api/task/$ASSET_ID", {
-  headers: {
     method: "GET",
-    Authorization: `Bearer ${process.env.LP_API_KEY}`,
-    "Content-Type": "application/json",
-  },
+    headers: {
+        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        "Content-Type": "application/json",
+    },
 });
 ```
 
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-### Uploading Locally
+## Uploading Locally
 
-#### Step 1: Generate upload URL
+### Step 1: Generate upload URL
 
 To upload the asset to the Livepeer network locally, you'll need to make a POST
 request to generate an upload URL.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="typescript" label="Typescript">
+<CodeBlockTabItem value="javascript" label="Javascript">
 
 ```js
-const uploadAsset = await fetch(
-  "https://livepeer.studio/api/asset/request-upload",
-  {
+const uploadAsset = await fetch("https://livepeer.studio/api/asset/request-upload", {
+    method: "POST",
     headers: {
-      method: "POST",
-      Authorization: `Bearer ${process.env.LP_API_KEY}`,
-      "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        "Content-Type": "application/json",
     },
     data: JSON.stringify({
-      name: "Example name",
+        name: "Example name",
     }),
-  }
-);
+});
 ```
 
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-#### Step 2: Upload your video to the URL
+### Step 2: Upload your video to the URL
 
 Get the `"url": "https://origin.livepeer.studio/api/assets/…"` from the
 [response object](/reference/api/create-asset#response-example). Using the URL
 generated, upload your video with a PUT request.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="typescript" label="Typescript">
+<CodeBlockTabItem value="javascript" label="Javascript">
 
 ```js
 const uploadAsset = await fetch("${url}", {
@@ -144,7 +141,7 @@ const uploadAsset = await fetch("${url}", {
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-#### Step 3: Check the upload status
+### Step 3: Check the upload status
 
 After uploading your asset, get the `asset.id` from the
 [response object](/reference/api/create-asset-with-url#response) of the POST
@@ -153,14 +150,14 @@ request. The `asset.id` represents the status of your upload. When
 be ready for playback.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="typescript" label="Typescript">
+<CodeBlockTabItem value="javascript" label="Javascript">
 
 ```js
 const getAsset = await fetch("https://livepeer.studio/api/task/$ASSET_ID", {
-  headers: {
-    method: "GET",
-    Authorization: `Bearer ${process.env.LP_API_KEY}`,
-  },
+    headers: {
+        method: "GET",
+        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+    },
 });
 ```
 
