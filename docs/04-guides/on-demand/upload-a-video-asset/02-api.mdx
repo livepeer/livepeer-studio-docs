@@ -129,8 +129,8 @@ generated, upload your video with a PUT request.
 
 ```js
 const uploadAsset = await fetch("${url}", {
+    method: "PUT",
     headers: {
-        method: "PUT",
         Authorization: `Bearer ${process.env.LP_API_KEY}`
         "Content-Type": "video/mp4"
     },
@@ -154,8 +154,8 @@ be ready for playback.
 
 ```js
 const getAsset = await fetch("https://livepeer.studio/api/task/$ASSET_ID", {
+    method: "GET",
     headers: {
-        method: "GET",
         Authorization: `Bearer ${process.env.LP_API_KEY}`,
     },
 });
