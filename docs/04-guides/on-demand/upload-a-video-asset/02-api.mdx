@@ -55,7 +55,7 @@ and include the URL of the asset to be uploaded.
 const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
     method: "POST",
     headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     },
     data: JSON.stringify({
@@ -68,7 +68,6 @@ const uploadAssetURLData = await uploadAssetURL.json()
 ```
 
 </CodeBlockTabItem>
-
 <CodeBlockTabItem value="curl" label="curl">
 
 ```bash
@@ -99,24 +98,18 @@ be ready for playback.
 const getAsset = await fetch("https://livepeer.studio/api/task/{uploadAssetURLData.asset.id}", {
     method: "GET",
     headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     },
 });
 ```
 
 </CodeBlockTabItem>
-
 <CodeBlockTabItem value="curl" label="curl">
 
-```curl
-const getAsset = await fetch("https://livepeer.studio/api/task/{uploadAssetURLData.asset.id}", {
-    method: "GET",
-    headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
-        "Content-Type": "application/json",
-    },
-});
+```bash
+curl --location --request GET 'https://livepeer.studio/api/asset/$ASSET_ID' \
+--header 'Authorization: Bearer $API_TOKEN'
 ```
 
 </CodeBlockTabItem>
@@ -136,13 +129,25 @@ request to generate an upload URL.
 const uploadAsset = await fetch("https://livepeer.studio/api/asset/request-upload", {
     method: "POST",
     headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     },
     data: JSON.stringify({
         name: "Example name",
     }),
 });
+```
+
+</CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl --location --request POST 'https://livepeer.studio/api/asset/request-upload' \
+--header 'Authorization: Bearer $API_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name":"Example name"
+}'
 ```
 
 </CodeBlockTabItem>
@@ -169,6 +174,15 @@ const uploadAsset = await fetch("${url}", {
 ```
 
 </CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl --location --request PUT "${url}" \
+--header 'Content-Type: video/mp4' \
+--data-binary '@$VIDEO_FILE_PATH'
+```
+
+</CodeBlockTabItem>
 </CodeBlockTabs>
 
 ### Step 3: Check the upload status
@@ -189,6 +203,14 @@ const getAsset = await fetch("https://livepeer.studio/api/task/$ASSET_ID", {
         Authorization: `Bearer ${process.env.LP_API_KEY}`,
     },
 });
+```
+
+</CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl --location --request GET 'https://livepeer.studio/api/asset/$ASSET_ID' \
+--header 'Authorization: Bearer $API_TOKEN'
 ```
 
 </CodeBlockTabItem>
