@@ -16,21 +16,7 @@ The Video-on-Demand (VOD) API allows you to send video files to Livepeer and get
 ready for optimized playback. Those videos can be provided either by you (static content) 
 or your users, given your application offers an interface for them to do so.
 
-## Technical Preparation
-
-Before getting started, you will need to meet the following dependencies for
-working with the On Demand feature:
-
-- [A Livepeer Studio account](https://livepeer.studio/login)
-- Install [Node.js](https://nodejs.org/en/)
-- Access to the [API Reference](https://docs.livepeer.studio/references)
-- An [API Key](https://docs.livepeer.studio/guides/livestreaming/api-key) to
-  call the VOD API
-  - Note: Calling the API from the frontend requires an API key with CORS access
-    allowed
-
 ## Caveats
-
 - Currently assets cannot be deleted from the default Livepeer Studio storage. 
 You can customize any additional storage though.
 - Only IPFS is supported as an additional storge at the moment. We are currently 
@@ -41,40 +27,58 @@ Get the $ASSET_ID of an existing asset by making a request to list all existing 
 If you haven't created an asset yet, you can follow the [upload a video asset guide](/guides/on-demand/upload-a-video-asset#api) to do so.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="javascript" label="javascript">
+<CodeBlockTabItem value="Node" label="Node">
 
 ```js
 const getAssets = await fetch("https://livepeer.studio/api/asset", {
     method: "GET",
     headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`,
+        Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     }
 });
 ```
 
 </CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl --location --request GET 'https://livepeer.studio/api/asset' \
+--header 'Authorization: Bearer $API_TOKEN'
+```
+
+</CodeBlockTabItem>
 </CodeBlockTabs>
 
-## Step 2: Export the asset to IPFS
+## Step 2: Store the asset on IPFS
 Once you have an $ASSET_ID, you can make a request to update the asset's storage location.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="javascript" label="javascript">
+<CodeBlockTabItem value="Node" label="Node">
 
 ```js
-const exportAssetToIPFS = await fetch("https://livepeer.studio/api/asset/{id}", {
+const storeAssetOnIPFS = await fetch("https://livepeer.studio/api/asset/{id}", {
     method: "PATCH",
     headers: {
-      Authorization: `Bearer ${process.env.LP_API_KEY}`,
+      Authorization: `Bearer ${process.env.API_TOKEN}`,
       "Content-Type": "application/json",
     },
     body: {
         "storage": {
-            "ipfs": {}
+            "ipfs": true
         }
     }
 });
+```
+
+</CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl -X PATCH https://livepeer.studio/api/asset/{id} \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api-key}' \
+-d {"storage": {"ipfs": true}}
 ```
 
 </CodeBlockTabItem>
