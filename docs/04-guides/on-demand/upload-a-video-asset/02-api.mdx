@@ -50,8 +50,6 @@ const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
         name: "Example name",
     }),
 });
-
-const uploadAssetURLData = await uploadAssetURL.json()
 ```
 
 </CodeBlockTabItem>
@@ -82,7 +80,7 @@ be ready for playback.
 <CodeBlockTabItem value="Node" label="Node">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/task/{uploadAssetURLData.asset.id}", {
+const getAsset = await fetch("https://livepeer.studio/api/task/{id}", {
     method: "GET",
     headers: {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
