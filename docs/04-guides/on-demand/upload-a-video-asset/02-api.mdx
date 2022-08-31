@@ -80,7 +80,7 @@ be ready for playback.
 <CodeBlockTabItem value="Node" label="Node">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/task/{id}", {
+const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
     method: "GET",
     headers: {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
@@ -93,7 +93,7 @@ const getAsset = await fetch("https://livepeer.studio/api/task/{id}", {
 <CodeBlockTabItem value="curl" label="curl">
 
 ```bash
-curl --location --request GET 'https://livepeer.studio/api/asset/$ASSET_ID' \
+curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 --header 'Authorization: Bearer $API_TOKEN'
 ```
 
@@ -182,7 +182,7 @@ be ready for playback.
 <CodeBlockTabItem value="Node" label="Node">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/task/$ASSET_ID", {
+const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
     method: "GET",
     headers: {
         Authorization: `Bearer ${process.env.LP_API_KEY}`,
@@ -194,7 +194,7 @@ const getAsset = await fetch("https://livepeer.studio/api/task/$ASSET_ID", {
 <CodeBlockTabItem value="curl" label="curl">
 
 ```bash
-curl --location --request GET 'https://livepeer.studio/api/asset/$ASSET_ID' \
+curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 --header 'Authorization: Bearer $API_TOKEN'
 ```
 
