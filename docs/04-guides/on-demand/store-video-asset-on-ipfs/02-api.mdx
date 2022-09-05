@@ -27,32 +27,8 @@ additional storage providers. If you have requirements for a particular storage 
 reach out to us at [help@livepeer.studio](mailto:help@livepeer.studio). 
 
 ## Step 1: Get the `asset.id` of an existing asset
-Get the `asset.id` of an existing asset by making a request to list all existing assets in your account.
+Get the `asset.id` of an existing asset. An `asset.id` can be found in the response object of any API call working with assets.
 If you haven't created an asset yet, you can follow the [upload a video asset guide](/guides/on-demand/upload-a-video-asset#api) to do so.
-
-<CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
-
-```js
-const getAssets = await fetch("https://livepeer.studio/api/asset", {
-    method: "GET",
-    headers: {
-        Authorization: `Bearer ${process.env.API_TOKEN}`,
-        "Content-Type": "application/json",
-    }
-});
-```
-
-</CodeBlockTabItem>
-<CodeBlockTabItem value="curl" label="curl">
-
-```bash
-curl --location --request GET 'https://livepeer.studio/api/asset' \
---header 'Authorization: Bearer $API_TOKEN'
-```
-
-</CodeBlockTabItem>
-</CodeBlockTabs>
 
 ## Step 2: Store the asset on IPFS
 Once you have an `asset.id`, you can make a request to update the asset's storage location.
