@@ -74,9 +74,12 @@ curl --location --request POST 'https://livepeer.studio/api/asset/import' \
 
 After uploading your asset, get the `asset.id` from the
 [response object](/reference/api/create-asset-with-url#response) of the POST
-request. The `asset.id` represents the status of your upload. When
-`asset.status == "ready"` that means the asset has finished uploading and will
-be ready for playback.
+request. The `asset.id` represents the status of your upload. 
+
+When `asset.status: "ready"` is returned in the response, the asset has finished 
+uploading and will be ready for playback. If `asset.status: "waiting"` is returned 
+in the response, the asset is not available yet and you should make the API call again 
+until `asset.status: "ready"`.
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="Node" label="Node">
@@ -176,9 +179,12 @@ curl --location --request PUT "${url}" \
 
 After uploading your asset, get the `asset.id` from the
 [response object](/reference/api/create-asset-with-url#response) of the POST
-request. The `asset.id` represents the status of your upload. When
-`asset.status == "ready"` that means the asset has finished uploading and will
-be ready for playback.
+request. The `asset.id` represents the status of your upload. 
+
+When `asset.status: "ready"` is returned in the response, the asset has finished 
+uploading and will be ready for playback. If `asset.status: "waiting"` is returned 
+in the response, the asset is not available yet and you should make the API call again 
+until `asset.status: "ready"`.
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="Node" label="Node">
