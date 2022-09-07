@@ -22,6 +22,7 @@ function TabbedPages({ pages }) {
                 activePage === slug
                   ? "var(--ifm-tabs-color-active)"
                   : "var(--ifm-tabs-color)",
+              fontSize: 20,
               fontWeight: 600,
               "&:hover": {
                 textDecoration: "none",
