@@ -16,6 +16,8 @@ The Livepeer API allows you to send video files to Livepeer and get them ready
 for optimized playback. Videos can be provided either by you (static content) or
 your users, given your application offers an interface for them to do so.
 
+You can [upload via URL](#uploading-via-url), [upload locally](#uploading-locally) or by [resumable upload](#resumable-upload).
+
 ## Caveats
 
 - Files are currently limited to 1GB in size. Any files greater than that will
@@ -210,6 +212,11 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 </CodeBlockTabs>
 
 ## Resumable Upload
+
+The resumable upload method allows a user to resume their upload if their 
+connection fails due to a cancelled request or a dropped connection. If you're
+uploading a large file and you lose connection at 98%, you don't have to restart
+from the beginning, you can continue back at 98%.
 
 ### Step 1: Generate upload URL
 
