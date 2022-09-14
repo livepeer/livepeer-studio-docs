@@ -16,7 +16,8 @@ The Livepeer API allows you to send video files to Livepeer and get them ready
 for optimized playback. Videos can be provided either by you (static content) or
 your users, given your application offers an interface for them to do so.
 
-You can upload video assets [via a url](#uploading-via-url), a [direct upload](#direct-upload) or a [resumable upload](#resumable-upload).
+You can upload video assets [via a url](#uploading-via-url), a
+[direct upload](#direct-upload) or a [resumable upload](#resumable-upload).
 
 ## Caveats
 
@@ -106,10 +107,11 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 
 ## Direct Upload
 
-A direct upload uploads the whole video asset in one HTTP request, as opposed to the 
-resumable upload protocol, which uploads the video asset in multiple requests. Doing a
-direct upload reduces the number of HTTP requests but increases the chance of failures
-(such as connection failures) that can happen with large uploads.
+A direct upload uploads the whole video asset in one HTTP request, as opposed to
+the [resumable upload protocol](#resumable-upload), which uploads the video
+asset in multiple requests. Doing a direct upload reduces the number of HTTP
+requests but increases the chance of failures (such as connection failures) that
+can happen with large uploads.
 
 ### Step 1: Generate upload URL
 
@@ -152,9 +154,7 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 ### Step 2: Upload your video to the URL
 
-Get the `"url": "https://origin.livepeer.studio/api/assets/…"` from the
-[response object](/reference/api/create-asset#response-example). Using the URL
-generated, upload your video with a PUT request.
+Using the URL generated in the response, upload your video with a PUT request.
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
@@ -218,14 +218,14 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 
 ## Resumable Upload
 
-A resumable upload allows you to resume an upload operation after a communication 
-failure interrupts the flow of data. Because you don't have to restart large file 
-uploads from the start, resumable uploads can also reduce your bandwidth usage if 
-there is a network failure.
+A resumable upload allows you to resume an upload operation after a
+communication failure interrupts the flow of data. Because you don't have to
+restart large file uploads from the start, resumable uploads can also reduce
+your bandwidth usage if there is a network failure.
 
-Resumable uploads are useful when your file sizes might vary greatly or when there 
-is a fixed time limit for requests. You might also use resumable uploads for situations 
-where you want to show an upload progress bar.
+Resumable uploads are useful when your file sizes might vary greatly or when
+there is a fixed time limit for requests. You might also use resumable uploads
+for situations where you want to show an upload progress bar.
 
 ### Step 1: Generate upload URL
 
@@ -268,11 +268,13 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 ### Step 2: Upload your resumable video via Tus
 
-Livepeer Studio supports resumable uploads via [Tus](https://tus.io/). This section provides a simple 
-example of how to use `tus-js-client` to upload a video file.
+Livepeer Studio supports resumable uploads via [Tus](https://tus.io/). This
+section provides a simple example of how to use `tus-js-client` to upload a
+video file.
 
-You should use the `tusEndpoint` field of the [response object](/reference/api/create-asset#response-example) 
-to upload the video file and track the progress:
+You should use the `tusEndpoint` field of the
+[response object](/reference/api/create-asset#response-example) to upload the
+video file and track the progress:
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
@@ -309,11 +311,8 @@ upload.start();
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-
 > **Note:** If you are using `tus` from `node.js`, you need to add a custom URL
 > storage to enable resuming from previous uploads. On the browser, this is
 > enabled by default using local storage. In `node.js`, add
 > `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile`
 > object definition above.
-
-
