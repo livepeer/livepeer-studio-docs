@@ -37,7 +37,7 @@ To upload the asset to the Livepeer network, you'll need to make a POST request
 and include the URL of the asset to be uploaded.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
@@ -81,7 +81,7 @@ returned in the response, the asset is not available yet and you should make the
 API call again until `asset.status: "ready"`.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
@@ -112,7 +112,7 @@ To upload the asset to the Livepeer network locally, you'll need to make a POST
 request to generate an upload URL.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 const uploadAsset = await fetch(
@@ -152,7 +152,7 @@ Get the `"url": "https://origin.livepeer.studio/api/assets/…"` from the
 generated, upload your video with a PUT request.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 const uploadAsset = await fetch("${url}", {
@@ -189,7 +189,7 @@ returned in the response, the asset is not available yet and you should make the
 API call again until `asset.status: "ready"`.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
@@ -224,7 +224,7 @@ To upload the asset to the Livepeer network locally, you'll need to make a POST
 request to generate an upload URL.
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="Node" label="Node">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 const uploadAsset = await fetch(
@@ -266,7 +266,7 @@ You should use the `tusEndpoint` field of the [response object](/reference/api/c
 to upload the video file and track the progress:
 
 <CodeBlockTabs>
-<CodeBlockTabItem value="js" label="js">
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
 //  This assumes there is an `input` element of `type="file"` with id `fileInput` in the HTML
