@@ -120,7 +120,7 @@ request to generate an upload URL.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const uploadAsset = await fetch(
+const urlResponse = await fetch(
   "https://livepeer.studio/api/asset/request-upload",
   {
     method: "POST",
@@ -133,6 +133,8 @@ const uploadAsset = await fetch(
     }),
   }
 );
+
+const { url } = await urlResponse.json()
 ```
 
 </CodeBlockTabItem>
@@ -236,7 +238,7 @@ request to generate an upload URL.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const uploadAsset = await fetch(
+const tusResponse = await fetch(
   "https://livepeer.studio/api/asset/request-upload",
   {
     method: "POST",
@@ -249,6 +251,8 @@ const uploadAsset = await fetch(
     }),
   }
 );
+
+const { tusEndpoint } = await tusResponse.json()
 ```
 
 </CodeBlockTabItem>
