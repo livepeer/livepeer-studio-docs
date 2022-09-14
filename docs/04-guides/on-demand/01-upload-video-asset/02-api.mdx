@@ -16,7 +16,7 @@ The Livepeer API allows you to send video files to Livepeer and get them ready
 for optimized playback. Videos can be provided either by you (static content) or
 your users, given your application offers an interface for them to do so.
 
-You can [upload via URL](#uploading-via-url), [upload locally](#uploading-locally) or by [resumable upload](#resumable-upload).
+You can upload video assets [via a url](#uploading-via-url), a [direct upload](#direct-upload) or a [resumable upload](#resumable-upload).
 
 ## Caveats
 
@@ -104,7 +104,12 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-## Uploading Locally
+## Direct Upload
+
+A direct upload uploads the whole video asset in one HTTP request, as opposed to the 
+resumable upload protocol, which uploads the video asset in multiple requests. Doing a
+direct upload reduces the number of HTTP requests but increases the chance of failures
+(such as connection failures) that can happen with large uploads.
 
 ### Step 1: Generate upload URL
 
@@ -213,10 +218,14 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 
 ## Resumable Upload
 
-The resumable upload method allows a user to resume their upload if their 
-connection fails due to a cancelled request or a dropped connection. If you're
-uploading a large file and you lose connection at 98%, you don't have to restart
-from the beginning, you can continue back at 98%.
+A resumable upload allows you to resume an upload operation after a communication 
+failure interrupts the flow of data. Because you don't have to restart large file 
+uploads from the start, resumable uploads can also reduce your bandwidth usage if 
+there is a network failure.
+
+Resumable uploads are useful when your file sizes might vary greatly or when there 
+is a fixed time limit for requests. You might also use resumable uploads for situations 
+where you want to show an upload progress bar.
 
 ### Step 1: Generate upload URL
 
