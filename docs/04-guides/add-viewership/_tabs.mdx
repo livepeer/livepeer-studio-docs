@@ -1,0 +1,27 @@
+import TabbedPages from "@site/src/components/TabbedPages";
+
+<head>
+  <title>Add viewership | Livepeer Studio Docs</title>
+  <meta
+    property="og:title"
+    content="Add viewership | Livepeer Studio Docs"
+  />
+</head>
+
+# Add viewership
+
+This guide provides information about adding and retrieving viewership to a video using
+the [dashboard](./dashboard) or the [Livepeer player API](./api).
+
+## Caveats
+
+The viewership API is still in development. Currently, we only support start views,
+views when you open or start watching an asset. In the future, we will be supporting
+end views and total views.
+
+<TabbedPages
+  pages={[
+    { slug: "dashboard", title: "Dashboard" },
+    { slug: "api", title: "API" },
+  ]}
+/>
