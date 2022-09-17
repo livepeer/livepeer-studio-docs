@@ -31,7 +31,7 @@
   --ifm-background-surface-color: #151718;
   --ifm-background-color: #151718;
   --ifm-navbar-shadow: #313538;
-  --ifm-footer-background-color:#1a1d1e; 
+  --ifm-footer-background-color: #1a1d1e;
   --site-announcement-bar-stripe-color: #1a1d1e;
 }
 
@@ -40,15 +40,15 @@
 }
 
 [data-theme="dark"] {
-  background-color:  #151718;
+  background-color: #151718;
 }
 
-nav[data-theme="light"]{
+nav[data-theme="light"] {
   background-color: white;
 }
 
 :root[data-theme="dark"] nav img {
-  filter: invert(1)
+  filter: invert(1);
 }
 
 .docusaurus-highlight-code-line {
@@ -79,7 +79,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   margin-top: 0;
 }
 
-div[class^=announcementBar_] {
+div[class^="announcementBar_"] {
   background-color: var(--site-announcement-bar-stripe-color);
   color: inherit;
   border-bottom: 1px solid var(--ifm-toc-border-color);
@@ -87,9 +87,9 @@ div[class^=announcementBar_] {
 }
 
 .hide-chevron button {
-  display: none
+  display: none;
 }
 
 .tabbed-page {
-  display: none
+  display: none;
 }
