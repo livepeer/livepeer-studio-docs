@@ -85,7 +85,7 @@ API call again until `asset.status: "ready"`.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
+const assetResponse = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "GET",
   headers: {
     Authorization: `Bearer ${process.env.API_TOKEN}`,
@@ -122,7 +122,7 @@ request to generate an upload URL.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const response = await fetch(
+const uploadResponse = await fetch(
   "https://livepeer.studio/api/asset/request-upload",
   {
     method: "POST",
@@ -199,7 +199,7 @@ API call again until `asset.status: "ready"`.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
+const assetResponse = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "GET",
   headers: {
     Authorization: `Bearer ${process.env.LP_API_KEY}`,
