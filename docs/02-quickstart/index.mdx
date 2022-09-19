@@ -15,8 +15,7 @@ Learn how to create an API key and get to building!
 > our Dashboard.
 
 1. 🔑 [Create a Livepeer Studio API key](#create-api-key)
-2. 🤝 [Set up Livepeer as your client](#set-livepeer-client)
-3. 💻 [Start building!](#start-building)
+2. 💻 [Start building!](#start-building)
 
 ### 1. Create a Livepeer Studio API key {#create-api-key}
 
@@ -59,72 +58,6 @@ curl -X GET \
   https://livepeer.studio/api/user/me
 ```
 
-### 2. Set up Livepeer as your client {#set-livepeer-client}
-
-Want to integrate Livepeer into your production app?
-
-#### livepeer.js SDK
-
-livepeer.js makes building with Livepeer effortless. It provides a core vanilla JS 
-library to easily connect to a Livepeer provider (e.g. Livepeer Studio), as well as 
-React-specific hooks with a similar API to provide memoization and DOM management.
-
-#### Step 1: Install the livepeer.js SDK
-
-To install the livepeer.js SDK, you want to create a project, and then navigate to your 
-project directory to run the installation. Let's go ahead and do that! Once we're in 
-our home directory, let's execute the following:
-
-<CodeBlockTabs>
-<CodeBlockTabItem value="npm" label="npm">
-
-```bash
-mkdir your-project-name
-cd your-project-name
-npm init   # (or npm init --yes)
-npm install livepeer @livepeer/react wagmi ethers
-```
-
-</CodeBlockTabItem>
-<CodeBlockTabItem value="yarn" label="yarn">
-
-```bash
-mkdir your-project-name
-cd your-project-name
-yarn init # (or yarn init --yes)
-yarn add livepeer @livepeer/react wagmi ethers
-```
-
-</CodeBlockTabItem>
-</CodeBlockTabs>
-
-#### Step 2: Create your livepeer client
-
-Now that we've installed livepeer.js, let's declare and configure the client with Livepeer Studio using `studioProvider`. 
-
-<CodeBlockTabs>
-<CodeBlockTabItem value="app.js" label="app.js">
-
-```js
-import { createReactClient } from '@livepeer/react';
-import { studioProvider } from 'livepeer/providers/studio';
- 
-const client = createReactClient({
-  provider: studioProvider({ apiKey: `${process.env.API_TOKEN}` }),
-});
-
-function App() {
-  return (
-    <LivepeerConfig client={client}>
-      <Livepeer />
-    </LivepeerConfig>
-  );
-}
-```
-
-</CodeBlockTabItem>
-</CodeBlockTabs>
-
 With this, you're ready to start building!
 
 ### 3. Start Building {#start-building}
@@ -134,7 +67,6 @@ Livepeer development:
 
 1. [Upload a video](/guides/on-demand/upload-video-asset/dashboard)
 2. [Create a livestream](/guides/live/create-a-livestream)
-3. [Mint a video NFT](/guides/mint-a-video-nft)
 
 Once you complete this tutorial, let us know how your experience was or if you
 have any feedback by tagging us on Twitter @livepeerstudio!
