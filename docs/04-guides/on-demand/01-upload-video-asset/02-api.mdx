@@ -16,6 +16,9 @@ The Livepeer API allows you to send video files to Livepeer and get them ready
 for optimized playback. Videos can be provided either by you (static content) or
 your users, given your application offers an interface for them to do so.
 
+You can upload video assets [via a url](#uploading-via-url), a
+[direct upload](#direct-upload) or a [resumable upload](#resumable-upload).
+
 ## Caveats
 
 - Files are currently limited to 1GB in size. Any files greater than that will
@@ -82,13 +85,15 @@ API call again until `asset.status: "ready"`.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
+const response = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "GET",
   headers: {
     Authorization: `Bearer ${process.env.API_TOKEN}`,
     "Content-Type": "application/json",
   },
 });
+
+const { status } = response.json();
 ```
 
 </CodeBlockTabItem>
@@ -102,7 +107,13 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
-## Uploading Locally
+## Direct Upload
+
+A direct upload uploads the whole video asset in one HTTP request, as opposed to
+the [resumable upload protocol](#resumable-upload), which uploads the video
+asset in multiple requests. Doing a direct upload reduces the number of HTTP
+requests but increases the chance of failures (such as connection failures) that
+can happen with large uploads.
 
 ### Step 1: Generate upload URL
 
@@ -113,7 +124,7 @@ request to generate an upload URL.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const uploadAsset = await fetch(
+const response = await fetch(
   "https://livepeer.studio/api/asset/request-upload",
   {
     method: "POST",
@@ -126,6 +137,8 @@ const uploadAsset = await fetch(
     }),
   }
 );
+
+const { url } = await response.json();
 ```
 
 </CodeBlockTabItem>
@@ -145,15 +158,13 @@ curl --location --request POST 'https://livepeer.studio/api/asset/request-upload
 
 ### Step 2: Upload your video to the URL
 
-Get the `"url": "https://origin.livepeer.studio/api/assets/…"` from the
-[response object](/reference/api/create-asset#response-example). Using the URL
-generated, upload your video with a PUT request.
+Using the URL generated in the response, upload your video with a PUT request.
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const uploadAsset = await fetch("${url}", {
+await fetch(url, {
     method: "PUT",
     headers: {
         Authorization: `Bearer ${process.env.LP_API_KEY}`
@@ -190,12 +201,14 @@ API call again until `asset.status: "ready"`.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const getAsset = await fetch("https://livepeer.studio/api/asset/{id}", {
+const response = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "GET",
   headers: {
     Authorization: `Bearer ${process.env.LP_API_KEY}`,
   },
 });
+
+const { status } = response.json();
 ```
 
 </CodeBlockTabItem>
@@ -208,3 +221,106 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 
 </CodeBlockTabItem>
 </CodeBlockTabs>
+
+## Resumable Upload
+
+A resumable upload allows you to resume an upload operation after a
+communication failure interrupts the flow of data. Because you don't have to
+restart large file uploads from the start, resumable uploads can also reduce
+your bandwidth usage if there is a network failure.
+
+Resumable uploads are useful when your file sizes might vary greatly or when
+there is a fixed time limit for requests. You might also use resumable uploads
+for situations where you want to show an upload progress bar.
+
+### Step 1: Generate upload URL
+
+To upload the asset to the Livepeer network locally, you'll need to make a POST
+request to generate an upload URL.
+
+<CodeBlockTabs>
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
+
+```js
+const response = await fetch(
+  "https://livepeer.studio/api/asset/request-upload",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.API_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify({
+      name: "Example name",
+    }),
+  }
+);
+
+const { tusEndpoint } = await response.json();
+```
+
+</CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl --location --request POST 'https://livepeer.studio/api/asset/request-upload' \
+--header 'Authorization: Bearer $API_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name":"Example name"
+}'
+```
+
+</CodeBlockTabItem>
+</CodeBlockTabs>
+
+### Step 2: Upload your resumable video via Tus
+
+Livepeer Studio supports resumable uploads via [Tus](https://tus.io/). This
+section provides a simple example of how to use `tus-js-client` to upload a
+video file.
+
+You should use the `tusEndpoint` field of the
+[response object](/reference/api/create-asset#response-example) to upload the
+video file and track the progress:
+
+<CodeBlockTabs>
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
+
+```js
+//  This assumes there is an `input` element of `type="file"` with id `fileInput` in the HTML
+const input = document.getElementById("fileInput");
+const file = input.files[0];
+const upload = new tus.Upload(file, {
+  endpoint: tusEndpoint, // URL from `tusEndpoint` field in the `/request-upload` response
+  metadata: {
+    filename,
+    filetype: "video/mp4",
+  },
+  uploadSize: file.size,
+  onError(err) {
+    console.error("Error uploading file:", err);
+  },
+  onProgress(bytesUploaded, bytesTotal) {
+    const percentage = ((bytesUploaded / bytesTotal) * 100).toFixed(2);
+    console.log("Uploaded " + percentage + "%");
+  },
+  onSuccess() {
+    console.log("Upload finished:", upload.url);
+  },
+});
+const previousUploads = await upload.findPreviousUploads();
+if (previousUploads.length > 0) {
+  upload.resumeFromPreviousUpload(previousUploads[0]);
+}
+upload.start();
+```
+
+</CodeBlockTabItem>
+</CodeBlockTabs>
+
+> **Note:** If you are using `tus` from `node.js`, you need to add a custom URL
+> storage to enable resuming from previous uploads. On the browser, this is
+> enabled by default using local storage. In `node.js`, add
+> `urlStorage: new tus.FileUrlStorage("path/to/tmp/file")`, to the `UploadFile`
+> object definition above.

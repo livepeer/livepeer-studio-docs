@@ -16,6 +16,7 @@ const CodeBlockTabs = ({ children }) => {
           py: "$2",
           px: "$3",
         },
+        marginBottom: "1rem",
       }}>
       <Tabs>{children}</Tabs>
     </Box>
