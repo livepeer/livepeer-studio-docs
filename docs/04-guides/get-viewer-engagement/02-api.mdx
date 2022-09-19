@@ -37,13 +37,15 @@ If you haven't created an asset yet, follow the
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const getPlaybackId = await fetch("https://livepeer.studio/api/asset/{id}", {
+const response = await fetch("https://livepeer.studio/api/asset/{id}", {
     method: "GET",
     headers: {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     },
 });
+
+const { playbackId } = await response.json();
 ```
 
 </CodeBlockTabItem>
