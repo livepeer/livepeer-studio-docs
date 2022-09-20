@@ -17,60 +17,25 @@ The Livepeer API allows you to send video files to Livepeer and get them ready
 for optimized playback. Videos can be provided either by you (static content) or
 your users, given your application offers an interface for them to do so.
 
-## Step 1: Configure your player
+## Step 1: Get the `asset.id` of an existing asset
 
-To display viewership data, you need to configure your player first.
-We recommend using the [Livepeer player](https://livepeerjs.org/) as the player
-is already configured. You can follow this [guide](guides/playback-a-video-stream) to
-setup the Livepeer player.
-
-## Step 2: Get the `playbackId` of an existing asset
-
-Get the `playbackId` of an existing asset. An asset's `playbackId` can be found by making 
-an API request using a `stream.id` or `asset.id`. You can find the `playbackId` in the response object of the 
-[asset](https://docs.livepeer.studio/reference/api/get-assets#response-example) request.
-
-If you haven't created an asset yet, follow the 
+Get the `asset.id` of an existing asset. An `asset.id` can be found in the
+response object of any API call working with assets. If you haven't created an
+asset yet, you can follow the
 [upload a video asset guide](/guides/on-demand/upload-video-asset#api) to do so.
+
+## Step 2: Retrieve viewership data
+
+Once you have the `asset.id`, you can make a request to get the viewership data.
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const response = await fetch("https://livepeer.studio/api/asset/{id}", {
+const getViews = await fetch("https://livepeer.studio/api/data/views/{assetId}/total", {
     method: "GET",
     headers: {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
-        "Content-Type": "application/json",
-    },
-});
-
-const { playbackId } = await response.json();
-```
-
-</CodeBlockTabItem>
-<CodeBlockTabItem value="curl" label="curl">
-
-```bash
-curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
---header 'Authorization: Bearer $API_TOKEN'
-```
-
-</CodeBlockTabItem>
-</CodeBlockTabs>
-
-## Step 3: Retrieve viewership data
-
-Once you have the `playbackId`, you can make a request to get the viewership data.
-
-<CodeBlockTabs>
-<CodeBlockTabItem value="JavaScript" label="JavaScript">
-
-```js
-const getViews = await fetch("https://livepeer.studio/api/data/views/{playbackId}/total", {
-    method: "GET",
-    headers: {
-        "Content-Type": "application/json",
     },
 });
 ```
@@ -79,7 +44,8 @@ const getViews = await fetch("https://livepeer.studio/api/data/views/{playbackId
 <CodeBlockTabItem value="curl" label="curl">
 
 ```bash
-curl --location --request GET https://livepeer.studio/api/data/views/{playbackId}/total
+curl --location --request GET https://livepeer.studio/api/data/views/{assetId}/total \
+    -H "Authorization: $LP_API_KEY"
 ```
 
 </CodeBlockTabItem>
@@ -87,7 +53,7 @@ curl --location --request GET https://livepeer.studio/api/data/views/{playbackId
 
 ## Livepeer player alternative
 
-If you are using a HTML5 video player, you will need to include the plugin code 
+If you are using another video player, you will need to include the plugin code 
 within the player code. You can check out the full example [here](https://github.com/0xcadams/livepeer-player-demo).
 
 <CodeBlockTabs>
