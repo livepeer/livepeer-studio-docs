@@ -164,10 +164,10 @@ Using the URL generated in the response, upload your video with a PUT request.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-await fetch(url, {
+const upload = await fetch(url, {
     method: "PUT",
     headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`
+        Authorization: `Bearer ${process.env.API_TOKEN}`
         "Content-Type": "video/mp4"
     },
     data: fs.createReadStream(path)
@@ -204,7 +204,7 @@ API call again until `asset.status: "ready"`.
 const response = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "GET",
   headers: {
-    Authorization: `Bearer ${process.env.LP_API_KEY}`,
+    Authorization: `Bearer ${process.env.API_TOKEN}`,
   },
 });
 

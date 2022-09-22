@@ -61,7 +61,7 @@ const storeAssetOnIPFS = await fetch("https://livepeer.studio/api/asset/{id}", {
 ```bash
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
--H 'authorization: Bearer {api-key}' \
+-H 'authorization: Bearer $API_TOKEN' \
 -d {"storage": {"ipfs": true}}
 ```
 
