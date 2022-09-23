@@ -47,7 +47,7 @@ const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     },
-    data: JSON.stringify({
+    body: JSON.stringify({
         url: "$EXTERNAL_URL"
         name: "Example name",
     }),
@@ -132,7 +132,7 @@ const response = await fetch(
       Authorization: `Bearer ${process.env.API_TOKEN}`,
       "Content-Type": "application/json",
     },
-    data: JSON.stringify({
+    body: JSON.stringify({
       name: "Example name",
     }),
   }
@@ -170,7 +170,7 @@ await fetch(url, {
         Authorization: `Bearer ${process.env.LP_API_KEY}`
         "Content-Type": "video/mp4"
     },
-    data: fs.createReadStream(path)
+    body: fs.createReadStream(path)
 });
 ```
 
@@ -250,7 +250,7 @@ const response = await fetch(
       Authorization: `Bearer ${process.env.API_TOKEN}`,
       "Content-Type": "application/json",
     },
-    data: JSON.stringify({
+    body: JSON.stringify({
       name: "Example name",
     }),
   }
