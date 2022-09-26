@@ -1,0 +1,22 @@
+---
+title: "DELETE asset"
+---
+
+# `DELETE` asset
+
+`DELETE /asset/{ASSET_ID}` deletes an existing `asset` object.
+
+This will delete an existing asset from the Livepeer API database. Deleted
+assets can currently be played back from a playback URL, even if the asset is
+deleted. There is currently no way to delete an asset from IPFS or "unpin" the
+asset through Pinata.
+
+> **NOTE:** If you wish for the asset to be completely removed from our storage,
+> please contact us at <help@livepeer.studio>
+
+```bash
+curl -X DELETE 'https://livepeer.studio/api/asset/{ASSET_ID}' \
+-H 'authorization: Bearer {api-key}'
+```
+
+204 No Content
