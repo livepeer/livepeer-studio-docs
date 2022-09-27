@@ -2,24 +2,6 @@
 title: Support Matrix
 ---
 
-The following technical descriptions highlight capabilities of Livepeer Studio
-features and components available for building your livestreaming application:
-
-## Livepeer Studio Features
-
-| Feature    | Description                                          | Capabilities                                                                                                                                                                                |
-| ---------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Livestream | Livestreaming using broadcasting software or WebRTMP | <li> Multistream</li> <li>Livestream Recording</li> <li>Suspend streams</li>                                                                                                                |
-| On Demand  | **Upload** and **store videos** for on demand access | <li>Export to IPFS or other services</li> <li>Upload video to Livepeer Studio (API or Dashboard)</li> <li>Store assets on decentralized storage</li>                                        |
-| Mint       | Minting `.mp4` video as an NFT                       | <li>Mint `.mp4` video files</li> <li>Use to create custom ERC-721 smart contracts</li> <li>Deploy to mainnet, testnet or layer 2 solutions like Optimism in your custom smart contract</li> |
-
-## What We Support
-
-The components of our architecture handle:
-
-- Ingest Support
-- Transcoding Support
-- Video Workflow
 
 ### Ingest Support
 
@@ -48,7 +30,8 @@ The components of our architecture handle:
 
 | attribute                 | notes                                                                                                                                                                                              |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Latency                   | 10-18 seconds with good RTMP ingest health, 2s segment size, and standard 3 seg buffering in player                                                                                                |
+| On Demand upload format | MP4
+| Live latency                   | 10-18 seconds with good RTMP ingest health, 2s segment size, and standard 3 seg buffering in player                                                                                                |
 | Live output format        | HLS playback URL (m3u8)                                                                                                                                                                            |
 | H264 Transcoding Profiles | Baseline, Main, High                                                                                                                                                                               |
 | Video players             | Supported tested: video.js, hls.js, safari/ios native player, TheoplayerSupported untested: JWPlayer, android native, Shaka, Exo, Bitmovin, Brightcove                                             |
