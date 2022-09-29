@@ -36,7 +36,7 @@ stored.
 
 - Currently assets cannot be deleted from the default Livepeer Studio storage.
   You can customize any additional storage though.
-- Only IPFS is supported as an additional storge at the moment. We are currently
+- Only IPFS is supported as an additional storage at the moment. We are currently
   working on support for other decentralized storages like Arweave and Storj.
 
 ### Request
@@ -51,12 +51,12 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 ## Updating Metadata
 
 This allows for modifying the metadata of the asset, which is customizable NFT.
-Since each marketplace has their own standard for the `metatdata` of the NFT, it
+Since each marketplace has their own standard for the `metadata` of the NFT, it
 is up to you to determine which standard to use and fields to include.
 
 > **NOTE:**
 
-- Livepeer Studio's defaut fields for `metadata` are:
+- Livepeer Studio's default fields for `metadata` are:
 
 ```json
     "name": , //Populated with the asset name
@@ -116,4 +116,4 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 ### Response
 
 Returns a `200 OK` response with an object containing the updated properties
-indicates that the `asset` was succussfully updated.
+indicates that the `asset` was successfully updated.
