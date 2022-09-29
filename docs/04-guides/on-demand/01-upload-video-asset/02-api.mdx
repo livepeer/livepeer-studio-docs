@@ -165,12 +165,8 @@ Using the URL generated in the response, upload your video with a PUT request.
 
 ```js
 await fetch(url, {
-    method: "PUT",
-    headers: {
-        Authorization: `Bearer ${process.env.LP_API_KEY}`
-        "Content-Type": "video/mp4"
-    },
-    body: fs.createReadStream(path)
+  method: "PUT",
+  body: fs.createReadStream(path),
 });
 ```
 
@@ -179,7 +175,6 @@ await fetch(url, {
 
 ```bash
 curl --location --request PUT "${url}" \
---header 'Content-Type: video/mp4' \
 --data-binary '@$VIDEO_FILE_PATH'
 ```
 
