@@ -29,9 +29,9 @@ The components of our architecture handle:
 | Ingest Format                | RTMP, SRT                                                                                                                                                                                  |
 | Ingest Codec                 | H264 + AAC                                                                                                                                                                                 |
 | Ingest Authentication        | Webhook based                                                                                                                                                                              |
-| Encoder Software             | Supported tested: OBS 25.0.8, ffmpeg 4.3, StreamaxiaSupported untested: Xsplit, other versions of OBS and ffmpeg, other RTMP encoders, SRT encodersUnsupported: WebRTC                     |
+| Encoder Software             | Supported tested: OBS 25.0.8, ffmpeg 4.3, Streamaxia Supported untested: Xsplit, other versions of OBS and ffmpeg, other RTMP encoders, SRT encodersUnsupported: WebRTC                     |
 | Framerate                    | Between 5fps and 60fps, passthrough or custom                                                                                                                                              |
-| GOP Size (Keyframe Interval) | Supported tested: Constant GOP, Variable GOP of 0.5s to 8sSupported untested: Xsplit, Other versions of OBS and ffmpeg, other RTMP encodersUnsupported: Variable GOP not within 0.5s to 8s |
+| GOP Size (Keyframe Interval) | Supported tested: Constant GOP, Variable GOP of 0.5s to 8s Supported untested: Xsplit, Other versions of OBS and ffmpeg, other RTMP encodersUnsupported: Variable GOP not within 0.5s to 8s |
 
 ### Transcoding Support
 
@@ -51,7 +51,7 @@ The components of our architecture handle:
 | Latency                   | 10-18 seconds with good RTMP ingest health, 2s segment size, and standard 3 seg buffering in player                                                                                                |
 | Live output format        | HLS playback URL (m3u8)                                                                                                                                                                            |
 | H264 Transcoding Profiles | Baseline, Main, High                                                                                                                                                                               |
-| Video players             | Supported tested: video.js, hls.js, safari/ios native player, TheoplayerSupported untested: JWPlayer, android native, Shaka, Exo, Bitmovin, Brightcove                                             |
+| Video players             | Supported tested: video.js, hls.js, safari/ios native player, Theoplayer Supported untested: JWPlayer, android native, Shaka, Exo, Bitmovin, Brightcove                                             |
 | Video Delivery Location   | Supported tested: EU, USSupported untested: Asia, South America, Australia, Africa                                                                                                                 |
 | Live stream recording     | Only available for paying users. HLS playback URL (m3u8) available 5 minutes after session ends. Livepeer.com stores recording and serves playback via CDN. There is no limit on recording length. |
 | Recording output format   | HLS playback URL (m3u8)                                                                                                                                                                            |
