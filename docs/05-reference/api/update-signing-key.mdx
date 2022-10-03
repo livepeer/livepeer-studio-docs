@@ -12,7 +12,7 @@ It is a single endpoint that can update any of the mutable properties of a strea
 All fields are optional, and if any field is not included in the request payload
 it will be kept unchanged from the saved object.
 
-A `204 No Content` status response indicates the `signing key` was successfully updated.
+## Request
 
 ### Disabling a signing key
 
@@ -50,3 +50,7 @@ curl https://livepeer.studio/api/access-control/signing-key/${KEY_ID} \
     "name":"My new name for signing key"
 }'
 ```
+
+## Response
+
+A `204 No Content` status response indicates the `signing key` was successfully updated.
