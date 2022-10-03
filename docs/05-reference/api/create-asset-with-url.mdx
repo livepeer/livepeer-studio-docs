@@ -32,9 +32,9 @@ curl --location --request POST 'https://livepeer.studio/api/asset/import' \
 
 ```js
 const response = await fetch("https://livepeer.studio/api/asset/upload/url", {
+    method: "POST",
     headers: {
-      method: "POST"
-      Authorization: "Bearer {api_key}",
+      Authorization: ${api_key},
       "Content-Type": "application/json",
     },
     body: JSON.stringify({

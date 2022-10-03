@@ -1,0 +1,62 @@
+---
+title: POST signing key
+---
+
+# `POST` Create a signing key
+
+A `Signing Key` is used to sign JWTs and are necessary to make a stream private.
+
+When you create a `Signing Key`, the request returns a ECDSA (P-256) `pem` keypair, where
+- The `publicKey` is a Base64 of the `pem` public key of the keypair
+- The `privateKey` is displayed *only* on creation. This is the only moment where the client can save the private key, otherwise it will be lost
+Upload a video `Asset` to Livepeer Studio from an external URL through the
+`POST /api/asset/import` API.
+
+Up to 10 signing keys can be generated, after that the client needs to delete at least one `signingKey` to create a new one.
+
+## Request
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+  <TabItem value="curl" label="curl">
+
+```bash
+curl https://livepeer.studio/api/access-control/signing-key \
+--header 'Authorization: Bearer {api_key}' \
+  -X POST \
+  -H "Content-Type: application/json" \
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const response = await fetch("https://livepeer.studio/api/access-control/signing-key", {
+    method: "POST",
+    headers: {
+      Authorization: ${api_key},
+      "Content-Type": "application/json",
+    },
+});
+
+const result = await response.json();
+```
+
+</TabItem>
+</Tabs>
+
+## Response
+
+```jsx
+{
+    "id": "0f6a1b5a-333c-4ef3-9775-589a2907e105",
+    "name": "Signing Key 2",
+    "userId": "2b22f1de-875e-45a0-908d-593281988fb2",
+    "createdAt": 1663863391700,
+    "publicKey": "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFeVlZZGNKL0tFbUIrWjAvb29sbXJ2bXNlblRiNgpnc1FuQmhnRVhmdkhycDgxNFg0b0lBbVg1VjlnZzhEclJLUFRhNWxlRkhRYm5LQ0VvTk1NckoxK2F3PT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==",
+    "privateKey": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg+Sebp896yp2JZouz\n9v1hlnu5ivJMp0CeXzxEr/6ZTL2hRANCAATJhh1wn8oSYH5nT+iiWau+ax6dNvqC\nxCcGGARd+8eunzXhfiggCZflX2CDwOtEo9NrmV4UdBucoISg0wysnX5r\n-----END PRIVATE KEY-----\n"
+}
+```
