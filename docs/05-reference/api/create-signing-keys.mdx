@@ -12,15 +12,9 @@ When you create a `Signing Key`, the request returns a ECDSA (P-256) `pem` keypa
 Upload a video `Asset` to Livepeer Studio from an external URL through the
 `POST /api/asset/import` API.
 
-Up to 10 signing keys can be generated, after that the client needs to delete at least one `signingKey` to create a new one.
+Up to 10 signing keys can be generated, after that you must delete at least one `Signing Key` to create a new one.
 
 ## Request
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs>
-  <TabItem value="curl" label="curl">
 
 ```bash
 curl https://livepeer.studio/api/access-control/signing-key \
@@ -28,25 +22,6 @@ curl https://livepeer.studio/api/access-control/signing-key \
   -X POST \
   -H "Content-Type: application/json" \
 ```
-
-</TabItem>
-
-<TabItem value="js" label="JavaScript">
-
-```js
-const response = await fetch("https://livepeer.studio/api/access-control/signing-key", {
-    method: "POST",
-    headers: {
-      Authorization: ${api_key},
-      "Content-Type": "application/json",
-    },
-});
-
-const result = await response.json();
-```
-
-</TabItem>
-</Tabs>
 
 ## Response
 
