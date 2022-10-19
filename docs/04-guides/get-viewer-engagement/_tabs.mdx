@@ -17,7 +17,7 @@ video using the [dashboard](./dashboard) or the [Livepeer API](./api).
 
 To collect and register viewership metrics, you need to configure your player.
 Currently the viewership data is only registered if you're using the
-[Livepeer player](https://livepeerjs.org/). It also comes fully configured for
+[Livepeer player](https://livepeerjs.org/react/Player). It also comes fully configured for
 the best playback experience with Livepeer, so it's the recommended way to get
 started. You can follow [this guide](/guides/playback-a-video-stream) to setup
 the Livepeer player.
@@ -31,10 +31,8 @@ you.
 
 ### Caveats
 
-The viewership API is still in development. Currently, we only support start
-views, views when you open or start watching an asset. In the future, we'll
-support additional viewership and engagement metrics so you can understand your
-user's experience.
+The viewership API is still in development. Currently, viewer count metrics are only available for On Demand assets. The count registers start views with some deduping logic that prevents users from attempting to inflate view counts. In the future, we'll
+support additional viewership and engagement metrics so you can better understand popularity and performance. [Let us know](https://livepeer.studio/contact) if you have any particular feature requests related to metrics.
 
 <TabbedPages
   pages={[
