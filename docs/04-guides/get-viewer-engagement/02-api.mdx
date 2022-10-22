@@ -1,9 +1,10 @@
 ---
-sidebar_class_name: tabbed-page
-hide_title: true
-slug: api
 title: API
+slug: api
+sidebar_class_name: tabbed-page
 pagination_next: guides/playback-a-video-stream
+hide_title: true
+displayed_sidebar: mySidebar
 ---
 
 import Tabs from "./_tabs.mdx";
@@ -13,9 +14,28 @@ import CodeBlockTabItem from "@site/src/components/CodeBlockTabItem";
 
 <Tabs />
 
-The Livepeer API allows you to send video files to Livepeer and get them ready
-for optimized playback. Videos can be provided either by you (static content) or
-your users, given your application offers an interface for them to do so.
+:::note
+
+The viewership API is still in development. Currently, we only support start
+views, views when you open or start watching an asset. In the future, we'll
+support additional viewership and engagement metrics so you can understand your
+user's experience.
+
+:::
+
+## Step 1: Register views
+
+To collect and register viewership metrics, you need to configure your player.
+Currently the viewership data is only registered if you're using the
+[Livepeer player](https://livepeerjs.org/). It also comes fully configured for
+the best playback experience with Livepeer, so it's the recommended way to get
+started. You can follow [this guide](/guides/playback-a-video-stream) to setup
+the Livepeer player.
+
+We are currently working on support for viewership data using custom players as
+well. If you need any urgent help with this
+[get in touch](https://livepeer.studio/contact) and we may be able to assist
+you.
 
 ## Step 1: Get the `asset.id` of an existing asset
 
