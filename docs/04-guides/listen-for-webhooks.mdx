@@ -70,8 +70,8 @@ curl \
 
 ### Response
 
-Returns a JSON object with the `events`, stream `id`, `name` of the webhook,
-`url` of the webhook endpoint, and the `userID` of the stream
+Returns a JSON object with the webhook object just created. This includes its `id`, `name`, the `events` it will be notified about and
+the `url` that will be called.
 
 ```JSON
 {
@@ -126,7 +126,7 @@ third party.
 1. Split the header, using the `,` character as the separator, to get a list of
    elements.
 
-2. plit each element, using the `=` character as the separator, to get a prefix
+2. Split each element, using the `=` character as the separator, to get a prefix
    and value pair.
 
 - The value for the prefix `t` corresponds to the timestamp, and

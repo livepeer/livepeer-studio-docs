@@ -3,7 +3,7 @@ title: Multistream
 ---
 
 Multistream allows a source stream and transcoded renditions to be pushed to
-multiple RTMP(S) or SRT targets, such as Twitch, Facebook Live, and YouTube
+multiple RTMP(S) targets, such as Twitch, Facebook Live, and YouTube
 Live. This guide will provide an understanding and use of multistream with the
 following:
 
@@ -27,7 +27,7 @@ multistreamed and the `id` of the corresponding `Multistream Target`.
 
 The `profile` field must reference an existing transcoding profile on the same
 stream, or `"source"` to multistream the same original video as ingested. The
-same profile can be mulsitreamed to several `Multistream Targets`, but there can
+same profile can be multistreamed to several `Multistream Targets`, but there can
 be only 1 multistream to a given URL. You can also set the `videoOnly` field to
 `true` to mute the stream audio and stream only a silent video to the target.
 
@@ -292,7 +292,7 @@ curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
 
 ### Patch Response
 
-The reponse should be a `204`
+The response should be a `204`
 
 ## Removing Multistream Targets
 
@@ -301,7 +301,7 @@ request as above to either remove or completely clear the `multistream.targets`
 array.
 
 After removing the reference from the `Stream`, you can also delete the
-`Multistream Target` object completetly by calling the separate
+`Multistream Target` object completely by calling the separate
 [Delete `Multistream Target` API](/reference/api/delete-multistream-target).
 
 > **Note:** Make sure that no other `Stream` has a reference to that
@@ -333,7 +333,7 @@ curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
 
 ### Response
 
-The reponse should be a `204`
+The response should be a `204`
 
 We kept only the remaining targets in the `PATCH`, i.e. the second one.
 
@@ -358,7 +358,7 @@ curl -X PATCH 'https://livepeer.studio/api/stream/{id}' \
 
 ### Response
 
-The reponse should be a `204`
+The response should be a `204`
 
 ## Manage Multistream targets in the Livepeer Studio Dashboard
 
@@ -378,14 +378,14 @@ streaming into and can be of the RTMP, RTMPS or SRT protocols. Select the
 rendition profile that you'd like to send to that target and click
 `Create Target`. Once created, you can toggle the targets on and off.
 
-To edit a `Mulitstream Target`, click on the three dots to the right of the
+To edit a `Multistream Target`, click on the three dots to the right of the
 target name and then on `Edit` to open up the target settings. Select
 `Update target` when you've completed your changes.
 
 To delete a multistream target, click on the three dots to the right of the
 target name and then on `Delete`.
 
-> **Note:** Any changes to <code>Mulitstream Targets</code>, including creating
+> **Note:** Any changes to <code>Multistream Targets</code>, including creating
 > new targets, will apply only to the next active session. If you make changes
 > while a stream is active, those changes will not apply until the current
 > session has ended and a new session begins.
@@ -423,7 +423,7 @@ curl -X POST 'https://livepeer.studio/api/multistream/target' \
 }'
 ```
 
-> **Note:** Supported Protocols -- `RTMP, RTMPS and SRT.`
+> **Note:** Supported Protocols -- `RTMP and RTMPS.`
 
 ### Response
 

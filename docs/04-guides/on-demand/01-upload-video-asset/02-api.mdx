@@ -47,7 +47,7 @@ const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
         "Content-Type": "application/json",
     },
-    data: JSON.stringify({
+    body: JSON.stringify({
         url: "$EXTERNAL_URL"
         name: "Example name",
     }),
@@ -132,7 +132,7 @@ const response = await fetch(
       Authorization: `Bearer ${process.env.API_TOKEN}`,
       "Content-Type": "application/json",
     },
-    data: JSON.stringify({
+    body: JSON.stringify({
       name: "Example name",
     }),
   }
@@ -165,12 +165,8 @@ Using the URL generated in the response, upload your video with a PUT request.
 
 ```js
 const upload = await fetch(url, {
-    method: "PUT",
-    headers: {
-        Authorization: `Bearer ${process.env.API_TOKEN}`
-        "Content-Type": "video/mp4"
-    },
-    data: fs.createReadStream(path)
+  method: "PUT",
+  body: fs.createReadStream(path),
 });
 ```
 
@@ -179,7 +175,6 @@ const upload = await fetch(url, {
 
 ```bash
 curl --location --request PUT "${url}" \
---header 'Content-Type: video/mp4' \
 --data-binary '@$VIDEO_FILE_PATH'
 ```
 
@@ -250,7 +245,7 @@ const response = await fetch(
       Authorization: `Bearer ${process.env.API_TOKEN}`,
       "Content-Type": "application/json",
     },
-    data: JSON.stringify({
+    body: JSON.stringify({
       name: "Example name",
     }),
   }
