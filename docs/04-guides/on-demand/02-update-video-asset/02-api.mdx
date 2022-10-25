@@ -32,7 +32,7 @@ and metadata.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const storeAssetOnIPFS = await fetch("https://livepeer.studio/api/asset/{id}", {
+const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "PATCH",
   headers: {
     Authorization: `Bearer ${process.env.API_TOKEN}`,

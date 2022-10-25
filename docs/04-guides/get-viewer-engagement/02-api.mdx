@@ -55,7 +55,7 @@ Once you have the `asset.id`, you can make a request to get the viewership data.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const getViews = await fetch(
+const response = await fetch(
   "https://livepeer.studio/api/data/views/{assetId}/total",
   {
     method: "GET",
@@ -64,6 +64,8 @@ const getViews = await fetch(
     },
   }
 );
+
+const { startViews } = await response.json()
 ```
 
 </CodeBlockTabItem>
@@ -71,7 +73,7 @@ const getViews = await fetch(
 
 ```bash
 curl --location --request GET https://livepeer.studio/api/data/views/{assetId}/total \
-    -H "Authorization: $LP_API_KEY"
+    -H "Authorization: Bearer $API_TOKEN"
 ```
 
 </CodeBlockTabItem>
