@@ -16,25 +16,30 @@ it will be kept unchanged from the saved object.
 
 ### Disabling a signing key
 
+This is useful when you want to rotate signing keys but don't want to risk deleting the old one permanently. 
+Instead you can disable it first and check that nothing broke to only then delete it permanently.
+
 ```bash
 curl https://livepeer.studio/api/access-control/signing-key/${KEY_ID} \
 --header 'Authorization: Bearer {api_key}' \
   -X PATCH \
   -H "Content-Type: application/json" \
 --data-raw '{
-    "disabled":true
+    "disabled": true
 }'
 ```
 
 ### Changing signing key name
 
+Notice that you can also provide a name to the signing key upon creation. Just provide the same `"name"` field on the creation API.
+
 ```bash
 curl https://livepeer.studio/api/access-control/signing-key/${KEY_ID} \
 --header 'Authorization: Bearer {api_key}' \
   -X PATCH \
   -H "Content-Type: application/json" \
 --data-raw '{
-    "name":"My new name for signing key"
+    "name": "My new name for signing key"
 }'
 ```
 
@@ -46,8 +51,8 @@ curl https://livepeer.studio/api/access-control/signing-key/${KEY_ID} \
   -X PATCH \
   -H "Content-Type: application/json" \
 --data-raw '{
-    "disabled":true,
-    "name":"My new name for signing key"
+    "disabled": true,
+    "name": "My new name for signing key"
 }'
 ```
 
