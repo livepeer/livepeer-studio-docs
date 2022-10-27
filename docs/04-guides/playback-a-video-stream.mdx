@@ -13,12 +13,12 @@ import HTMLPlayer from "@site/src/components/Player/HTML";
 
 # Playback a video
 
-This guide provides you the instructions to playback a video or a livestream on
-your website/applications. To playback a live streams or on demand video inside
-your application you'll need to use a video player component that supports the
+This guide provides you the instructions to playback a video or a live stream on
+your website/applications. To playback live streams or on-demand video inside
+your application, you'll need to use a video player component that supports the
 HLS protocol.
 
-You can either use Livepeer's build-in player or your own player. This guide
+You can either use Livepeer's built-in player or your own player. This guide
 covers both options.
 
 ## Using Livepeer's player
@@ -37,7 +37,7 @@ Next.js.
 
 ### Get video playback id
 
-Each video or livestream has a unique playback id. You can get the playback id
+Each video or live stream has a unique playback id. You can get the playback id
 from the response of the [Create a video](/reference/api/create-asset-with-url)
 or [Create a livestream](/reference/api/create-stream) API.
 
@@ -102,22 +102,22 @@ export const SimplePlayer = () => {
 ## Using your own player
 
 Using livepeer.js is the easiest and recommended way to playback a video or a
-livestream. However, if you want to use your own player, you can do so by
+live stream. However, if you want to use your own player, you can do so by
 following the instructions below.
 
 :::caution
 
 Please note that to playback live streams inside your application you'll need to
-use a video player component that supports the HLS protocol.
+use a video player component that supports the HLS.
 
 :::
 
 ### Create a playback URL
 
-To playback a livestream in other players, you'll need to create a HLS url. HLS
-is a protocol that allows you to stream video and audio content over HTTP. Most
-of the video you watch on the web is delivered using HLS. Livepeer uses HLS to
-delivers video and audio content.
+To playback a live stream in other players, you'll need to create an HLS URL.
+HLS is a protocol that allows you to stream video and audio content over HTTP.
+Most of the video you watch on the web is delivered using HLS. Livepeer also
+uses HLS to deliver video and audio content.
 
 You can create a HLS url by using the below format and replacing the
 `PLAYBACK_ID` with your stream's playback id.
@@ -136,8 +136,8 @@ https://livepeercdn.com/asset/{PLAYBACK_ID}/video
 
 ### Use the playback URL in a player
 
-You can use the playback URL is any video player that supports HLS. Here are a
-few popular players that supports HLS:
+You can use the playback URL is any video player that supports HLS. Here is a
+list of popular players that supports HLS:
 
 - [Video.js](https://videojs.com/)
 - [Plyr.io](https://plyr.io/)
