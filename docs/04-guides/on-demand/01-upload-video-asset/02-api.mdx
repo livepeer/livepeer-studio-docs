@@ -217,6 +217,75 @@ curl --location --request GET 'https://livepeer.studio/api/asset/{id}' \
 </CodeBlockTabItem>
 </CodeBlockTabs>
 
+### Using Livepeerjs
+
+You can also use [Livepeerjs](https://livepeerjs.org/) to upload a video asset directly to Livepeer.
+
+<CodeBlockTabs>
+<CodeBlockTabItem value="Livepeerjs" label="Livepeerjs">
+
+```js
+import {
+  LivepeerConfig,
+  createReactClient,
+  studioProvider,
+  useAsset, 
+  useCreateAsset
+} from '@livepeer/react';
+ 
+const client = createReactClient({
+  provider: studioProvider({ apiKey: 'yourStudioApiKey' }),
+});
+ 
+function App() {
+  const [video, setVideo] = useState<File | undefined>();
+  const {
+    mutate: createAsset,
+    data: asset,
+    uploadProgress,
+    status,
+    error,
+  } = useCreateAsset();
+ 
+  return (
+    <LivepeerConfig client={client}>
+      <div>
+        <input
+          type="file"
+          accept="video/*"
+          onChange={(e) => setVideo(e?.target?.files?.[0])}
+        />
+        <button
+          disabled={!video || status === 'loading'}
+          onClick={() => {
+            if (video) {
+              createAsset({
+                name: video.name,
+                file: video,
+              });
+            }
+          }}
+        >
+          Create Asset
+        </button>
+        {asset && (
+          <>
+            <div>Asset Name: {asset?.name}</div>
+            <div>Playback URL: {asset?.playbackUrl}</div>
+            {uploadProgress && <div>Upload Progress: {Math.floor(uploadProgress * 100)}%</div>}
+            {asset?.status?.progress && <div>Processing Progress: {Math.floor(asset.status.progress * 100)}%</div>}
+          </>
+        )}
+        {error && <div>{error.message}</div>}
+      </div>
+    </LivepeerConfig>
+  ) 
+}
+```
+
+</CodeBlockTabItem>
+</CodeBlockTabs>
+
 ## Resumable Upload
 
 A resumable upload allows you to resume an upload operation after a

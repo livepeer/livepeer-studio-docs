@@ -52,6 +52,32 @@ asset yet, you can follow the
 Once you have the `asset.id`, you can make a request to get the viewership data.
 
 <CodeBlockTabs>
+<CodeBlockTabItem value="Livepeerjs" label="Livepeerjs">
+
+```js
+import {
+  LivepeerConfig,
+  createReactClient,
+  studioProvider,
+  useAssetMetrics
+} from '@livepeer/react';
+ 
+const client = createReactClient({
+  provider: studioProvider({ apiKey: 'yourStudioApiKey' }),
+});
+ 
+function App() {
+  const { data: metrics } = useAssetMetrics({ assetId });
+ 
+  return (
+    <LivepeerConfig client={client}>
+      <p>Metrics: {metrics}</p>
+    </LivepeerConfig>
+  ) 
+}
+```
+
+</CodeBlockTabItem>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
