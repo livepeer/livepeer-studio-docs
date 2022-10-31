@@ -25,14 +25,14 @@ asset yet, you can follow the
 
 ## Step 2: Update the asset
 
-Once you have an `asset.id`, you can make a request to update the asset's name
-and metadata.
+Once you have an `asset.id`, you can make a request to update the asset's name,
+playback policy and storage.
 
 <CodeBlockTabs>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
+const updateAssetName = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "PATCH",
   headers: {
     Authorization: `Bearer ${process.env.API_TOKEN}`,
@@ -40,10 +40,6 @@ const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
   },
   body: {
     name: "testing123",
-    meta: {
-      name: "testing123",
-      description: "new video",
-    },
   },
 });
 ```
@@ -55,13 +51,7 @@ const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer $API_TOKEN' \
--d {
-    "name": "Example name",
-    "meta": {
-        "name": "testing123",
-        "description": "new video"
-    }
-}
+-d '{ "name": "Example name" }'
 ```
 
 </CodeBlockTabItem>
