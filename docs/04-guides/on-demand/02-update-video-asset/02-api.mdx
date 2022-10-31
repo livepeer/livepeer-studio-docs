@@ -49,20 +49,4 @@ const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
 ```
 
 </CodeBlockTabItem>
-<CodeBlockTabItem value="curl" label="curl">
-
-```bash
-curl -X PATCH https://livepeer.studio/api/asset/{id} \
--H 'content-type: application/json' \
--H 'authorization: Bearer $API_TOKEN' \
--d {
-    "name": "Example name",
-    "meta": {
-        "name": "testing123",
-        "description": "new video"
-    }
-}
-```
-
-</CodeBlockTabItem>
 </CodeBlockTabs>
