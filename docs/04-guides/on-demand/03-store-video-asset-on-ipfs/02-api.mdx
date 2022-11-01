@@ -16,7 +16,7 @@ The Livepeer API allows you to send video files to Livepeer and get them ready
 for optimized playback. Videos can be provided either by you (static content) or
 your users, given your application offers an interface for them to do so.
 
-## Caveats
+:::caution Caveats
 
 - Currently assets cannot be deleted from the default Livepeer Studio storage.
   You can customize any additional storage though.
@@ -24,6 +24,7 @@ your users, given your application offers an interface for them to do so.
   working on adding additional storage providers. If you have requirements for a
   particular storage provider, please reach out to us at
   [help@livepeer.studio](mailto:help@livepeer.studio).
+:::
 
 ## Step 1: Get the `asset.id` of an existing asset
 
@@ -61,7 +62,7 @@ const storeAssetOnIPFS = await fetch("https://livepeer.studio/api/asset/{id}", {
 ```bash
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
--H 'authorization: Bearer {api-key}' \
+-H 'authorization: Bearer $API_TOKEN' \
 -d {"storage": {"ipfs": true}}
 ```
 

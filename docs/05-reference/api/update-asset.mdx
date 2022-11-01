@@ -10,7 +10,6 @@ mutable properties of an asset:
 
 - `name`
 - `storage`
-- `meta`
 
 ## Update Stored Asset
 
@@ -36,8 +35,9 @@ stored.
 
 - Currently assets cannot be deleted from the default Livepeer Studio storage.
   You can customize any additional storage though.
-- Only IPFS is supported as an additional storage at the moment. We are currently
-  working on support for other decentralized storages like Arweave and Storj.
+- Only IPFS is supported as an additional storage at the moment. We are
+  currently working on support for other decentralized storages like Arweave and
+  Storj.
 
 ### Request
 
@@ -48,31 +48,48 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -d {"storage": {"ipfs": {}}}
 ```
 
-## Updating Metadata
+### Response
 
-This allows for modifying the metadata of the asset, which is customizable NFT.
+Storing a file on IPFS is a long-running operation, which can take a few seconds
+to complete. As such, you won't get an immediate result on the response, but
+should check the `storage.status` object of the asset (e.g. polling) until it
+phases to `ready`. Then you will have the corresponding CIDs of the asset inside
+the `storage.ipfs` object.
+
+You can also use the `asset.updated` webhook to get notified when the asset
+changes, both for the intermediate progress updates and the final update with
+the CIDs added to the object.
+
+## Setting NFT Metadata
+
+When you save a file to IPFS Livepeer Studio also exports a metadata file that
+can be used to mint NFTs from the video. This way you don't need to have a
+separate IPFS provider only for storing your NFT metadata.
+
 Since each marketplace has their own standard for the `metadata` of the NFT, it
 is up to you to determine which standard to use and fields to include.
 
 > **NOTE:**
 
-- Livepeer Studio's default fields for `metadata` are:
+- Livepeer Studio includes a couple of fields by default which are deep merged
+  with the provided NFT metadata, with the provided values having precedence.
 
 ```json
-    "name": , //Populated with the asset name
-    "description": , //A default description referring to the asset name above
-    "image": //A default image including the Livepeer logo as a thumbnail
-    "animation_url": //URL for the Livepeer player on IPFS playing the video from Livepeer Studio
-    "external_url": //URL for the Livepeer player hosted on lvpr.tv playing the video from Livepeer Studio
+    "name": , // Populated with the same name of the asset in the API
+    "description": , // A default description referring to the above asset name
+    "image": // A default image including the Livepeer logo as a thumbnail
+    "animation_url": // IPFS URL for an immutable version of the lvpr.tv player with the video
+    "external_url": // Mutable URL for the lvpr.tv player with the video
     "properties": {
-      "video": //CID of the original video file saved on IPFS
-      "com.livepeer.playbackId": //playback ID of the asset in Livepeer Studio
+      "video": // CID of the original video file saved on IPFS
+      "com.livepeer.playbackId": // playback ID of the asset in Livepeer Studio
     }
 ```
 
 > **NOTICE** that you can change the value or delete any of these default fields
-> by providing a value in the `nftMetadata` field. You can delete any of the
-> above fields by specifying them as `null` in your overrides.
+> by providing a value for it in the `nftMetadata` object, which have precedence
+> over whatever is set by default. You can delete any of the above fields by
+> specifying them as `null` in your overrides.
 
 Example: `"animation_url": null`
 
@@ -82,19 +99,30 @@ Example: `"animation_url": null`
 curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api-key}' \
--d {  "meta": {
-        "title": "My awesome video",
-        "description": "This is a video of my awesome life",
-        "tags": "awesome,life,video"
-    }
-  }
+-d '{
+      "storage": {
+        "ipfs": {
+          "spec": {
+            "nftMetadata": {
+              "title": "My awesome video",
+              "description": "This is a video of my awesome life",
+              "tags": "awesome,life,video"
+            }
+          }
+        }
+      }
+    }'
 ```
+
+### Response
+
+Same as before, saving the NFT metadata on IPFS will be a long-running
+operation. You can track the progress the same way as the simple IPFS request,
+with the NFT metadata CID showing up in the `storage.ipfs.nftMetadata` object.
 
 ## Updating Multiple parameters
 
-This allows for modifying the metadata of the asset, which can be used to
-customize the asset of the NFT metadata. These fields are customizable and are
-not set.
+You can also specify multiple fields to update in a single `PATCH` request.
 
 ### Request
 
@@ -104,12 +132,7 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 -H 'authorization: Bearer {api-key}' \
 -d {
   "name": "New name",
-  "storage": {"ipfs": {}},
-  "meta": {
-        "title": "My awesome video",
-        "description": "This is a video of my awesome life",
-        "tags": "awesome,life,video"
-    }
+  "storage": {"ipfs": {}}
   }
 ```
 

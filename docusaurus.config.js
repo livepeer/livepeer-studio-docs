@@ -54,12 +54,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // algolia: {
-      //   appId: "TIWEI9YB8Y",
-      //   apiKey: "bee5caa76c6df12c16be24f2f04e7c7c",
-      //   indexName: "2022-livepeer-org-docs",
-      //   contextualSearch: true,
-      // },
+      algolia: {
+        appId: "2ETEDSW9F2",
+        apiKey: "81686719154ad71c4c2545e3cb6c9dca",
+        indexName: "livepeer_studio_docs",
+        contextualSearch: true,
+      },
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,
