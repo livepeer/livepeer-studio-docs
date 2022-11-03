@@ -6,23 +6,23 @@ import {
   studioProvider,
 } from "@livepeer/react";
 
+const client = createReactClient({
+  provider: studioProvider({
+    apiKey: "97f1716d-d1cd-4ebf-aa10-48d733b3f228",
+  }),
+});
+
+const livepeerTheme = {
+  colors: {
+    accent: "rgb(0, 145, 255)",
+    containerBorderColor: "rgba(0, 145, 255, 0.9)",
+  },
+  fonts: {
+    display: "Inter",
+  },
+};
+
 export default function index() {
-  const client = createReactClient({
-    provider: studioProvider({
-      apiKey: "97f1716d-d1cd-4ebf-aa10-48d733b3f228",
-    }),
-  });
-
-  const livepeerTheme = {
-    colors: {
-      accent: "rgb(0, 145, 255)",
-      containerBorderColor: "rgba(0, 145, 255, 0.9)",
-    },
-    fonts: {
-      display: "Inter",
-    },
-  };
-
   return (
     <LivepeerConfig client={client} theme={livepeerTheme}>
       <Player
