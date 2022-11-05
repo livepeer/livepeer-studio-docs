@@ -26,79 +26,14 @@ feature requests related to metrics.
 
 :::
 
-## Step 1: Register views
-
-To collect and register viewership metrics, you need to configure your player.
-It is not required but we recommend that you use the [Livepeer player](https://livepeerjs.org/react/Player)
-to get viewership metrics, as it comes fully configured for the best playback experience with Livepeer.
-You can follow [this guide](/guides/playback-a-video-stream) to set it up.
-
-We also support viewership data using custom players. Here's how to configure one to register
-viewership metrics as well:
-
-Here's how to configure a custom player:
-
-<CodeBlockTabs>
-<CodeBlockTabItem value="JavaScript" label="JavaScript">
-
-```js
-import { addMediaMetrics } from 'livepeer'
-
-const source =
-  'https://livepeercdn.com/recordings/bd600224-d93a-4ddc-a6ac-2d71e3c36768/index.m3u8'
-const video = document.getElementById('my-video')
-
-// setup your player before calling addMediaMetrics
-
-addMediaMetrics(video, source, (e) => console.error('Error adding metrics', e))
-```
-
-</CodeBlockTabItem>
-<CodeBlockTabItem value="React" label="React">
-
-```js
-import { addMediaMetrics } from 'livepeer'
-import React, { useEffect, useRef, useState } from 'react'
-
-export default function VideoPlayer() {
-  const videoRef = useRef(null)
-  const [source, setSource] = useState(
-    'https://livepeercdn.com/recordings/bd600224-d93a-4ddc-a6ac-2d71e3c36768/index.m3u8'
-  )
-
-  useEffect(() => {
-    if (videoRef.current) {
-      // set up other stuff in your player before calling addMediaMetrics
-      const metrics = addMediaMetrics(videoRef.current, source, (e) =>
-        console.error('Error adding metrics', e)
-      )
-      return metrics?.destroy
-    }
-  }, [videoRef, source])
-
-  return (
-    <video
-      controls
-      ref={videoRef}
-      src={source}
-      style={{ width: '100%', maxWidth: '500px' }}
-    />
-  )
-}
-```
-
-</CodeBlockTabItem>
-</CodeBlockTabs>
-
-
-## Step 2: Get the `asset.id` of an existing asset
+## Step 1: Get the `asset.id` of an existing asset
 
 Get the `asset.id` of an existing asset. An `asset.id` can be found in the
 response object of any API call working with assets. If you haven't created an
 asset yet, you can follow the
 [upload a video asset guide](/guides/on-demand/upload-video-asset#api) to do so.
 
-## Step 3: Retrieve viewership data
+## Step 2: Retrieve viewership data
 
 Once you have the `asset.id`, you can make a request to get the viewership data.
 
