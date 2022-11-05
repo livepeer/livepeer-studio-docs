@@ -116,7 +116,7 @@ const response = await fetch(
   }
 );
 
-const startViews = await response[0].startViews
+const { startViews } = (await response.json())[0]
 ```
 
 </CodeBlockTabItem>
