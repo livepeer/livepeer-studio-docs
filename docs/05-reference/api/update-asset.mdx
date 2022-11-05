@@ -140,29 +140,3 @@ curl -X PATCH https://livepeer.studio/api/asset/{id} \
 
 Returns a `200 OK` response with an object containing the updated properties
 indicates that the `asset` was successfully updated.
-
-## Update Access Control Policy
-
-A `playbackPolicy` `type` can be either:
-- public - No access control is applied to the asset
-- jwt - A JWT is required to playback the asset
-
-If you set your stream or asset's playback policy to jwt, you will need to decode and verify
-your stream or asset for playback.
-
-### Request
-
-```bash
-curl --location --request PATCH 'https://livepeer.studio/api/asset/{asset_id}' \
--H 'Content-type: application/json' \
--H 'Authorization: Bearer {api_key}' \
--d {
-    "playbackPolicy": {
-      "type":"jwt"
-    }
-  }
-```
-
-### Response
-
-A `204 No Content` status response indicates the `asset` was successfully updated.
