@@ -25,14 +25,65 @@ asset yet, you can follow the
 
 ## Step 2: Update the asset
 
-Once you have an `asset.id`, you can make a request to update the asset's name
-and metadata.
+Once you have an `asset.id`, you can make a request to update the asset's name,
+playback policy and storage.
 
 <CodeBlockTabs>
+<CodeBlockTabItem value="Livepeerjs" label="Livepeerjs">
+
+```js
+import {
+  LivepeerConfig,
+  createReactClient,
+  studioProvider,
+  useAsset, 
+  useUpdateAsset
+} from '@livepeer/react';
+ 
+const client = createReactClient({
+  provider: studioProvider({ apiKey: 'yourStudioApiKey' }),
+});
+ 
+const assetId = '7ce29561-91ae-42cf-b9c0-6e46dbc1cc2d';
+ 
+function App() {
+  const { data: asset } = useAsset({
+    assetId,
+    refetchInterval: 10000,
+  });
+  const { mutate: updateAsset, status, error } = useUpdateAsset();
+ 
+  return (
+    <LivepeerConfig client={client}>
+      <div>
+        <button
+          disabled={status === 'loading'}
+          onClick={() => {
+            updateAsset({
+              assetId,
+              name: "testing123",
+            });
+          }}
+        >
+          Upload to IPFS
+        </button>
+        {asset && (
+          <>
+            <div>Asset Name: {asset?.name}</div>
+          </>
+        )}
+        {error && <div>{error.message}</div>}
+      </div>
+    </LivepeerConfig>
+  );
+}
+```
+
+</CodeBlockTabItem>
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
+const updateAssetName = await fetch("https://livepeer.studio/api/asset/{id}", {
   method: "PATCH",
   headers: {
     Authorization: `Bearer ${process.env.API_TOKEN}`,
@@ -40,10 +91,6 @@ const updateAssetData = await fetch("https://livepeer.studio/api/asset/{id}", {
   },
   body: {
     name: "testing123",
-    meta: {
-      name: "testing123",
-      description: "new video",
-    },
   },
 });
 ```
