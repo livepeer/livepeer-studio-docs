@@ -26,20 +26,6 @@ feature requests related to metrics.
 
 :::
 
-## Step 1: Register views
-
-To collect and register viewership metrics, you need to configure your player.
-Currently the viewership data is only registered if you're using the
-[Livepeer player](https://livepeerjs.org/react/Player). It also comes fully
-configured for the best playback experience with Livepeer, so it's the
-recommended way to get started. You can follow
-[this guide](/guides/playback-a-video-stream) to setup the Livepeer player.
-
-We are currently working on support for viewership data using custom players as
-well. If you need any urgent help with this
-[get in touch](https://livepeer.studio/contact) and we may be able to assist
-you.
-
 ## Step 1: Get the `asset.id` of an existing asset
 
 Get the `asset.id` of an existing asset. An `asset.id` can be found in the
@@ -65,7 +51,7 @@ const response = await fetch(
   }
 );
 
-const { startViews } = await response.json()
+const { startViews } = (await response.json())[0]
 ```
 
 </CodeBlockTabItem>
