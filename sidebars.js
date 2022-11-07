@@ -59,6 +59,7 @@ const sidebars = {
         "guides/playback-a-video-stream",
         "guides/listen-for-webhooks",
         "guides/mint-a-video-nft",
+        "guides/secure-video-playback"
       ],
     },
     {
