@@ -84,7 +84,7 @@ playback URL to be able to playback your stream.
 ### Request
 
 ```bash
-curl -X POST \
+curl -X POST 'https://livepeer.studio/api/stream' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api_key}' \
 -d '{
@@ -115,8 +115,7 @@ curl -X POST \
   "playbackPolicy": {
     "type":"jwt"
   }
-}' \
-https://livepeer.studio/api/stream
+}'
 ```
 
 ### Response
