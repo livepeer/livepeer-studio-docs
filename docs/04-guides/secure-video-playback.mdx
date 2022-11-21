@@ -64,39 +64,31 @@ After setting up your livestream and signing key, you will need to sign the JWT 
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-import jwt, { JsonWebTokenError, JwtPayload } from "jsonwebtoken";
+// use the signAccessJwt export from `livepeer` in Node.JS
+import { signAccessJwt } from 'livepeer/crypto';
 
-/* LIVEPEER JS IMPORTS WHEN SIGNING KEYS ARE GOING TO BE INTEGRATED*/
-/*import {
-  LivepeerConfig,
-  createReactClient,
-  studioProvider,
-} from '@livepeer/react';
-import { useCreateSigningKey } from '@livepeer/react';
+const accessControlPrivateKey = process.env.ACCESS_CONTROL_PRIVATE_KEY;
+const accessControlPublicKey =
+  process.env.NEXT_PUBLIC_ACCESS_CONTROL_PUBLIC_KEY;
  
-const client = createReactClient({
-  provider: studioProvider({ apiKey: 'yourStudioApiKey' }),
-});*/ 
+const handler = async () => {
+  // we sign the JWT and return it to the user
+  const token = await signAccessJwt({
+    privateKey: accessControlPrivateKey,
+    publicKey: accessControlPublicKey,
+    issuer: 'https://livepeerjs.org',
+    // playback ID to include in the JWT
+    playbackId: playbackId,
+    // expire the JWT in 1 hour
+    expiration: '1h',
+    // custom metadata to include
+    custom: {
+      userId: 'user-id-1',
+    },
+  });
 
-const signingKey = // Livepeer.js function to create a signing key
-const privateKey = signingKey.privateKey; // decoded from base64
-
-// db.keys.save(privateKey) // Store it! It's received only on signing key creation!
-
-const expiration = Math.floor(Date.now() / 1000) + 1000;
-const payload: JwtPayload = {
-        sub: "b0dcxvwml48mxt2s", // Playback ID
-        action: "pull", // Allowed action for this token. `pull` is allowing playback
-        custom: {
-						"session_id": "xxxx-123",
-            "user_id": "xxxx-123"
-				}
-				iss: "lenstube",
-        pub: signingKey.publicKey, // REQUIRED: The public key of your keypair
-        exp: expiration, // Expiry date of your JWT
-        video: "none",
-};
-const token = jwt.sign(payload, privateKey, { algorithm: "ES256" });
+  return token
+}
 ```
 
 </CodeBlockTabItem>
