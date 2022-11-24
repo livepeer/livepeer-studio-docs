@@ -2,41 +2,46 @@
 title: Support Matrix
 ---
 
-## Inputs
+# Support Matrix
+
+## On Demand
+
+### Inputs
 
 :::note
 Only file sizes up to 1GB are supported.
 :::
 
-### Video
+#### Video
 
 | Container                    | Video codecs supported with container  |                                                                                                                                                                                   |
 | ---------------------------- | -------------------------------------- |
 | MPEG-4 (.mp4)                | AVC (H.264), HEVC (H.265)              |                                                                                                                                                                      |
-| QuickTime (.mov)             | AVC (H.264), HEVC (H.265)              |
 
-### Audio
+#### Audio
 
 | Container | Audio codecs supported with container |
 | --------- | ------------------------------------- |
 | MPEG-4    | AAC                                   |
 
-## Outputs
+### Outputs
 
-### Video
+#### Video
 
 | Container                    | Video codecs supported with container  |                                                                                                                                                                                   |
 | ---------------------------- | -------------------------------------- |
 | MPEG-4 (.mp4)                | AVC (H.264)                            |                                                                                                                                                                      |
 | HLS                          | AVC (H.264)                            |
 
-### Audio
+#### Audio
 
 | Container     | Audio codecs supported with container |
 | ------------- | ------------------------------------- |
 | MPEG-4 (.mp4) | AAC                                   |
 
-## Ingest Support
+## Livestream
+
+### Ingest Support
 
 | attribute                    | notes                                                                                                                                                                                      |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -48,7 +53,7 @@ Only file sizes up to 1GB are supported.
 | Framerate                    | Between 5fps and 60fps, passthrough or custom                                                                                                                                              |
 | GOP Size (Keyframe Interval) | Supported tested: Constant GOP, Variable GOP of 0.5s to 8s Supported untested: Xsplit, Other versions of OBS and ffmpeg, other RTMP encodersUnsupported: Variable GOP not within 0.5s to 8s |
 
-## Transcoding Support
+### Transcoding Support
 
 | attribute                 | notes                                                                                                                            |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,7 +64,7 @@ Only file sizes up to 1GB are supported.
 | Resolution                | Supported tested: Custom resolution up to 1080pSupported untested: Custom resolution up to 4k                                    |
 | Pixel format              | YUV4:2:0                                                                                                                         |
 
-## Video Workflow Support
+### Video Workflow Support
 
 | attribute                 | notes                                                                                                                                                                                              |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
