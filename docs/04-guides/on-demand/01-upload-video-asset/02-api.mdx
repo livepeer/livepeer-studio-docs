@@ -48,7 +48,7 @@ const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
         "Content-Type": "application/json",
     },
     body: JSON.stringify({
-        url: "$EXTERNAL_URL"
+        url: "$EXTERNAL_URL",
         name: "Example name",
     }),
 });
