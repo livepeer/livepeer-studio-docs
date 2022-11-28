@@ -6,16 +6,211 @@ description: Playback video and livestreams
 import CodeBlock from "@theme/CodeBlock";
 import CodeBlockTabs from "@site/src/components/CodeBlockTabs";
 import CodeBlockTabItem from "@site/src/components/CodeBlockTabItem";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import LivepeerPlayer from "@site/src/components/Player/Livepeer";
+import VideoJSPlayer from "@site/src/components/Player/Video.js";
+import IframePlayer from "@site/src/components/Player/Iframe";
 
 # Playback a video
 
-To playback your live or on demand video inside your application you'll need to
-use a video player component that supports the HLS protocol. While there are
-many HLS video players out there, we recommend using
-[livepeer.js](https://livepeerjs.org).
+This guide provides you the instructions to playback a video or a live stream on
+your website/applications. To playback live streams or on-demand video inside
+your application, you'll need to use a video player component that supports the
+HLS protocol.
 
-## Audio-only streams
+You can either use Livepeer's built-in player or your own player. This guide
+covers both options.
 
-If you want to provide only the audio version of the stream, you can use
-?video=false at the end of an .m3u8 URL to get an audio-only stream. For
-example, `https://livepeercdn.com/hls/{playbackId}/index.m3u8?video=none`
+## Using Livepeer's player
+
+[Livepeer.js](https://livepeerjs.org/) is a JavaScript library that allows you
+to upload, retrieve, and play assets. It provides a core vanilla JS library to
+easily connect to a Livepeer provider (e.g. Livepeer Studio), as well as
+React-specific hooks/components to provide memoization and DOM management.
+
+:::note
+
+Livepeer.js currently only supports applications built with React.js and
+Next.js.
+
+:::
+
+### Get video playback id
+
+Each video or live stream has a unique playback id. You can get the playback id
+from the response of the [Create a video](/reference/api/create-asset-with-url)
+or [Create a livestream](/reference/api/create-stream) API.
+
+The response should look like this:
+
+```js
+{
+    "asset": {
+        "id": "7d042176-230b-464c-a677-4a19b513193c",
+        // highlight-start
+        "playbackId": "7d048tbcfrv6gvzs",
+        // highlight-end
+        "userId": "80dc8f6e-69d5-401f-bbd7-bfc09a2a5320",
+        "createdAt": 1659715086322,
+        "status": {
+            "phase": "waiting",
+            "updatedAt": 1659715086322
+        },
+        "name": "Example name"
+    },
+    "task": {
+        "id": "d3a2ab1b-8dd1-450d-ac8e-498fd9d91865"
+    }
+}
+```
+
+### Installation
+
+Once you have the playback id, the next step is to install the library. You can
+do so by running the following command:
+
+<Tabs>
+  <TabItem value="npm" label="npm">
+    <CodeBlock language="bash">npm install @livepeer/react</CodeBlock>
+  </TabItem>
+  <TabItem value="yarn" label="yarn">
+    <CodeBlock language="bash">yarn add @livepeer/react</CodeBlock>
+  </TabItem>
+</Tabs>
+
+### Usage
+
+The Player component provides an easy way to display video or audio. You can
+also [customize](https://livepeerjs.org/react/Player) the player's theme and
+controls.
+
+```jsx
+import { Player } from "@livepeer/react";
+
+export const SimplePlayer = () => {
+  return (
+    <Player
+      title="Agent 327: Operation Barbershop"
+      playbackId="6d7el73r1y12chxr"
+      showPipButton
+    />
+  );
+};
+```
+
+<LivepeerPlayer />
+
+## Using your own player
+
+Using livepeer.js is the easiest and recommended way to playback a video or a
+live stream. However, if you want to use your own player, you can do so by
+following the instructions below.
+
+Please note that to playback live streams inside your application you'll need to
+use a video player component that supports the HLS.
+
+### Create a playback URL
+
+To playback a live stream in other players, you'll need to create an HLS URL.
+HLS is a protocol that allows you to stream video and audio content over HTTP.
+Most of the video you watch on the web is delivered using HLS. Livepeer also
+uses HLS to deliver video and audio content.
+
+:::caution
+
+Playback URLs are different for live streams and on-demand videos. Please make
+sure you're using the correct URL for the type of content you're trying to
+playback.
+
+:::
+
+You can create an HLS url by using the below format and replacing the
+`PLAYBACK_ID` with your stream's playback id.
+
+```txt
+https://livepeercdn.com/hls/{PLAYBACK_ID}/index.m3u8
+```
+
+On-demand videos have a different format for the playback URLs. To playback such
+videos, you can use the below format and replace the `PLAYBACK_ID` with your
+video's playback id.
+
+```txt
+https://livepeercdn.com/asset/{PLAYBACK_ID}/video
+```
+
+### Use the playback URL in a player
+
+You can use the playback URL is any video player that supports HLS. Here is a
+list of popular players that supports HLS:
+
+- [Video.js](https://videojs.com/)
+- [Plyr.io](https://plyr.io/)
+- [HLS.js](https://github.com/video-dev/hls.js)
+- [JW Player](https://www.jwplayer.com/html5-video-player/)
+- [Bitmovin Player](https://bitmovin.com/video-player/)
+
+Here is an example of how to use the playback URL in video.js player.
+
+```html
+<head>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg">
+    <source
+      src="https://livepeercdn.com/asset/${PLAYBACK_ID}/video"
+      type="video/mp4" />
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+</body>
+```
+
+<VideoJSPlayer />
+
+## Embeddable Player
+
+:::caution
+
+The embeddable player is currently in beta and some elements may change as we
+mature the product. For a production-grade application consider using
+Livepeer.js instead.
+
+:::
+
+This is one of the easiest way to playback a video on your website/applications.
+You can embed the player on your website/applications by using the below code
+snippet.
+
+You can replace the `PLAYBACK_ID` with your video's playback id.
+
+```html
+<iframe
+  src="https://lvpr.tv?v={PLAYBACK_ID}"
+  frameborder="0"
+  allowfullscreen
+  allow="autoplay; encrypted-media; picture-in-picture"
+  sandbox="allow-scripts">
+</iframe>
+```
+
+<IframePlayer />
+
+## Next steps
+
+- [Get viewer engagement](/guides/get-viewer-engagement/dashboard)
+- [Listen for webhooks](/guides/listen-for-webhooks)
+- [Mint a Video NFT](/guides/mint-a-video-nft)
