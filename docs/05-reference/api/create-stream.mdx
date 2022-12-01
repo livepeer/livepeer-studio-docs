@@ -16,10 +16,12 @@ If you do not define transcoding rendition `profiles` when creating the
 attributes of the source stream only, will not take advantage of adaptive
 bitrate streaming and will likely buffer.
 
-Here is an example request:
+## Create a stream
+
+### Request
 
 ```bash
-curl -X POST \
+curl -X POST 'https://livepeer.studio/api/stream' \
 -H 'content-type: application/json' \
 -H 'authorization: Bearer {api_key}' \
 -d '{
@@ -47,11 +49,10 @@ curl -X POST \
       "height": 360
     }
   ]
-}' \
-https://livepeer.studio/api/stream
+}'
 ```
 
-201 Created
+### Response
 
 ```bash
 {
@@ -64,6 +65,48 @@ https://livepeer.studio/api/stream
     "createdAt":1596081229373,
     "streamKey":"abcd-uimq-jtgy-x98v",
     "playbackId":"efghb2mxupongp5k",
+    {other asset object keys}
+}
+```
+
+## Create a stream with a playback policy
+
+Add an access control playback policy to a stream.
+
+A `playbackPolicy` type can be either:
+- public - No access control is applied to the stream
+- jwt - A JWT is required to playback the stream
+
+If you set your stream or asset's playback policy to JWT, you 
+will need to sign a token with a signing key and put it in the 
+playback URL to be able to playback your stream.
+
+### Request
+
+```bash
+curl -X POST 'https://livepeer.studio/api/stream' \
+-H 'content-type: application/json' \
+-H 'authorization: Bearer {api_key}' \
+-d '{
+  "name": "test_stream",
+  "playbackPolicy": {
+    "type":"jwt"
+  }
+}'
+```
+
+### Response
+
+```bash
+{
+    "name":"test_stream",
+    "id":"ijkl61f3-95bd-4971-a7b1-4dcb5d39e78a",
+    "createdAt":1596081229373,
+    "streamKey":"abcd-uimq-jtgy-x98v",
+    "playbackId":"efghb2mxupongp5k",
+    "playbackPolicy": {
+        "type": "jwt"
+    },
     {other asset object keys}
 }
 ```
