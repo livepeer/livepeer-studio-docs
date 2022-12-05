@@ -1,0 +1,34 @@
+---
+title: GET webhooks
+---
+
+# `GET` Webhook
+
+To get a single Webhook object's details call `GET /api/webhook/{webhookID}`.
+
+### Request
+
+```jsx
+curl --location --request GET 'https://livepeer.studio/api/webhook/{webhookID}' \
+--header 'Authorization: Bearer $API_TOKEN'
+```
+
+### Response
+
+200 OK
+
+```jsx
+{
+    "id": "5e90b574-5b28-48c4-8f75-06c7f73b2d84",
+    "url": "https://lvpr.tv?v=5438hocpzjl79dr9",
+    "kind": "webhook",
+    "name": "stream started",
+    "events": [
+        "stream.started",
+        "recording.started"
+    ],
+    "userId": "72ffa5ee-ad5d-4c97-960f-475a5d8069cb",
+    "createdAt": 1670226988514,
+    "sharedSecret": ""
+}
+```

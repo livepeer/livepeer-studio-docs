@@ -1,0 +1,23 @@
+---
+title: PUT edit webhook
+---
+
+# `PUT` Edit webhook
+
+To edit a webhook object's details call `PUT /api/webhook/{webhookID}`
+
+### Request
+
+```bash
+curl --location --request PUT 'https://livepeer.studio/api/webhook/{webhookID}' \
+--header 'Authorization: Bearer $API_TOKEN'
+--header 'content-type: application/json'
+--data-raw '{
+  "events": ["stream.started", "stream.idle"],
+  "url": "{webhook_endpoint}",
+  "name": "test webhooks"
+}' \
+```
+
+### Response
+
