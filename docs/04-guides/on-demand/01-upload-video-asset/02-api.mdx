@@ -41,7 +41,7 @@ and include the URL of the asset to be uploaded.
 <CodeBlockTabItem value="JavaScript" label="JavaScript">
 
 ```js
-const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
+const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/upload/url", {
     method: "POST",
     headers: {
         Authorization: `Bearer ${process.env.API_TOKEN}`,
@@ -58,7 +58,7 @@ const uploadAssetURL = await fetch("https://livepeer.studio/api/asset/import", {
 <CodeBlockTabItem value="curl" label="curl">
 
 ```bash
-curl --location --request POST 'https://livepeer.studio/api/asset/import' \
+curl --location --request POST 'https://livepeer.studio/api/asset/upload/url' \
 --header 'Authorization: Bearer $API_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
