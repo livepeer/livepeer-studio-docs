@@ -9,26 +9,37 @@ title: Support Matrix
 ### Inputs
 
 :::note
-Only file sizes up to 1GB are supported.
+Only file sizes up to 10GB are supported.
 :::
 
 #### Video
-
-| Container                    | Video codecs supported with container  |                                                                                                                                                                                   |
-| ---------------------------- | -------------------------------------- |
-| MPEG-4 (.mp4)                | AVC (H.264), HEVC (H.265)              |                                                                                                                                                                      |
+|Container                     | Video codecs supported with container  |
+|--|--|
+| MPEG-4 (.mp4)                | Uncompressed, AVC Intra 50/100, DivX/Xvid, H.261, H.262, H.263, AVC (H.264), HEVC (H.265), JPEG 2000, MPEG-2, MPEG-4 part 2, VC-1   |
+|QuickTime (.mov).             |Uncompressed, Apple ProRes, AVC Intra 50/100, DivX/Xvid, DV/DVCPRO, H.261, H.262, H.263, AVC (H.264), HEVC (H.265), JPEG 2000 (J2K), MJPEG, MPEG-2, MPEG-4 part 2, QuickTime Animation (RLE)|
+|Audio Video Interleave (.avi)| Uncompressed, Canopus HQ, DivX/Xvid, DV/DVCPRO, MJPEG|
+|Adobe Flash (.flv)            | AVC (H.264), Flash 9 File, H.263|
+|Matroska (.mkv)               |AAC, Dolby Digital (AC3), Dolby Digital Plus (EAC3), Opus, WMA, WMA2|
+|WebM (.webm)                  | VP8, VP9|
+|Advanced Systems Format (.wmv)|WMA, WMA2, WMA Pro|
 
 #### Audio
 
 | Container | Audio codecs supported with container |
 | --------- | ------------------------------------- |
-| MPEG-4    | AAC                                   |
+| MPEG-4 (.mp4)      | AAC, Dolby Digital (AC3), Dolby Digital Plus (EAC3), PCM, WMA, WMA2|
+| QuickTime (.mov)   | AAC, MP3, PCM                |
+| Audio Video Interleave (.avi)   | Dolby Digital (AC3), Dolby Digital Plus (EAC3), Dolby E frames carried in PCM streams, MP3, MPEG Audio, PCM|
+| Adobe Flash (.flv)    | AAC |
+| Matroska (.mkv)    | AAC, Dolby Digital (AC3), Dolby Digital Plus (EAC3), Opus, WMA, WMA2                                  |
+| WebM (.webm)   | Opus, Vorbis|
+| Advanced Systems Format (.wmv)   | WMA, WMA2, WMA Pro   |
 
 ### Outputs
 
 #### Video
 
-| Container                    | Video codecs supported with container  |                                                                                                                                                                                   |
+| Container                    | Video codecs supported with container  |                                                                                                                                                        
 | ---------------------------- | -------------------------------------- |
 | MPEG-4 (.mp4)                | AVC (H.264)                            |                                                                                                                                                                      |
 | HLS                          | AVC (H.264)                            |
