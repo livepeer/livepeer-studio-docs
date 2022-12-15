@@ -57,7 +57,11 @@ const sidebars = {
           label: "Get viewer engagement",
         },
         "guides/playback-a-video-stream",
-        "guides/listen-for-webhooks",
+        {
+          type: "doc",
+          id: "guides/listen-for-webhooks/index",
+          label: "Listen for webhooks",
+        },
         "guides/mint-a-video-nft",
       ],
     },

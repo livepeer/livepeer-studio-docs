@@ -1,0 +1,66 @@
+---
+title: API
+slug: api
+sidebar_class_name: tabbed-page
+pagination_next: guides/playback-a-video-stream
+hide_title: true
+displayed_sidebar: mySidebar
+---
+
+import Tabs from "./_tabs.mdx";
+import CodeBlock from "@theme/CodeBlock";
+import CodeBlockTabs from "@site/src/components/CodeBlockTabs";
+import CodeBlockTabItem from "@site/src/components/CodeBlockTabItem";
+
+<Tabs />
+
+:::note
+
+The viewership API is still in development. Currently, viewer count metrics are
+only available for on demand assets. The count registers start views with
+deduping logic that prevents users from attempting to inflate view counts. In
+the future, we'll support additional viewership and engagement metrics so you
+can better understand popularity and performance.
+[Let us know](https://livepeer.studio/contact) if you have any particular
+feature requests related to metrics.
+
+:::
+
+## Step 1: Get the `asset.id` of an existing asset
+
+Get the `asset.id` of an existing asset. An `asset.id` can be found in the
+response object of any API call working with assets. If you haven't created an
+asset yet, you can follow the
+[upload a video asset guide](/guides/on-demand/upload-video-asset#api) to do so.
+
+## Step 2: Retrieve viewership data
+
+Once you have the `asset.id`, you can make a request to get the viewership data.
+
+<CodeBlockTabs>
+<CodeBlockTabItem value="JavaScript" label="JavaScript">
+
+```js
+const response = await fetch(
+  "https://livepeer.studio/api/data/views/{assetId}/total",
+  {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${process.env.API_TOKEN}`,
+    },
+  }
+);
+
+const { startViews } = (await response.json())[0]
+```
+
+</CodeBlockTabItem>
+<CodeBlockTabItem value="curl" label="curl">
+
+```bash
+curl --location --request GET https://livepeer.studio/api/data/views/{assetId}/total \
+    -H "Authorization: Bearer $API_TOKEN"
+```
+
+</CodeBlockTabItem>
+</CodeBlockTabs>
