@@ -1,0 +1,44 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://docs.livepeer.org",
+      "permanent": false
+    },
+    {
+      "source": "/category/guides",
+      "destination": "https://docs.livepeer.org/guides/developing",
+      "permanent": false
+    },
+    {
+      "source": "/category/api",
+      "destination": "https://docs.livepeer.org/reference/api",
+      "permanent": false
+    },
+    {
+      "source": "/guides/live/create-a-livestream",
+      "destination": "https://docs.livepeer.org/guides/developing/create-a-livestream",
+      "permanent": false
+    },
+    {
+      "source": "/guides/on-demand/upload-video-asset/dashboard",
+      "destination": "https://docs.livepeer.org/guides/developing/upload-a-video-asset",
+      "permanent": false
+    },
+    {
+      "source": "/guides/mint-a-video-nft",
+      "destination": "https://docs.livepeer.org/guides/developing/mint-a-video-nft",
+      "permanent": false
+    },
+    {
+      "source": "/video-miners",
+      "destination": "https://docs.livepeer.org/guides/orchestrating",
+      "permanent": false
+    },
+    {
+      "source": "/video-miners/getting-started",
+      "destination": "https://docs.livepeer.org/guides/orchestrating/get-started",
+      "permanent": false
+    }
+  ]
+}
