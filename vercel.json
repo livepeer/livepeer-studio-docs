@@ -1,9 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "destination": "https://docs.livepeer.org",
-      "permanent": false
+      source: '.*',
+      destination: `https://docs.livepeer.studio`,
+      permanent: false,
     },
     {
       "source": "/category/guides",
