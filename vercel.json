@@ -1,11 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://docs.livepeer.org",
-      "permanent": false
-    },
-    {
       "source": "/category/guides",
       "destination": "https://docs.livepeer.org/guides/developing",
       "permanent": false
@@ -38,6 +33,11 @@
     {
       "source": "/video-miners/getting-started",
       "destination": "https://docs.livepeer.org/guides/orchestrating/get-started",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://docs.livepeer.org",
       "permanent": false
     }
   ]
